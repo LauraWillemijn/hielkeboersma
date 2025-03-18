@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hielke Boersma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Form Success Message -->
+    <div class="form-success">
+        Bedankt voor uw bericht. Ik neem zo spoedig mogelijk contact met u op.
+    </div>
+
+    <!-- Add Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Hielke Boersma</a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="#over-hielke" class="nav-link">Over Hielke</a>
+                <a href="#dj" class="nav-link">DJ</a>
+                <a href="#presentator" class="nav-link">Presentator</a>
+                <a href="#voice-over" class="nav-link">Voice-over</a>
+                <a href="#contact" class="nav-link contact-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="Images/hielke10.JPG" alt="Hielke Boersma" class="hero-image">
+        <div class="hero-content">
+            <h1 class="hero-title">Hielke Boersma</h1>
+            <p class="hero-text">
+                Professioneel DJ, presentator en voice-over artiest met jarenlange ervaring in de entertainment industrie. 
+                Van corporate events tot festivals - altijd met passie en professionaliteit.
+            </p>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Rest of your content sections -->
+
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/hielke-boersma-517aa134/" class="social-link" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/hielkeboersma/" class="social-link" target="_blank" rel="noopener">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+        <a href="https://www.tiktok.com/@hielkeboersma" class="social-link" target="_blank" rel="noopener">
+            <i class="fab fa-tiktok"></i>
+            <span>TikTok</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html> 

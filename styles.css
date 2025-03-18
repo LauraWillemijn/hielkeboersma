@@ -1,0 +1,47 @@
+/* Base styles */
+:root {
+    --primary: #000000;
+    --secondary: #333333;
+    --text: #1a1a1a;
+    --light: #ffffff;
+    --max-width: 1200px;
+    --transition: all 0.3s ease;
+    --font-light: 300;
+    --font-regular: 400;
+    --menu-bg: rgba(255, 255, 255, 0.98);
+    --accent: #007AFF;
+    --header-height: 80px;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --form-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: var(--font-light);
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--light);
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+.header {
+    position: fixed;
+    width: 100%;
+    height: var(--header-height);
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    top: 0;
+}
+
+/* Add the rest of your CSS styles here */ 
