@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <!-- Same head section as presentator.html -->
+    <style>
+        /* Add to existing styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .testimonials {
+            margin: 4rem 0;
+        }
+
+        .testimonial {
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-left: 2px solid var(--primary);
+        }
+
+        .testimonial-author {
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Same header -->
+
+    <main id="main">
+        <h1>Voice-over Hielke Boersma</h1>
+        
+        <div class="intro-text">
+            <p>Met zijn karakteristieke stem en jarenlange ervaring in de radio is Hielke de perfecte keuze voor voice-over werk. Van commercials tot bedrijfsfilms, hij geeft elke productie de juiste toon.</p>
+        </div>
+
+        <section class="audio-samples">
+            <h2>Luister naar voorbeelden</h2>
+            <!-- Audio player with samples -->
+            <audio controls class="audio-player">
+                <source src="audio/sample1.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+        <section class="services">
+            <h2>Voice-over diensten</h2>
+            <ul>
+                <li>Radio commercials</li>
+                <li>TV commercials</li>
+                <li>Bedrijfsfilms</li>
+                <li>E-learning</li>
+                <li>IVR / Telefoon</li>
+            </ul>
+        </section>
+
+        <section class="testimonials">
+            <h2>Referenties</h2>
+            <!-- Similar testimonials structure -->
+        </section>
+    </main>
+</body>
+</html> 

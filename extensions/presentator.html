@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <!-- Same head section as index.html with additional styles -->
+    <style>
+        /* Add to existing styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .testimonials {
+            margin: 4rem 0;
+        }
+
+        .testimonial {
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-left: 2px solid var(--primary);
+        }
+
+        .testimonial-author {
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Same header as index.html -->
+
+    <main id="main">
+        <h1>Presentator Hielke Boersma</h1>
+        
+        <div class="intro-text">
+            <p>Als presentator bij SLAM! heeft Hielke bewezen dat hij het publiek kan boeien en vermaken. Met zijn natuurlijke charisma en professionele aanpak is hij de ideale host voor elk evenement.</p>
+        </div>
+
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="images/presenting1.jpg" alt="Hielke presenting at SLAM!">
+            </div>
+            <div class="gallery-item">
+                <img src="images/presenting2.jpg" alt="Hielke at an event">
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>Wat anderen zeggen</h2>
+            <div class="testimonial">
+                <p>"Hielke's energie is aanstekelijk. Hij weet precies hoe hij de zaal moet lezen en meekrijgt."</p>
+                <div class="testimonial-author">- SLAM! Radio</div>
+            </div>
+            <div class="testimonial">
+                <p>"Professioneel, energiek en altijd goed voorbereid. Hielke is een aanwinst voor elk evenement."</p>
+                <div class="testimonial-author">- Festival Organizer</div>
+            </div>
+        </section>
+
+        <section class="social-links">
+            <h2>Volg Hielke</h2>
+            <a href="https://instagram.com/hielkeboersma" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/in/hielkeboersma" target="_blank">LinkedIn</a>
+        </section>
+    </main>
+
+    <!-- Same footer as index.html -->
+</body>
+</html> 
