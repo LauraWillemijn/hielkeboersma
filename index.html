@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hielke Boersma | DJ, Presentator & Voice-over Artiest</title>
+    <meta name="description" content="Hielke Boersma is een professionele DJ, presentator en voice-over artiest met jarenlange ervaring. Van corporate events tot festivals - altijd met passie en professionaliteit.">
+    <meta name="keywords" content="Hielke Boersma, DJ, presentator, voice-over, radio dj, SLAM!, Utrecht, evenementen, festivals">
+    <meta name="author" content="Hielke Boersma">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hielke Boersma",
+        "url": "https://hielkeboersma.nl",
+        "image": "https://hielkeboersma.nl/Images/hielke10.JPG",
+        "sameAs": [
+            "https://www.linkedin.com/in/hielke-boersma-517aa134/",
+            "https://www.instagram.com/hielkeboersma/",
+            "https://www.tiktok.com/@hielkeboersma"
+        ],
+        "jobTitle": "DJ, Presentator & Voice-over Artiest",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "SLAM!"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Utrecht",
+            "addressCountry": "NL"
+        },
+        "description": "Professioneel DJ, presentator en voice-over artiest met jarenlange ervaring in de entertainment industrie."
+    }
+    </script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hielkeboersma.nl/">
+    <meta property="og:title" content="Hielke Boersma | DJ, Presentator & Voice-over Artiest">
+    <meta property="og:description" content="Professioneel DJ, presentator en voice-over artiest met jarenlange ervaring in de entertainment industrie.">
+    <meta property="og:image" content="https://hielkeboersma.nl/Images/hielke10.JPG">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hielkeboersma.nl/">
+    <meta property="twitter:title" content="Hielke Boersma | DJ, Presentator & Voice-over Artiest">
+    <meta property="twitter:description" content="Professioneel DJ, presentator en voice-over artiest met jarenlange ervaring in de entertainment industrie.">
+    <meta property="twitter:image" content="https://hielkeboersma.nl/Images/hielke10.JPG">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://hielkeboersma.nl/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Existing stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Update root variables to match Sander's site */
+        :root {
+            --primary: #000000;
+            --secondary: #333333;
+            --text: #1a1a1a;
+            --light: #ffffff;
+            --max-width: 1200px;  /* Increased from 860px to 1200px */
+            --transition: all 0.3s ease;
+            --font-light: 300;
+            --font-regular: 400;
+            --menu-bg: rgba(255, 255, 255, 0.98);
+            --accent: #007AFF;
+            --header-height: 80px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --form-bg: #f8f9fa;
+        }
+
+        /* Base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: var(--font-light);
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--light);
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Professional Navigation Bar with Pattern */
+        .header {
+            position: fixed;
+            width: 100%;
+            height: var(--header-height);
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            border-bottom: none;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: none;
+            top: 0;
+            opacity: 1;
+        }
+
+        .header.scrolled {
+            background: rgba(245, 245, 245, 0.95);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding-left: 2rem;
+            padding-right: 2rem;  /* Updated from 8% to 2rem for consistency */
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #90744E;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            opacity: 1;
+            text-transform: none;
+            background: none;
+            -webkit-background-clip: initial;
+            -webkit-text-fill-color: initial;
+            text-shadow: none;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+            margin-right: auto;
+            margin-left: -4rem;
+        }
+
+        .header.scrolled .logo {
+            color: #90744E;
+            text-shadow: none;
+        }
+
+        .logo:hover {
+            transform: translateY(-2px);
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            height: 100%;
+            margin-left: auto;
+            margin-right: 0;  /* Updated from -12rem to 0 */
+        }
+
+        .nav-links a:not(.contact-link) {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled .nav-links a:not(.contact-link) {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-links a {
+            color: #90744E;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a.contact-link {
+            opacity: 1;
+            visibility: visible;
+            background: #90744E;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 500;
+            color: #ffffff !important;
+            transform: none;
+        }
+
+        .nav-links a.contact-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(144, 116, 78, 0.2);
+            background: #7A6342;  /* Darker shade of #90744E */
+        }
+
+        .nav-links a.contact-link:hover {
+            background: #7A6342;  /* Darker shade of #90744E */
+            color: var(--light);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #90744E;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .nav-links a.active {
+            opacity: 1;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #90744E;
+        }
+
+        /* Content Layout */
+        .content-section {
+            max-width: var(--max-width);
+            margin: 6rem auto 3rem;  /* Reduced from 8rem 4rem */
+            padding: 0 2rem;
+        }
+
+        /* Article Grid */
+        .article-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;  /* Reduced from 6rem */
+            margin: 4rem 0;  /* Reduced from 6rem */
+        }
+
+        .article {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;  /* Reduced from 3rem */
+            transition: var(--transition);
+            margin-bottom: 1.5rem;  /* Reduced from 2rem */
+        }
+
+        .article-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+            transform-origin: center;
+            filter: brightness(0.95) contrast(0.95);
+        }
+
+        .article:hover {
+            transform: translateY(-5px);
+        }
+
+        .article:hover .article-image {
+            box-shadow: var(--shadow-md);
+            transform: scale(1.02);
+            filter: brightness(1.05) contrast(1.05);
+        }
+
+        .article-content h2 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;  /* Reduced from 1.5rem */
+            color: #5A5A5A;
+            position: relative;
+            padding-bottom: 0.8rem;  /* Reduced from 1rem */
+        }
+
+        .article-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #5A5A5A;
+            border-radius: 2px;
+        }
+
+        .article-content h3 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin: 2rem 0 1rem;  /* Reduced from 2.5rem 1.2rem */
+            color: #5A5A5A;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .article-content h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 70%;
+            background: #5A5A5A;
+            border-radius: 2px;
+        }
+
+        .article-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--secondary);
+            margin-bottom: 1rem;  /* Added to reduce space between paragraphs */
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+            transform: scale(1.2);
+            transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), filter 1.2s ease;
+            filter: brightness(1.3) saturate(1.1);
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero.loaded .hero-image {
+            transform: scale(1.1);
+            filter: brightness(1.4) saturate(1.2);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+            color: var(--light);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%;
+        }
+
+        .hero.loaded .hero-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--light);
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .hero-text {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: var(--light);
+            max-width: 600px;
+            opacity: 0.9;
+        }
+
+        /* Enhanced Social Media Icons */
+        .social-links {
+            position: fixed;
+            left: 2rem;  /* Changed from right to left */
+            bottom: 2rem;
+            display: flex;
+            flex-direction: column;  /* Stack icons vertically */
+            gap: 1rem;
+            z-index: 100;
+        }
+
+        .social-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.2rem;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-link:hover {
+            opacity: 1;
+            transform: translateX(5px);  /* Move right on hover */
+        }
+
+        .social-link span {
+            font-size: 0.85rem;
+            margin-left: 1rem;
+            font-weight: 400;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover span {
+            opacity: 0.8;
+            transform: translateX(0);
+        }
+
+        /* Mobile Navigation Enhancements */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #90744E;
+            margin: 5px 0;
+            transition: var(--transition);
+        }
+
+        .header.scrolled .menu-toggle span {
+            background: #90744E;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                height: 70px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: var(--menu-bg);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2.5rem;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .nav-links.active {
+                right: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-links a {
+                font-size: 1.4rem;
+                padding: 1rem;
+            }
+
+            .menu-toggle.active span:first-child {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active span:last-child {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+
+            .social-links {
+                left: 2rem;
+                right: auto;
+                bottom: 2rem;
+                flex-direction: row;
+                gap: 1.5rem;
+            }
+
+            .social-link {
+                font-size: 1.4rem;
+                background: var(--light);
+                padding: 0.8rem;
+                border-radius: 50%;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .social-link:hover {
+                transform: translateY(-5px);
+            }
+
+            .social-link span {
+                display: none;  /* Hide the text labels on mobile */
+            }
+
+            body.menu-open {
+                overflow: hidden;
+            }
+
+            .contact-section {
+                padding: 3rem 1.5rem;
+                margin: 4rem auto;
+            }
+
+            .back-to-top {
+                right: 2rem;
+                bottom: 2rem;
+                width: 40px;
+                height: 40px;
+            }
+
+            .contact-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .form-group {
+                padding: 0.6rem 1rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .article-content h2 {
+                font-size: 2rem;
+            }
+
+            .article-content h3 {
+                font-size: 1.4rem;
+            }
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .contact-info h2 {
+                font-size: 2.4rem;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+                margin-left: 0;
+            }
+
+            .quotes-section {
+                padding: 1rem;
+                margin: 0.5rem auto;
+            }
+            
+            .quotes-container {
+                padding: 0;
+            }
+            
+            .quote-item {
+                padding: 1.2rem 1.5rem;
+            }
+            
+            .quote-text {
+                font-size: 1rem;
+                padding-left: 1.2rem;
+            }
+
+            /* Improve video grid for mobile */
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin: 1.5rem auto;
+                padding: 0 1rem;
+            }
+
+            .article-video-container {
+                padding-bottom: 56.25%; /* 16:9 aspect ratio for videos on mobile */
+                margin: 0;
+                max-width: 100%;
+            }
+
+            /* Improve article content spacing */
+            .article-content {
+                padding: 0 1rem;
+            }
+
+            .article-content h2 {
+                font-size: 2rem;
+                margin-bottom: 1.2rem;
+            }
+
+            .article-content h3 {
+                font-size: 1.4rem;
+                margin: 2rem 0 1rem;
+            }
+
+            .article-content p {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+
+            /* Improve image grid for mobile */
+            .image-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin: 1rem 0;
+            }
+
+            .image-grid-item {
+                aspect-ratio: 16/9;
+            }
+
+            .article-featured-image {
+                margin: 1.5rem 0;
+            }
+
+            /* Adjust spacing between sections */
+            .article {
+                margin-bottom: 3rem;
+                padding: 0 1rem;
+            }
+
+            /* Improve play button size for mobile */
+            .play-button {
+                width: 60px;
+                height: 60px;
+            }
+
+            .play-button::before {
+                border-width: 12px 0 12px 20px;
+            }
+
+            /* Improve quote navigation for mobile */
+            .quote-nav {
+                padding: 0.5rem 0;
+            }
+
+            .quote-nav button {
+                padding: 0.8rem;
+                font-size: 1.2rem;
+            }
+
+            .quote-dots {
+                gap: 0.8rem;
+            }
+
+            .quote-dot {
+                width: 8px;
+                height: 8px;
+            }
+
+            .hero-content {
+                padding: 0 1.5rem;
+                margin-top: 30vh;  /* Move content down on mobile */
+            }
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .hero-text {
+                font-size: 1.1rem;
+                max-width: 100%;
+            }
+        }
+
+        /* Add styles for even smaller screens */
+        @media (max-width: 480px) {
+            .article-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .article-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .quote-text {
+                font-size: 0.95rem;
+            }
+
+            .quote-author {
+                font-size: 0.9rem;
+            }
+
+            .play-button {
+                width: 50px;
+                height: 50px;
+            }
+
+            .article {
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Add smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--form-bg) 0%, #ffffff 100%);
+            padding: 4rem 2rem;  /* Reduced from 6rem */
+            border-radius: 16px;
+            margin: 6rem auto;  /* Reduced from 8rem */
+            max-width: var(--max-width);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;  /* Reduced from 4rem */
+            position: relative;
+            z-index: 2;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .contact-info {
+            padding-right: 2rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            color: #5A5A5A;
+            letter-spacing: -0.5px;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .contact-info h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #5A5A5A;
+            border-radius: 2px;
+        }
+
+        .contact-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+            color: var(--secondary);
+        }
+
+        .contact-item i {
+            color: #90744E;
+            font-size: 1.2rem;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2.5rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-md);
+            width: 100%;
+            max-width: 600px;  /* Add max-width to limit form width */
+            margin: 0 auto;  /* Center the form */
+            margin-left: auto;
+            margin-right: auto;
+            transform: translateX(-10px);
+        }
+
+        /* Form Group */
+        .form-group {
+            margin-bottom: 1.5rem;
+            width: 100%;
+            display: flex;  /* Added to align items */
+            flex-direction: column;  /* Ensure vertical alignment */
+        }
+
+        /* Form Input */
+        .form-input {
+            width: calc(100% - 2rem); /* Adjust width to fit within the container */
+            border: 1px solid #e0e0e0;
+            padding: 1rem 1rem; /* Adjust padding to fit within the container */
+            font-size: 1rem;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            background: var(--light);
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #90744E;
+            box-shadow: 0 0 0 2px rgba(144, 116, 78, 0.1);
+        }
+
+        textarea.form-input {
+            min-height: 150px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #90744E 0%, #6B5639 100%);
+            color: var(--light);
+            border: none;
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255,255,255,0.2);
+            transform: translate(-50%, -50%) rotate(45deg) scale(0);
+            transition: transform 0.6s ease;
+        }
+
+        .btn:hover::before {
+            transform: translate(-50%, -50%) rotate(45deg) scale(1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(144, 116, 78, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 0;
+            }
+
+            .contact-info {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .contact-details {
+                align-items: center;
+            }
+
+            .form-group {
+                padding: 0;
+            }
+
+            .form-input {
+                padding: 0.875rem 1.25rem;
+            }
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            right: 2rem;
+            bottom: 2rem;
+            background: var(--light);
+            color: var(--primary);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 99;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background: #7A6342;  /* Darker shade of #90744E */
+            color: var(--light);
+        }
+
+        /* Add loading animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--form-bg);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Form Success Message */
+        .form-success {
+            position: fixed;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100%);
+            background: #90744E;
+            color: var(--light);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 500;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+        }
+
+        .form-success.visible {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Scroll Down Indicator */
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--light);
+            font-size: 1.5rem;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        .scroll-down:hover {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-5px);
+        }
+
+        /* Update video grid styles */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;  /* Reduced from 2rem */
+            margin-bottom: 2rem;  /* Reduced from 3rem */
+            max-width: var(--max-width);
+        }
+
+        .article-video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 40%;  /* Changed back to 40% for more square-like format */
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #000;
+            cursor: pointer;
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+
+        .article-video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .article-video-container.playing iframe {
+            opacity: 1;
+            z-index: 3;
+        }
+
+        .video-thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .article-video-container.playing .video-thumbnail {
+            opacity: 0;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .play-button::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 0 15px 25px;
+            border-color: transparent transparent transparent #ffffff;
+            margin-left: 5px;
+        }
+
+        .article-video-container:hover .play-button {
+            background: rgba(0, 0, 0, 0.9);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .article-media {
+            display: grid;
+            gap: 1.5rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .article-featured-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .article-featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .article-featured-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Updated Image Grid Layout */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;  /* Reduced from 2rem */
+            margin-top: 1rem;
+        }
+
+        .image-grid-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .image-grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .image-grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .image-grid-item:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .image-grid-item {
+                aspect-ratio: 16/9;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .article-video-container {
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1100;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1101;
+        }
+
+        /* Updated Quotes Section styles */
+        .quotes-section {
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: var(--max-width);
+            position: relative;
+            background: linear-gradient(135deg, rgba(144, 116, 78, 0.05) 0%, rgba(144, 116, 78, 0.02) 100%);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(144, 116, 78, 0.1);
+        }
+
+        .quotes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .quotes-slider {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .quote-item {
+            display: none;
+            padding: 2rem;
+            text-align: left;
+            background: rgba(144, 116, 78, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid #90744E;
+            box-shadow: 0 2px 8px rgba(144, 116, 78, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .quote-item.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .quote-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #333333;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 2rem;
+            font-weight: 500;
+        }
+
+        .quote-text::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -0.5rem;
+            font-size: 3rem;
+            color: #90744E;
+            opacity: 0.7;
+            font-family: Georgia, serif;
+        }
+
+        .quote-author {
+            font-size: 1rem;
+            color: #90744E;
+            font-weight: 600;
+            text-align: right;
+            padding-right: 1rem;
+            font-style: italic;
+        }
+
+        .quote-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .quote-nav button {
+            background: none;
+            border: none;
+            color: #90744E;
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding: 0.8rem;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(144, 116, 78, 0.1);
+        }
+
+        .quote-nav button:hover {
+            opacity: 1;
+            color: #90744E;
+            background: rgba(144, 116, 78, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .quote-dots {
+            display: flex;
+            gap: 0.8rem;
+            margin: 0 1rem;
+        }
+
+        .quote-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #D4C4B4;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0.4;
+        }
+
+        .quote-dot.active {
+            background: #90744E;
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .quotes-section {
+                padding: 1.5rem;
+                margin: 1.5rem auto;
+            }
+            
+            .quotes-container {
+                padding: 1.5rem;
+            }
+            
+            .quote-item {
+                padding: 1.5rem;
+            }
+            
+            .quote-text {
+                font-size: 1.1rem;
+                padding-left: 1.5rem;
+            }
+        }
+
+        /* Update video container in voice-over section */
+        #voice-over .article-video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 40%;  /* Changed back to 40% for more square-like format */
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #000;
+            cursor: pointer;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #voice-over .article-video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        #voice-over .video-thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 0.3s ease;
+        }
+
+        #voice-over .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        #voice-over .play-button::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 0 15px 25px;
+            border-color: transparent transparent transparent #ffffff;
+            margin-left: 5px;
+        }
+
+        #voice-over .article-video-container:hover .play-button {
+            background: rgba(0, 0, 0, 0.9);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        /* Client List Style */
+        .client-list {
+            background: rgba(144, 116, 78, 0.05);
+            border-left: 3px solid #90744E;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 1.1rem;
+            color: #5A5A5A;
+        }
+
+        .client-list strong {
+            color: #90744E;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Form Success Message -->
+    <div class="form-success">
+        Bedankt voor uw bericht. Ik neem zo spoedig mogelijk contact met u op.
+    </div>
+
+    <!-- Add Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Hielke Boersma</a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="#over-hielke" class="nav-link">Over Hielke</a>
+                <a href="#dj" class="nav-link">DJ</a>
+                <a href="#presentator" class="nav-link">Presentator</a>
+                <a href="#voice-over" class="nav-link">Voice-over</a>
+                <a href="#contact" class="nav-link contact-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="Images/hielke10.JPG" alt="Hielke Boersma" class="hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1920x1080?text=Hielke+Boersma'">
+            <div class="hero-content">
+            <h1 class="hero-title">Hielke Boersma</h1>
+            <p class="hero-text">
+                DJ, presentator en voice-over met jarenlange ervaring in de entertainment industrie. Van corporate events tot festivals - altijd met passie en professionaliteit.
+            </p>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+    <main class="content-section">
+        <div class="article-grid">
+            <article class="article" id="over-hielke">
+                <div class="article-content">
+                    <h2>Over Hielke</h2>
+                    <p>Hielke Boersma is (radio) dj, presentator en voice-over. Sinds 2020 is hij een van de vaste stemmen van SLAM!, waar hij zijn scherpe humor en energie inzet om radio tot een belevenis te maken. Zijn carrière begon bij de lokale omroep OOG TV en Radio, waarna hij via opleidingsprojecten bij Qmusic en Radio 538 zijn weg vond naar de landelijke ether.</p>
+                    <p>Naast zijn werk op de radio is Hielke een ervaren presentator, zowel op het podium als voor de camera. Of het nu gaat om een strak geregisseerde video, een bedrijfscongres of een energiek festivalpanel, hij schakelt moeiteloos tussen stijlen en formats. Zijn stijl? Prikkelend, to the point en altijd met een vleug humor.</p>
+                    <p>Hielke is opgegroeid in Groningen, maar woont tegenwoordig in Utrecht. Daar werkt hij aan uiteenlopende mediaprojecten, van radioshows tot events. Als hij niet achter de microfoon staat, vind je hem achter de draaitafels, waar hij met zijn DJ-sets menig feest naar een hoger niveau tilt.</p>
+                    <div class="client-list">
+                        <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, RTV Noord, SBS 6 en SLAM!.
+                    </div>
+                </div>
+                <div class="article-video-container" style="max-width: 800px; margin: 0 auto;">
+                    <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/08TJrVb8xTQ/maxresdefault.jpg')"></div>
+                    <div class="play-button"></div>
+                    <iframe
+                        src="https://www.youtube.com/embed/08TJrVb8xTQ?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+                        title="Hielke Boersma Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                        </div>
+            </article>
+
+            <article class="article" id="dj">
+                <div class="article-content">
+                    <h2>DJ Hielke Boersma</h2>
+                    <p>Een DJ die de sfeer leest en opbouwt, in plaats van simpelweg een playlist afdraait. Hielke Boersma draait met gevoel en energie, en mixt moeiteloos alle genres en de juiste tracks aan elkaar. Of het nu gaat om een bedrijfsfeest, een bruiloft of een festival, hij brengt het publiek precies wat het nodig heeft.</p>
+                    <p>Zijn achtergrond in radio maakt dat hij snapt hoe je een spanningsboog opbouwt en hoe je de energie in een zaal aanvoelt. Geen standaard set, maar een ervaring op maat.</p>
+                    <p>Weten wat Hielke voor jouw feest kan beteken? Neem vrijblijvend contact op!</p>
+                    <div class="client-list">
+                        <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, RTV Noord, SBS 6, SLAM!.
+                    </div>
+                
+                    <!-- Move video grid here -->
+                    <div class="video-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; max-width: 100%; margin: 2rem auto;">
+                        <!-- First video -->
+                        <div class="article-video-container" style="margin: 0; padding-bottom: 65%;">
+                            <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/kS7sqYUa5NU/maxresdefault.jpg')"></div>
+                            <div class="play-button"></div>
+                            <iframe
+                                src="https://www.youtube.com/embed/kS7sqYUa5NU?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+                                title="Hielke Boersma DJ Video 1"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                    </div>
+
+                        <!-- Second video -->
+                        <div class="article-video-container" style="margin: 0; padding-bottom: 65%;">
+                            <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/W4W5LpvQz20/maxresdefault.jpg')"></div>
+                            <div class="play-button"></div>
+                            <iframe
+                                src="https://www.youtube.com/embed/W4W5LpvQz20?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+                                title="Hielke Boersma DJ Video 2"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                </div>
+
+                        <!-- Third video -->
+                        <div class="article-video-container" style="margin: 0; padding-bottom: 65%;">
+                            <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/d9VwtcFM2eM/maxresdefault.jpg')"></div>
+                            <div class="play-button"></div>
+                            <iframe
+                                src="https://www.youtube.com/embed/d9VwtcFM2eM?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+                                title="Hielke Boersma DJ Video 3"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+            </div>
+                    </div>
+                </div>
+
+                <div class="article-media">
+                    <!-- Quotes Section -->
+                    <div class="quotes-section">
+                        <div class="quotes-container">
+                            <div class="quotes-slider">
+                                <div class="quote-item active">
+                                    <p class="quote-text">"Enorm bedankt voor de geweldige avond. De complimenten stromen binnen, en die zijn allemaal voor jou. Van de jongste tot de oudste gast, iedereen was op de dansvloer te vinden en genoot zichtbaar."</p>
+                                    <p class="quote-author">- Marianne</p>
+                        </div>
+                                <div class="quote-item">
+                                    <p class="quote-text">"Heel erg bedankt voor de fantastische avond, we vonden het een eer dat je op deze bijzondere dag het feest hebt gemaakt."</p>
+                                    <p class="quote-author">- Peter en Annelies</p>
+                    </div>
+                                <div class="quote-item">
+                                    <p class="quote-text">"Knap hoe Hielke precies weet aan te voelen wat er nodig is om een goed feestje te bouwen. Van meezingers tot dansbare classics."</p>
+                                    <p class="quote-author">- Linda</p>
+                    </div>
+                                <div class="quote-item">
+                                    <p class="quote-text">"We hebben een fantastische avond gehad, mede dankzij de set van Hielke. Hele goede opbouw qua muziek, perfect passend bij het publiek."</p>
+                                    <p class="quote-author">- Tim</p>
+                </div>
+                                <div class="quote-item">
+                                    <p class="quote-text">"Net zo leuk in de DJ booth als op de radio. Leuke muziekkeuze, fijne communicatie, professional."</p>
+                                    <p class="quote-author">- Suzanne</p>
+            </div>
+                            </div>
+                            <div class="quote-nav">
+                                <button class="quote-prev"><i class="fas fa-chevron-left"></i></button>
+                                <div class="quote-dots"></div>
+                                <button class="quote-next"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured image -->
+                    <div class="article-featured-image">
+                        <img src="Images/hielke4.jpeg" alt="DJ Hielke Boersma in actie" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x800?text=DJ+Hielke+in+Action'">
+                    </div>
+                    <div class="image-grid">
+                        <div class="image-grid-item">
+                            <img src="Images/hielke3.avif" alt="DJ Performance" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x400?text=DJ+Event+1'">
+                        </div>
+                        <div class="image-grid-item">
+                            <img src="Images/hielke 5.jpeg" alt="Festival DJ Set" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x400?text=DJ+Event+2'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spotify Playlist -->
+            <div class="spotify-container" style="width: 100%; margin: 2rem 0; padding: 3rem 0; background: linear-gradient(to right, rgba(144, 116, 78, 0.05), rgba(144, 116, 78, 0.02));">
+                <div style="max-width: var(--max-width); margin: 0 auto; padding: 0 2rem;">
+                    <div style="background: rgba(255, 255, 255, 0.8); padding: 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <iframe 
+                            style="border-radius:8px" 
+                            src="https://open.spotify.com/embed/playlist/7JamPvoVnG92CKg8JrUJ5j?utm_source=generator&theme=0" 
+                            width="100%" 
+                            height="450" 
+                            frameBorder="0" 
+                            allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            </article>
+
+            <article class="article" id="presentator">
+                <div class="article-content">
+                    <h2>Presentator</h2>
+                    <h3>Op de radio</h3>
+                    <p>Radio is waar het voor Hielke begon – en waar zijn hart nog steeds sneller van gaat kloppen. Als vaste stem van SLAM! brengt hij elke show met energie, humor en scherpte. Hielke spreekt de taal van zijn luisteraars, voelt precies aan wat er speelt en maakt van elk moment iets bijzonders. Hielke is een van de vaste presentatoren van Housuh in de Pauzuh, de SLAM! Mixmarathon en de SLAM! WKND MIX en heeft heeft meerdere shows in het weekend bij SLAM!. Daarnaast is hij als invaller regelmatig te horen bij 100%NL.</p>
+                    
+                    <h3>Dagvoorzitter en event host</h3>
+                    <p>Als dagvoorzitter zorgt Hielke ervoor dat een evenement gesmeerd loopt. Hij stelt de juiste vragen, houdt de energie erin en brengt een luchtige, maar scherpe stijl. Van zakelijke congressen tot live talkshows, hij houdt het publiek bij de les en de sprekers scherp.</p>
+                    
+                    <h3>Video- en beeldpresentator</h3>
+                    <p>Voor de camera is Hielke een authentieke en toegankelijke presentator. Hij brengt verhalen helder over en weet kijkers te boeien, of het nu gaat om een YouTube-serie, een bedrijfsfilm of een commercial. Zijn ervaring op radio, tv en podium maakt dat hij moeiteloos schakelt tussen verschillende formats en stijlen.</p>
+                    
+                    <p>Weten wat Hielke voor jouw evenement of video productie kan beteken? Neem vrijblijvend contact op!</p>
+                    
+                    <div class="client-list">
+                        <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, RTV Noord, SBS 6, SLAM!.
+                    </div>
+                
+                    <div class="video-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; max-width: 100%; margin: 2rem auto;">
+                        <!-- First video -->
+                        <div class="article-video-container" style="margin: 0; padding-bottom: 65%;">
+                            <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/0s97vTdy0dY/maxresdefault.jpg')"></div>
+                            <div class="play-button"></div>
+                            <iframe
+                                src="https://www.youtube.com/embed/0s97vTdy0dY?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+                                title="Hielke Boersma Video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <!-- Second video -->
+                        <div class="article-video-container" style="margin: 0; padding-bottom: 65%;">
+                            <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/6hfunEugxMw/maxresdefault.jpg')"></div>
+                            <div class="play-button"></div>
+                            <iframe
+                                src="https://www.youtube.com/embed/6hfunEugxMw?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+                                title="Hielke Boersma Video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <!-- Third video -->
+                        <div class="article-video-container" style="margin: 0; padding-bottom: 65%;">
+                            <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/CHUDq9uHAnM/maxresdefault.jpg')"></div>
+                            <div class="play-button"></div>
+                            <iframe
+                                src="https://www.youtube.com/embed/CHUDq9uHAnM?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+                                title="Hielke Boersma Video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article" id="voice-over">
+                <div class="article-content">
+                    <h2>Voice-over</h2>
+                    <p>Ben je op zoek naar een ervaren voice-over?</p>
+                    <p>Zoek je een voice-over voor een radiocommercial, tv-commercial, webvideo, animatie, billboard, pre-roll, tv-programma, productvideo, uitlegvideo of iets anders?</p>
+                    <p>Hielke Boersma heeft een stem die blijft hangen. Helder, authentiek en enthousiast – met de juiste tone-of-voice voor elk project. Dankzij zijn jarenlange radio-ervaring weet hij precies hoe hij luisteraars kan boeien en hoe een verhaal goed overkomt.</p>
+                    <p>Of het nu gaat om een commercial, een documentaire of een bedrijfsfilm, zijn stem geeft de juiste lading. Hij weet hoe hij een script tot leven brengt en hoe hij met timing en intonatie impact maakt.</p>
+                    <p>Geïnteresseerd in de stem van Hielke voor jouw productie? Neem vrijblijvend contact op!</p>
+                    <div class="client-list">
+                        <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, RTV Noord, SBS 6, SLAM!.
+                    </div>
+                </div>
+                <div class="video-grid" style="grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                    <div class="article-video-container" style="margin: 0; width: 100%; padding-bottom: 56.25%;">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/gPd8GxV07ug/maxresdefault.jpg')"></div>
+                        <div class="play-button"></div>
+                        <iframe
+                            src="https://www.youtube.com/embed/gPd8GxV07ug?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+                            title="Hielke Boersma voice-over"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="article-video-container" style="margin: 0; width: 100%; padding-bottom: 56.25%;">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/cvLSx5h77sA/maxresdefault.jpg')"></div>
+                        <div class="play-button"></div>
+                        <iframe
+                            src="https://www.youtube.com/embed/cvLSx5h77sA?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
+                            title="Hielke Boersma Voice-over"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact</h2>
+                <p class="contact-description">Laat me weten wat ik voor je kan betekenen. Ik neem zo spoedig mogelijk contact met je op.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@hielkeboersma.com">info@hielkeboersma.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Utrecht, Nederland</span>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" action="mailto:info@hielkeboersma.com" method="POST" enctype="text/plain" onsubmit="return handleSubmit(event)">
+                        <div class="form-group">
+                    <input type="text" name="name" class="form-input" placeholder="Naam" required>
+                        </div>
+                        <div class="form-group">
+                    <input type="email" name="email" class="form-input" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                    <input type="tel" name="phone" class="form-input" placeholder="Telefoonnummer" required>
+                        </div>
+                <div class="form-group message-group">
+                    <textarea name="message" class="form-input" placeholder="Bericht" rows="5" required></textarea>
+                        </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn">
+                        <span>Versturen</span>
+                    </button>
+                    </div>
+            </form>
+            </div>
+        </section>
+
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/hielke-boersma-517aa134/" class="social-link" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/hielkeboersma/" class="social-link" target="_blank" rel="noopener">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+        <a href="https://www.tiktok.com/@hielkeboersma" class="social-link" target="_blank" rel="noopener">
+            <i class="fab fa-tiktok"></i>
+            <span>TikTok</span>
+        </a>
+                </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Add Lightbox -->
+    <div class="lightbox">
+        <div class="lightbox-close">&times;</div>
+        <img src="" alt="Enlarged Image">
+            </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS with error handling
+        try {
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+        } catch (error) {
+            console.warn('AOS initialization failed:', error);
+        }
+
+        // Handle header visibility on scroll
+        const header = document.querySelector('.header');
+        let lastScrollY = window.pageYOffset;
+        
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.pageYOffset;
+            
+            // Show header after scrolling down 100px
+            if (currentScrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        // Get DOM elements with error handling
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinksArray = document.querySelectorAll('.nav-link');
+        const body = document.body;
+        const loading = document.querySelector('.loading');
+        const hero = document.querySelector('.hero');
+        const scrollProgress = document.querySelector('.scroll-progress-bar');
+        const backToTop = document.querySelector('.back-to-top');
+        const formSuccess = document.querySelector('.form-success');
+
+        // Lazy loading for images with error handling
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+                
+                if ('loading' in HTMLImageElement.prototype) {
+                    lazyImages.forEach(img => {
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                        }
+                    });
+                } else {
+                    const imageObserver = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const img = entry.target;
+                                if (img.dataset.src) {
+                                    img.src = img.dataset.src;
+                                }
+                                observer.unobserve(img);
+                            }
+                        });
+                    });
+
+                    lazyImages.forEach(img => imageObserver.observe(img));
+                }
+            } catch (error) {
+                console.warn('Lazy loading initialization failed:', error);
+            }
+        });
+
+        // Scroll down button
+        const scrollDown = document.querySelector('.scroll-down');
+        if (scrollDown) {
+            scrollDown.addEventListener('click', () => {
+                const contentSection = document.querySelector('.content-section');
+                if (contentSection) {
+                    contentSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+
+        // Form handling with error handling
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                try {
+                    // Show success message
+                    if (formSuccess) {
+                        formSuccess.classList.add('visible');
+                        
+                        // Reset form
+                        this.reset();
+                        
+                        // Hide success message after 3 seconds
+                        setTimeout(() => {
+                            formSuccess.classList.remove('visible');
+                        }, 3000);
+                    }
+                } catch (error) {
+                    console.warn('Form submission handling failed:', error);
+                }
+            });
+        }
+
+        // Update active navigation link based on scroll position
+        const sections = document.querySelectorAll('section[id]');
+
+        if (sections.length > 0) {
+            window.addEventListener('scroll', () => {
+                try {
+                    let current = '';
+                    
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        const sectionHeight = section.clientHeight;
+                        
+                        if (pageYOffset >= sectionTop - 150) {
+                            current = section.getAttribute('id');
+                        }
+                    });
+
+                    navLinksArray.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').slice(1) === current) {
+                            link.classList.add('active');
+                        }
+                    });
+                } catch (error) {
+                    console.warn('Navigation update failed:', error);
+                }
+            });
+        }
+
+        // Mobile Menu Toggle with error handling
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                try {
+                    menuToggle.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                    body.classList.toggle('menu-open');
+                } catch (error) {
+                    console.warn('Menu toggle failed:', error);
+                }
+            });
+        }
+
+        // Close menu when clicking a link
+        navLinksArray.forEach(link => {
+            link.addEventListener('click', (e) => {
+                try {
+                    e.preventDefault();
+                    if (menuToggle && navLinks) {
+                        menuToggle.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        body.classList.remove('menu-open');
+                    }
+
+                    const targetId = link.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const headerOffset = 100;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                } catch (error) {
+                    console.warn('Navigation link handling failed:', error);
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            try {
+                if (navLinks && navLinks.classList.contains('active') && !e.target.closest('.nav-container')) {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    body.classList.remove('menu-open');
+                }
+            } catch (error) {
+                console.warn('Menu close handling failed:', error);
+            }
+        });
+
+        // Add scroll progress indicator with error handling
+        if (scrollProgress) {
+            window.addEventListener('scroll', () => {
+                try {
+                    const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+                    const scrollPosition = window.pageYOffset;
+                    const scrollPercentage = (scrollPosition / totalScroll) * 100;
+                    scrollProgress.style.width = `${scrollPercentage}%`;
+                } catch (error) {
+                    console.warn('Scroll progress update failed:', error);
+                }
+            });
+        }
+
+        // Back to Top Button with error handling
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                try {
+                    if (window.pageYOffset > 500) {
+                        backToTop.classList.add('visible');
+                    } else {
+                        backToTop.classList.remove('visible');
+                    }
+                } catch (error) {
+                    console.warn('Back to top button update failed:', error);
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                try {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } catch (error) {
+                    console.warn('Back to top scroll failed:', error);
+                }
+            });
+        }
+
+        // Loading Screen with error handling
+        window.addEventListener('load', () => {
+            try {
+                if (loading && hero) {
+                    setTimeout(() => {
+                        loading.style.opacity = '0';
+                        setTimeout(() => {
+                            loading.style.display = 'none';
+                            hero.classList.add('loaded');
+                        }, 300);
+                    }, 500);
+                }
+            } catch (error) {
+                console.warn('Loading screen handling failed:', error);
+                // Ensure loading screen is hidden even if there's an error
+                if (loading) {
+                    loading.style.display = 'none';
+                }
+            }
+        });
+
+        // Article Animations with error handling
+        try {
+            const observeArticles = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            document.querySelectorAll('.article').forEach(article => {
+                observeArticles.observe(article);
+            });
+        } catch (error) {
+            console.warn('Article animations initialization failed:', error);
+        }
+
+        // Video Player Enhancement
+        const videoContainers = document.querySelectorAll('.article-video-container');
+        const players = [];
+
+        // Initialize YouTube Player API
+        function onYouTubeIframeAPIReady() {
+            videoContainers.forEach((container, index) => {
+                const iframe = container.querySelector('iframe');
+                const playButton = container.querySelector('.play-button');
+                
+                // Set the src attribute when initializing
+                if (iframe.dataset.src) {
+                    iframe.src = iframe.dataset.src;
+                }
+                
+                players[index] = new YT.Player(iframe, {
+                    events: {
+                        'onReady': (event) => {
+                            // Add click handler for play button once player is ready
+                            playButton.addEventListener('click', () => {
+                                container.classList.add('playing');
+                                event.target.playVideo();
+                                
+                                // Pause other videos
+                                videoContainers.forEach((otherContainer, otherIndex) => {
+                                    if (otherIndex !== index) {
+                                        otherContainer.classList.remove('playing');
+                                        if (players[otherIndex] && players[otherIndex].pauseVideo) {
+                                            players[otherIndex].pauseVideo();
+                                        }
+                                    }
+                                });
+                            });
+                        },
+                        'onStateChange': (event) => {
+                            if (event.data === YT.PlayerState.ENDED) {
+                                container.classList.remove('playing');
+                            }
+                        }
+                    }
+                });
+            });
+        }
+
+        // Load YouTube API
+        if (videoContainers.length > 0) {
+            const tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            const firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        }
+
+        // Image Grid and Lightbox functionality
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        const lightboxClose = lightbox.querySelector('.lightbox-close');
+        const gridItems = document.querySelectorAll('.image-grid-item');
+
+        gridItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Quotes Slider functionality
+        const quotesSlider = document.querySelector('.quotes-slider');
+        const quoteItems = document.querySelectorAll('.quote-item');
+        const quotePrev = document.querySelector('.quote-prev');
+        const quoteNext = document.querySelector('.quote-next');
+        const quoteDots = document.querySelector('.quote-dots');
+        let currentQuote = 0;
+
+        // Create dots for each quote
+        quoteItems.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('quote-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToQuote(index));
+            quoteDots.appendChild(dot);
+        });
+
+        function goToQuote(index) {
+            // Remove active class from current quote and dot
+            quoteItems[currentQuote].classList.remove('active');
+            document.querySelectorAll('.quote-dot')[currentQuote].classList.remove('active');
+            
+            // Update current quote index
+            currentQuote = index;
+            
+            // Add active class to new quote and dot
+            quoteItems[currentQuote].classList.add('active');
+            document.querySelectorAll('.quote-dot')[currentQuote].classList.add('active');
+        }
+
+        function nextQuote() {
+            goToQuote((currentQuote + 1) % quoteItems.length);
+        }
+
+        function prevQuote() {
+            goToQuote((currentQuote - 1 + quoteItems.length) % quoteItems.length);
+        }
+
+        // Add click handlers for navigation buttons
+        quotePrev.addEventListener('click', prevQuote);
+        quoteNext.addEventListener('click', nextQuote);
+
+        // Initialize first quote
+        goToQuote(0);
+
+        // Auto-advance quotes every 5 seconds
+        let quoteInterval = setInterval(nextQuote, 5000);
+
+        // Pause auto-advance when user interacts with navigation
+        [quotePrev, quoteNext, ...document.querySelectorAll('.quote-dot')].forEach(el => {
+            el.addEventListener('mouseenter', () => clearInterval(quoteInterval));
+            el.addEventListener('mouseleave', () => {
+                quoteInterval = setInterval(nextQuote, 5000);
+            });
+        });
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            // Construct email body
+            const body = `
+Naam: ${formData.get('name')}
+Email: ${formData.get('email')}
+Telefoon: ${formData.get('phone')}
+
+Bericht:
+${formData.get('message')}
+            `;
+            
+            // Create mailto link with form data
+            const mailtoLink = `mailto:info@hielkeboersma.com?subject=Contact formulier website&body=${encodeURIComponent(body)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            const formSuccess = document.querySelector('.form-success');
+            if (formSuccess) {
+                formSuccess.classList.add('visible');
+                setTimeout(() => {
+                    formSuccess.classList.remove('visible');
+                }, 3000);
+            }
+            
+            // Reset form
+            form.reset();
+            
+            return false;
+        }
+    </script>
+</body>
+</html> 

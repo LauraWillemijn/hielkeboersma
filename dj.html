@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hielke Boersma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #000000;
+            --light: #FFFFFF;
+            --gray: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--primary);
+            background: var(--light);
+        }
+
+        /* Skip to content link */
+        .skip-to-content {
+            position: absolute;
+            left: -9999px;
+        }
+
+        /* Header */
+        header {
+            padding: 2rem;
+            position: fixed;
+            width: 100%;
+            background: var(--light);
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Main content */
+        main {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 4rem;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            margin-top: 4rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        button {
+            background: var(--primary);
+            color: var(--light);
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+        }
+
+        /* Hero image section */
+        .hero-image {
+            width: 100%;
+            height: 80vh;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 4rem;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Content sections with images */
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin: 6rem 0;
+            align-items: center;
+        }
+
+        .content-section.image-right {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .content-section.image-left {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .image-container {
+            width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .text-container {
+            padding: 2rem 0;
+        }
+
+        .text-container h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .text-container p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-section,
+            .content-section.image-right,
+            .content-section.image-left {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-image {
+                height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-to-content">Ga naar de inhoud</a>
+
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">Hielke Boersma</a>
+            <nav>
+                <ul>
+                    <li><a href="dj.html">DJ</a></li>
+                    <li><a href="presentator.html">Presentator</a></li>
+                    <li><a href="voice-over.html">Voice-over</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero image section -->
+        <section class="hero-image">
+            <img src="path-to-dj-hero.jpg" alt="Hielke Boersma DJ">
+        </section>
+
+        <div class="content-wrapper">
+            <h1>DJ Hielke Boersma</h1>
+            
+            <div class="intro-text">
+                <p>Als DJ staat Hielke bekend om zijn energieke sets...</p>
+            </div>
+
+            <!-- Content section with image right -->
+            <section class="content-section image-right">
+                <div class="text-container">
+                    <h2>Club Events</h2>
+                    <p>Van intieme clubnachten tot grote festivals, Hielke weet precies hoe hij de dansvloer moet laten bewegen.</p>
+                </div>
+                <div class="image-container">
+                    <img src="path-to-club-image.jpg" alt="Hielke in de club">
+                </div>
+            </section>
+
+            <!-- Content section with image left -->
+            <section class="content-section image-left">
+                <div class="image-container">
+                    <img src="path-to-festival-image.jpg" alt="Hielke op festival">
+                </div>
+                <div class="text-container">
+                    <h2>Festivals</h2>
+                    <p>Met ervaring op de grootste festivals weet Hielke precies hoe hij duizenden mensen in beweging krijgt.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Hielke Boersma</p>
+    </footer>
+
+    <!-- Smooth scroll -->
+    <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Gallery lightbox
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Create lightbox
+            const lightbox = document.createElement('div');
+            lightbox.className = 'lightbox';
+            lightbox.innerHTML = `
+                <div class="lightbox-content">
+                    <img src="${item.querySelector('img').src}">
+                    <button class="close-lightbox">&times;</button>
+                </div>
+            `;
+            document.body.appendChild(lightbox);
+            
+            // Close lightbox
+            lightbox.querySelector('.close-lightbox').addEventListener('click', () => {
+                lightbox.remove();
+            });
+        });
+    });
+    </script>
+</body>
+</html> 

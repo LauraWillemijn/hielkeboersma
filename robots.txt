@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+
+# Sitemap
+Sitemap: https://hielkeboersma.nl/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10 
