@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <!-- Same head section as presentator.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice-over | Hielke Boersma</title>
+    <meta name="description" content="Hielke Boersma is een professionele voice-over artiest met jarenlange ervaring. Van commercials tot bedrijfsfilms - altijd met passie en professionaliteit.">
+    <meta name="keywords" content="Hielke Boersma, voice-over, radio, commercials, bedrijfsfilms, Utrecht">
+    <meta name="author" content="Hielke Boersma">
+    
+    <!-- Existing stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+    
     <style>
         /* Add to existing styles */
         .gallery {
@@ -53,17 +68,72 @@
             color: var(--primary);
             text-decoration: none;
         }
+
+        .featured-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .featured-image:hover img {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
-    <!-- Same header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="/" class="logo">Hielke Boersma</a>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/dj.html">DJ</a>
+                <a href="/presentator.html">Presentator</a>
+                <a href="/voice-over.html">Voice-over</a>
+            </nav>
+        </div>
+    </header>
 
     <main id="main">
         <h1>Voice-over Hielke Boersma</h1>
         
-        <div class="intro-text">
-            <p>Met zijn karakteristieke stem en jarenlange ervaring in de radio is Hielke de perfecte keuze voor voice-over werk. Van commercials tot bedrijfsfilms, hij geeft elke productie de juiste toon.</p>
+        <div class="featured-image">
+            <img src="images/hielke14.png" alt="Hielke Boersma in de studio" loading="lazy">
         </div>
+
+        <div class="intro-text">
+            <p>Ben je op zoek naar een ervaren voice-over?</p>
+        </div>
+
+        <section class="video-examples">
+            <h2>Video voorbeelden</h2>
+            <div class="video-grid">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div style="margin-top: 2rem; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <img src="images/hielke14.png" alt="Hielke Boersma in de studio" style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            </div>
+        </section>
+
+        <section class="gallery" style="margin: 4rem 0;">
+            <div class="gallery-item" style="width: 100%; max-width: 800px; margin: 0 auto;">
+                <img src="images/hielke14.png" alt="Hielke Boersma in de studio" style="width: 100%; height: auto; display: block;">
+            </div>
+        </section>
 
         <section class="audio-samples">
             <h2>Luister naar voorbeelden</h2>
@@ -88,6 +158,12 @@
             <h2>Referenties</h2>
             <!-- Similar testimonials structure -->
         </section>
+
+        <div class="client-list">
+            <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, Radio 538, RTV Noord, SBS 6, SLAM!.
+        </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html> 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hielke Boersma | DJ, Presentator & Voice-over Artiest</title>
+    <title>Hielke Boersma - DJ, presentator en voice-over</title>
     <meta name="description" content="Hielke Boersma is een professionele DJ, presentator en voice-over artiest met jarenlange ervaring. Van corporate events tot festivals - altijd met passie en professionaliteit.">
     <meta name="keywords" content="Hielke Boersma, DJ, presentator, voice-over, radio dj, SLAM!, Utrecht, evenementen, festivals">
     <meta name="author" content="Hielke Boersma">
@@ -32,7 +32,7 @@
             "addressLocality": "Utrecht",
             "addressCountry": "NL"
         },
-        "description": "Professioneel DJ, presentator en voice-over artiest met jarenlange ervaring in de entertainment industrie."
+        "description": "DJ, presentator en voice-over met jarenlange ervaring in de entertainmentindustrie. Van corporate events tot festivals - altijd met passie en professionaliteit."
     }
     </script>
 
@@ -40,14 +40,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hielkeboersma.nl/">
     <meta property="og:title" content="Hielke Boersma | DJ, Presentator & Voice-over Artiest">
-    <meta property="og:description" content="Professioneel DJ, presentator en voice-over artiest met jarenlange ervaring in de entertainment industrie.">
+    <meta property="og:description" content="DJ, presentator en voice-over met jarenlange ervaring in de entertainmentindustrie. Van corporate events tot festivals - altijd met passie en professionaliteit.">
     <meta property="og:image" content="https://hielkeboersma.nl/Images/hielke10.JPG">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://hielkeboersma.nl/">
     <meta property="twitter:title" content="Hielke Boersma | DJ, Presentator & Voice-over Artiest">
-    <meta property="twitter:description" content="Professioneel DJ, presentator en voice-over artiest met jarenlange ervaring in de entertainment industrie.">
+    <meta property="twitter:description" content="DJ, presentator en voice-over met jarenlange ervaring in de entertainmentindustrie. Van corporate events tot festivals - altijd met passie en professionaliteit.">
     <meta property="twitter:image" content="https://hielkeboersma.nl/Images/hielke10.JPG">
 
     <!-- Canonical URL -->
@@ -615,21 +615,142 @@
             }
 
             .quotes-section {
-                padding: 1rem;
-                margin: 0.5rem auto;
+                padding: 1rem 0;
+                margin: 1rem 0;
+                max-width: var(--max-width);
+                position: relative;
+                background: rgba(144, 116, 78, 0.03);
+                border-radius: 12px;
             }
-            
+
             .quotes-container {
-                padding: 0;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0.5rem 0;
             }
-            
+
             .quote-item {
-                padding: 1.2rem 1.5rem;
+                display: none;
+                padding: 1rem 2rem 1rem 2rem;  /* Updated padding to include right side */
+                text-align: left;
+                border-left: 4px solid #90744E;
             }
-            
+
+            .quote-item.active {
+                display: block;
+                animation: fadeIn 0.5s ease-in-out;
+            }
+
             .quote-text {
-                font-size: 1rem;
-                padding-left: 1.2rem;
+                font-size: 0.95rem;
+                line-height: 1.6;
+                color: #333333;
+                margin-bottom: 1rem;
+                position: relative;
+                padding-left: 2rem;
+                padding-right: 1rem;  /* Added padding-right */
+                font-weight: 500;
+            }
+
+            .quote-text::before {
+                content: '"';
+                position: absolute;
+                left: 0;
+                top: -0.5rem;
+                font-size: 3rem;
+                color: #90744E;
+                opacity: 0.7;
+                font-family: Georgia, serif;
+            }
+
+            .quote-author {
+                font-size: 0.9rem;
+                color: #90744E;
+                font-weight: 600;
+                text-align: right;
+                padding-right: 1rem;
+                font-style: italic;
+            }
+
+            .quote-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                margin-top: 1rem;
+                padding-left: 0;
+            }
+
+            .quote-nav button {
+                background: none;
+                border: none;
+                color: #90744E;
+                font-size: 1.1rem;
+                cursor: pointer;
+                padding: 0.8rem;
+                transition: all 0.3s ease;
+                opacity: 0.7;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(144, 116, 78, 0.1);
+            }
+
+            .quote-nav button:hover {
+                opacity: 1;
+                color: #90744E;
+                background: rgba(144, 116, 78, 0.2);
+                transform: translateY(-2px);
+            }
+
+            .quote-dots {
+                display: flex;
+                gap: 0.8rem;
+                margin: 0 1rem;
+            }
+
+            .quote-dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #D4C4B4;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                opacity: 0.4;
+            }
+
+            .quote-dot.active {
+                background: #90744E;
+                transform: scale(1.2);
+                opacity: 1;
+            }
+
+            @media (max-width: 768px) {
+                .quotes-section {
+                    padding: 0.75rem 0;
+                    margin: 0.75rem 0;
+                }
+                
+                .quote-item {
+                    padding: 0.75rem 1.5rem;  /* Updated padding for mobile */
+                }
+                
+                .quote-text {
+                    font-size: 0.9rem;
+                    padding-left: 1.5rem;
+                    padding-right: 0.75rem;  /* Added padding-right for mobile */
+                }
+                
+                .quote-author {
+                    font-size: 0.85rem;
+                }
+
+                .quote-nav {
+                    padding-left: 0;
+                }
             }
 
             /* Improve video grid for mobile */
@@ -729,6 +850,29 @@
             .hero-text {
                 font-size: 1.1rem;
                 max-width: 100%;
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .image-grid-item {
+                aspect-ratio: 16/9;
+            }
+
+            /* Add rules for section image grids */
+            .article-content > div[style*="display: flex"] > img:not(:first-child) {
+                display: none !important;
+            }
+
+            .article-content > div[style*="display: flex"] {
+                justify-content: center !important;
+            }
+
+            .article-content > div[style*="display: flex"] > img:first-child {
+                width: 100% !important;
+                max-width: 500px !important;
             }
         }
 
@@ -1189,7 +1333,7 @@
         /* Updated Image Grid Layout */
         .image-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;  /* Reduced from 2rem */
             margin-top: 1rem;
         }
@@ -1230,9 +1374,25 @@
                 aspect-ratio: 16/9;
             }
 
+            /* Add rules for section image grids */
+            .article-content > div[style*="display: flex"] > img:not(:first-child) {
+                display: none !important;
+            }
+
+            .article-content > div[style*="display: flex"] {
+                justify-content: center !important;
+            }
+
+            .article-content > div[style*="display: flex"] > img:first-child {
+                width: 100% !important;
+                max-width: 500px !important;
+            }
+
             .video-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+                margin: 1.5rem auto;
+                padding: 0 1rem;
             }
             
             .article-video-container {
@@ -1280,39 +1440,25 @@
 
         /* Updated Quotes Section styles */
         .quotes-section {
-            padding: 2rem;
-            margin: 2rem auto;
+            padding: 1rem 0;
+            margin: 1rem 0;
             max-width: var(--max-width);
             position: relative;
-            background: linear-gradient(135deg, rgba(144, 116, 78, 0.05) 0%, rgba(144, 116, 78, 0.02) 100%);
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(144, 116, 78, 0.1);
+            background: rgba(144, 116, 78, 0.03);
+            border-radius: 12px;
         }
 
         .quotes-container {
-            max-width: 1000px;
+            width: 100%;
             margin: 0 auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .quotes-slider {
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 1rem;
+            padding: 0.5rem 0;
         }
 
         .quote-item {
             display: none;
-            padding: 2rem;
+            padding: 1rem 2rem 1rem 2rem;  /* Updated padding to include right side */
             text-align: left;
-            background: rgba(144, 116, 78, 0.05);
-            border-radius: 12px;
             border-left: 4px solid #90744E;
-            box-shadow: 0 2px 8px rgba(144, 116, 78, 0.1);
-            transition: all 0.3s ease;
         }
 
         .quote-item.active {
@@ -1321,12 +1467,13 @@
         }
 
         .quote-text {
-            font-size: 1.2rem;
+            font-size: 0.95rem;
             line-height: 1.6;
             color: #333333;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             position: relative;
             padding-left: 2rem;
+            padding-right: 1rem;  /* Added padding-right */
             font-weight: 500;
         }
 
@@ -1342,7 +1489,7 @@
         }
 
         .quote-author {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #90744E;
             font-weight: 600;
             text-align: right;
@@ -1355,7 +1502,8 @@
             justify-content: center;
             align-items: center;
             gap: 1rem;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
+            padding-left: 0;
         }
 
         .quote-nav button {
@@ -1407,21 +1555,26 @@
 
         @media (max-width: 768px) {
             .quotes-section {
-                padding: 1.5rem;
-                margin: 1.5rem auto;
-            }
-            
-            .quotes-container {
-                padding: 1.5rem;
+                padding: 0.75rem 0;
+                margin: 0.75rem 0;
             }
             
             .quote-item {
-                padding: 1.5rem;
+                padding: 0.75rem 1.5rem;  /* Updated padding for mobile */
             }
             
             .quote-text {
-                font-size: 1.1rem;
+                font-size: 0.9rem;
                 padding-left: 1.5rem;
+                padding-right: 0.75rem;  /* Added padding-right for mobile */
+            }
+            
+            .quote-author {
+                font-size: 0.85rem;
+            }
+
+            .quote-nav {
+                padding-left: 0;
             }
         }
 
@@ -1500,13 +1653,50 @@
             padding: 1rem 1.5rem;
             margin: 1.5rem 0;
             border-radius: 0 8px 8px 0;
-            font-size: 1.1rem;
+            font-size: 0.9rem;  /* Reduced from 1.1rem to 0.9rem */
             color: #5A5A5A;
+            line-height: 1.6;
         }
 
         .client-list strong {
             color: #90744E;
             font-weight: 600;
+            display: block;  /* Make the title appear on its own line */
+            margin-bottom: 0.5rem;  /* Add some space between title and list */
+            font-size: 0.95rem;  /* Slightly larger than the list but still smaller than before */
+        }
+
+        /* Add styling for contact links */
+        .article-content a {
+            color: #90744E;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .article-content a:hover {
+            color: #7A6342;  /* Slightly darker shade for hover state */
+            text-decoration: underline;
+        }
+
+        /* Add styling for the review button */
+        .review-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            color: #90744E;
+            background: transparent;
+            border: 1px solid #90744E;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .review-button:hover {
+            background: rgba(144, 116, 78, 0.1);
+            transform: translateY(-1px);
+            opacity: 1;
         }
     </style>
 </head>
@@ -1547,9 +1737,9 @@
     <section class="hero">
         <img src="images/hielke10.JPG" alt="Hielke Boersma" class="hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1920x1080?text=Hielke+Boersma'">
             <div class="hero-content">
-            <h1 class="hero-title">Hielke Boersma</h1>
-            <p class="hero-text">
-                DJ, presentator en voice-over met jarenlange ervaring in de entertainment industrie. Van corporate events tot festivals - altijd met passie en professionaliteit.
+            <h1 class="hero-title" style="font-family: 'Poppins', sans-serif; color: #ffffff; text-align: left; font-weight: 700;">Hielke Boersma</h1>
+            <p class="hero-text" style="text-align: left;">
+                DJ, presentator en voice-over met jarenlange ervaring in de entertainmentindustrie. Van corporate events tot festivals - altijd met passie en professionaliteit.
             </p>
         </div>
         <div class="scroll-down">
@@ -1566,7 +1756,7 @@
                     <p>Naast zijn werk op de radio is Hielke een ervaren presentator, zowel op het podium als voor de camera. Of het nu gaat om een strak geregisseerde video, een bedrijfscongres of een energiek festivalpanel, hij schakelt moeiteloos tussen stijlen en formats. Zijn stijl? Prikkelend, to the point en altijd met een vleug humor.</p>
                     <p>Hielke is opgegroeid in Groningen, maar woont tegenwoordig in Utrecht. Daar werkt hij aan uiteenlopende mediaprojecten, van radioshows tot events. Als hij niet achter de microfoon staat, vind je hem achter de draaitafels, waar hij met zijn DJ-sets menig feest naar een hoger niveau tilt.</p>
                     <div class="client-list">
-                        <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, RTV Noord, SBS 6 en SLAM!.
+                        <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, Radio 538, RTV Noord, SBS 6, SLAM!. ⭐⭐⭐⭐⭐
                     </div>
                 </div>
                 <div class="article-video-container" style="max-width: 800px; margin: 0 auto;">
@@ -1584,11 +1774,16 @@
             <article class="article" id="dj">
                 <div class="article-content">
                     <h2>DJ Hielke Boersma</h2>
+                    <div style="display: flex; gap: 1rem; margin: 2rem 0; justify-content: space-between;">
+                        <img src="images/hielke12.png" alt="DJ Hielke Boersma" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <img src="images/hielke-dj-blue.jpg" alt="DJ Hielke in Action with Blue Lighting" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <img src="images/hielke4.jpeg" alt="DJ Hielke Boersma Performance" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    </div>
                     <p>Een DJ die de sfeer leest en opbouwt, in plaats van simpelweg een playlist afdraait. Hielke Boersma draait met gevoel en energie, en mixt moeiteloos alle genres en de juiste tracks aan elkaar. Of het nu gaat om een bedrijfsfeest, een bruiloft of een festival, hij brengt het publiek precies wat het nodig heeft.</p>
                     <p>Zijn achtergrond in radio maakt dat hij snapt hoe je een spanningsboog opbouwt en hoe je de energie in een zaal aanvoelt. Geen standaard set, maar een ervaring op maat.</p>
-                    <p>Weten wat Hielke voor jouw feest kan beteken? Neem vrijblijvend contact op!</p>
+                    <p>Weten wat Hielke voor jouw feest kan beteken? <a href="#contact">Neem vrijblijvend contact op!</a></p>
                     <div class="client-list">
-                        <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, RTV Noord, SBS 6, SLAM!.
+                        <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, Radio 538, RTV Noord, SBS 6, SLAM!. ⭐⭐⭐⭐⭐
                     </div>
                 
                     <!-- Move video grid here -->
@@ -1637,52 +1832,57 @@
                         <div class="quotes-container">
                             <div class="quotes-slider">
                                 <div class="quote-item active">
-                                    <p class="quote-text">"Enorm bedankt voor de geweldige avond. De complimenten stromen binnen, en die zijn allemaal voor jou. Van de jongste tot de oudste gast, iedereen was op de dansvloer te vinden en genoot zichtbaar."</p>
+                                    <p class="quote-text">"Enorm bedankt voor de geweldige avond afgelopen zaterdag. Ik heb de hele avond niet stilgestaan en hoewel ik je toen persoonlijk niet heb kunnen bedanken, wil ik je nu laten weten hoe fantastisch je aanvoelde wat wij, de 'jong van hart', geweldig vinden. De complimenten stromen binnen, en die zijn allemaal voor jou. Van de jongste tot de oudste gast, iedereen was op de dansvloer te vinden en genoot zichtbaar. We hebben ongelooflijk veel geluk gehad met jou als onze DJ. Je bent een ware professional!"</p>
                                     <p class="quote-author">- Marianne</p>
-                        </div>
+                                </div>
                                 <div class="quote-item">
                                     <p class="quote-text">"Heel erg bedankt voor de fantastische avond, we vonden het een eer dat je op deze bijzondere dag het feest hebt gemaakt."</p>
                                     <p class="quote-author">- Peter en Annelies</p>
-                    </div>
+                                </div>
                                 <div class="quote-item">
-                                    <p class="quote-text">"Knap hoe Hielke precies weet aan te voelen wat er nodig is om een goed feestje te bouwen. Van meezingers tot dansbare classics."</p>
+                                    <p class="quote-text">"Knap hoe Hielke precies weet aan te voelen wat er nodig is om een goed feestje te bouwen. Van meezingers tot dansbare classics. Hij voelde precies aan wat er nodig was op ons bedrijfsfeest. Iedereen was enthousiast en volgende keer boeken we hem graag weer!"</p>
                                     <p class="quote-author">- Linda</p>
-                    </div>
+                                </div>
                                 <div class="quote-item">
-                                    <p class="quote-text">"We hebben een fantastische avond gehad, mede dankzij de set van Hielke. Hele goede opbouw qua muziek, perfect passend bij het publiek."</p>
+                                    <p class="quote-text">"We hebben een fantastische avond gehad, mede dankzij de set van Hielke. Hele goede opbouw qua muziek, heel goed passend bij de avond en het diverse publiek dat er was."</p>
                                     <p class="quote-author">- Tim</p>
-                </div>
+                                </div>
                                 <div class="quote-item">
                                     <p class="quote-text">"Net zo leuk in de DJ booth als op de radio. Leuke muziekkeuze, fijne communicatie, professional."</p>
                                     <p class="quote-author">- Suzanne</p>
-            </div>
+                                </div>
+                                <div class="quote-item">
+                                    <p class="quote-text">"Hielke Boersma was de perfecte keuze voor ons bedrijfsfeest. Zijn mix van uptempo house en klassiekers bracht de dansvloer tot leven. Zijn professionele houding en interactie met het publiek maakten de avond compleet. Een DJ die zijn publiek kent en waardeert."</p>
+                                    <p class="quote-author">- Marcel de Groot</p>
+                                </div>
+                                <div class="quote-item">
+                                    <p class="quote-text">"Hielke was de DJ op ons studentenfeest en wat een feest was dat! Zijn muziek was precies wat we nodig hadden om te ontstressen na de examens. Zijn mix van house en herkenbare hits was perfect. Hij weet echt hoe hij een jong publiek moet entertainen!"</p>
+                                    <p class="quote-author">- Anouk Jansen</p>
+                                </div>
+                                <div class="quote-item">
+                                    <p class="quote-text">"Zijn trendy en frisse muziekkeuze was perfect afgestemd op ons hippe publiek. Zijn mixen waren innovatief en gaven een extra flair aan ons evenement. Leuk om te zien dat een 'bekendere' DJ ook nog bescheiden kan zijn."</p>
+                                    <p class="quote-author">- Femke Host</p>
+                                </div>
                             </div>
                             <div class="quote-nav">
                                 <button class="quote-prev"><i class="fas fa-chevron-left"></i></button>
                                 <div class="quote-dots"></div>
                                 <button class="quote-next"><i class="fas fa-chevron-right"></i></button>
                             </div>
+                            <div style="text-align: center;">
+                                <a href="mailto:boersmahielke@gmail.com?subject=Review voor Hielke Boersma&body=Hoi Hielke,%0D%0A%0D%0AHier mijn review over jouw optreden:%0D%0A%0D%0A" class="review-button">
+                                    <i class="fas fa-pen"></i> Review schrijven
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Featured image -->
-                    <div class="article-featured-image">
-                        <img src="images/hielke4.jpeg" alt="DJ Hielke Boersma in actie" onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x800?text=DJ+Hielke+in+Action'">
-                    </div>
-                    <div class="image-grid">
-                        <div class="image-grid-item">
-                            <img src="images/hielke3.avif" alt="DJ Performance" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x400?text=DJ+Event+1'">
-                        </div>
-                        <div class="image-grid-item">
-                            <img src="images/hielke 5.jpeg" alt="Festival DJ Set" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x400?text=DJ+Event+2'">
-                    </div>
-                </div>
             </div>
 
             <!-- Spotify Playlist -->
-            <div class="spotify-container" style="width: 100%; margin: 2rem 0; padding: 3rem 0; background: linear-gradient(to right, rgba(144, 116, 78, 0.05), rgba(144, 116, 78, 0.02));">
+            <div class="spotify-container" style="width: 100%; margin: 1rem 0; padding: 1rem 0;">
                 <div style="max-width: var(--max-width); margin: 0 auto; padding: 0 2rem;">
-                    <div style="background: rgba(255, 255, 255, 0.8); padding: 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div style="background: rgba(255, 255, 255, 0.8); padding: 1rem; border-radius: 12px;">
                         <iframe 
                             style="border-radius:8px" 
                             src="https://open.spotify.com/embed/playlist/7JamPvoVnG92CKg8JrUJ5j?utm_source=generator&theme=0" 
@@ -1701,6 +1901,16 @@
             <article class="article" id="presentator">
                 <div class="article-content">
                     <h2>Presentator</h2>
+                    <div style="display: flex; gap: 1rem; margin: 2rem 0; justify-content: space-between;">
+                        <img src="images/hielke1.avif" alt="Hielke Boersma als presentator" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <img src="images/hielke13.jpg" alt="Hielke Boersma als presentator" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <img src="images/hielke15.jpg" alt="Hielke Boersma als presentator" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    </div>
+                    <div style="display: flex; justify-content: center; margin: 2rem 0;">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DIJkwvSMmBT/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        </blockquote>
+                        <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
                     <h3>Op de radio</h3>
                     <p>Radio is waar het voor Hielke begon – en waar zijn hart nog steeds sneller van gaat kloppen. Als vaste stem van SLAM! brengt hij elke show met energie, humor en scherpte. Hielke spreekt de taal van zijn luisteraars, voelt precies aan wat er speelt en maakt van elk moment iets bijzonders. Hielke is een van de vaste presentatoren van Housuh in de Pauzuh, de SLAM! Mixmarathon en de SLAM! WKND MIX en heeft heeft meerdere shows in het weekend bij SLAM!. Daarnaast is hij als invaller regelmatig te horen bij 100%NL.</p>
                     
@@ -1710,10 +1920,10 @@
                     <h3>Video- en beeldpresentator</h3>
                     <p>Voor de camera is Hielke een authentieke en toegankelijke presentator. Hij brengt verhalen helder over en weet kijkers te boeien, of het nu gaat om een YouTube-serie, een bedrijfsfilm of een commercial. Zijn ervaring op radio, tv en podium maakt dat hij moeiteloos schakelt tussen verschillende formats en stijlen.</p>
                     
-                    <p>Weten wat Hielke voor jouw evenement of video productie kan beteken? Neem vrijblijvend contact op!</p>
+                    <p>Weten wat Hielke voor jouw evenement of video productie kan beteken? <a href="#contact">Neem vrijblijvend contact op!</a></p>
                     
                     <div class="client-list">
-                        <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, RTV Noord, SBS 6, SLAM!.
+                        <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, Radio 538, RTV Noord, SBS 6, SLAM!. ⭐⭐⭐⭐⭐
                     </div>
                 
                     <div class="video-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; max-width: 100%; margin: 2rem auto;">
@@ -1759,13 +1969,14 @@
             <article class="article" id="voice-over">
                 <div class="article-content">
                     <h2>Voice-over</h2>
+                    <img src="images/hielke14.png" alt="Hielke Boersma in de studio" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 2rem 0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     <p>Ben je op zoek naar een ervaren voice-over?</p>
                     <p>Zoek je een voice-over voor een radiocommercial, tv-commercial, webvideo, animatie, billboard, pre-roll, tv-programma, productvideo, uitlegvideo of iets anders?</p>
                     <p>Hielke Boersma heeft een stem die blijft hangen. Helder, authentiek en enthousiast – met de juiste tone-of-voice voor elk project. Dankzij zijn jarenlange radio-ervaring weet hij precies hoe hij luisteraars kan boeien en hoe een verhaal goed overkomt.</p>
                     <p>Of het nu gaat om een commercial, een documentaire of een bedrijfsfilm, zijn stem geeft de juiste lading. Hij weet hoe hij een script tot leven brengt en hoe hij met timing en intonatie impact maakt.</p>
-                    <p>Geïnteresseerd in de stem van Hielke voor jouw productie? Neem vrijblijvend contact op!</p>
+                    <p>Geïnteresseerd in de stem van Hielke voor jouw productie? <a href="#contact">Neem vrijblijvend contact op!</a></p>
                     <div class="client-list">
-                        <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, RTV Noord, SBS 6, SLAM!.
+                        <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, Radio 538, RTV Noord, SBS 6, SLAM!. ⭐⭐⭐⭐⭐
                     </div>
                 </div>
                 <div class="video-grid" style="grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
@@ -1795,14 +2006,14 @@
     </main>
 
     <section class="contact-section" id="contact">
-        <div class="contact-container">
+        <div class="contact-container" style="grid-template-columns: 1fr;">
             <div class="contact-info">
                 <h2>Contact</h2>
                 <p class="contact-description">Laat me weten wat ik voor je kan betekenen. Ik neem zo spoedig mogelijk contact met je op.</p>
                 <div class="contact-details">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@hielkeboersma.com">info@hielkeboersma.com</a>
+                        <a href="mailto:info@hielkeboersma.com?from=info@hielkeboersma.com">info@hielkeboersma.com</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -1810,27 +2021,8 @@
                     </div>
                 </div>
             </div>
-            <form class="contact-form" action="mailto:info@hielkeboersma.com" method="POST" enctype="text/plain" onsubmit="return handleSubmit(event)">
-                        <div class="form-group">
-                    <input type="text" name="name" class="form-input" placeholder="Naam" required>
-                        </div>
-                        <div class="form-group">
-                    <input type="email" name="email" class="form-input" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                    <input type="tel" name="phone" class="form-input" placeholder="Telefoonnummer" required>
-                        </div>
-                <div class="form-group message-group">
-                    <textarea name="message" class="form-input" placeholder="Bericht" rows="5" required></textarea>
-                        </div>
-                <div class="btn-container">
-                    <button type="submit" class="btn">
-                        <span>Versturen</span>
-                    </button>
-                    </div>
-            </form>
-            </div>
-        </section>
+        </div>
+    </section>
 
     <div class="social-links">
         <a href="https://www.linkedin.com/in/hielke-boersma-517aa134/" class="social-link" target="_blank" rel="noopener">
@@ -2264,43 +2456,6 @@
                 quoteInterval = setInterval(nextQuote, 5000);
             });
         });
-
-        function handleSubmit(event) {
-            event.preventDefault();
-            
-            const form = event.target;
-            const formData = new FormData(form);
-            
-            // Construct email body
-            const body = `
-Naam: ${formData.get('name')}
-Email: ${formData.get('email')}
-Telefoon: ${formData.get('phone')}
-
-Bericht:
-${formData.get('message')}
-            `;
-            
-            // Create mailto link with form data
-            const mailtoLink = `mailto:info@hielkeboersma.com?subject=Contact formulier website&body=${encodeURIComponent(body)}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            const formSuccess = document.querySelector('.form-success');
-            if (formSuccess) {
-                formSuccess.classList.add('visible');
-                setTimeout(() => {
-                    formSuccess.classList.remove('visible');
-                }, 3000);
-            }
-            
-            // Reset form
-            form.reset();
-            
-            return false;
-        }
     </script>
 </body>
 </html> 

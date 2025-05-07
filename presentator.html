@@ -1,20 +1,114 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <!-- Same head section as index.html with additional styles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentator | Hielke Boersma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
     <style>
-        /* Add to existing styles */
+        main {
+            padding-top: 100px; /* Ruimte voor de fixed header */
+        }
+        
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            display: block; /* Ensure proper display */
+        }
+
+        .content-text {
+            max-width: 800px;
+            line-height: 1.8;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #333;
+        }
+
+        .social-links {
+            position: fixed;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .social-links {
+                position: static;
+                flex-direction: row;
+                justify-content: center;
+                margin: 2rem 0;
+                transform: none;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Debug styling */
+        img[src*="hielke13"] {
+            border: 2px solid red; /* This will help us see if the image is being rendered */
+        }
+
+        /* Gallery styling */
         .gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
-            margin: 3rem 0;
+            margin: 4rem 0;
         }
 
         .gallery-item {
             position: relative;
+            width: 100%;
             aspect-ratio: 16/9;
             overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .gallery-item img {
@@ -28,71 +122,76 @@
             transform: scale(1.05);
         }
 
-        .testimonials {
-            margin: 4rem 0;
-        }
-
-        .testimonial {
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-left: 2px solid var(--primary);
-        }
-
-        .testimonial-author {
-            font-weight: 500;
-            margin-top: 1rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .social-links a {
-            color: var(--primary);
-            text-decoration: none;
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Same header as index.html -->
-
-    <main id="main">
-        <h1>Presentator Hielke Boersma</h1>
-        
-        <div class="intro-text">
-            <p>Als presentator bij SLAM! heeft Hielke bewezen dat hij het publiek kan boeien en vermaken. Met zijn natuurlijke charisma en professionele aanpak is hij de ideale host voor elk evenement.</p>
+    <header class="header">
+        <div class="nav-container">
+            <a href="/" class="logo">Hielke Boersma</a>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/dj.html">DJ</a>
+                <a href="/presentator.html">Presentator</a>
+                <a href="/voice-over.html">Voice-over</a>
+            </nav>
         </div>
+    </header>
 
-        <section class="gallery">
-            <div class="gallery-item">
-                <img src="images/presenting1.jpg" alt="Hielke presenting at SLAM!">
-            </div>
-            <div class="gallery-item">
-                <img src="images/presenting2.jpg" alt="Hielke at an event">
-            </div>
-        </section>
+    <main>
+        <div class="content-container">
+            <h1>Presentator</h1>
+            
+            <img src="images/hielke13.jpg" alt="Hielke Boersma als presentator" class="main-image">
 
-        <section class="testimonials">
-            <h2>Wat anderen zeggen</h2>
-            <div class="testimonial">
-                <p>"Hielke's energie is aanstekelijk. Hij weet precies hoe hij de zaal moet lezen en meekrijgt."</p>
-                <div class="testimonial-author">- SLAM! Radio</div>
-            </div>
-            <div class="testimonial">
-                <p>"Professioneel, energiek en altijd goed voorbereid. Hielke is een aanwinst voor elk evenement."</p>
-                <div class="testimonial-author">- Festival Organizer</div>
-            </div>
-        </section>
+            <section class="gallery">
+                <div class="gallery-item">
+                    <img src="images/hielke13.jpg" alt="Hielke Boersma presenteert">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/hielke14.png" alt="Hielke Boersma in actie">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/hielke12.png" alt="Hielke Boersma op het podium">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/hielke11.jpg" alt="Hielke Boersma tijdens een event">
+                </div>
+            </section>
 
-        <section class="social-links">
-            <h2>Volg Hielke</h2>
-            <a href="https://instagram.com/hielkeboersma" target="_blank">Instagram</a>
-            <a href="https://linkedin.com/in/hielkeboersma" target="_blank">LinkedIn</a>
-        </section>
+            <h2 class="section-title">Op de radio</h2>
+            <div class="content-text">
+                <p>Radio is waar het voor Hielke begon – en waar zijn hart nog steeds sneller van gaat kloppen. Als vaste stem van SLAM! brengt hij elke show met energie, humor en scherpte. Hielke spreekt de taal van zijn luisteraars, voelt precies aan wat er speelt en maakt van elk moment iets bijzonders. Hielke is een van de vaste presentatoren van Housuh in de Pauzuh, de SLAM! Mixmarathon en de SLAM! WKND MIX en heeft heeft meerdere shows in het weekend bij SLAM!. Daarnaast is hij als invaller regelmatig te horen bij 100%NL.</p>
+            </div>
+
+            <div class="client-list">
+                <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, Radio 538, RTV Noord, SBS 6, SLAM!.
+            </div>
+        </div>
     </main>
 
-    <!-- Same footer as index.html -->
+    <div class="social-links">
+        <a href="https://linkedin.com/in/hielkeboersma" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com/hielkeboersma" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@hielkeboersma" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <!-- Debug script to check if image loads -->
+    <script>
+        window.onload = function() {
+            const img = document.querySelector('.main-image');
+            console.log('Image load status:', img.complete);
+            console.log('Image natural size:', img.naturalWidth, 'x', img.naturalHeight);
+            img.onerror = function() {
+                console.error('Image failed to load');
+            };
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 </body>
 </html> 
