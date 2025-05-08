@@ -4,8 +4,21 @@ Disallow: /private/
 Disallow: /admin/
 Disallow: /temp/
 
-# Sitemap
+# Allow important bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 10
+
+# Sitemaps
 Sitemap: https://hielkeboersma.nl/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 10 
+# Host
+Host: https://hielkeboersma.nl 

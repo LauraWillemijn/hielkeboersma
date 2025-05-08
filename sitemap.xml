@@ -1,39 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- Homepage -->
     <url>
         <loc>https://hielkeboersma.nl/</loc>
         <lastmod>2024-03-20</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
+
+    <!-- Main sections -->
     <url>
         <loc>https://hielkeboersma.nl/#over-hielke</loc>
         <lastmod>2024-03-20</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
+
     <url>
         <loc>https://hielkeboersma.nl/#dj</loc>
         <lastmod>2024-03-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://hielkeboersma.nl/images/hielke12.png</image:loc>
+            <image:title>DJ Hielke Boersma</image:title>
+        </image:image>
     </url>
+
     <url>
         <loc>https://hielkeboersma.nl/#presentator</loc>
         <lastmod>2024-03-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://hielkeboersma.nl/images/hielke1.avif</image:loc>
+            <image:title>Hielke Boersma als presentator</image:title>
+        </image:image>
     </url>
+
     <url>
         <loc>https://hielkeboersma.nl/#voice-over</loc>
         <lastmod>2024-03-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://hielkeboersma.nl/images/hielke14.png</image:loc>
+            <image:title>Hielke Boersma Voice-over</image:title>
+        </image:image>
     </url>
+
+    <!-- Contact -->
     <url>
         <loc>https://hielkeboersma.nl/#contact</loc>
         <lastmod>2024-03-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <!-- FAQ -->
+    <url>
+        <loc>https://hielkeboersma.nl/#faq</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 </urlset> 

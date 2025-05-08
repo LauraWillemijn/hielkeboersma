@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
     <title>Hielke Boersma - DJ, presentator en voice-over</title>
-    <meta name="description" content="Hielke Boersma is een professionele DJ, presentator en voice-over artiest met jarenlange ervaring. Van corporate events tot festivals - altijd met passie en professionaliteit.">
-    <meta name="keywords" content="Hielke Boersma, DJ, presentator, voice-over, radio dj, SLAM!, Utrecht, evenementen, festivals">
+    <meta name="description" content="Hielke Boersma is een professionele DJ, presentator en voice-over artiest met jarenlange ervaring bij SLAM! en Radio 538. Specialist in bedrijfsevents, festivals en commercials.">
+    <meta name="keywords" content="Hielke Boersma, DJ, presentator, voice-over, radio dj, SLAM!, Radio 538, Utrecht, evenementen, festivals, bedrijfsfeesten, commercials, voice-over artiest">
     <meta name="author" content="Hielke Boersma">
     <meta name="robots" content="index, follow">
     
@@ -23,16 +33,130 @@
             "https://www.tiktok.com/@hielkeboersma"
         ],
         "jobTitle": "DJ, Presentator & Voice-over Artiest",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "SLAM!"
-        },
+        "worksFor": [
+            {
+                "@type": "Organization",
+                "name": "SLAM!"
+            },
+            {
+                "@type": "Organization",
+                "name": "Radio 538"
+            }
+        ],
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Utrecht",
             "addressCountry": "NL"
         },
-        "description": "DJ, presentator en voice-over met jarenlange ervaring in de entertainmentindustrie. Van corporate events tot festivals - altijd met passie en professionaliteit."
+        "description": "DJ, presentator en voice-over met jarenlange ervaring in de entertainmentindustrie. Van corporate events tot festivals - altijd met passie en professionaliteit.",
+        "hasOccupation": [
+            {
+                "@type": "Occupation",
+                "name": "DJ",
+                "description": "Professionele DJ voor bedrijfsfeesten, festivals en evenementen"
+            },
+            {
+                "@type": "Occupation",
+                "name": "Presentator",
+                "description": "Radio presentator bij SLAM! en event host"
+            },
+            {
+                "@type": "Occupation",
+                "name": "Voice-over Artiest",
+                "description": "Voice-over voor commercials, bedrijfsfilms en andere producties"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Services Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "Service",
+                "position": 1,
+                "name": "DJ Services",
+                "description": "Professionele DJ diensten voor bedrijfsfeesten, bruiloften en festivals",
+                "provider": {
+                    "@type": "Person",
+                    "name": "Hielke Boersma"
+                }
+            },
+            {
+                "@type": "Service",
+                "position": 2,
+                "name": "Presentatie Services",
+                "description": "Event hosting, radio presentatie en MC services",
+                "provider": {
+                    "@type": "Person",
+                    "name": "Hielke Boersma"
+                }
+            },
+            {
+                "@type": "Service",
+                "position": 3,
+                "name": "Voice-over Services",
+                "description": "Professionele voice-over voor commercials, bedrijfsfilms en andere producties",
+                "provider": {
+                    "@type": "Person",
+                    "name": "Hielke Boersma"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Reviews Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AggregateRating",
+        "itemReviewed": {
+            "@type": "Person",
+            "name": "Hielke Boersma"
+        },
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "8",
+        "reviewCount": "8"
+    }
+    </script>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Wat voor soort evenementen verzorgt Hielke Boersma als DJ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hielke Boersma verzorgt als DJ diverse evenementen, waaronder bedrijfsfeesten, bruiloften, festivals en corporate events. Hij past zijn muziekstijl aan op het publiek en het type evenement."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Waar is Hielke Boersma als radio-DJ te horen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hielke is een van de vaste stemmen van SLAM!, waar hij verschillende shows presenteert waaronder Housuh in de Pauzuh en de SLAM! Mixmarathon. Daarnaast is hij regelmatig te horen bij 100%NL."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wat voor voice-over werk doet Hielke Boersma?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hielke verzorgt voice-overs voor diverse producties, waaronder radiocommercials, tv-commercials, webvideo's, animaties, billboards, pre-rolls, tv-programma's, productvideo's en uitlegvideo's."
+                }
+            }
+        ]
     }
     </script>
 
@@ -1879,9 +2003,9 @@
                 </div>
 
                 <!-- Spotify Playlist -->
-                <div class="spotify-container" style="width: 100%; margin: 1rem 0; padding: 1rem 0;">
+                <div class="spotify-container" style="width: 100%; margin: 0.5rem 0; padding: 0;">
                     <div style="max-width: var(--max-width); margin: 0 auto; padding: 0 2rem;">
-                        <div style="background: rgba(255, 255, 255, 0.8); padding: 1rem; border-radius: 12px;">
+                        <div style="background: rgba(255, 255, 255, 0.8); padding: 0.5rem; border-radius: 12px;">
                             <iframe 
                                 style="border-radius:8px" 
                                 src="https://open.spotify.com/embed/playlist/7JamPvoVnG92CKg8JrUJ5j?utm_source=generator&theme=0" 
@@ -2005,6 +2129,35 @@
             </article>
         </div>
     </main>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" style="background: #f8f9fa; padding: 4rem 0; margin: 2rem 0;">
+        <div style="max-width: var(--max-width); margin: 0 auto; padding: 0 2rem;">
+            <h2 style="font-size: 2.4rem; margin-bottom: 2rem; color: #5A5A5A;">Veelgestelde vragen</h2>
+            
+            <div class="faq-grid" style="display: grid; gap: 1.5rem;">
+                <div class="faq-item" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: #90744E;">Wat voor soort evenementen verzorgt Hielke Boersma als DJ?</h3>
+                    <p style="color: var(--secondary); line-height: 1.6;">Hielke Boersma verzorgt als DJ diverse evenementen, waaronder bedrijfsfeesten, bruiloften, festivals en corporate events. Hij past zijn muziekstijl aan op het publiek en het type evenement.</p>
+                </div>
+                
+                <div class="faq-item" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: #90744E;">Waar is Hielke Boersma als radio-DJ te horen?</h3>
+                    <p style="color: var(--secondary); line-height: 1.6;">Hielke is een van de vaste stemmen van SLAM!, waar hij verschillende shows presenteert waaronder Housuh in de Pauzuh en de SLAM! Mixmarathon. Daarnaast is hij regelmatig te horen bij 100%NL.</p>
+                </div>
+                
+                <div class="faq-item" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: #90744E;">Wat voor voice-over werk doet Hielke Boersma?</h3>
+                    <p style="color: var(--secondary); line-height: 1.6;">Hielke verzorgt voice-overs voor diverse producties, waaronder radiocommercials, tv-commercials, webvideo's, animaties, billboards, pre-rolls, tv-programma's, productvideo's en uitlegvideo's.</p>
+                </div>
+                
+                <div class="faq-item" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: #90744E;">Hoe kan ik Hielke Boersma boeken?</h3>
+                    <p style="color: var(--secondary); line-height: 1.6;">Je kunt Hielke eenvoudig boeken door contact op te nemen via het contactformulier op deze website of door een e-mail te sturen naar info@hielkeboersma.com. Hij neemt dan zo snel mogelijk contact met je op om de mogelijkheden te bespreken.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="contact-section" id="contact">
         <div class="contact-container" style="grid-template-columns: 1fr;">
