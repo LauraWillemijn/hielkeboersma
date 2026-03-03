@@ -599,28 +599,40 @@
             right: 0;
         }
 
-        .hero-image {
+        .hero-slider {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 40%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             z-index: 1;
-            transform: scale(1.0);
-            transition: transform 6s cubic-bezier(0.0, 0, 0.2, 1);
-            margin: 0;
-            padding: 0;
         }
 
-        .hero.loaded .hero-image {
-            transform: scale(1.15);
+        .hero-slide {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            overflow: hidden;
         }
+
+        .hero-slide.slide-right { transform: translateX(100%); }
+        .hero-slide.slide-left  { transform: translateX(-100%); }
+        .hero-slide.slide-transition {
+            transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hero-slide img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+        }
+
+        #hero-slide-1 img { object-position: center 65%; }
+        #hero-slide-2 img { object-position: center 65%; }
 
         .hero-content {
             position: relative;
-            z-index: 2;
+            z-index: 3;
             max-width: var(--max-width);
             margin: 0 auto;
             padding: 0 2rem;
@@ -644,7 +656,7 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
-            z-index: 1;
+            z-index: 2;
         }
 
         .hero-title {
@@ -1978,7 +1990,17 @@
     </header>
 
     <section class="hero">
-        <img src="images/hielke-hero.jpg" alt="Hielke Boersma" class="hero-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/1920x1080?text=Hielke+Boersma'">
+        <div class="hero-slider">
+            <div class="hero-slide" id="hero-slide-0">
+                <img src="images/hielke-hero.jpg" alt="Hielke Boersma">
+            </div>
+            <div class="hero-slide slide-right" id="hero-slide-1">
+                <img src="images/hielke-hero-2.jpg" alt="Hielke Boersma">
+            </div>
+            <div class="hero-slide slide-right" id="hero-slide-2">
+                <img src="images/hielke-hero-3.jpg" alt="Hielke Boersma">
+            </div>
+        </div>
             <div class="hero-content">
             <h1 class="hero-title" style="font-family: 'Poppins', sans-serif; color: #ffffff; text-align: left; font-weight: 700;">Hielke Boersma</h1>
             <p class="hero-text" style="text-align: left;">
@@ -2613,6 +2635,57 @@
                 }
             }
         });
+
+        // Hero Slider
+        (function() {
+            const slides = document.querySelectorAll('.hero-slide');
+            let current = 0;
+            const total = slides.length;
+
+            function kenBurns(idx) {
+                const img = slides[idx].querySelector('img');
+                if (!img) return;
+                img.style.transition = 'none';
+                img.style.transform = 'scale(1.0)';
+                img.offsetHeight; // force reflow
+                img.style.transition = 'transform 6s cubic-bezier(0.0, 0, 0.2, 1)';
+                img.style.transform = 'scale(1.15)';
+            }
+
+            function goNext() {
+                const prev = current;
+                current = (current + 1) % total;
+
+                // Position incoming slide to the right without transition
+                slides[current].classList.remove('slide-left', 'slide-transition');
+                slides[current].classList.add('slide-right');
+                slides[current].offsetHeight; // force reflow
+
+                // Animate both slides
+                slides[prev].classList.add('slide-transition');
+                slides[current].classList.add('slide-transition');
+
+                requestAnimationFrame(() => {
+                    slides[prev].classList.add('slide-left');
+                    slides[prev].classList.remove('slide-right');
+                    slides[current].classList.remove('slide-right');
+                });
+
+                // Start Ken Burns on new slide
+                setTimeout(() => kenBurns(current), 50);
+
+                // Clean up old slide after transition
+                setTimeout(() => {
+                    slides[prev].classList.remove('slide-transition');
+                }, 950);
+            }
+
+            // Start Ken Burns on first slide
+            kenBurns(0);
+
+            // Auto-cycle every 5 seconds
+            setInterval(goNext, 5000);
+        })();
 
         // Article Animations with error handling
         try {
