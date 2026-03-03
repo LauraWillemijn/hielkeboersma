@@ -302,13 +302,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Existing stylesheets -->
+    <!-- Preload critical resources -->
+    <link rel="preload" as="image" href="images/hielke-hero.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Fonts: non-blocking via media trick -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome: non-blocking -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    <!-- AOS: non-blocking -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="styles.css">
     
     <style>
@@ -1995,10 +1999,10 @@
                 <img src="images/hielke-hero.jpg" alt="Hielke Boersma">
             </div>
             <div class="hero-slide slide-right" id="hero-slide-1">
-                <img src="images/hielke-hero-2.jpg" alt="Hielke Boersma">
+                <img loading="lazy" src="images/hielke-hero-2.jpg" alt="Hielke Boersma">
             </div>
             <div class="hero-slide slide-right" id="hero-slide-2">
-                <img src="images/hielke-hero-3.jpg" alt="Hielke Boersma">
+                <img loading="lazy" src="images/hielke-hero-3.jpg" alt="Hielke Boersma">
             </div>
         </div>
             <div class="hero-content">
@@ -2027,7 +2031,7 @@
                             </div>
                         </div>
                         <div class="over-hielke-photo" style="flex-shrink: 0; width: 340px;">
-                            <img src="images/hielke-over.jpg" alt="Hielke Boersma" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); display: block;">
+                            <img loading="lazy" src="images/hielke-over.jpg" alt="Hielke Boersma" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); display: block;">
                         </div>
                     </div>
                 </div>
@@ -2047,9 +2051,9 @@
                 <div class="article-content">
                     <h2>DJ Hielke Boersma</h2>
                     <div style="display: flex; gap: 1rem; margin: 2rem 0; justify-content: space-between;">
-                        <img src="images/hielke12.png" alt="DJ Hielke Boersma" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                        <img src="images/hielke-dj-blue.jpg" alt="DJ Hielke in Action with Blue Lighting" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                        <img src="images/hielke4.jpeg" alt="DJ Hielke Boersma Performance" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <img loading="lazy" src="images/hielke12.jpg" alt="DJ Hielke Boersma" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <img loading="lazy" src="images/hielke-dj-blue.jpg" alt="DJ Hielke in Action with Blue Lighting" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <img loading="lazy" src="images/hielke4.jpeg" alt="DJ Hielke Boersma Performance" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     </div>
                     <p>Een DJ die de sfeer leest en opbouwt, in plaats van simpelweg een playlist afdraait. Hielke Boersma draait met gevoel en energie, en mixt moeiteloos alle genres en de juiste tracks aan elkaar. Of het nu gaat om een bedrijfsfeest, een bruiloft of een festival, hij brengt het publiek precies wat het nodig heeft.</p>
                     <p>Zijn achtergrond in radio maakt dat hij snapt hoe je een spanningsboog opbouwt en hoe je de energie in een zaal aanvoelt. Geen standaard set, maar een ervaring op maat.</p>
@@ -2173,9 +2177,9 @@
                 <div class="article-content">
                     <h2>Presentator</h2>
                     <div style="display: flex; gap: 1rem; margin: 2rem 0; justify-content: space-between;">
-                        <img src="images/hielke1.avif" alt="Hielke Boersma als presentator" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                        <img src="images/hielkenieuwade.jpg" alt="Hielke Boersma als presentator" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                        <img src="images/hielke15.jpg" alt="Hielke Boersma als presentator" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <img loading="lazy" src="images/hielke1.avif" alt="Hielke Boersma als presentator" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <img loading="lazy" src="images/hielke13.jpg" alt="Hielke Boersma als presentator" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <img loading="lazy" src="images/hielke15.jpg" alt="Hielke Boersma als presentator" style="width: 32%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     </div>
 
                     <h3>Op de radio</h3>
@@ -2199,20 +2203,8 @@
                         <strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, Radio 538, RTV Noord, SBS 6, SLAM!. ⭐⭐⭐⭐⭐
                     </div>
 
-                    <div class="video-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 100%; margin: 2rem auto;">
+                    <div class="video-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; max-width: 100%; margin: 2rem auto;">
                         <!-- First video -->
-                        <div class="article-video-container" style="margin: 0; padding-bottom: 65%;">
-                            <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/mIwBKIRZY2Q/maxresdefault.jpg')"></div>
-                            <div class="play-button"></div>
-                            <iframe
-                                src="https://www.youtube.com/embed/mIwBKIRZY2Q?enablejsapi=1&rel=0&modestbranding=1&playsinline=1"
-                                title="Hielke Boersma Video"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-
-                        <!-- Second video -->
                         <div class="article-video-container" style="margin: 0; padding-bottom: 65%;">
                             <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/0s97vTdy0dY/maxresdefault.jpg')"></div>
                             <div class="play-button"></div>
@@ -2224,7 +2216,7 @@
                             </iframe>
                         </div>
 
-                        <!-- Third video -->
+                        <!-- Second video -->
                         <div class="article-video-container" style="margin: 0; padding-bottom: 65%;">
                             <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/6hfunEugxMw/maxresdefault.jpg')"></div>
                             <div class="play-button"></div>
@@ -2236,7 +2228,7 @@
                             </iframe>
                         </div>
 
-                        <!-- Fourth video -->
+                        <!-- Third video -->
                         <div class="article-video-container" style="margin: 0; padding-bottom: 65%;">
                             <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/CHUDq9uHAnM/maxresdefault.jpg')"></div>
                             <div class="play-button"></div>
@@ -2254,7 +2246,7 @@
             <article class="article" id="voice-over">
                 <div class="article-content">
                     <h2>Voice-over</h2>
-                    <img src="images/hielke14.png" alt="Hielke Boersma in de studio" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 2rem 0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <img loading="lazy" src="images/hielke14.jpg" alt="Hielke Boersma in de studio" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 2rem 0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     <p>Ben je op zoek naar een ervaren voice-over?</p>
                     <p>Zoek je een voice-over voor een radiocommercial, tv-commercial, webvideo, animatie, billboard, pre-roll, tv-programma, productvideo, uitlegvideo of iets anders?</p>
                     <p>Hielke Boersma heeft een stem die blijft hangen. Helder, authentiek en enthousiast – met de juiste tone-of-voice voor elk project. Dankzij zijn jarenlange radio-ervaring weet hij precies hoe hij luisteraars kan boeien en hoe een verhaal goed overkomt.</p>
@@ -2384,7 +2376,7 @@
         <img src="" alt="Enlarged Image">
             </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         // Initialize AOS with error handling
         try {
