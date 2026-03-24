@@ -25,10 +25,12 @@
     {
         "@context": "https://schema.org",
         "@type": "Person",
+        "@id": "https://hielkeboersma.nl/#hielke-boersma",
         "name": "Hielke Boersma",
         "url": "https://hielkeboersma.nl",
         "image": "https://hielkeboersma.nl/images/hielke-hero.jpg",
         "email": "info@hielkeboersma.com",
+        "telephone": "+31651969025",
         "sameAs": [
             "https://www.linkedin.com/in/hielke-boersma-517aa134/",
             "https://www.instagram.com/hielkeboersma/",
@@ -77,9 +79,11 @@
     {
         "@context": "https://schema.org",
         "@type": ["LocalBusiness", "EntertainmentBusiness"],
+        "@id": "https://hielkeboersma.nl/#business",
         "name": "Hielke Boersma – DJ & Presentator",
         "description": "Hielke Boersma is een professionele DJ en presentator gevestigd in Utrecht. Bekend van SLAM! radio. Beschikbaar als DJ op feest, bedrijfsfeest of bruiloft in Utrecht en door heel Nederland. Ook beschikbaar als dagvoorzitter en voice-over artiest.",
         "url": "https://hielkeboersma.nl",
+        "telephone": "+31651969025",
         "email": "info@hielkeboersma.com",
         "image": "https://hielkeboersma.nl/images/hielke-hero.jpg",
         "address": {
@@ -139,6 +143,7 @@
         },
         "contactPoint": {
             "@type": "ContactPoint",
+            "telephone": "+31651969025",
             "email": "info@hielkeboersma.com",
             "contactType": "booking",
             "availableLanguage": ["Dutch", "English"]
@@ -163,9 +168,11 @@
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
+        "@id": "https://hielkeboersma.nl/#webpage",
         "name": "Hielke Boersma | SLAM DJ · Dagvoorzitter · Presentator · Voice-over Utrecht",
         "url": "https://hielkeboersma.nl",
         "description": "Hielke Boersma is een professionele DJ in Utrecht, bekend van SLAM!. Boek hem als DJ op feest, als dagvoorzitter of voice-over artiest.",
+        "dateModified": "2026-03-23",
         "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": [".hero-text", ".faq-item p", "#over-hielke p"]
@@ -272,6 +279,22 @@
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Je kunt Hielke Boersma boeken door contact op te nemen via info@hielkeboersma.com of het contactformulier op hielkeboersma.nl. Hij is beschikbaar als DJ, dagvoorzitter, presentator en voice-over artiest."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wat zijn de contactgegevens van Hielke Boersma?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hielke Boersma is bereikbaar via e-mail: info@hielkeboersma.com, telefonisch: 06 519 690 25, of via het contactformulier op hielkeboersma.nl. Hij is gevestigd in Utrecht."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wat kost het om Hielke Boersma te boeken als DJ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "De prijs voor het boeken van DJ Hielke Boersma is afhankelijk van het type evenement, de duur en de locatie. Neem contact op via info@hielkeboersma.com of bel 06 519 690 25 voor een offerte op maat."
                 }
             }
         ]
@@ -2260,8 +2283,8 @@
         </div>
     </main>
 
-    <!-- FAQ Section (visueel verborgen, JSON-LD schema's in <head> blijven actief voor SEO/GEO) -->
-    <section class="faq-section" style="display: none;">
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq" style="padding: 5rem 0; background: #F8F6F2;">
         <div style="max-width: var(--max-width); margin: 0 auto; padding: 0 2rem;">
             <h2 style="font-size: 2.4rem; margin-bottom: 2rem; color: #5A5A5A;">Veelgestelde vragen</h2>
             
@@ -2304,6 +2327,16 @@
                 <div class="faq-item" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
                     <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: #90744E;">Wat voor voice-over werk doet Hielke Boersma?</h3>
                     <p style="color: var(--secondary); line-height: 1.6;">Hielke verzorgt voice-overs voor radiocommercials, tv-commercials, webvideo's, animaties, billboards, pre-rolls, productvideo's en uitlegvideo's.</p>
+                </div>
+
+                <div class="faq-item" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: #90744E;">Wat zijn de contactgegevens van Hielke Boersma?</h3>
+                    <p style="color: var(--secondary); line-height: 1.6;">Hielke Boersma is bereikbaar via e-mail: <a href="mailto:info@hielkeboersma.com" style="color:#90744E;">info@hielkeboersma.com</a>, telefonisch: <a href="tel:+31651969025" style="color:#90744E;">06 519 690 25</a>, of via het contactformulier op deze pagina. Hij is gevestigd in Utrecht.</p>
+                </div>
+
+                <div class="faq-item" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: #90744E;">Wat kost het om Hielke Boersma te boeken?</h3>
+                    <p style="color: var(--secondary); line-height: 1.6;">De prijs is afhankelijk van het type evenement, de duur en de locatie. Neem contact op via <a href="mailto:info@hielkeboersma.com" style="color:#90744E;">info@hielkeboersma.com</a> of bel <a href="tel:+31651969025" style="color:#90744E;">06 519 690 25</a> voor een offerte op maat.</p>
                 </div>
             </div>
         </div>
