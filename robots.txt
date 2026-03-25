@@ -18,7 +18,7 @@ Allow: /
 Crawl-delay: 10
 
 # Sitemaps
-Sitemap: https://hielkeboersma.nl/sitemap.xml
+Sitemap: https://hielkeboersma.com/sitemap.xml
 
 # Host
-Host: https://hielkeboersma.nl 
+Host: https://hielkeboersma.com 
