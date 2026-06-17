@@ -46,14 +46,14 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:100;height:68px;padding:0 60p
   background:rgba(246,242,234,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--light)}
 .logo{justify-self:start;display:inline-flex;align-items:flex-end;gap:6px;line-height:1}
 .logo .name{font-family:'DM Sans',sans-serif;font-weight:800;font-size:26px;letter-spacing:-0.8px;white-space:nowrap;color:var(--ink)}
-.logo .wave{display:inline-flex;align-items:flex-end;gap:2px;height:18px;margin-bottom:3px}
-.logo .wave i{width:3px;height:100%;background:var(--accent);border-radius:2px;transform-origin:bottom;animation:eq .9s ease-in-out infinite}
-.logo .wave i:nth-child(1){animation-delay:-.2s}
-.logo .wave i:nth-child(2){animation-delay:-.55s}
-.logo .wave i:nth-child(3){animation-delay:-.05s}
-.logo .wave i:nth-child(4){animation-delay:-.75s}
+.wave{display:inline-flex;align-items:flex-end;gap:2px;height:18px;margin-bottom:3px}
+.wave i{width:3px;height:100%;background:var(--accent);border-radius:2px;transform-origin:bottom;animation:eq .9s ease-in-out infinite}
+.wave i:nth-child(1){animation-delay:-.2s}
+.wave i:nth-child(2){animation-delay:-.55s}
+.wave i:nth-child(3){animation-delay:-.05s}
+.wave i:nth-child(4){animation-delay:-.75s}
 @keyframes eq{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}
-@media(prefers-reduced-motion:reduce){.logo .wave i{animation:none;height:65%}}
+@media(prefers-reduced-motion:reduce){.wave i{animation:none;height:65%}}
 .logo .sub{font-size:7.5px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--accent);margin-top:3px}
 .nav-links{justify-self:center;display:flex;gap:32px;list-style:none}
 .nav-links a{font-size:15px;font-weight:500;color:var(--ink);opacity:.65;transition:.2s}
@@ -171,8 +171,7 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:100;height:68px;padding:0 60p
 /* ===== FOOTER ===== */
 footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
-.footer-logo{font-family:'DM Sans',sans-serif;font-weight:900;font-size:23px;letter-spacing:-0.8px;color:#fff}
-.footer-logo::after{content:'.';color:var(--accent)}
+.footer-logo{font-family:'DM Sans',sans-serif;font-weight:900;font-size:23px;letter-spacing:-0.8px;color:#fff;display:inline-flex;align-items:flex-end;gap:6px}
 .social{display:flex;gap:14px}
 .social a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;transition:.2s;color:#fff}
 .social a:hover{background:var(--accent);border-color:var(--accent)}
@@ -424,7 +423,7 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-logo">Hielke Boersma</div>
+      <div class="footer-logo">Hielke Boersma<span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
       <div class="footer-copy" style="margin-top:8px">© 2026 Hielke Boersma — DJ · Presentator · Voice-over</div>
     </div>
     <div class="social">
