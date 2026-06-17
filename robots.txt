@@ -1,24 +1,26 @@
+# robots.txt — hielkeboersma.com
+
 User-agent: *
 Allow: /
-Disallow: /private/
-Disallow: /admin/
-Disallow: /temp/
 
-# Allow important bots
-User-agent: Googlebot
+# AI-zoekmachines & assistenten expliciet toestaan
+User-agent: GPTBot
 Allow: /
-Crawl-delay: 1
-
-User-agent: Googlebot-Image
+User-agent: OAI-SearchBot
 Allow: /
-Crawl-delay: 1
-
-User-agent: Bingbot
+User-agent: ChatGPT-User
 Allow: /
-Crawl-delay: 10
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
 
-# Sitemaps
 Sitemap: https://hielkeboersma.com/sitemap.xml
-
-# Host
-Host: https://hielkeboersma.com 
