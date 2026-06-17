@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hielke Boersma | SLAM! DJ · Dagvoorzitter · Presentator · Voice-over Utrecht</title>
+<meta name="description" content="Hielke Boersma is DJ bij SLAM!, dagvoorzitter, presentator en voice-over uit Utrecht. Van corporate events en bruiloften tot festivals — altijd met passie en professionaliteit.">
+<meta name="keywords" content="DJ Utrecht, SLAM! DJ, feest DJ, bruiloft DJ, presentator, dagvoorzitter, voice-over, Hielke Boersma">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Hielke Boersma">
+<link rel="canonical" href="https://hielkeboersma.com/nieuw/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hielkeboersma.com/nieuw/">
+<meta property="og:title" content="Hielke Boersma | SLAM! DJ · Dagvoorzitter · Presentator · Voice-over">
+<meta property="og:description" content="DJ bij SLAM!, dagvoorzitter, presentator en voice-over uit Utrecht.">
+<meta property="og:image" content="https://hielkeboersma.com/images/hielke-hero.jpg">
+<meta property="og:locale" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&family=Fraunces:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#172232;
+  --navy-mid:#1d2c42;
+  --accent:#2e9e60;
+  --accent-dark:#227348;
+  --footer:#0c1828;
+  --ink:#101926;
+  --muted:rgba(17,24,39,0.5);
+  --light:rgba(17,24,39,0.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;left:0;width:100%;z-index:100;height:68px;padding:0 60px;
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+  background:rgba(255,255,255,0.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--light)}
+.logo{justify-self:start;display:flex;flex-direction:column;line-height:1}
+.logo .name{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:22px;color:var(--ink)}
+.logo .sub{font-size:7.5px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--accent);margin-top:3px}
+.nav-links{justify-self:center;display:flex;gap:32px;list-style:none}
+.nav-links a{font-size:15px;font-weight:500;color:var(--ink);opacity:.65;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--accent)}
+.nav-cta{justify-self:end;background:var(--accent);color:#fff;padding:11px 26px;border-radius:100px;font-size:14px;font-weight:600;transition:background .2s}
+.nav-cta:hover{background:var(--accent-dark)}
+
+/* ===== BUTTONS ===== */
+.btn-primary{display:inline-block;background:var(--accent);color:#fff;border:none;padding:16px 36px;border-radius:100px;font-size:15px;font-weight:600;font-family:inherit;cursor:pointer;transition:background .2s}
+.btn-primary:hover{background:var(--accent-dark)}
+.btn-ghost{display:inline-block;background:transparent;color:var(--ink);border:1.5px solid rgba(17,24,39,0.35);padding:16px 36px;border-radius:100px;font-size:15px;font-weight:500;transition:border-color .2s;cursor:pointer}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-ghost.light{color:#fff;border-color:rgba(255,255,255,0.35)}
+.btn-ghost.light:hover{border-color:#fff}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;background:linear-gradient(135deg,#c8f9d3 0%,#cff0dc 30%,#d2ddf0 60%,#d3d9f8 100%);
+  display:flex;align-items:center;padding:130px 60px 90px}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center}
+.hero h1{font-size:clamp(40px,5vw,68px);font-weight:900;line-height:1.02;color:var(--ink);margin-bottom:24px}
+.hero h1 .accent{color:var(--accent)}
+.hero p{font-size:clamp(16px,1.7vw,19px);font-weight:300;line-height:1.7;color:rgba(17,24,39,0.7);max-width:520px;margin-bottom:34px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.22);filter:contrast(1.05) saturate(1.05);object-fit:cover;aspect-ratio:4/5}
+.hero-badge{position:absolute;left:-22px;bottom:34px;background:#fff;padding:14px 22px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.14);display:flex;align-items:center;gap:12px}
+.hero-badge .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(46,158,96,.18)}
+.hero-badge strong{font-size:14px;font-weight:700;display:block}
+.hero-badge span{font-size:12px;color:var(--muted)}
+
+/* ===== SECTION SHELL ===== */
+.section{padding:100px 60px}
+.section.dark{background:var(--navy);color:#fff}
+.section.darker{background:var(--navy-mid);color:#fff}
+.section.alt{background:#f8f9fa}
+.wrap{max-width:1200px;margin:0 auto}
+.section h2{font-size:clamp(34px,4vw,52px);font-weight:900;line-height:1.1;margin-bottom:22px}
+.section.dark .eyebrow,.section.darker .eyebrow{color:#5fd698}
+.lead{font-size:17px;font-weight:300;line-height:1.8;max-width:620px}
+.section.dark .lead{color:rgba(255,255,255,0.78)}
+
+/* ===== OVER ===== */
+.over-grid{display:grid;grid-template-columns:7fr 5fr;gap:70px;align-items:center}
+.over-grid img{width:100%;border-radius:16px;object-fit:cover;aspect-ratio:4/5;filter:contrast(1.05) saturate(1.05)}
+.over-grid p{margin-bottom:18px}
+.clients-line{margin-top:34px;font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,0.6)}
+.clients-line strong{color:#fff;font-weight:600}
+.stars{color:#f5b53d;letter-spacing:2px}
+
+/* ===== STATS ===== */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:60px}
+.stat{padding:0 24px;border-left:1.5px solid rgba(255,255,255,0.14)}
+.stat:first-child{border-left:none;padding-left:0}
+.stat .num{font-size:54px;font-weight:900;color:#5fd698;line-height:1}
+.stat .lbl{font-size:13px;font-weight:300;color:rgba(255,255,255,0.65);margin-top:8px;line-height:1.4}
+
+/* ===== DIENSTEN TILES ===== */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;margin-top:54px}
+.tile{background:var(--navy);padding:40px 34px;transition:background .25s}
+.tile:hover{background:var(--navy-mid)}
+.tile .ti{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#5fd698;margin-bottom:16px}
+.tile h3{font-size:22px;font-weight:700;margin-bottom:12px}
+.tile p{font-size:14.5px;font-weight:300;line-height:1.7;color:rgba(255,255,255,0.7)}
+
+/* ===== MEDIA GRIDS ===== */
+.photo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:46px 0}
+.photo-row img{width:100%;height:280px;object-fit:cover;border-radius:12px;filter:contrast(1.05) saturate(1.05)}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.video-grid.two{grid-template-columns:repeat(2,1fr)}
+.video{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.spotify{margin-top:36px;border-radius:12px;overflow:hidden}
+.subhead{margin-top:40px}
+.subhead h3{font-size:21px;font-weight:700;margin-bottom:10px}
+.subhead p{font-size:15px;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.78)}
+.section:not(.dark):not(.darker) .subhead p{color:var(--ink);opacity:.8}
+.inline-link{color:var(--accent);font-weight:600;border-bottom:1px solid rgba(46,158,96,.35);transition:.2s}
+.inline-link:hover{border-color:var(--accent)}
+
+/* ===== REVIEWS SLIDER ===== */
+.reviews{margin-top:54px;position:relative}
+.review-track{overflow:hidden}
+.review-slides{display:flex;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.review{min-width:100%;padding:0 8px}
+.review-card{background:#fff;border:1px solid var(--light);border-radius:16px;padding:46px 50px;max-width:760px;margin:0 auto;box-shadow:0 8px 30px rgba(0,0,0,.05)}
+.review-card .quote{font-size:19px;font-weight:300;line-height:1.75;color:var(--ink);font-style:italic}
+.review-card .who{margin-top:24px;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent)}
+.review-nav{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:30px}
+.review-nav button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--light);background:#fff;cursor:pointer;font-size:18px;color:var(--ink);transition:.2s;display:flex;align-items:center;justify-content:center}
+.review-nav button:hover{border-color:var(--accent);color:var(--accent)}
+.review-dots{display:flex;gap:8px}
+.review-dots span{width:8px;height:8px;border-radius:50%;background:var(--light);cursor:pointer;transition:.2s}
+.review-dots span.active{background:var(--accent);width:22px;border-radius:6px}
+
+/* ===== CLIENTS BAND ===== */
+.clients-band{text-align:center}
+.clients-logos{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 18px;margin-top:36px}
+.clients-logos span{font-size:15px;font-weight:600;color:var(--ink);opacity:.55;padding:10px 20px;border:1px solid var(--light);border-radius:100px;transition:.2s}
+.clients-logos span:hover{opacity:1;border-color:var(--accent);color:var(--accent)}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:840px;margin:46px auto 0}
+.faq-item{border-bottom:1px solid var(--light)}
+.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;font-family:inherit;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 0;font-size:18px;font-weight:600;color:var(--ink)}
+.faq-icon{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--light);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--ink);transition:transform .3s,background .3s,color .3s}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--accent);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 0 26px;font-size:15.5px;font-weight:300;line-height:1.8;color:var(--muted)}
+
+/* ===== CONTACT ===== */
+.contact-grid{display:grid;grid-template-columns:5fr 7fr;gap:70px;align-items:start}
+.contact-cards{display:flex;flex-direction:column;gap:18px}
+.contact-card{background:var(--navy-mid);border-radius:14px;padding:26px 28px;display:flex;align-items:center;gap:18px;transition:.2s}
+.contact-card:hover{background:#243758}
+.contact-card .ic{width:46px;height:46px;border-radius:12px;background:rgba(46,158,96,.16);display:flex;align-items:center;justify-content:center;font-size:20px}
+.contact-card .lbl{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);font-weight:700;margin-bottom:4px}
+.contact-card .val{font-size:17px;font-weight:600;color:#fff}
+
+/* ===== FOOTER ===== */
+footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.footer-logo{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:22px;color:#fff}
+.social{display:flex;gap:14px}
+.social a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;transition:.2s;color:#fff}
+.social a:hover{background:var(--accent);border-color:var(--accent)}
+.social svg{width:18px;height:18px;fill:currentColor}
+.footer-copy{font-size:13px;color:rgba(255,255,255,0.4)}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:920px){
+  .over-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-photo{order:-1;max-width:380px}
+  .tiles{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr);gap:30px 0}
+  .stat:nth-child(3){border-left:none;padding-left:0}
+}
+@media(max-width:768px){
+  nav{padding:0 20px;grid-template-columns:auto 1fr}
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .section,.hero,footer{padding-left:20px;padding-right:20px}
+  .section{padding-top:70px;padding-bottom:70px}
+  .photo-row,.video-grid,.video-grid.two{grid-template-columns:1fr}
+  .photo-row img{height:auto;aspect-ratio:4/3}
+  .review-card{padding:34px 26px}
+  .review-card .quote{font-size:17px}
+  .footer-inner{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#top" class="logo">
+    <span class="name">Hielke Boersma</span>
+    <span class="sub">DJ · Presentator · Voice-over</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#over">Over</a></li>
+    <li><a href="#dj">DJ</a></li>
+    <li><a href="#presentator">Presentator</a></li>
+    <li><a href="#voice-over">Voice-over</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Contact</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">SLAM! DJ · Dagvoorzitter · Voice-over</div>
+      <h1>Het verhaal achter elk <span class="accent">moment</span>.</h1>
+      <p>DJ bij SLAM!, DJ op je feestje, presentator en voice-over met jarenlange ervaring. Van corporate events tot festivals — altijd met passie en professionaliteit.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary">Neem contact op →</a>
+        <a href="#dj" class="btn-ghost">Bekijk het werk</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="../images/hielke-hero.jpg" alt="Hielke Boersma">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <div><strong>Live op SLAM!</strong><span>Vaste stem sinds 2020</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- OVER -->
+<section class="section dark" id="over">
+  <div class="wrap">
+    <div class="over-grid">
+      <div>
+        <div class="eyebrow">Over Hielke</div>
+        <h2>Prikkelend, to the point, en altijd met een vleug humor.</h2>
+        <p class="lead">Hielke Boersma is (radio) dj, presentator en voice-over. Sinds 2020 is hij een van de vaste stemmen van radiozender SLAM!. Zijn carrière begon bij OOG TV en Radio, waarna hij via opleidingsprojecten bij Qmusic en Radio 538 zijn weg vond naar de landelijke radio.</p>
+        <p class="lead">Naast zijn werk op de radio is Hielke een ervaren presentator, zowel op het podium als voor de camera. Of het nu gaat om een strak geregisseerde video, een bedrijfscongres of een energiek festivalpanel, hij schakelt moeiteloos tussen stijlen en formats.</p>
+        <p class="lead">Hielke is opgegroeid in Groningen, maar woont tegenwoordig in Utrecht. Daar werkt hij aan uiteenlopende mediaprojecten, van radioshows tot events. Als hij niet achter de microfoon staat, vind je hem achter de draaitafels.</p>
+        <p class="clients-line"><strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, OOG TV, PWC, Radio 538, RTV Noord, SBS 6, SLAM!. <span class="stars">★★★★★</span></p>
+      </div>
+      <img src="../images/hielke-over.jpg" alt="Hielke Boersma">
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num" data-target="2020" data-plain="1">2020</div><div class="lbl">Vaste stem van SLAM!</div></div>
+      <div class="stat"><div class="num" data-target="100">0</div><div class="lbl">Events, feesten &amp; festivals</div></div>
+      <div class="stat"><div class="num" data-target="3" data-suffix="+">0</div><div class="lbl">Disciplines: DJ · presentator · voice-over</div></div>
+      <div class="stat"><div class="num" data-target="5" data-suffix=".0">0</div><div class="lbl">Gemiddelde beoordeling</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIENSTEN -->
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow">Wat Hielke doet</div>
+    <h2>Eén professional, drie disciplines.</h2>
+    <div class="tiles">
+      <a class="tile" href="#dj">
+        <div class="ti">01 — DJ</div>
+        <h3>Feest-DJ &amp; SLAM! DJ</h3>
+        <p>Een DJ die de sfeer leest en opbouwt in plaats van een playlist afdraait. Van bedrijfsfeest tot bruiloft en festival.</p>
+      </a>
+      <a class="tile" href="#presentator">
+        <div class="ti">02 — Presentator</div>
+        <h3>Presentator &amp; dagvoorzitter</h3>
+        <p>Radio, podium en camera. Scherp, energiek en met humor — van congres tot live talkshow en bedrijfsfilm.</p>
+      </a>
+      <a class="tile" href="#voice-over">
+        <div class="ti">03 — Voice-over</div>
+        <h3>Voice-over</h3>
+        <p>Een stem die blijft hangen. Helder, authentiek en enthousiast, met de juiste tone-of-voice voor elk project.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DJ -->
+<section class="section alt" id="dj">
+  <div class="wrap">
+    <div class="eyebrow">DJ Hielke Boersma</div>
+    <h2>Een set op maat, geen standaard playlist.</h2>
+    <div class="subhead">
+      <p>Hielke Boersma draait met gevoel en energie, en mixt moeiteloos alle genres en de juiste tracks aan elkaar. Of het nu gaat om een bedrijfsfeest, een bruiloft of een festival, hij brengt het publiek precies wat het nodig heeft. Zijn achtergrond in radio maakt dat hij snapt hoe je een spanningsboog opbouwt en hoe je de energie in een zaal aanvoelt. Weten wat Hielke voor jouw feest kan betekenen? <a class="inline-link" href="#contact">Neem vrijblijvend contact op!</a></p>
+    </div>
+
+    <div class="photo-row">
+      <img src="../images/hielke12.jpg" alt="DJ Hielke Boersma">
+      <img src="../images/spinforlife-hielke.jpg" alt="DJ Hielke Boersma bij Spin for Life">
+      <img src="../images/hielke4.jpeg" alt="DJ Hielke Boersma Performance">
+    </div>
+
+    <div class="video-grid">
+      <div class="video"><iframe src="https://www.youtube.com/embed/kS7sqYUa5NU" title="Hielke Boersma DJ" loading="lazy" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube.com/embed/W4W5LpvQz20" title="Hielke Boersma DJ" loading="lazy" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube.com/embed/d9VwtcFM2eM" title="Hielke Boersma DJ" loading="lazy" allowfullscreen></iframe></div>
+    </div>
+
+    <!-- REVIEWS -->
+    <div class="reviews">
+      <div class="review-track">
+        <div class="review-slides" id="reviewSlides">
+          <div class="review"><div class="review-card"><p class="quote">"Enorm bedankt voor de geweldige avond. Ik heb de hele avond niet stilgestaan en je voelde fantastisch aan wat wij, de 'jong van hart', geweldig vinden. Van de jongste tot de oudste gast, iedereen was op de dansvloer te vinden. We hebben ongelooflijk veel geluk gehad met jou als onze DJ. Je bent een ware professional!"</p><div class="who">— Marianne</div></div></div>
+          <div class="review"><div class="review-card"><p class="quote">"Heel erg bedankt voor de fantastische avond, we vonden het een eer dat je op deze bijzondere dag het feest hebt gemaakt."</p><div class="who">— Peter en Annelies</div></div></div>
+          <div class="review"><div class="review-card"><p class="quote">"Knap hoe Hielke precies weet aan te voelen wat er nodig is om een goed feestje te bouwen. Van meezingers tot dansbare classics. Hij voelde precies aan wat er nodig was op ons bedrijfsfeest. Iedereen was enthousiast en volgende keer boeken we hem graag weer!"</p><div class="who">— Linda</div></div></div>
+          <div class="review"><div class="review-card"><p class="quote">"We hebben een fantastische avond gehad, mede dankzij de set van Hielke. Hele goede opbouw qua muziek, heel goed passend bij de avond en het diverse publiek dat er was."</p><div class="who">— Tim</div></div></div>
+          <div class="review"><div class="review-card"><p class="quote">"Net zo leuk in de DJ booth als op de radio. Leuke muziekkeuze, fijne communicatie, professional."</p><div class="who">— Suzanne</div></div></div>
+          <div class="review"><div class="review-card"><p class="quote">"Hielke Boersma was de perfecte keuze voor ons bedrijfsfeest. Zijn mix van uptempo house en klassiekers bracht de dansvloer tot leven. Zijn professionele houding en interactie met het publiek maakten de avond compleet. Een DJ die zijn publiek kent en waardeert."</p><div class="who">— Marcel de Groot</div></div></div>
+          <div class="review"><div class="review-card"><p class="quote">"Hielke was de DJ op ons studentenfeest en wat een feest was dat! Zijn mix van house en herkenbare hits was perfect. Hij weet echt hoe hij een jong publiek moet entertainen!"</p><div class="who">— Anouk Jansen</div></div></div>
+          <div class="review"><div class="review-card"><p class="quote">"Zijn trendy en frisse muziekkeuze was perfect afgestemd op ons hippe publiek. Zijn mixen waren innovatief en gaven een extra flair aan ons evenement. Leuk om te zien dat een 'bekendere' DJ ook nog bescheiden kan zijn."</p><div class="who">— Femke Host</div></div></div>
+        </div>
+      </div>
+      <div class="review-nav">
+        <button id="revPrev" aria-label="Vorige review">‹</button>
+        <div class="review-dots" id="revDots"></div>
+        <button id="revNext" aria-label="Volgende review">›</button>
+      </div>
+      <div style="text-align:center;margin-top:28px">
+        <a class="btn-ghost" href="mailto:boersmahielke@gmail.com?subject=Review%20voor%20Hielke%20Boersma">Review schrijven</a>
+      </div>
+    </div>
+
+    <div class="spotify">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7JamPvoVnG92CKg8JrUJ5j?utm_source=generator" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- PRESENTATOR -->
+<section class="section dark" id="presentator">
+  <div class="wrap">
+    <div class="eyebrow">Presentator &amp; dagvoorzitter</div>
+    <h2>Houdt de energie erin — op de radio, op het podium en voor de camera.</h2>
+
+    <div class="photo-row">
+      <img src="../images/hielke1.avif" alt="Hielke Boersma als presentator">
+      <img src="../images/hielke13.jpg" alt="Hielke Boersma als presentator">
+      <img src="../images/hielke15.jpg" alt="Hielke Boersma als presentator">
+    </div>
+
+    <div class="subhead">
+      <h3>Op de radio</h3>
+      <p>Radio is waar het voor Hielke begon — en waar zijn hart nog steeds sneller van gaat kloppen. Als vaste stem van SLAM! brengt hij elke show met energie, humor en scherpte. Hielke spreekt de taal van zijn luisteraars, voelt precies aan wat er speelt en maakt van elk moment iets bijzonders. Hij is een van de vaste presentatoren van Housuh in de Pauzuh, de SLAM! Mixmarathon en de SLAM! WKND MIX en heeft meerdere shows in het weekend bij SLAM!. Daarnaast is hij als invaller regelmatig te horen bij 100%NL.</p>
+    </div>
+    <div class="subhead">
+      <h3>Dagvoorzitter en event host</h3>
+      <p>Als dagvoorzitter zorgt Hielke ervoor dat een evenement gesmeerd loopt. Hij stelt de juiste vragen, houdt de energie erin en brengt een luchtige, maar scherpe stijl. Van zakelijke congressen tot live talkshows, hij houdt het publiek bij de les en de sprekers scherp.</p>
+    </div>
+    <div class="subhead">
+      <h3>Video- en beeldpresentator</h3>
+      <p>Voor de camera is Hielke een authentieke en toegankelijke presentator. Hij brengt verhalen helder over en weet kijkers te boeien, of het nu gaat om een YouTube-serie, een bedrijfsfilm of een commercial. Zijn ervaring op radio, tv en podium maakt dat hij moeiteloos schakelt tussen verschillende formats en stijlen. Weten wat Hielke voor jouw evenement of videoproductie kan betekenen? <a class="inline-link" href="#contact">Neem vrijblijvend contact op!</a></p>
+    </div>
+
+    <div class="video-grid">
+      <div class="video"><iframe src="https://www.youtube.com/embed/mIwBKIRZY2Q" title="Hielke Boersma presentator" loading="lazy" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube.com/embed/6hfunEugxMw" title="Hielke Boersma presentator" loading="lazy" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube.com/embed/CHUDq9uHAnM" title="Hielke Boersma presentator" loading="lazy" allowfullscreen></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE-OVER -->
+<section class="section" id="voice-over">
+  <div class="wrap">
+    <div class="eyebrow">Voice-over</div>
+    <h2>Een stem die blijft hangen.</h2>
+    <div class="subhead">
+      <p style="color:var(--ink);opacity:.8">Zoek je een voice-over voor een radiocommercial, tv-commercial, webvideo, animatie, billboard, pre-roll, tv-programma, productvideo of uitlegvideo? Hielke Boersma heeft een stem die blijft hangen. Helder, authentiek en enthousiast — met de juiste tone-of-voice voor elk project. Dankzij zijn jarenlange radio-ervaring weet hij precies hoe hij luisteraars kan boeien en hoe een verhaal goed overkomt. Of het nu gaat om een commercial, een documentaire of een bedrijfsfilm, zijn stem geeft de juiste lading. Geïnteresseerd in de stem van Hielke voor jouw productie? <a class="inline-link" href="#contact">Neem vrijblijvend contact op!</a></p>
+    </div>
+
+    <div class="video-grid two">
+      <div class="video"><iframe src="https://www.youtube.com/embed/gPd8GxV07ug" title="Voice-over Hielke Boersma" loading="lazy" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube.com/embed/cvLSx5h77sA" title="Voice-over Hielke Boersma" loading="lazy" allowfullscreen></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWREEL / CLIENTS -->
+<section class="section alt">
+  <div class="wrap clients-band">
+    <div class="eyebrow">Showreel</div>
+    <h2>Zie en hoor Hielke aan het werk.</h2>
+    <div class="video-grid two" style="margin-top:36px">
+      <div class="video" style="grid-column:span 2;max-width:760px;margin:0 auto;width:100%"><iframe src="https://www.youtube.com/embed/08TJrVb8xTQ" title="Hielke Boersma Showreel" loading="lazy" allowfullscreen></iframe></div>
+    </div>
+    <div style="margin-top:70px"></div>
+    <div class="eyebrow">Opdrachtgevers</div>
+    <div class="clients-logos">
+      <span>100%NL</span><span>EY</span><span>PWC</span><span>SLAM!</span><span>Radio 538</span>
+      <span>SBS 6</span><span>Gemeente Den Haag</span><span>Gemeente Groningen</span>
+      <span>Min. van Justitie en Veiligheid</span><span>OOG TV</span><span>RTV Noord</span><span>Bedrijvingsfestival</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div style="text-align:center">
+      <div class="eyebrow">FAQ</div>
+      <h2>Veelgestelde vragen</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item"><button class="faq-q">Wie is een goede DJ in Utrecht?<span class="faq-icon">+</span></button><div class="faq-a"><p>Hielke Boersma is een professionele DJ gevestigd in Utrecht, bekend van radiozender SLAM!. Met jarenlange ervaring als feest-DJ voor bedrijfsfeesten, bruiloften en festivals is hij een van de meest gevraagde DJ's in de regio Utrecht.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Hoe boek ik een DJ voor mijn feest in Utrecht?<span class="faq-icon">+</span></button><div class="faq-a"><p>Je kunt Hielke Boersma eenvoudig boeken via het contactformulier onderaan deze pagina of via info@hielkeboersma.com. Hij is beschikbaar voor feesten, bedrijfsfeesten, bruiloften en festivals in Utrecht en door heel Nederland.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Welke genres draait Hielke Boersma als DJ?<span class="faq-icon">+</span></button><div class="faq-a"><p>Hielke mixt moeiteloos alle genres en past zijn set altijd aan op het publiek en het evenement. Vanuit zijn werk bij SLAM! heeft hij een sterke basis in house en dance, maar hij speelt ook pop, urban en andere genres — een ervaring op maat, geen standaard playlist.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Wat voor soort evenementen verzorgt Hielke Boersma als DJ?<span class="faq-icon">+</span></button><div class="faq-a"><p>Hielke Boersma verzorgt als DJ bedrijfsfeesten, bruiloften, festivals, vrijgezellenfeesten, verjaardagsfeesten en corporate events. Hij past zijn muziekstijl altijd aan op het publiek en de sfeer.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Is Hielke Boersma ook buiten Utrecht beschikbaar?<span class="faq-icon">+</span></button><div class="faq-a"><p>Ja, Hielke is beschikbaar door heel Nederland — van Amsterdam en Rotterdam tot Den Haag en Groningen. Neem contact op voor de mogelijkheden.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Waar is Hielke Boersma als radio-DJ te horen?<span class="faq-icon">+</span></button><div class="faq-a"><p>Hielke is een van de vaste stemmen van SLAM!, waar hij shows presenteert waaronder Housuh in de Pauzuh en de SLAM! Mixmarathon. Eerder was hij ook te horen bij Radio 538 en 100%NL.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Kan Hielke Boersma als dagvoorzitter optreden?<span class="faq-icon">+</span></button><div class="faq-a"><p>Ja, Hielke is beschikbaar als dagvoorzitter voor bedrijfsevents, congressen en awards ceremonies. Hij werkte al voor EY, PWC, Gemeente Den Haag en het Ministerie van Justitie en Veiligheid.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Wat voor voice-over werk doet Hielke Boersma?<span class="faq-icon">+</span></button><div class="faq-a"><p>Hielke verzorgt voice-overs voor radiocommercials, tv-commercials, webvideo's, animaties, billboards, pre-rolls, productvideo's en uitlegvideo's.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Wat zijn de contactgegevens van Hielke Boersma?<span class="faq-icon">+</span></button><div class="faq-a"><p>Hielke Boersma is bereikbaar via e-mail: info@hielkeboersma.com, telefonisch: 06 519 690 25, of via het contactformulier op deze pagina. Hij is gevestigd in Utrecht.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Wat kost het om Hielke Boersma te boeken?<span class="faq-icon">+</span></button><div class="faq-a"><p>De prijs is afhankelijk van het type evenement, de duur en de locatie. Neem contact op via info@hielkeboersma.com of bel 06 519 690 25 voor een offerte op maat.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section dark" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow">Contact</div>
+        <h2>Laat me weten wat ik voor je kan betekenen.</h2>
+        <p class="lead">Een feest, een event of een voice-over? Stuur een bericht of bel even — ik neem zo spoedig mogelijk contact met je op.</p>
+      </div>
+      <div class="contact-cards">
+        <a class="contact-card" href="mailto:info@hielkeboersma.com">
+          <div class="ic">✉</div>
+          <div><div class="lbl">E-mail</div><div class="val">info@hielkeboersma.com</div></div>
+        </a>
+        <a class="contact-card" href="tel:+31651969025">
+          <div class="ic">☎</div>
+          <div><div class="lbl">Telefoon</div><div class="val">06 519 690 25</div></div>
+        </a>
+        <div class="contact-card">
+          <div class="ic">📍</div>
+          <div><div class="lbl">Locatie</div><div class="val">Utrecht, Nederland</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Hielke Boersma</div>
+      <div class="footer-copy" style="margin-top:8px">© 2025 Hielke Boersma — DJ · Presentator · Voice-over</div>
+    </div>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/hielke-boersma-517aa134/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96v5.7h-3v-11h2.89v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v6.47z"/></svg></a>
+      <a href="https://www.instagram.com/hielkeboersma/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.43-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zm0 3.68a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm6.41-10.41a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg></a>
+      <a href="https://www.tiktok.com/@hielkeboersma" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.3 0 .59.03.87.1V9.4a6.33 6.33 0 00-1-.05A6.34 6.34 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.04-.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.parentElement;
+    var ans=item.querySelector('.faq-a');
+    var isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(o){
+      o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;
+    });
+    if(!isOpen){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+  });
+});
+
+// Reviews slider
+(function(){
+  var slides=document.getElementById('reviewSlides');
+  if(!slides)return;
+  var total=slides.children.length,idx=0;
+  var dotsWrap=document.getElementById('revDots');
+  for(var i=0;i<total;i++){
+    var d=document.createElement('span');
+    (function(n){d.addEventListener('click',function(){idx=n;render();});})(i);
+    dotsWrap.appendChild(d);
+  }
+  var dots=dotsWrap.children;
+  function render(){
+    slides.style.transform='translateX(-'+(idx*100)+'%)';
+    for(var i=0;i<dots.length;i++)dots[i].className=(i===idx?'active':'');
+  }
+  document.getElementById('revPrev').addEventListener('click',function(){idx=(idx-1+total)%total;render();});
+  document.getElementById('revNext').addEventListener('click',function(){idx=(idx+1)%total;render();});
+  var timer=setInterval(function(){idx=(idx+1)%total;render();},7000);
+  slides.addEventListener('mouseenter',function(){clearInterval(timer);});
+  render();
+})();
+
+// Stats count-up
+(function(){
+  var nums=document.querySelectorAll('.stat .num');
+  var done=false;
+  function run(){
+    if(done)return;done=true;
+    nums.forEach(function(el){
+      if(el.dataset.plain){return;} // leave year as-is
+      var target=+el.dataset.target,suffix=el.dataset.suffix||'',start=null,dur=1400;
+      function step(ts){
+        if(!start)start=ts;
+        var p=Math.min((ts-start)/dur,1),e=1-Math.pow(1-p,3);
+        var val=Math.round(target*e);
+        el.textContent=(suffix==='.0'?val.toFixed(0)+',0':val+(target>=100?'+':'')+suffix);
+        if(p<1)requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)run();});},{threshold:.4});
+  var s=document.querySelector('.stats');if(s)io.observe(s);
+})();
+</script>
+</body>
+</html>
