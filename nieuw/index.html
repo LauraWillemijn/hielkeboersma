@@ -46,6 +46,7 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:100;height:68px;padding:0 60p
   background:rgba(246,242,234,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--light)}
 .logo{justify-self:start;display:flex;flex-direction:column;line-height:1}
 .logo .name{font-family:'DM Sans',sans-serif;font-weight:800;font-size:26px;letter-spacing:-0.8px;white-space:nowrap;color:var(--ink)}
+.logo .name::after{content:'.';color:var(--accent)}
 .logo .sub{font-size:7.5px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--accent);margin-top:3px}
 .nav-links{justify-self:center;display:flex;gap:32px;list-style:none}
 .nav-links a{font-size:15px;font-weight:500;color:var(--ink);opacity:.65;transition:.2s}
