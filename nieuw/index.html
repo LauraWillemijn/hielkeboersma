@@ -63,7 +63,7 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:100;height:68px;padding:0 60p
 
 /* ===== HERO (schermvullende foto) ===== */
 .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:contrast(1.05) saturate(1.05);z-index:0}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:contrast(1.05) saturate(1.05);z-index:0}
 .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(28,27,25,.9) 0%,rgba(28,27,25,.52) 32%,rgba(28,27,25,.12) 62%,rgba(28,27,25,.34) 100%)}
 .hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%;padding:0 60px 96px}
 .hero h1{font-size:clamp(40px,5.5vw,72px);font-weight:900;line-height:1.02;color:#fff;margin-bottom:24px;max-width:860px;text-shadow:0 2px 24px rgba(0,0,0,.25)}
@@ -72,10 +72,6 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:100;height:68px;padding:0 60p
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 .hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,0.4)}
 .hero .btn-ghost:hover{border-color:#fff}
-.hero-badge{position:absolute;top:96px;right:60px;z-index:2;background:rgba(255,255,255,0.95);backdrop-filter:blur(6px);padding:14px 22px;border-radius:100px;box-shadow:0 10px 30px rgba(0,0,0,.18);display:flex;align-items:center;gap:12px}
-.hero-badge .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(227,91,90,.22)}
-.hero-badge strong{font-size:14px;font-weight:700;display:block;color:var(--ink)}
-.hero-badge span{font-size:12px;color:var(--muted)}
 
 /* ===== SECTION SHELL ===== */
 .section{padding:100px 60px}
@@ -189,7 +185,6 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
   .nav-cta{display:none}
   .section,footer{padding-left:20px;padding-right:20px}
   .hero-inner{padding-left:20px;padding-right:20px;padding-bottom:60px}
-  .hero-badge{top:84px;right:20px;padding:11px 18px}
   .section{padding-top:70px;padding-bottom:70px}
   .photo-row,.video-grid,.video-grid.two{grid-template-columns:1fr}
   .photo-row img{height:auto;aspect-ratio:4/3}
@@ -219,10 +214,6 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
 <header class="hero" id="top">
   <img class="hero-bg" src="../images/hielke-hero.jpg" alt="Hielke Boersma">
   <div class="hero-overlay"></div>
-  <div class="hero-badge">
-    <span class="dot"></span>
-    <div><strong>Live op SLAM!</strong><span>Vaste stem sinds 2020</span></div>
-  </div>
   <div class="hero-inner">
     <h1>Hielke Boersma</h1>
     <p>DJ bij SLAM!, DJ op je feestje, presentator en voice-over met jarenlange ervaring. Van corporate events tot festivals — altijd met passie en professionaliteit.</p>
