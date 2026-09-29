@@ -175,6 +175,27 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:100;height:68px;padding:0 60p
 .faq-a p{padding:0 0 26px;font-size:15.5px;font-weight:300;line-height:1.8;color:var(--muted)}
 
 /* ===== CONTACT ===== */
+.hb-form{margin-top:34px;display:flex;flex-direction:column;gap:16px}
+.hb-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hb-form label{display:flex;flex-direction:column;gap:8px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.hb-form label i{font-style:normal;font-weight:500;letter-spacing:0;text-transform:none;color:rgba(255,255,255,.4)}
+.hb-form input,.hb-form select,.hb-form textarea{font:inherit;font-size:15px;font-weight:400;letter-spacing:0;text-transform:none;color:#fff;background:var(--navy-mid);border:1.5px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 16px;outline:none;transition:border-color .2s}
+.hb-form select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,rgba(255,255,255,.6) 50%),linear-gradient(135deg,rgba(255,255,255,.6) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 15px) 50%;background-size:5px 5px;background-repeat:no-repeat}
+.hb-form select option{color:#1c1b19}
+.hb-form textarea{resize:vertical;min-height:120px}
+.hb-form input:focus,.hb-form select:focus,.hb-form textarea:focus{border-color:var(--accent)}
+.hb-form .is-bad{border-color:var(--accent)}
+.hb-form button{align-self:flex-start;margin-top:4px}
+.hb-form button:disabled{opacity:.6;cursor:default}
+.hb-err{font-size:14px;color:#ffb3b2}
+.hb-success{margin-top:34px;background:rgba(151,206,201,.1);border:1.5px solid var(--teal);border-radius:14px;padding:32px;text-align:center}
+.hb-success .ck{width:48px;height:48px;margin:0 auto 14px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:22px;font-weight:700}
+.hb-success h3{font-size:20px;font-weight:700;color:#fff;margin-bottom:8px}
+.hb-success p{font-size:15px;color:rgba(255,255,255,.7)}
+.hb-toast{position:fixed;left:50%;bottom:28px;z-index:9999;display:flex;align-items:center;gap:14px;max-width:calc(100% - 32px);padding:16px 22px;border-radius:16px;background:#1c1b19;color:#fff;font-size:15px;line-height:1.45;box-shadow:0 20px 50px rgba(0,0,0,.35);opacity:0;transform:translate(-50%,20px);transition:opacity .4s ease,transform .5s cubic-bezier(.16,1,.3,1)}
+.hb-toast.show{opacity:1;transform:translate(-50%,0)}
+.hb-toast .ck{flex:none;width:30px;height:30px;border-radius:50%;background:var(--accent);display:grid;place-items:center;font-weight:700}
+@media(max-width:560px){.hb-row{grid-template-columns:1fr}.hb-form button{align-self:stretch}}
 .contact-grid{display:grid;grid-template-columns:5fr 7fr;gap:70px;align-items:start}
 .contact-cards{display:flex;flex-direction:column;gap:18px}
 .contact-card{background:var(--navy-mid);border-radius:14px;padding:26px 28px;display:flex;align-items:center;gap:18px;transition:.2s}
@@ -498,6 +519,19 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
         <div class="eyebrow">Contact</div>
         <h2>Laat me weten wat ik voor je kan betekenen.</h2>
         <p class="lead">Een DJ, presentator, dagvoorzitter of voice-over nodig? Stuur een bericht of bel. Ik neem zo snel mogelijk contact met je op!</p>
+        <form class="hb-form" id="hbForm" novalidate>
+          <div class="hb-row">
+            <label>Naam<input name="naam" autocomplete="name" required></label>
+            <label>E-mail<input name="email" type="email" autocomplete="email" required></label>
+          </div>
+          <div class="hb-row">
+            <label>Telefoon <i>(optioneel)</i><input name="telefoon" type="tel" autocomplete="tel"></label>
+            <label>Waarvoor?<select name="dienst" required><option value="" selected disabled>Maak een keuze</option><option>DJ</option><option>Presentator</option><option>Dagvoorzitter</option><option>Voice-over</option><option>Iets anders</option></select></label>
+          </div>
+          <label>Bericht<textarea name="bericht" rows="4" placeholder="Wat voor evenement of project, en wanneer?" required></textarea></label>
+          <button type="submit" class="btn-primary">Verstuur bericht →</button>
+          <p class="hb-err" role="alert" hidden></p>
+        </form>
       </div>
       <div class="contact-cards">
         <a class="contact-card" href="mailto:info@hielkeboersma.com">
@@ -558,6 +592,38 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
 </footer>
 
 <script>
+// Contactformulier (EmailJS, zelfde account als Storio)
+(function(){
+  var form=document.getElementById('hbForm'); if(!form) return;
+  var CFG={key:'NRt6lTt-HMSu7Kk1m',service:'service_43na4v7',template:'template_x6k2gvm'};
+  var sdk=null;
+  function loadSDK(){ if(sdk) return sdk; sdk=new Promise(function(res,rej){ if(window.emailjs) return res(window.emailjs);
+    var s=document.createElement('script'); s.src='https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+    s.onload=function(){ window.emailjs.init({publicKey:CFG.key}); res(window.emailjs); }; s.onerror=rej; document.head.appendChild(s); }); return sdk; }
+  form.addEventListener('focusin',loadSDK,{once:true});
+  function esc(t){return String(t).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var err=form.querySelector('.hb-err'), bad=[];
+    [].forEach.call(form.querySelectorAll('[required]'),function(el){ var ok=el.value.trim()!=='' && (el.type!=='email'||/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value.trim())); el.classList.toggle('is-bad',!ok); if(!ok) bad.push(el); });
+    if(bad.length){ err.textContent='Vul je naam, een geldig e-mailadres, waarvoor en je bericht in.'; err.hidden=false; bad[0].focus(); return; }
+    err.hidden=true;
+    var btn=form.querySelector('button'), label=btn.innerHTML; btn.disabled=true; btn.textContent='Versturen…';
+    var v=function(n){return form.elements[n].value.trim()||'Niet ingevuld';};
+    var data={naam:v('naam'),email:v('email'),telefoon:v('telefoon'),bedrijf:'Niet ingevuld',dienst:v('dienst'),bericht:v('bericht')+'\n\n(Verstuurd via hielkeboersma.com)'};
+    loadSDK().then(function(ejs){ return ejs.send(CFG.service,CFG.template,data); }).then(function(){
+      var box=document.createElement('div'); box.className='hb-success'; box.setAttribute('role','status');
+      box.innerHTML='<div class="ck">✓</div><h3>Bedankt voor je bericht!</h3><p>Ik neem binnen één werkdag contact met je op.</p>';
+      form.replaceWith(box); box.scrollIntoView({behavior:'smooth',block:'center'});
+      var t=document.createElement('div'); t.className='hb-toast'; t.setAttribute('role','status');
+      t.innerHTML='<span class="ck">✓</span><span><strong>Bedankt voor je bericht!</strong><br>Ik neem binnen één werkdag contact met je op.</span>';
+      document.body.appendChild(t); requestAnimationFrame(function(){t.classList.add('show');});
+      setTimeout(function(){t.classList.remove('show');setTimeout(function(){t.remove();},500);},6000);
+    }).catch(function(e2){ console.error('Versturen mislukt',e2); btn.disabled=false; btn.innerHTML=label;
+      err.innerHTML='Versturen is helaas mislukt. Mail me gerust direct via <a href="mailto:info@hielkeboersma.com" style="color:#fff">info@hielkeboersma.com</a>.'; err.hidden=false; });
+  });
+})();
+
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(function(btn){
   btn.addEventListener('click',function(){
