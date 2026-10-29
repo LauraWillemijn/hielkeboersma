@@ -313,8 +313,8 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
     <div class="contact-grid">
       <div>
         <div class="eyebrow">Contact</div>
-        <h2>Laat me weten wat ik voor je kan betekenen.</h2>
-        <p class="lead">Een DJ, presentator, dagvoorzitter of voice-over nodig? Stuur een bericht of bel. Ik neem zo snel mogelijk contact met je op!</p>
+        <h2>Benieuwd wat Hielke voor je kan betekenen?</h2>
+        <p class="lead">Een DJ, presentator, dagvoorzitter of voice-over nodig? Stuur een bericht of bel. Hielke neemt zo snel mogelijk contact met je op!</p>
         <form class="hb-form" id="hbForm" novalidate>
           <div class="hb-row">
             <label>Naam<input name="naam" autocomplete="name" required></label>
@@ -406,10 +406,10 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
     var data={naam:v('naam'),email:v('email'),telefoon:v('telefoon'),bedrijf:'Niet ingevuld',dienst:v('dienst'),bericht:v('bericht')+'\n\n(Verstuurd via hielkeboersma.com)'};
     loadSDK().then(function(ejs){ return ejs.send(CFG.service,CFG.template,data); }).then(function(){
       var box=document.createElement('div'); box.className='hb-success'; box.setAttribute('role','status');
-      box.innerHTML='<div class="ck">✓</div><h3>Bedankt voor je bericht!</h3><p>Ik neem binnen één werkdag contact met je op.</p>';
+      box.innerHTML='<div class="ck">✓</div><h3>Bedankt voor je bericht!</h3><p>Hielke neemt binnen één werkdag contact met je op.</p>';
       form.replaceWith(box); box.scrollIntoView({behavior:'smooth',block:'center'});
       var t=document.createElement('div'); t.className='hb-toast'; t.setAttribute('role','status');
-      t.innerHTML='<span class="ck">✓</span><span><strong>Bedankt voor je bericht!</strong><br>Ik neem binnen één werkdag contact met je op.</span>';
+      t.innerHTML='<span class="ck">✓</span><span><strong>Bedankt voor je bericht!</strong><br>Hielke neemt binnen één werkdag contact met je op.</span>';
       document.body.appendChild(t); requestAnimationFrame(function(){t.classList.add('show');});
       setTimeout(function(){t.classList.remove('show');setTimeout(function(){t.remove();},500);},6000);
     }).catch(function(e2){ console.error('Versturen mislukt',e2); btn.disabled=false; btn.innerHTML=label;
