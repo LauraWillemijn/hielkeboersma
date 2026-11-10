@@ -80,6 +80,9 @@ label.f{display:grid;gap:5px;font:600 12px var(--f-mono);text-transform:uppercas
 .stappen li.fout{color:var(--warn)}.stappen li.fout::before{background:var(--warn);border-color:var(--warn)}
 @keyframes spin{to{transform:rotate(360deg)}}
 .melding{color:var(--warn);font-size:14px}
+.nieuwsmelding{display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:var(--panel);border:1px solid var(--acc);border-radius:var(--r);padding:12px 14px;margin-bottom:20px;font-weight:700}
+.nieuwsmelding[hidden]{display:none}
+.nieuwsmelding .go{font-size:16px;padding:8px 14px}
 .voortgang{display:grid;gap:10px;margin-bottom:24px}.voortgang:has(.stappen[hidden]):has(.melding[hidden]){display:none}
 .leeg{background:var(--panel);border:1px dashed var(--line);border-radius:var(--r);padding:26px;color:var(--mute)}
 
@@ -141,6 +144,10 @@ label.f{display:grid;gap:5px;font:600 12px var(--f-mono);text-transform:uppercas
 .nieuwitem:hover{border-color:var(--acc);color:var(--ink)}
 .alleenster .nieuwitem{display:none}
 .alleenster .sug:not(.picked){display:none}
+.uur.compact .track{padding:2px 12px;font-size:13.5px;grid-template-columns:26px minmax(0,1fr) auto}
+.uur.compact .tnr,.uur.compact .tmeta{font-size:12px}
+.uur.compact .sug .tekst{font-size:14.5px}
+.slot-half{color:var(--acc);border-style:solid}
 .alleenster .break:has(.picked) .sugs{grid-template-columns:1fr}
 .sync{font:500 12px var(--f-mono);color:var(--mute)}
 @media (max-width:640px){.sugs{grid-template-columns:1fr}.bar{margin-left:0}}
