@@ -102,10 +102,9 @@ h1 em,h2 em,h3 em{font-style:normal;color:var(--grn)}
 .ring{position:absolute;inset:0;border-radius:50%;border:1.5px dashed rgba(23,34,50,.16);animation:spin 60s linear infinite}
 .ring.r2{inset:80px;animation-duration:40s;animation-direction:reverse}
 @keyframes spin{to{transform:rotate(360deg)}}
-.sat{position:absolute;left:50%;top:50%;width:0;height:0}
+.sat{position:absolute;left:50%;top:50%;width:0;height:0;z-index:2}
 .sat span{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;font-size:14px;font-weight:700;padding:8px 14px;border-radius:100px;background:var(--navy);color:#fff;box-shadow:0 10px 24px rgba(23,34,50,.22)}
-.ring .sat span{animation:spin 60s linear infinite reverse}
-.ring.r2 .sat span{animation:spin 40s linear infinite;background:#fff;color:var(--navy);border:1px solid var(--line)}
+.sat span.alt{background:#fff;color:var(--navy);border:1px solid var(--line)}
 
 /* --- intro --- */
 .intro{display:grid;grid-template-columns:440px 1fr;gap:80px;align-items:center}
@@ -361,6 +360,26 @@ pre.skill .h{color:#fff;font-weight:600}
 .punch em{font-style:normal;color:var(--grn)}
 .offer{margin-top:34px;font-size:21px;color:var(--mut)}
 .offer b{color:var(--navy)}
+
+/* --- story (radio, podcasts) --- */
+.story{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.story h2{font-size:66px}
+.story .lead{font-size:23px;margin-top:22px}
+.story.rev{grid-template-columns:1fr 1.05fr}
+.mosaic{display:grid;grid-template-columns:1.45fr 1fr;grid-template-rows:1fr 1fr;gap:16px;height:640px}
+.mosaic figure{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px rgba(23,34,50,.18);margin:0}
+.mosaic figure:first-child{grid-row:1/3}
+.mosaic img{width:100%;height:100%;object-fit:cover;display:block}
+.active .mosaic img{animation:kb 18s ease-out both}
+.mosaic figcaption{position:absolute;left:16px;bottom:16px}
+.facts{display:flex;flex-direction:column;gap:14px;margin-top:26px}
+.fact{display:flex;gap:18px;align-items:flex-start;font-size:18px;color:var(--mut);line-height:1.45}
+.fact b{color:var(--navy);display:block;font-size:20px;margin-bottom:1px}
+.clients-l{font-size:16px;color:var(--mut);margin-top:24px}
+.clients{display:grid;grid-template-columns:repeat(4,1fr);gap:16px 22px;align-items:center;margin-top:12px}
+.clients img{height:40px;width:100%;max-width:150px;object-fit:contain;filter:grayscale(1);opacity:.7;mix-blend-mode:multiply}
+#notesBtn{position:fixed;left:16px;bottom:14px;z-index:55;font:600 13px var(--f);color:var(--navy);background:rgba(255,255,255,.85);border:1px solid var(--line);border-radius:100px;padding:7px 14px;cursor:pointer;opacity:.45;transition:opacity .3s}
+#notesBtn:hover{opacity:1}
 /* chrome */
 #progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--navy),var(--grn));z-index:50;transition:width .6s var(--ease)}
 #dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:7px;z-index:50}
@@ -417,7 +436,7 @@ aside.notes{display:none}
 <!-- ============ 2 INTRO ============ -->
 <section class="slide" data-label="Wie ben ik">
   <div class="intro">
-    <div class="photo r"><img src="assets/hielke.webp" alt=""><div class="tag"><span class="pill dark"><i></i>Stem, verhalen, ideeën</span></div></div>
+    <div class="photo r"><img src="assets/portret.webp" alt="Hielke Boersma"><div class="tag"><span class="pill dark"><i></i>Stem, verhalen, ideeën</span></div></div>
     <div>
       <h2 class="r" style="--d:100;font-size:62px">Hoi, ik ben Hielke Boersma.<br><em>Creatief. Geen developer.</em></h2>
       <p class="lead r" style="--d:200">Ik kom van de radio. Ik maak verhalen met geluid, en inmiddels ook met beeld. Code schrijven? Nooit geleerd.</p>
@@ -429,6 +448,50 @@ aside.notes{display:none}
     </div>
   </div>
   <aside class="notes">Ik ben Hielke Boersma. Kort mijn achtergrond. Radio is mijn basis. Daar leer je verhalen vertellen in drie minuten. Van daaruit ben ik podcasts gaan maken, en dit jaar kwam Storio Media erbij. Belangrijk voor vandaag: ik heb geen IT-achtergrond. Alles wat je straks ziet, heb ik zonder programmeerkennis opgezet.</aside>
+</section>
+
+<!-- ============ 2b RADIO ============ -->
+<section class="slide" data-label="Radio">
+  <div class="story">
+    <div>
+      <h2 class="r" style="--d:0">Het begon <em>op de radio.</em></h2>
+      <p class="lead r" style="--d:120">Ik ben dj en presentator. Van maandag tot en met donderdag sta ik van 12:00 tot 16:00 live op SLAM!.</p>
+      <div class="facts">
+        <div class="fact r" style="--d:240"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg></div><div><b>Verhalen in drie minuten</b>Op de radio leer je snel to the point komen. Tussen twee platen moet het raak zijn.</div></div>
+        <div class="fact r" style="--d:340"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5-6.5-4.5L5.5 21l2-7.5L2 9h7z"/></svg></div><div><b>Op het podium</b>Als dj op feesten en als presentator en dagvoorzitter op events.</div></div>
+        <div class="fact r" style="--d:440"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7v5l3 2"/></svg></div><div><b>Altijd live, altijd op tijd</b>Een uitzending wacht niet. Dat ritme neem ik overal mee naartoe.</div></div>
+      </div>
+    </div>
+    <div class="mosaic r" style="--d:150">
+      <figure><img src="assets/radio-studio.webp" alt="Hielke Boersma in de radiostudio"><figcaption><span class="pill dark"><i></i>Live op SLAM!</span></figcaption></figure>
+      <figure><img src="assets/radio-slam.webp" alt="Hielke Boersma bij SLAM!"></figure>
+      <figure><img src="assets/dj-booth.webp" alt="Hielke Boersma als dj"></figure>
+    </div>
+  </div>
+  <aside class="notes">Mijn basis is radio. Van maandag tot en met donderdag sta ik van twaalf tot vier live op SLAM!. Daarnaast draai ik als dj en presenteer ik events. Wat radio je leert: je hebt drie minuten tussen twee platen, en dan moet het raak zijn. En: een uitzending wacht niet. Dat ritme heb ik meegenomen in alles wat ik daarna ging doen.</aside>
+</section>
+
+<!-- ============ 2c PODCASTS ============ -->
+<section class="slide" data-label="Storio Podcasts">
+  <div class="story rev">
+    <div class="mosaic r" style="--d:150">
+      <figure><img src="assets/pod-opname.webp" alt="Podcastopname van Storio Podcasts"><figcaption><span class="pill dark"><i></i>Storio Podcasts</span></figcaption></figure>
+      <figure><img src="assets/pod-fcu.webp" alt="Opname FC Utrecht Podcast"></figure>
+      <figure><img src="assets/pod-regie.webp" alt="Regie tijdens een opname"></figure>
+    </div>
+    <div>
+      <h2 class="r" style="--d:0">Toen kwamen <em>de podcasts.</em></h2>
+      <p class="lead r" style="--d:120">Met Storio Podcasts maak ik podcasts voor organisaties. Van concept en opname op locatie tot montage en publicatie.</p>
+      <div class="facts">
+        <div class="fact r" style="--d:240"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12zM12 6.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></div><div><b>Op locatie</b>Van een vergaderzaal tot het trainingscomplex van FC Utrecht.</div></div>
+        <div class="fact r" style="--d:340"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM6 15a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12"/></svg></div><div><b>Alles in eigen hand</b>Concept, interviews, regie en montage.</div></div>
+        <div class="fact r" style="--d:440"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 6h14v12H2zM16 10l6-3v10l-6-3"/></svg></div><div><b>En nu ook met beeld</b>Dit jaar kwam Storio Media erbij: AI-video voor bedrijven.</div></div>
+      </div>
+      <p class="clients-l r" style="--d:520">Onder meer voor</p>
+      <div class="clients r" style="--d:580"><img src="assets/klanten/logo-fcutrecht.svg" alt="FC Utrecht"><img src="assets/klanten/logo-pharmapartners.png" alt="PharmaPartners"><img src="assets/klanten/logo-tss.png" alt="Total Specific Solutions"><img src="assets/klanten/logo-pinkroccade.png" alt="PinkRoccade"><img src="assets/klanten/logo-groningen.svg" alt="Gemeente Groningen"><img src="assets/klanten/logo-magenta.jpeg" alt="Magenta"><img src="assets/klanten/logo-keiweek.png" alt="KEI-week"></div>
+    </div>
+  </div>
+  <aside class="notes">Vanuit de radio ben ik podcasts gaan maken. Eerst voor mezelf, toen voor organisaties. Met Storio Podcasts doen we alles: concept, opname op locatie, regie, montage. Hier zie je een opname bij FC Utrecht. Klanten zijn onder meer PharmaPartners, TSS, PinkRoccade en Gemeente Groningen. En dit jaar kwam Storio Media erbij: video, gemaakt met AI. En daar begon het probleem dat ik zo laat zien.</aside>
 </section>
 
 <!-- ============ 3 HATS ============ -->
@@ -832,13 +895,14 @@ Elke werkdag om 14:00.</pre>
     <span class="pill">storiopodcasts.nl</span>
     <span class="pill">info@storiomedia.nl</span>
   </div>
-  <p class="offer r" style="--d:500">Wil je de vacature voor je eerste AI-collega? Mail <b>"collega"</b> naar <b>info@storiomedia.nl</b>.</p>
-  <aside class="notes">Om mee te nemen: je hoeft geen developer te zijn. Je moet een goede manager zijn. Iemand die helder kan uitleggen wat goed werk is, en die feedback geeft. Dat kunnen jullie allemaal al. Wil je de vacature-template en het voorbeeld van de follow-upbewaker? Mail "collega" naar info@storiomedia.nl. Dank jullie wel, en ik ben benieuwd welke collega jullie als eerste gaan inwerken.</aside>
+  <p class="offer r" style="--d:500">Het werkblad voor je eerste AI-collega: <b>hielkeboersma.com/werkblad</b></p>
+  <aside class="notes">Om mee te nemen: je hoeft geen developer te zijn. Je moet een goede manager zijn. Iemand die helder kan uitleggen wat goed werk is, en die feedback geeft. Dat kunnen jullie allemaal al. Het werkblad met de vacature en het voorbeeld staat op hielkeboersma.com/werkblad. Dank jullie wel, en ik ben benieuwd welke collega jullie als eerste gaan inwerken.</aside>
 </section>
 
   <div class="foot"><span>Hielke Boersma · Eén mens, twaalf collega's</span><span class="ln"></span><span class="num" id="num"></span></div>
 </div></div>
 <nav id="dots"></nav>
+<button id="notesBtn" type="button">Notities</button>
 <div id="hint">← → navigeren · F volledig scherm · N notities en tijd · T klok opnieuw</div>
 <div id="notes"><div class="nh"><b>SPREKERSNOTITIES</b><span id="sched"></span></div><div id="notesTxt"></div></div>
 
@@ -942,9 +1006,12 @@ stage.addEventListener('mouseleave',()=>{glow.style.opacity=0;mouse.x=mouse.y=-9
 
 /* title orbit satellites */
 const sat1=['Sales','Assistent','Copy','Web','SEO','Social'],sat2=['Video','Audio','Design','Radio','Offertes','Slides'];
-function place(ring,list,rad){const R=document.getElementById(ring);list.forEach((t,i)=>{const a=i/list.length*Math.PI*2-Math.PI/2;
-  const s=document.createElement('div');s.className='sat';s.style.transform=`translate(${Math.cos(a)*rad}px,${Math.sin(a)*rad}px)`;s.innerHTML=`<span>${t}</span>`;R.appendChild(s)})}
-place('ring1',sat1,280);place('ring2',sat2,200);
+const SATS=[];const orbitEl=document.querySelector('.orbit');
+function place(list,rad,dir,period){list.forEach((t,i)=>{const s=document.createElement('div');s.className='sat';s.innerHTML=`<span${dir<0?' class="alt"':''}>${t}</span>`;orbitEl.appendChild(s);
+  SATS.push({el:s,a0:i/list.length*Math.PI*2-Math.PI/2,rad,dir,period})})}
+place(sat1,280,1,60);place(sat2,200,-1,40);
+(function orbitLoop(now){const t=now/1000;for(const o of SATS){const a=o.a0+o.dir*Math.PI*2*t/o.period;o.el.style.transform=`translate(${(Math.cos(a)*o.rad).toFixed(1)}px,${(Math.sin(a)*o.rad).toFixed(1)}px)`}
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(orbitLoop)})(0);
 
 /* chat sequence */
 let chatT=[];
@@ -967,6 +1034,7 @@ document.getElementById('tReset').onclick=e=>{e.stopPropagation();clearInterval(
 /* nav */
 slides.forEach((s,i)=>{const b=document.createElement('button');b.title=s.dataset.label||i+1;b.onclick=()=>go(i);dots.appendChild(b)});
 const notesBox=document.getElementById('notes'),notesTxt=document.getElementById('notesTxt');
+document.getElementById('notesBtn').onclick=e=>{e.stopPropagation();notesBox.classList.toggle('on');e.target.blur();if(typeof sched==='function')sched()};
 function go(i){
   i=Math.max(0,Math.min(slides.length-1,i));
   const old=slides[cur];
@@ -991,7 +1059,7 @@ function go(i){
 }
 
 /* tijdschema */
-const MIN=[1, 1, 2, 2, 1, 0.5, 2.5, 2.5, 2.5, 2, 2, 1.5, 0.5, 2, 0.5, 2.5, 2, 2, 2, 1.5, 4, 0.5, 2, 2, 2, 1.5, 12, 1, 1.5];let t0=null;
+const MIN=[1,1,1.5,1.5,1.5,2,1,0.5,2.5,2.5,2.5,2,2,1.5,0.5,2,0.5,2.5,2,2,2,1,3,0.5,2,2,2,1.5,10,1,1.5];let t0=null;
 const mmss=x=>{const a=Math.abs(Math.round(x));return (x<0?'-':'')+String(Math.floor(a/60)).padStart(2,'0')+':'+String(a%60).padStart(2,'0')};
 function sched(){const plan=MIN.slice(0,cur).reduce((a,b)=>a+b,0)*60,el=document.getElementById('sched');
   let h=`dia ${cur+1} · ± ${MIN[cur]} min · schema ${mmss(plan)}`;
