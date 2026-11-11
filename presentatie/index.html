@@ -384,6 +384,71 @@ pre.skill .h{color:#fff;font-weight:600}
 .videoslide{background:#000}
 .videoslide video.full{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
 .brandlogo svg{height:64px;width:auto;display:block;margin-bottom:26px}
+
+/* --- zo bouw ik --- */
+.build{display:grid;grid-template-columns:560px 1fr;gap:56px;align-items:center;margin-top:34px}
+.cwin{border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:0 30px 70px rgba(23,34,50,.16);overflow:hidden}
+.cwin .top{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line);font-weight:800;color:var(--navy);font-size:16px}
+.cwin .top i{width:10px;height:10px;border-radius:50%;background:#e4e8ef}
+.cwin .top i:first-child{margin-left:0}
+.cwin .top span{margin-left:8px}
+.cwin .body{padding:20px;display:flex;flex-direction:column;gap:12px}
+.cmsg{padding:14px 18px;border-radius:18px;font-size:17px;line-height:1.45}
+.cmsg.me{align-self:flex-end;max-width:88%;background:var(--navy);color:#fff;border-bottom-right-radius:6px}
+.cmsg.ai{max-width:92%;background:var(--soft);color:var(--ink);border-bottom-left-radius:6px}
+.cmsg.ai b{color:var(--navy)}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ba figure{margin:0}
+.ba img{width:100%;aspect-ratio:16/8.4;object-fit:cover;object-position:top;border-radius:14px;border:1px solid var(--line);box-shadow:0 18px 40px rgba(23,34,50,.14);display:block}
+.ba figcaption{font-size:17px;color:var(--mut);margin-top:10px;font-weight:600}
+.ba figcaption b{color:var(--navy)}
+.flow4{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.flow4 span{font-size:16px;font-weight:700;color:var(--navy);background:var(--soft);padding:9px 16px;border-radius:100px}
+.flow4 em{font-style:normal;color:var(--grn);font-weight:800;margin-right:6px}
+/* --- gekoppeld --- */
+.wire{display:grid;grid-template-columns:260px 1fr 330px;gap:70px;align-items:center;margin-top:40px;position:relative}
+.wnode{border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:var(--sh);padding:22px 24px;position:relative}
+.wnode b{display:block;font-size:22px;font-weight:800;color:var(--navy)}
+.wnode span{display:block;font-size:16px;color:var(--mut);margin-top:4px;line-height:1.4}
+.wme{text-align:center}
+.wme .ic{margin:0 auto 14px;width:64px;height:64px;border-radius:20px}
+.wcore{background:var(--navy);color:#fff;border:0;padding:28px 30px;box-shadow:0 30px 70px rgba(23,34,50,.28)}
+.wcore b{color:#fff;font-size:28px}
+.wcore>span{color:rgba(255,255,255,.65)}
+.wcore .rows{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.wcore .rw{display:flex;gap:14px;align-items:center;background:rgba(255,255,255,.07);border-radius:14px;padding:12px 16px}
+.wcore .rw .ic{width:40px;height:40px;border-radius:12px;background:var(--grn)}
+.wcore .rw .ic svg{width:20px;height:20px}
+.wcore .rw b{font-size:18px}.wcore .rw span{font-size:15px;color:rgba(255,255,255,.65);margin:0}
+.wtools{display:flex;flex-direction:column;gap:12px}
+.wtools .wnode{display:flex;gap:14px;align-items:center;padding:14px 18px}
+.wtools .wnode .ic{width:40px;height:40px;border-radius:12px}
+.wtools .wnode .ic svg{width:20px;height:20px}
+.wtools b{font-size:18px}.wtools span{font-size:14.5px;margin-top:1px}
+.wire .ln{position:absolute;top:50%;height:2px;background:repeating-linear-gradient(90deg,var(--grn) 0 6px,transparent 6px 12px);background-size:24px 2px;animation:dash .8s linear infinite}
+.wire .ln.l1{left:260px;width:70px}
+.wire .ln.l2{right:330px;width:70px}
+/* --- zapier --- */
+.zsteps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.zstep{border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:var(--sh);padding:22px 24px;display:flex;flex-direction:column;gap:14px}
+.zstep .k{font-size:15px;font-weight:700;color:var(--mut)}
+.zstep b{font-size:22px;font-weight:800;color:var(--navy);line-height:1.2}
+.zmock{border-radius:14px;background:var(--soft);padding:14px 16px;display:flex;flex-direction:column;gap:9px;font-size:15.5px;color:var(--ink);margin-top:auto}
+.zmock .tg{display:flex;justify-content:space-between;align-items:center}
+.zmock .tg i{width:34px;height:20px;border-radius:20px;background:var(--grn);position:relative}
+.zmock .tg i::after{content:"";position:absolute;right:3px;top:3px;width:14px;height:14px;border-radius:50%;background:#fff}
+.zmock .url{font-family:var(--mono);font-size:13.5px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--navy)}
+.zmock .btn{align-self:flex-start;background:var(--navy);color:#fff;font-weight:700;font-size:14px;padding:8px 14px;border-radius:100px}
+.zmock .say{background:var(--navy);color:#fff;border-radius:14px;border-bottom-right-radius:4px;padding:12px 14px;line-height:1.4}
+.zres{margin-top:26px;display:flex;align-items:center;gap:20px;padding:20px 26px;border-radius:20px;background:var(--navy);color:#fff}
+.zres b{font-size:21px}
+.zres span{color:rgba(255,255,255,.7);font-size:17px}
+.zres .ic{background:var(--grn)}
+/* --- echte skill --- */
+.realskill{display:grid;grid-template-columns:500px 1fr;gap:60px;align-items:center}
+.vers{display:flex;flex-direction:column;gap:10px;margin-top:30px}
+.vers div{display:grid;grid-template-columns:76px 1fr;gap:14px;font-size:17px;color:var(--mut);align-items:baseline}
+.vers div b{font-family:var(--mono);font-size:15px;color:var(--navy)}
 /* chrome */
 #progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--navy),var(--grn));z-index:50;transition:width .6s var(--ease)}
 #dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:7px;z-index:50}
@@ -411,9 +476,9 @@ aside.notes{display:none}
 <!-- ============ 0 COLD OPEN ============ -->
 <section class="slide center" data-label="Opening">
   <div class="clock r" style="--d:150">08<i>:</i>00</div>
-  <div class="notif f"><div class="av">S</div><div><b>Storio assistent <small>nu</small></b><p>6 nieuwe leads gevonden: 4 voor Storio Media, 2 voor Storio Podcasts. Allemaal met een aanleiding. Zal ik de mails klaarzetten?</p></div></div>
+  <div class="notif f"><div class="av">S</div><div><b>Storio assistent <small>nu</small></b><p>20 nieuwe leads gevonden: 16 voor Storio Media, 4 voor Storio Podcasts. Allemaal met een aanleiding. Zal ik de mails klaarzetten?</p></div></div>
   <p class="punch f">Ik heb nog niets gedaan. <em>Mijn team al wel.</em></p>
-  <aside class="notes">Begin zonder introductie. Laat de klok even staan. [klik] Dit bericht krijg ik elke werkdag om acht uur. Zes bedrijven, uitgezocht, met een reden waarom ze nú interessant zijn. [klik] Ik heb nog niets gedaan. Mijn team al wel. Dan pas: "Goedemorgen." en door naar de titel. Op de volgende dia stel je jezelf voor.</aside>
+  <aside class="notes">Begin zonder introductie. Laat de klok even staan. [klik] Dit bericht krijg ik elke werkdag om acht uur. Twintig bedrijven, uitgezocht, met een reden waarom ze nú interessant zijn. [klik] Ik heb nog niets gedaan. Mijn team al wel. Dan pas: "Goedemorgen." en door naar de titel. Op de volgende dia stel je jezelf voor.</aside>
 </section>
 
 <!-- ============ 1 TITLE ============ -->
@@ -584,16 +649,16 @@ aside.notes{display:none}
   <div class="day r" style="--d:250">
     <div class="track"></div><div class="fill"></div>
     <div class="pts">
-      <div class="pt" style="--i:0"><div class="t">08:00</div><div class="dot"></div><div class="h">Leadronde 1</div><div class="d">Zoekt 6 bedrijven met een aanleiding: nieuwe directeur, funding, vacature, groei.</div></div>
+      <div class="pt" style="--i:0"><div class="t">08:00</div><div class="dot"></div><div class="h">Leadronde 1</div><div class="d">Zoekt tot 20 bedrijven met een aanleiding: nieuwe directeur, funding, vacature, groei.</div></div>
       <div class="pt" style="--i:1"><div class="t">08:30</div><div class="dot"></div><div class="h">Mails klaarzetten</div><div class="d">Na mijn akkoord: persoonlijke acquisitiemail per lead, als concept.</div></div>
-      <div class="pt" style="--i:2"><div class="t">12:00</div><div class="dot"></div><div class="h">Leadronde 2</div><div class="d">Weer 6. Checkt eerst of het bedrijf al eerder benaderd is.</div></div>
+      <div class="pt" style="--i:2"><div class="t">12:00</div><div class="dot"></div><div class="h">Leadronde 2</div><div class="d">Nog een ronde. Checkt eerst of het bedrijf al eerder benaderd is.</div></div>
       <div class="pt" style="--i:3"><div class="t">14:00</div><div class="dot"></div><div class="h">Follow-ups</div><div class="d">Wie reageerde niet? Een korte, vriendelijke tweede mail.</div></div>
       <div class="pt" style="--i:4"><div class="t">15:00</div><div class="dot"></div><div class="h">Leadronde 3</div><div class="d">Mkb met een eigen marketeer scoort hoger.</div></div>
       <div class="pt" style="--i:5"><div class="t">16:30</div><div class="dot"></div><div class="h">Dagafsluiting</div><div class="d">Wat ging eruit, wat staat open. Vrijdag: weekreview.</div></div>
     </div>
   </div>
-  <div class="rule f"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><div><b><span data-count="18">18</span> leads per dag. Geen mail verstuurd zonder mijn "ja".</b><br><span>De agent bepaalt zelfs de prijs bij een offertevraag, binnen de grenzen die ik heb vastgelegd.</span></div></div>
-  <aside class="notes">Mijn sales agent. Drie keer per dag zoekt die nieuwe leads: 4 voor Storio Media en 2 voor Storio Podcasts. Niet zomaar bedrijven, maar bedrijven met een aanleiding. Daarna schrijft de agent per lead een persoonlijke mail in mijn tone of voice. Om twee uur de follow-ups. Om half vijf een dagafsluiting. [klik] De belangrijkste regel: niets gaat de deur uit zonder mijn ja. Let op: zeg "de agent", niet "hij".</aside>
+  <div class="rule f"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><div><b>Drie leadrondes per dag. Geen mail verstuurd zonder mijn "ja".</b><br><span>De agent bepaalt zelfs de prijs bij een offertevraag, binnen de grenzen die ik heb vastgelegd.</span></div></div>
+  <aside class="notes">Mijn sales agent. Drie keer per dag zoekt die nieuwe leads: tot 16 voor Storio Media en 4 voor Storio Podcasts per ronde. Niet zomaar bedrijven, maar bedrijven met een aanleiding. Daarna schrijft de agent per lead een persoonlijke mail in mijn tone of voice. Om twee uur de follow-ups. Om half vijf een dagafsluiting. [klik] De belangrijkste regel: niets gaat de deur uit zonder mijn ja. Let op: zeg "de agent", niet "hij".</aside>
 </section>
 
 <!-- ============ 8 ASSISTANT ============ -->
@@ -602,7 +667,7 @@ aside.notes{display:none}
     <div>
       <h2 class="r" style="--d:100">Mijn assistent zit <em>in mijn broekzak.</em></h2>
       <div class="feat">
-        <div class="row r" style="--d:250"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><b>Inbox</b><span>Drie keer per dag: actie nodig, ter info, afwijzingen. Antwoorden staan al klaar als concept.</span></div></div>
+        <div class="row r" style="--d:250"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><b>Inbox</b><span>Elk half uur: actie nodig, ter info, afwijzingen. Antwoorden staan al klaar als concept.</span></div></div>
         <div class="row r" style="--d:350"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><div><b>Agenda</b><span>Plant afspraken in, met de vaste Teams-link en een bevestigingsmail.</span></div></div>
         <div class="row r" style="--d:450"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><div><b>Meetingvoorbereiding</b><span>Een uur voor elk gesprek: wie is het, wat speelt er, welke vragen stel ik.</span></div></div>
       </div>
@@ -696,6 +761,31 @@ aside.notes{display:none}
   <aside class="notes">Hoe lang heeft dit geduurd? Geen jaar. Half oktober startte mijn eerste agent. Een week later deed die acquisitie, mail en agenda. Eind oktober bereidde die mijn gesprekken voor. Begin november bepaalde die prijzen. [klik] Geen groot IT-project, geen budgetronde. Elke week één collega erbij, of een betere.</aside>
 </section>
 
+<!-- ============ 12c ZO BOUW IK ============ -->
+<section class="slide" data-label="Zo bouw ik">
+  <h2 class="r" style="--d:0;font-size:64px">Zo bouw ik: <em>ik praat gewoon.</em></h2>
+  <div class="build">
+    <div class="cwin r" style="--d:150">
+      <div class="top"><i></i><i></i><i></i><span>Claude</span></div>
+      <div class="body">
+        <div class="cmsg me">Ik wil graag dat de achtergrond licht (wit) is, en vooral donkerblauw gebruiken.</div>
+        <div class="cmsg ai">Duidelijk: <b>witte achtergrond, vooral donkerblauw.</b> Ik zet de hele kleurenset om en zet de nieuwe versie online.</div>
+        <div class="cmsg me">Die titels met hoofdletters erboven wil ik weg. Dat lijkt erg AI-achtig.</div>
+        <div class="cmsg ai">Weggehaald, op alle 25 dia's. <b>Live gezet.</b></div>
+      </div>
+    </div>
+    <div>
+      <div class="ba r" style="--d:250">
+        <figure><img src="assets/bouw-voor.webp" alt="Eerste versie van deze presentatie"><figcaption>Eerste versie</figcaption></figure>
+        <figure><img src="assets/bouw-na.webp" alt="Huidige versie van deze presentatie"><figcaption><b>Eén zin later</b></figcaption></figure>
+      </div>
+      <p class="lead r" style="--d:350;font-size:23px">Deze presentatie is zo gemaakt. Ik schrijf geen code. Ik zeg wat ik wil, kijk wat eruit komt en geef feedback.</p>
+      <div class="flow4 r" style="--d:450"><span><em>1</em>Zeggen wat je wilt</span><span><em>2</em>Claude bouwt</span><span><em>3</em>Kijken en bijsturen</span><span><em>4</em>Live</span></div>
+    </div>
+  </div>
+  <aside class="notes">Dit is letterlijk hoe ik werk. Links zie je twee berichten die ik vandaag zelf aan Claude stuurde, voor déze presentatie. Rechts het verschil. Ik schrijf geen code: ik zeg wat ik wil, ik kijk, en ik stuur bij. Net als met een vormgever die naast je zit. Mijn websites, video's en deze slides zijn allemaal zo gemaakt.</aside>
+</section>
+
 <!-- ============ 13 SECTION 02 ============ -->
 <section class="slide sec" data-label="02 Hoe werkt het">
   <div class="no r">02</div>
@@ -744,6 +834,81 @@ aside.notes{display:none}
   <aside class="notes">Laat de zaal een bedrijf noemen. Cmd + Tab naar Telegram (op de laptop, alleen het gesprek met de bot open, chatlijst ingeklapt). Typ het bericht en verstuur. Cmd + Tab terug naar de presentatie: "Die gaat nu aan het werk. Wij gaan verder, en over een paar minuten kijken we wat er gevonden is."</aside>
 </section>
 
+<!-- ============ 20b GEKOPPELD ============ -->
+<section class="slide" data-label="Zo hangt het samen">
+  <h2 class="r" style="--d:0;font-size:64px">Zo hangt het <em>bij mij samen.</em></h2>
+  <div class="wire">
+    <div class="wnode wme r" style="--d:150"><div class="ic"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></div><b>Ik</b><span>Een bericht in Telegram, op mijn telefoon of laptop.</span></div>
+    <div class="wnode wcore r" style="--d:250"><b>Mijn agent</b><span>Hermes. Draait dag en nacht op mijn Mac.</span>
+      <div class="rows">
+        <div class="rw"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM8 12h8M12 8v8"/></svg></div><div><b>Het brein</b><span>Claude, via mijn gewone abonnement</span></div></div>
+        <div class="rw"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div><div><b>Het handboek</b><span>11 werkinstructies: sales, prijzen, mail, agenda, huisstijl</span></div></div>
+        <div class="rw"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7v5l3 2"/></svg></div><div><b>De planning</b><span>6 vaste taken: leads, follow-ups, inbox, meetings, dag- en weekafsluiting</span></div></div>
+      </div>
+    </div>
+    <div class="wtools">
+      <div class="wnode r" style="--d:350"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zM3 7l9 6 9-6"/></svg></div><div><b>Mail</b><span>Lezen, concepten, versturen na mijn ja</span></div></div>
+      <div class="wnode r" style="--d:420"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 4h18v17H3zM3 9h18M8 2v4M16 2v4"/></svg></div><div><b>Agenda</b><span>Afspraken en Teams-links</span></div></div>
+      <div class="wnode r" style="--d:490"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></div><div><b>Internet</b><span>Zoeken en lezen voor leads en briefings</span></div></div>
+      <div class="wnode r" style="--d:560"><div class="ic"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></div><div><b>Zapier</b><span>LinkedIn en Instagram</span></div></div>
+    </div>
+    <div class="ln l1"></div><div class="ln l2"></div>
+  </div>
+  <aside class="notes">Zo ziet het er echt uit. Ik stuur een bericht in Telegram. Dat komt binnen bij mijn agent, Hermes, die op mijn Mac draait. Het brein is Claude, via mijn gewone abonnement, dus geen extra kosten per vraag. Het handboek: elf tekstbestanden met werkinstructies. De planning: zes vaste taken die de agent zelf start. En rechts de handen: mail, agenda, internet, en via Zapier LinkedIn en Instagram.</aside>
+</section>
+
+<!-- ============ 20c ZAPIER ============ -->
+<section class="slide" data-label="Zapier">
+  <h2 class="r" style="--d:0;font-size:64px">Zo koppel ik <em>een nieuw kanaal.</em></h2>
+  <div class="zsteps">
+    <div class="zstep r" style="--d:150"><span class="k">Stap 1, in Zapier</span><b>Kies wat de agent mag doen</b>
+      <div class="zmock"><div class="tg">Instagram: foto plaatsen<i></i></div><div class="tg">LinkedIn: bericht plaatsen<i></i></div><div class="tg">Mail versturen<i style="background:#cfd6e2"></i></div></div></div>
+    <div class="zstep r" style="--d:250"><span class="k">Stap 2</span><b>Kopieer de koppellink</b>
+      <div class="zmock"><div class="url">mcp.zapier.com/api/v1/connect</div><span class="btn">Kopiëren</span></div></div>
+    <div class="zstep r" style="--d:350"><span class="k">Stap 3, aan Claude</span><b>Zeg dat het gekoppeld moet worden</b>
+      <div class="zmock"><div class="say">Koppel deze Zapier-server aan mijn agent op Telegram. Alleen plaatsen na mijn ja.</div></div></div>
+  </div>
+  <div class="zres r" style="--d:450"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Vanaf dan: "Plaats deze post op Instagram."</b><br><span>De agent maakt het beeld en de tekst, ik zeg ja, en het staat online.</span></div></div>
+  <aside class="notes">Zo koppel ik een nieuw kanaal, bijvoorbeeld Instagram. In Zapier zet ik aan wat de agent mag doen. Mail heb ik daar bewust uitgezet: dat loopt via mijn eigen mailbox. Ik kopieer de koppellink en zeg tegen Claude: koppel dit aan mijn agent. Dat is het. Vanaf dan kan ik in Telegram zeggen: plaats deze post. En ook hier: alleen na mijn ja. Let op: de koppellink zelf is geheim, die deel je nooit.</aside>
+</section>
+
+<!-- ============ 20d ECHTE SKILL ============ -->
+<section class="slide" data-label="Echte werkinstructie">
+  <div class="realskill">
+    <div>
+      <h2 class="r" style="--d:0;font-size:62px">De echte werkinstructie van <em>mijn sales agent.</em></h2>
+      <p class="lead r" style="--d:120;font-size:23px">Gewoon tekst, in mijn woorden. Elke versie is een les.</p>
+      <div class="vers r" style="--d:220">
+        <div><b>21 okt</b>Storio Media én Storio Podcasts in één agent.</div>
+        <div><b>3 nov</b>Breder zoeken: lijsten, vacatures, regionaal nieuws.</div>
+        <div><b>9 nov</b>Focus op mkb met een eigen marketingafdeling.</div>
+        <div><b>10 nov</b>"Wij produceren jóuw podcast", niet: "kom je in mijn podcast?"</div>
+      </div>
+    </div>
+    <pre class="skill r" style="--d:200"><span class="c"># Storio, sales agent (versie 2.3), ingekort</span>
+
+<span class="k">Wie je bent</span>
+Je bent de sales agent van Hielke Boersma.
+Doel: elke werkdag nieuwe opdrachten dichterbij
+brengen. Jij doet het uitzoekwerk, houdt de
+pipeline bij en schrijft concepten.
+
+<span class="k">Grenzen</span>
+<span class="h">Versturen gebeurt alleen na Hielke's "ja".</span>
+Acquisitie loopt alleen via mail.
+
+<span class="k">Wie zoek je</span>
+Storio Media: vooral mkb, 20 tot 250 medewerkers.
+Pluspunt: een eigen marketingafdeling.
+
+<span class="k">Toon</span>
+Laat merken dat Storio Podcasts een productie-
+bedrijf is. Nooit iets wat leest als een gast-
+verzoek of interviewverzoek.</pre>
+  </div>
+  <aside class="notes">Dit is de echte werkinstructie van mijn sales agent, iets ingekort. Gewoon tekst. Links zie je hoe die is gegroeid: elke regel komt van iets wat misging of beter kon. Op 10 november bijvoorbeeld: bedrijven dachten dat ik ze als gast wilde interviewen. Nu staat erin dat elke mail duidelijk maakt dat wíj hún podcast maken.</aside>
+</section>
+
 <!-- ============ 15 COMPARE ============ -->
 <section class="slide" data-label="Inwerken">
   <h2 class="r" style="--d:100">Een agent trainen is <em>een collega inwerken.</em></h2>
@@ -780,21 +945,7 @@ aside.notes{display:none}
   </div>
   <div class="pct r" style="--d:800"><div class="a"></div><div class="b"></div></div>
   <div class="pctl r" style="--d:800"><span><b>Het meeste werk</b> · de agent</span><span><b>Het oordeel</b> · jij</span></div>
-  <aside class="notes">De gouden regel. Agents zoeken, agents maken concepten. Maar het oordeel ligt bij mij. Mijn naam staat eronder, dus ik zeg ja. Het meeste werk zit links, de verantwoordelijkheid blijft rechts. Dat is ook het antwoord op de vraag die jullie nu hebben: "is dat niet eng?" Nee, want jij houdt de knop.</aside>
-</section>
-
-<!-- ============ 18 STACK ============ -->
-<section class="slide" data-label="Gereedschap">
-  <h2 class="r" style="--d:100">Ik schrijf geen code. <em>Ik schrijf instructies.</em></h2>
-  <div class="stack">
-    <div class="card r" style="--d:200"><div class="nm">Claude</div><div class="rl">Het brein &amp; de bouwer</div><p>Het taalmodel achter al mijn collega's. Via Claude Code bouwt het ook mijn websites, video's en deze slides.</p></div>
-    <div class="card r" style="--d:280"><div class="nm">Hermes Agent</div><div class="rl">De collega op Telegram</div><p>Draait dag en nacht, voert de planning uit en praat met mij via de chat op mijn telefoon.</p></div>
-    <div class="card r" style="--d:360"><div class="nm">Skills</div><div class="rl">Het handboek</div><p>Tekstbestanden met werkinstructies: sales, prijzen, tone of voice, huisstijl, agenda, mailbox.</p></div>
-    <div class="card r" style="--d:440"><div class="nm">Zapier</div><div class="rl">De koppelingen</div><p>Verbindt de agent met LinkedIn, Instagram en YouTube.</p></div>
-    <div class="card r" style="--d:520"><div class="nm">HeyGen</div><div class="rl">Stem, muziek, beeld</div><p>Voice-overs, muziekbibliotheek, geluidseffecten en AI-beeld.</p></div>
-    <div class="card r" style="--d:600"><div class="nm">HyperFrames</div><div class="rl">Video als code</div><p>Montage en motion graphics die de agent zelf opbouwt en rendert.</p></div>
-  </div>
-  <aside class="notes">Mijn gereedschap. Belangrijk: de tools doen er minder toe dan je denkt. Morgen is er weer iets nieuws. Wat blijft, zijn je werkinstructies. Die zijn van jou en die neem je mee naar elke tool. Volgende dia: terug naar de assistent.</aside>
+  <aside class="notes">De gouden regel. Agents zoeken, agents maken concepten. Maar het oordeel ligt bij mij. Mijn naam staat eronder, dus ik zeg ja. Het meeste werk zit links, de verantwoordelijkheid blijft rechts. Dat is ook het antwoord op de vraag die jullie nu hebben: "is dat niet eng?" Nee, want jij houdt de knop. Volgende dia: terug naar de assistent.</aside>
 </section>
 
 <!-- ============ 18c LIVE RESULTAAT ============ -->
@@ -971,7 +1122,7 @@ addEventListener('resize',fit);fit();
 
 /* org chart roles */
 const roles=[
- ['Sales agent','18 leads per dag, eerste mail klaar','M3 17l6-6 4 4 8-8M14 7h7v7'],
+ ['Sales agent','Drie leadrondes per dag','M3 17l6-6 4 4 8-8M14 7h7v7'],
  ['Persoonlijk assistent','Inbox, agenda, meetingbriefings','M3 4h18v17H3zM3 9h18M8 2v4M16 2v4'],
  ['Accountmanager','Prijzen en voorstellen op maat','M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zM14 3v6h6'],
  ['Marketing manager','Social posts, Instagram, YouTube','M3 11l18-5v12L3 14v-3zM11.6 16.8a3 3 0 1 1-5.8-1.6'],
@@ -1003,7 +1154,7 @@ function drawOrg(){
 }
 /* agents at work */
 const tasks=[
- ['zoekt leads…','scoort 6 bedrijven…','checkt dubbelen…','schrijft mail #4…'],
+ ['zoekt leads…','scoort 20 bedrijven…','checkt dubbelen…','schrijft mail #4…'],
  ['leest inbox…','plant call 10:00…','maakt briefing…','zet Teams-link…'],
  ['rekent offerte…','past seriekorting toe…','maakt voorstel…'],
  ['plant post…','kiest beeld…','plaatst op Instagram…'],
@@ -1113,7 +1264,7 @@ function go(i){
 }
 
 /* tijdschema */
-const MIN=[1,1,1.5,1.5,1.5,1.5,1.5,2,1,0.5,2.5,2.5,2.5,2,1.5,1.5,0.5,2,0.5,2.5,1.5,2,2,2,1,2.5,0.5,1.5,1.5,2,1.5,9,1,1.5];let t0=null;
+const MIN=[1,1,1.5,1.5,1.5,1.5,1.5,1.5,1,0.5,2,2,2,1.5,1,1,0.5,1.5,2,0.5,2,1.5,2,1.5,1.5,1.5,1.5,1.5,2.5,0.5,1,1,1.5,1,10,1,1.5];let t0=null;
 const mmss=x=>{const a=Math.abs(Math.round(x));return (x<0?'-':'')+String(Math.floor(a/60)).padStart(2,'0')+':'+String(a%60).padStart(2,'0')};
 function sched(){const plan=MIN.slice(0,cur).reduce((a,b)=>a+b,0)*60,el=document.getElementById('sched');
   let h=`dia ${cur+1} · ± ${MIN[cur]} min · schema ${mmss(plan)}`;
