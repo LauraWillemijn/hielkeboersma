@@ -190,7 +190,7 @@ h1 em,h2 em,h3 em{font-style:normal;color:var(--grn)}
 .msg.me{align-self:flex-end;background:var(--grn);color:#fff;border-bottom-right-radius:6px}
 .msg.bot{border-bottom-left-radius:6px}
 .msg.on{opacity:1;transform:none}
-.msg .lbl{font-size:12px;font-weight:800;letter-spacing:.14em;color:#a9c6f0;display:block;margin-bottom:4px}
+.msg .lbl{font-size:14px;font-weight:800;letter-spacing:0;color:#a9c6f0;display:block;margin-bottom:4px}
 .typing{align-self:flex-start;display:none;gap:5px;padding:16px 18px;border-radius:20px;background:#24344c}
 .typing.on{display:flex}
 .typing i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.6);animation:bob 1s infinite}
@@ -610,11 +610,11 @@ aside.notes{display:none}
     <div class="phone r" style="--d:200">
       <div class="bar"><div class="av">S</div><div><b>Storio assistent</b><small>● online</small></div></div>
       <div class="msgs" id="chat">
-        <div class="msg bot"><span class="lbl">INBOX 12:00</span>2 mails vragen actie. Een klant wil de 9:16-versie vóór vrijdag. Concept-antwoord staat in Drafts.</div>
+        <div class="msg bot"><span class="lbl">Inbox 12:00</span>2 mails vragen actie. Een klant wil de 9:16-versie vóór vrijdag. Concept-antwoord staat in Drafts.</div>
         <div class="msg me">Top. Zet morgen 10:00 een call met ze in.</div>
         <div class="msg bot">Staat erin, met Teams-link. Bevestiging klaar als concept. Versturen?</div>
         <div class="msg me">Ja</div>
-        <div class="msg bot"><span class="lbl">OVER 45 MIN</span>Gesprek met een softwarebedrijf uit Utrecht. 80 medewerkers, net een nieuwe CMO. Drie vragen voor je klaargezet.</div>
+        <div class="msg bot"><span class="lbl">Over 45 minuten</span>Gesprek met een softwarebedrijf uit Utrecht. 80 medewerkers, net een nieuwe CMO. Drie vragen voor je klaargezet.</div>
         <div class="typing" id="typing"><i></i><i></i><i></i></div>
       </div>
     </div>
@@ -721,6 +721,29 @@ aside.notes{display:none}
   <aside class="notes">In het midden het brein: het taalmodel, bij mij Claude. Op zichzelf is dat een slimme chatbot. Een agent wordt het pas met vier dingen eromheen. [klik] Een handboek: skills, werkinstructies in gewone taal. [klik] Handen: toegang tot mail, agenda, internet. [klik] Een geheugen: bestanden waarin staat wat er al gebeurd is. [klik] En een ritme: de agent begint zelf, op vaste tijden.</aside>
 </section>
 
+<!-- ============ 18b LIVE ============ -->
+<section class="slide" data-label="Live demo">
+  <div class="split">
+    <div>
+      <h2 class="r" style="--d:100">Test <em>mijn assistent.</em></h2>
+      <p class="lead r" style="--d:180;font-size:25px">Noem een bedrijf uit de zaal. Ik stuur één bericht, en terwijl mijn assistent aan het werk gaat, vertel ik verder.</p>
+      <div class="feat">
+        <div class="row r" style="--d:280"><div class="ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div><div><b>Jullie kiezen</b><span>Een bedrijf, een klant, een prospect.</span></div></div>
+        <div class="row r" style="--d:380"><div class="ic"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></div><div><b>Eén bericht</b><span>Via Telegram, live op het scherm.</span></div></div>
+        <div class="row r" style="--d:480"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b>Straks het resultaat</b><span>Over een paar dia's kijken we samen wat er gevonden is.</span></div></div>
+      </div>
+    </div>
+    <div class="phone r" style="--d:200">
+      <div class="bar"><div class="av">S</div><div><b>Storio assistent</b><small>● online</small></div></div>
+      <div class="msgs" style="min-height:420px">
+        <div class="msg me on">Maak een briefing over [bedrijf uit de zaal] voor een eerste gesprek over video. Wie beslist, wat speelt er, drie vragen.</div>
+        <div class="typing on"><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">Laat de zaal een bedrijf noemen. Cmd + Tab naar Telegram (op de laptop, alleen het gesprek met de bot open, chatlijst ingeklapt). Typ het bericht en verstuur. Cmd + Tab terug naar de presentatie: "Die gaat nu aan het werk. Wij gaan verder, en over een paar minuten kijken we wat er gevonden is."</aside>
+</section>
+
 <!-- ============ 15 COMPARE ============ -->
 <section class="slide" data-label="Inwerken">
   <h2 class="r" style="--d:100">Een agent trainen is <em>een collega inwerken.</em></h2>
@@ -771,30 +794,30 @@ aside.notes{display:none}
     <div class="card r" style="--d:520"><div class="nm">HeyGen</div><div class="rl">Stem, muziek, beeld</div><p>Voice-overs, muziekbibliotheek, geluidseffecten en AI-beeld.</p></div>
     <div class="card r" style="--d:600"><div class="nm">HyperFrames</div><div class="rl">Video als code</div><p>Montage en motion graphics die de agent zelf opbouwt en rendert.</p></div>
   </div>
-  <aside class="notes">Mijn gereedschap. Belangrijk: de tools doen er minder toe dan je denkt. Morgen is er weer iets nieuws. Wat blijft, zijn je werkinstructies. Die zijn van jou en die neem je mee naar elke tool.</aside>
+  <aside class="notes">Mijn gereedschap. Belangrijk: de tools doen er minder toe dan je denkt. Morgen is er weer iets nieuws. Wat blijft, zijn je werkinstructies. Die zijn van jou en die neem je mee naar elke tool. Volgende dia: terug naar de assistent.</aside>
 </section>
 
-<!-- ============ 18b LIVE ============ -->
-<section class="slide" data-label="Live demo">
+<!-- ============ 18c LIVE RESULTAAT ============ -->
+<section class="slide" data-label="Live resultaat">
   <div class="split">
     <div>
-      <h2 class="r" style="--d:100">Test <em>mijn assistent.</em></h2>
-      <p class="lead r" style="--d:180;font-size:25px">Noem een bedrijf uit de zaal. Ik stuur één bericht, en mijn assistent maakt er een gespreksbriefing van.</p>
+      <h2 class="r" style="--d:0">Wat heeft mijn assistent <em>gevonden?</em></h2>
+      <p class="lead r" style="--d:120;font-size:25px">Een paar minuten geleden stuurde ik één bericht. Dit is wat er ondertussen is uitgezocht.</p>
       <div class="feat">
-        <div class="row r" style="--d:280"><div class="ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div><div><b>Jullie kiezen</b><span>Een bedrijf, een klant, een prospect.</span></div></div>
-        <div class="row r" style="--d:380"><div class="ic"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></div><div><b>Eén bericht</b><span>Via Telegram, vanaf mijn telefoon.</span></div></div>
-        <div class="row r" style="--d:480"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b>Een paar minuten later</b><span>Wie zijn ze, wat speelt er, welke vragen stel je.</span></div></div>
+        <div class="row r" style="--d:240"><div class="ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><b>Wie zit er aan tafel</b><span>Wie beslist er, en wat is hun rol?</span></div></div>
+        <div class="row r" style="--d:340"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/></svg></div><div><b>Wat speelt er</b><span>Nieuws, groei, vacatures, recente campagnes.</span></div></div>
+        <div class="row r" style="--d:440"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></svg></div><div><b>Drie vragen</b><span>Om het gesprek mee te openen.</span></div></div>
       </div>
     </div>
     <div class="phone r" style="--d:200">
       <div class="bar"><div class="av">S</div><div><b>Storio assistent</b><small>● online</small></div></div>
       <div class="msgs" style="min-height:420px">
         <div class="msg me on">Maak een briefing over [bedrijf uit de zaal] voor een eerste gesprek over video. Wie beslist, wat speelt er, drie vragen.</div>
-        <div class="typing on"><i></i><i></i><i></i></div>
+        <div class="msg bot on"><span class="lbl">Briefing klaar</span>Wie zit er aan tafel · Wat speelt er · Drie vragen voor het gesprek. Hieronder alles op een rij.</div>
       </div>
     </div>
   </div>
-  <aside class="notes">Tijd voor bewijs. Laat de zaal een bedrijf noemen. Typ het bericht live in Telegram, met je telefoon gespiegeld op het scherm. Terwijl de agent werkt: vertel verder over het gereedschap of beantwoord een vraag. Plan B als wifi of tijd tegenvalt: een briefing die je vooraf hebt laten maken.</aside>
+  <aside class="notes">Terug naar de assistent. Cmd + Tab naar Telegram en lees de briefing samen met de zaal door. Vraag aan iemand uit dat bedrijf: klopt dit? Wat mist er? Daarna Cmd + Tab terug. Is de briefing nog niet klaar: "Die is nog bezig, ik kom er aan het eind op terug." Plan B: de briefing die je vooraf hebt laten maken. Overgang: "Dit is één collega. Wat betekent dit nou voor jullie?"</aside>
 </section>
 
 <!-- ============ 19 SECTION 03 ============ -->
@@ -1090,7 +1113,7 @@ function go(i){
 }
 
 /* tijdschema */
-const MIN=[1,1,1.5,1.5,1.5,1.5,1.5,2,1,0.5,2.5,2.5,2.5,2,1.5,1.5,0.5,2,0.5,2.5,2,2,2,1,3,0.5,2,2,2,1.5,9,1,1.5];let t0=null;
+const MIN=[1,1,1.5,1.5,1.5,1.5,1.5,2,1,0.5,2.5,2.5,2.5,2,1.5,1.5,0.5,2,0.5,2.5,1.5,2,2,2,1,2.5,0.5,1.5,1.5,2,1.5,9,1,1.5];let t0=null;
 const mmss=x=>{const a=Math.abs(Math.round(x));return (x<0?'-':'')+String(Math.floor(a/60)).padStart(2,'0')+':'+String(a%60).padStart(2,'0')};
 function sched(){const plan=MIN.slice(0,cur).reduce((a,b)=>a+b,0)*60,el=document.getElementById('sched');
   let h=`dia ${cur+1} · ± ${MIN[cur]} min · schema ${mmss(plan)}`;
