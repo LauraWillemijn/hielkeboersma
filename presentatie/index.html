@@ -381,6 +381,8 @@ pre.skill .h{color:#fff;font-weight:600}
 .clients img{height:40px;width:100%;max-width:150px;object-fit:contain;filter:grayscale(1);opacity:.7;mix-blend-mode:multiply}
 #notesBtn{position:fixed;left:16px;bottom:14px;z-index:55;font:600 13px var(--f);color:var(--navy);background:rgba(255,255,255,.85);border:1px solid var(--line);border-radius:100px;padding:7px 14px;cursor:pointer;opacity:.45;transition:opacity .3s}
 #notesBtn:hover{opacity:1}
+.videoslide{background:#000}
+.videoslide video.full{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
 /* chrome */
 #progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--navy),var(--grn));z-index:50;transition:width .6s var(--ease)}
 #dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:7px;z-index:50}
@@ -456,11 +458,11 @@ aside.notes{display:none}
   <div class="story">
     <div>
       <h2 class="r" style="--d:0">Het begon <em>op de radio.</em></h2>
-      <p class="lead r" style="--d:120">Ik ben dj en presentator. Van maandag tot en met donderdag sta ik van 12:00 tot 16:00 live op SLAM!.</p>
+      <p class="lead r" style="--d:120">Ik ben vooral een creatief. Ik vertel verhalen, met woorden en met muziek. Van maandag tot en met donderdag live op SLAM!.</p>
       <div class="facts">
-        <div class="fact r" style="--d:240"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg></div><div><b>Verhalen in drie minuten</b>Op de radio leer je snel to the point komen. Tussen twee platen moet het raak zijn.</div></div>
-        <div class="fact r" style="--d:340"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5-6.5-4.5L5.5 21l2-7.5L2 9h7z"/></svg></div><div><b>Op het podium</b>Als dj op feesten en als presentator en dagvoorzitter op events.</div></div>
-        <div class="fact r" style="--d:440"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7v5l3 2"/></svg></div><div><b>Altijd live, altijd op tijd</b>Een uitzending wacht niet. Dat ritme neem ik overal mee naartoe.</div></div>
+        <div class="fact r" style="--d:240"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div><div><b>Verhalen vertellen</b>Elke uitzending is een verhaal. Wat vertel je, wanneer, en hoe neem je mensen mee?</div></div>
+        <div class="fact r" style="--d:340"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13M6 15a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM18 13a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></div><div><b>Leven in de muziek</b>Achter de draaitafel bouw ik een set op en voel ik wat een zaal nodig heeft.</div></div>
+        <div class="fact r" style="--d:440"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2z"/></svg></div><div><b>Een creatief in de kern</b>Ideeën bedenken en ze maken. Daar krijg ik energie van, op de radio en daarbuiten.</div></div>
       </div>
     </div>
     <div class="mosaic r" style="--d:150">
@@ -469,7 +471,7 @@ aside.notes{display:none}
       <figure><img src="assets/radio-ade.webp" alt="Hielke Boersma als presentator bij SLAM!"></figure>
     </div>
   </div>
-  <aside class="notes">Mijn basis is radio. Van maandag tot en met donderdag sta ik van twaalf tot vier live op SLAM!. Daarnaast draai ik als dj en presenteer ik events. Wat radio je leert: je hebt drie minuten tussen twee platen, en dan moet het raak zijn. En: een uitzending wacht niet. Dat ritme heb ik meegenomen in alles wat ik daarna ging doen.</aside>
+  <aside class="notes">Mijn basis is radio. Van maandag tot en met donderdag sta ik van twaalf tot vier live op SLAM!. Daarnaast draai ik als dj en presenteer ik events. Maar bovenal ben ik een creatief. Op de radio en achter de draaitafel vertel ik verhalen, met woorden en met muziek. Ideeën bedenken en ze maken: daar krijg ik energie van.</aside>
 </section>
 
 <!-- ============ 2c PODCASTS ============ -->
@@ -486,13 +488,40 @@ aside.notes{display:none}
       <div class="facts">
         <div class="fact r" style="--d:240"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12zM12 6.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></div><div><b>Op locatie</b>Van een vergaderzaal tot het trainingscomplex van FC Utrecht.</div></div>
         <div class="fact r" style="--d:340"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM6 15a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12"/></svg></div><div><b>Alles in eigen hand</b>Concept, interviews, regie en montage.</div></div>
-        <div class="fact r" style="--d:440"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 6h14v12H2zM16 10l6-3v10l-6-3"/></svg></div><div><b>En nu ook met beeld</b>Dit jaar kwam Storio Media erbij: AI-video voor bedrijven.</div></div>
+        <div class="fact r" style="--d:440"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 6h14v12H2zM16 10l6-3v10l-6-3"/></svg></div><div><b>Het verhaal centraal</b>Elke aflevering draait om een goed gesprek, goed verteld.</div></div>
       </div>
       <p class="clients-l r" style="--d:520">Onder meer voor</p>
       <div class="clients r" style="--d:580"><img src="assets/klanten/logo-fcutrecht.svg" alt="FC Utrecht"><img src="assets/klanten/logo-pharmapartners.png" alt="PharmaPartners"><img src="assets/klanten/logo-tss.png" alt="Total Specific Solutions"><img src="assets/klanten/logo-pinkroccade.png" alt="PinkRoccade"><img src="assets/klanten/logo-groningen.svg" alt="Gemeente Groningen"><img src="assets/klanten/logo-magenta.jpeg" alt="Magenta"><img src="assets/klanten/logo-keiweek.png" alt="KEI-week"></div>
     </div>
   </div>
-  <aside class="notes">Vanuit de radio ben ik podcasts gaan maken. Eerst voor mezelf, toen voor organisaties. Met Storio Podcasts doen we alles: concept, opname op locatie, regie, montage. Hier zie je een opname bij FC Utrecht. Klanten zijn onder meer PharmaPartners, TSS, PinkRoccade en Gemeente Groningen. En dit jaar kwam Storio Media erbij: video, gemaakt met AI. En daar begon het probleem dat ik zo laat zien.</aside>
+  <aside class="notes">Vanuit de radio ben ik podcasts gaan maken. Eerst voor mezelf, toen voor organisaties. Met Storio Podcasts doen we alles: concept, opname op locatie, regie, montage. Hier zie je een opname bij FC Utrecht. Klanten zijn onder meer PharmaPartners, TSS, PinkRoccade en Gemeente Groningen. En daarna kwam er nog iets bij.</aside>
+</section>
+
+<!-- ============ 2d STORIO MEDIA ============ -->
+<section class="slide" data-label="Storio Media">
+  <div class="story">
+    <div>
+      <h2 class="r" style="--d:0">En nu ook <em>met beeld.</em></h2>
+      <p class="lead r" style="--d:120">Met Storio Media maak ik video's voor bedrijven, slim gemaakt met AI. Van idee tot eindfilm, zonder draaidag.</p>
+      <div class="facts">
+        <div class="fact r" style="--d:240"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16zM14 6l4 4"/></svg></div><div><b>Concept en script</b>Eerst het verhaal. Dan pas het beeld.</div></div>
+        <div class="fact r" style="--d:340"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div><div><b>AI-beeld, stem en muziek</b>Beelden, voice-over en muziek, gemaakt en gemonteerd met AI.</div></div>
+        <div class="fact r" style="--d:440"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7v5l3 2"/></svg></div><div><b>Binnen een week klaar</b>Van briefing tot eindfilm, voor een vaste prijs.</div></div>
+      </div>
+    </div>
+    <div class="mosaic r" style="--d:150">
+      <figure><img src="assets/media-flow.webp" alt="Video van Storio Media"></figure>
+      <figure><img src="assets/media-reveal-nieuw-bedrijf.webp" alt="Video van Storio Media"></figure>
+      <figure><img src="assets/media-ai-bij-softwaregroep.webp" alt="Video van Storio Media"></figure>
+    </div>
+  </div>
+  <aside class="notes">Dit jaar kwam daar Storio Media bij. Daar vertellen we verhalen met beeld. Geen draaidag, geen cameraploeg: concept en script, en dan beeld, stem en muziek met AI. Elke video binnen een week. En dit is meteen het bedrijf waar ik het meest met agents ben gaan werken. Ik laat er één zien.</aside>
+</section>
+
+<!-- ============ 2e VIDEO ============ -->
+<section class="slide videoslide" data-label="Video" style="padding:0">
+  <video class="full" src="assets/volta-16x9.mp4" poster="assets/volta-poster.webp" playsinline controls preload="metadata" data-sound="1"></video>
+  <aside class="notes">Video afspelen, met geluid. Dit is een film voor Volta, gemaakt door Storio Media. Na afloop: pijltje naar rechts. Overgang: "Leuk, toch? Maar weet je wat het probleem is als je zo veel verschillende dingen doet?"</aside>
 </section>
 
 <!-- ============ 3 HATS ============ -->
@@ -1055,12 +1084,13 @@ function go(i){
   s.querySelectorAll('.sec .no').forEach(k=>scramble(k,100));
   s.querySelectorAll('[data-count]').forEach(c=>{if(!c.closest('.f'))countIn(c,700)});
   if(s.querySelector('#chat'))runChat();
-  s.querySelectorAll('video').forEach(v=>{v.currentTime=0;v.play().catch(()=>{})});
+  document.querySelectorAll('video[data-sound]').forEach(v=>{if(!s.contains(v))v.pause()});
+  s.querySelectorAll('video').forEach(v=>{v.currentTime=0;if(v.dataset.sound){v.muted=false;v.play().catch(()=>{v.muted=true;v.play().catch(()=>{})})}else v.play().catch(()=>{})});
   if(location.hash!=='#'+(cur+1))history.replaceState(null,'','#'+(cur+1));
 }
 
 /* tijdschema */
-const MIN=[1,1,1.5,1.5,1.5,2,1,0.5,2.5,2.5,2.5,2,2,1.5,0.5,2,0.5,2.5,2,2,2,1,3,0.5,2,2,2,1.5,10,1,1.5];let t0=null;
+const MIN=[1,1,1.5,1.5,1.5,1.5,1.5,2,1,0.5,2.5,2.5,2.5,2,1.5,1.5,0.5,2,0.5,2.5,2,2,2,1,3,0.5,2,2,2,1.5,9,1,1.5];let t0=null;
 const mmss=x=>{const a=Math.abs(Math.round(x));return (x<0?'-':'')+String(Math.floor(a/60)).padStart(2,'0')+':'+String(a%60).padStart(2,'0')};
 function sched(){const plan=MIN.slice(0,cur).reduce((a,b)=>a+b,0)*60,el=document.getElementById('sched');
   let h=`dia ${cur+1} · ± ${MIN[cur]} min · schema ${mmss(plan)}`;
