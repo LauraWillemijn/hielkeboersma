@@ -117,7 +117,8 @@ h1 em,h2 em,h3 em{font-style:normal;color:var(--grn)}
 .tl .st{flex:1;padding:20px 22px;border-radius:20px;border:1px solid var(--line);background:#fff;box-shadow:var(--sh)}
 .tl .yr{font-size:15px;font-weight:600;color:var(--mut)}
 .tl .tt{font-size:22px;font-weight:800;margin-top:8px;color:var(--navy)}
-.tl .tt .lg{height:58px;width:auto;display:block;margin:2px 0 -4px}
+.tl .tt .lg{height:58px;width:auto;max-width:100%;display:block;margin:4px 0 14px}
+.tl .tt .lg.slam{height:34px;margin:16px 0 22px;object-fit:contain;object-position:left}
 .tl .dd{font-size:16px;color:var(--mut);margin-top:4px;line-height:1.4}
 
 /* --- hats --- */
@@ -436,12 +437,12 @@ aside.notes{display:none}
 <!-- ============ 2 INTRO ============ -->
 <section class="slide" data-label="Wie ben ik">
   <div class="intro">
-    <div class="photo r"><img src="assets/portret.webp" alt="Hielke Boersma"><div class="tag"><span class="pill dark"><i></i>Stem, verhalen, ideeën</span></div></div>
+    <div class="photo r"><img src="assets/hielke.webp" alt="Hielke Boersma"></div>
     <div>
       <h2 class="r" style="--d:100;font-size:62px">Hoi, ik ben Hielke Boersma.<br><em>Creatief. Geen developer.</em></h2>
-      <p class="lead r" style="--d:200">Ik kom van de radio. Ik maak verhalen met geluid, en inmiddels ook met beeld. Code schrijven? Nooit geleerd.</p>
+      <p class="lead r" style="--d:200">Begonnen in de radio. Ik maak verhalen met geluid, en inmiddels ook met beeld. Code schrijven? Nooit geleerd.</p>
       <div class="tl">
-        <div class="st r" style="--d:320"><div class="yr">De basis</div><div class="tt">Radio</div><div class="dd">DJ en presentator, nu nog elke middag op SLAM!</div></div>
+        <div class="st r" style="--d:320"><div class="yr">De basis</div><div class="tt"><img class="lg slam" src="assets/slam-logo.png" alt="SLAM!"></div><div class="dd">DJ en presentator, nu nog elke middag op SLAM!</div></div>
         <div class="st r" style="--d:420"><div class="yr">Daarna</div><div class="tt"><svg class="lg" viewBox="0 0 160 44" role="img" aria-label="Storio Podcasts"><text x="0" y="29" font-family="Fraunces, Georgia, serif" font-weight="800" font-size="27" fill="#101926">Storio</text><text x="8.5" y="41" font-family="'DM Sans', sans-serif" font-weight="600" font-size="7.5" letter-spacing="3.5" fill="#2e9e60">PODCASTS</text></svg></div><div class="dd">Podcasts voor organisaties, van concept tot montage</div></div>
         <div class="st r" style="--d:520"><div class="yr">2026</div><div class="tt"><svg class="lg" viewBox="0 0 160 44" role="img" aria-label="Storio Media"><text x="0" y="29" font-family="'Fraunces',Georgia,serif" font-size="27" font-weight="800" fill="#101926">Storio</text><text x="45.80" text-anchor="middle" y="41" font-family="'DM Sans',sans-serif" font-size="7.5" font-weight="600" fill="#2e9e60" letter-spacing="7.4">MEDIA</text></svg></div><div class="dd">AI-video voor bedrijven, binnen een week klaar</div></div>
       </div>
@@ -463,9 +464,9 @@ aside.notes{display:none}
       </div>
     </div>
     <div class="mosaic r" style="--d:150">
-      <figure><img src="assets/radio-studio.webp" alt="Hielke Boersma in de radiostudio"><figcaption><span class="pill dark"><i></i>Live op SLAM!</span></figcaption></figure>
+      <figure><img src="assets/radio-studio.webp" alt="Hielke Boersma in de radiostudio"></figure>
       <figure><img src="assets/radio-slam.webp" alt="Hielke Boersma bij SLAM!"></figure>
-      <figure><img src="assets/dj-booth.webp" alt="Hielke Boersma als dj"></figure>
+      <figure><img src="assets/radio-ade.webp" alt="Hielke Boersma als presentator bij SLAM!"></figure>
     </div>
   </div>
   <aside class="notes">Mijn basis is radio. Van maandag tot en met donderdag sta ik van twaalf tot vier live op SLAM!. Daarnaast draai ik als dj en presenteer ik events. Wat radio je leert: je hebt drie minuten tussen twee platen, en dan moet het raak zijn. En: een uitzending wacht niet. Dat ritme heb ik meegenomen in alles wat ik daarna ging doen.</aside>
@@ -475,7 +476,7 @@ aside.notes{display:none}
 <section class="slide" data-label="Storio Podcasts">
   <div class="story rev">
     <div class="mosaic r" style="--d:150">
-      <figure><img src="assets/pod-opname.webp" alt="Podcastopname van Storio Podcasts"><figcaption><span class="pill dark"><i></i>Storio Podcasts</span></figcaption></figure>
+      <figure><img src="assets/pod-opname.webp" alt="Podcastopname van Storio Podcasts"></figure>
       <figure><img src="assets/pod-fcu.webp" alt="Opname FC Utrecht Podcast"></figure>
       <figure><img src="assets/pod-regie.webp" alt="Regie tijdens een opname"></figure>
     </div>
@@ -608,7 +609,7 @@ aside.notes{display:none}
   <h2 class="r" style="--d:100">Een productiehuis <em>op één laptop.</em></h2>
   <div class="studio">
     <div class="r" style="--d:200">
-      <div class="reel"><video src="assets/wat-we-maken-loop.mp4" poster="assets/poster-960.webp" muted loop playsinline autoplay></video><span class="pill"><i></i>Echt werk, Storio Media</span></div>
+      <div class="reel"><video src="assets/wat-we-maken-loop.mp4" poster="assets/poster-960.webp" muted loop playsinline autoplay></video></div>
       <div class="posters">
         <img src="assets/case-volta.webp" alt=""><img src="assets/case-tennis-verbindt.webp" alt=""><img src="assets/case-rondje.webp" alt="">
       </div>
