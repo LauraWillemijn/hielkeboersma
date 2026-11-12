@@ -449,6 +449,47 @@ pre.skill .h{color:#fff;font-weight:600}
 .vers{display:flex;flex-direction:column;gap:10px;margin-top:30px}
 .vers div{display:grid;grid-template-columns:76px 1fr;gap:14px;font-size:17px;color:var(--mut);align-items:baseline}
 .vers div b{font-family:var(--mono);font-size:15px;color:var(--navy)}
+
+/* --- team / poppetjes --- */
+.toon{width:100%;height:100%;display:block}
+.tw{display:block;border-radius:50%;overflow:hidden;flex:0 0 auto;box-shadow:0 8px 18px rgba(23,34,50,.14)}
+.role .tw{width:56px;height:56px}
+.role b .rl{font-weight:600;color:var(--mut)}
+.role b{font-size:17px!important}
+.role small{font-size:13.5px!important}
+.role{gap:14px!important;padding:14px 16px!important}
+.boss .reveal{margin-top:16px;font-size:22px;font-weight:800;color:var(--grn)}
+.hwho{display:flex;align-items:center;gap:30px}
+.hwho .tw{width:118px;height:118px}
+.hwho h2{font-size:66px}
+.bento .tw{width:68px;height:68px}
+.crew .tw{width:60px;height:60px}
+.notif .av,.phone .bar .av{overflow:hidden;padding:0;background:none}
+.notif .av svg,.phone .bar .av svg{width:100%;height:100%}
+/* --- begrippen --- */
+.terms{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:44px}
+.term{border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:var(--sh);padding:22px 20px;display:flex;flex-direction:column;gap:10px;position:relative}
+.term .n{font-family:var(--mono);font-size:14px;color:var(--mut)}
+.term b{font-size:27px;font-weight:900;color:var(--navy);letter-spacing:-.02em}
+.term p{font-size:16.5px;color:var(--mut);line-height:1.45}
+.term .mine{margin-top:auto;font-size:15px;line-height:1.4;background:var(--soft);border-radius:12px;padding:10px 12px;color:var(--navy)}
+.term .mine i{font-style:normal;font-weight:800}
+.term.agent{background:var(--navy);border:0}
+.term.agent b{color:#fff}.term.agent p{color:rgba(255,255,255,.72)}.term.agent .n{color:rgba(255,255,255,.5)}
+.term.agent .mine{background:rgba(255,255,255,.1);color:#fff}
+.term:not(:last-child)::after{content:"+";position:absolute;right:-14px;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;background:var(--grn);color:#fff;font-weight:900;font-size:15px;display:grid;place-items:center;z-index:2}
+.term:nth-child(4)::after{content:"="}
+/* --- één brein --- */
+.brainmap{display:flex;flex-direction:column;gap:22px;margin-top:34px}
+.bm-row .bm-h{font-size:18px;font-weight:700;color:var(--mut);margin-bottom:10px}
+.bm-tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.bm-t{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px 14px;box-shadow:var(--sh)}
+.bm-t .tw{width:50px;height:50px}
+.bm-t b{display:block;font-size:17px;color:var(--navy)}
+.bm-t code{display:block;font-family:var(--mono);font-size:12px;color:var(--grn);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px}
+.bm-core{display:flex;align-items:center;gap:20px;padding:20px 26px;border-radius:20px;background:var(--navy);color:#fff}
+.bm-core b{font-size:22px}.bm-core span{color:rgba(255,255,255,.7);font-size:17px}
+.bm-core .ic{background:var(--grn)}
 /* chrome */
 #progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--navy),var(--grn));z-index:50;transition:width .6s var(--ease)}
 #dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:7px;z-index:50}
@@ -476,7 +517,7 @@ aside.notes{display:none}
 <!-- ============ 0 COLD OPEN ============ -->
 <section class="slide center" data-label="Opening">
   <div class="clock r" style="--d:150">08<i>:</i>00</div>
-  <div class="notif f"><div class="av">S</div><div><b>Storio assistent <small>nu</small></b><p>20 nieuwe leads gevonden: 16 voor Storio Media, 4 voor Storio Podcasts. Allemaal met een aanleiding. Zal ik de mails klaarzetten?</p></div></div>
+  <div class="notif f"><div class="av" data-toon="sam"></div><div><b>Sam, sales agent <small>nu</small></b><p>20 nieuwe leads gevonden: 16 voor Storio Media, 4 voor Storio Podcasts. Allemaal met een aanleiding. Zal ik de mails klaarzetten?</p></div></div>
   <p class="punch f">Ik heb nog niets gedaan. <em>Mijn team al wel.</em></p>
   <aside class="notes">Begin zonder introductie. Laat de klok even staan. [klik] Dit bericht krijg ik elke werkdag om acht uur. Twintig bedrijven, uitgezocht, met een reden waarom ze nú interessant zijn. [klik] Ik heb nog niets gedaan. Mijn team al wel. Dan pas: "Goedemorgen." en door naar de titel. Op de volgende dia stel je jezelf voor.</aside>
 </section>
@@ -635,17 +676,17 @@ aside.notes{display:none}
 
 <!-- ============ 6 ORG CHART ============ -->
 <section class="slide" data-label="Organogram" style="padding-top:56px">
-  <h2 class="r" style="--d:0;font-size:52px">Mijn <em>team.</em></h2>
+  <h2 class="r" style="--d:0;font-size:52px">Ik heb twaalf mensen <em>in dienst.</em></h2>
   <div class="org" id="org">
     <svg id="orgLines"></svg>
-    <div class="boss r" style="--d:100"><div class="av"><img src="assets/hielke.webp" alt=""></div><b>Hielke</b><small>Eigenaar, creatief, eindredactie</small></div>
+    <div class="boss r" style="--d:100"><div class="av"><img src="assets/hielke.webp" alt=""></div><b>Hielke</b><small>Eigenaar, creatief, eindredactie</small><p class="reveal f">Geen van hen is een mens.</p></div>
   </div>
-  <aside class="notes">Dit is mijn organogram. In het midden zit ik. Om mij heen twaalf functies die je in elk groeiend bureau tegenkomt. Sales, een assistent, marketing, een websitebouwer, een video-editor, een audio-engineer. Al deze functies worden ingevuld door AI-agents. Ze werken elke dag, ook als ik op de radio zit. Ik loop er een paar met jullie langs.</aside>
+  <aside class="notes">Ik heb twaalf mensen in dienst. Even voorstellen: Sam doet mijn sales, Ada is mijn assistent, Otto maakt de offertes, Max doet marketing, Coco schrijft, Wes bouwt websites, Zoë zorgt dat we gevonden worden, Gijs ontwerpt, Vera monteert, Abel doet het geluid, Rosa bereidt mijn radioshow voor en Pim maakte deze presentatie. Ze werken elke dag, ook als ik op de radio zit. [klik] En geen van hen is een mens. Ik loop er een paar met jullie langs.</aside>
 </section>
 
 <!-- ============ 7 SALES ============ -->
 <section class="slide" data-label="Sales agent">
-  <h2 class="r" style="--d:100">Een werkdag van <em>mijn sales agent.</em></h2>
+  <div class="hwho"><span class="tw r" style="--d:0" data-toon="sam"></span><h2 class="r" style="--d:100">Een werkdag van <em>Sam,</em> mijn sales agent.</h2></div>
   <div class="day r" style="--d:250">
     <div class="track"></div><div class="fill"></div>
     <div class="pts">
@@ -657,15 +698,15 @@ aside.notes{display:none}
       <div class="pt" style="--i:5"><div class="t">16:30</div><div class="dot"></div><div class="h">Dagafsluiting</div><div class="d">Wat ging eruit, wat staat open. Vrijdag: weekreview.</div></div>
     </div>
   </div>
-  <div class="rule f"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><div><b>Drie leadrondes per dag. Geen mail verstuurd zonder mijn "ja".</b><br><span>De agent bepaalt zelfs de prijs bij een offertevraag, binnen de grenzen die ik heb vastgelegd.</span></div></div>
-  <aside class="notes">Mijn sales agent. Drie keer per dag zoekt die nieuwe leads: tot 16 voor Storio Media en 4 voor Storio Podcasts per ronde. Niet zomaar bedrijven, maar bedrijven met een aanleiding. Daarna schrijft de agent per lead een persoonlijke mail in mijn tone of voice. Om twee uur de follow-ups. Om half vijf een dagafsluiting. [klik] De belangrijkste regel: niets gaat de deur uit zonder mijn ja. Let op: zeg "de agent", niet "hij".</aside>
+  <div class="rule f"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><div><b>Drie leadrondes per dag. Geen mail verstuurd zonder mijn "ja".</b><br><span>Vraagt een lead naar de prijs, dan rekent Otto die uit, binnen de grenzen die ik heb vastgelegd.</span></div></div>
+  <aside class="notes">Dit is Sam, mijn sales agent. Drie keer per dag zoekt die nieuwe leads: tot 16 voor Storio Media en 4 voor Storio Podcasts per ronde. Niet zomaar bedrijven, maar bedrijven met een aanleiding. Daarna schrijft de agent per lead een persoonlijke mail in mijn tone of voice. Om twee uur de follow-ups. Om half vijf een dagafsluiting. [klik] De belangrijkste regel: niets gaat de deur uit zonder mijn ja. Let op: zeg "de agent", niet "hij".</aside>
 </section>
 
 <!-- ============ 8 ASSISTANT ============ -->
 <section class="slide" data-label="Assistent">
   <div class="split">
     <div>
-      <h2 class="r" style="--d:100">Mijn assistent zit <em>in mijn broekzak.</em></h2>
+      <div class="hwho"><span class="tw r" style="--d:0" data-toon="ada"></span><h2 class="r" style="--d:100">Ada zit <em>in mijn broekzak.</em></h2></div>
       <div class="feat">
         <div class="row r" style="--d:250"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><b>Inbox</b><span>Elk half uur: actie nodig, ter info, afwijzingen. Antwoorden staan al klaar als concept.</span></div></div>
         <div class="row r" style="--d:350"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><div><b>Agenda</b><span>Plant afspraken in, met de vaste Teams-link en een bevestigingsmail.</span></div></div>
@@ -673,7 +714,7 @@ aside.notes{display:none}
       </div>
     </div>
     <div class="phone r" style="--d:200">
-      <div class="bar"><div class="av">S</div><div><b>Storio assistent</b><small>● online</small></div></div>
+      <div class="bar"><div class="av" data-toon="ada"></div><div><b>Ada, assistent</b><small>● online</small></div></div>
       <div class="msgs" id="chat">
         <div class="msg bot"><span class="lbl">Inbox 12:00</span>2 mails vragen actie. Een klant wil de 9:16-versie vóór vrijdag. Concept-antwoord staat in Drafts.</div>
         <div class="msg me">Top. Zet morgen 10:00 een call met ze in.</div>
@@ -684,21 +725,21 @@ aside.notes{display:none}
       </div>
     </div>
   </div>
-  <aside class="notes">Mijn assistent. Die zit in Telegram, dus letterlijk in mijn broekzak. Ik zit op de radio, en tussen twee platen door handel ik mijn mail af. Voorbeeldchat is een illustratie van hoe dat eruitziet. Voor elk gesprek krijg ik een briefing: wie is het, wat is er recent gebeurd, wat moet ik vragen.</aside>
+  <aside class="notes">Dit is Ada, mijn assistent. Ada zit in Telegram, dus letterlijk in mijn broekzak. Ik zit op de radio, en tussen twee platen door handel ik mijn mail af. Voorbeeldchat is een illustratie van hoe dat eruitziet. Voor elk gesprek krijg ik een briefing: wie is het, wat is er recent gebeurd, wat moet ik vragen.</aside>
 </section>
 
 <!-- ============ 9 MARKETING ============ -->
 <section class="slide" data-label="Marketing">
   <h2 class="r" style="--d:100">Een marketingafdeling <em>die nooit slaapt.</em></h2>
   <div class="bento">
-    <div class="card r" style="--d:220"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M14 6l4 4"/></svg></div><h3>Copywriter</h3><p>Schrijft in mijn stem. Ik heb elf echte mails laten analyseren; daar is een handboek van gemaakt.</p></div>
-    <div class="card r" style="--d:300"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div><h3>Social media manager</h3><p>LinkedIn-posts in mijn toon, beelden in huisstijl, plaatst op Instagram en YouTube na mijn akkoord.</p></div>
-    <div class="card r" style="--d:380"><div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M6 6.5h.01M9 6.5h.01"/></svg></div><h3>Websitebouwer</h3><p>Drie websites gebouwd en live. Pagina erbij? Eén zin in de chat.</p><div class="metric"><span data-count="3">3</span><small>sites live</small></div></div>
-    <div class="card r" style="--d:460"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><h3>SEO-specialist</h3><p>Audits, zoekwoordpagina's, structured data, bezoekersstatistieken. En vindbaar in AI-zoekmachines.</p></div>
-    <div class="card r" style="--d:540"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><circle cx="16" cy="16" r="2.5"/><path d="M12 21a9 9 0 1 1 9-9c0 2-1.5 3-3 3h-2"/></svg></div><h3>Merkbewaker</h3><p>Een vastgelegde brandguide. Elke uiting wordt gecheckt op kleuren, fonts en toon.</p></div>
-    <div class="card r" style="--d:620"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H5.2L4 17.2z"/><path d="M8 9h8M8 12h5"/></svg></div><h3>Presentatie-designer</h3><p>Ook deze presentatie. Ik vertelde het verhaal, mijn collega bouwde de slides.</p></div>
+    <div class="card r" style="--d:220"><span class="tw" data-toon="coco"></span><h3>Coco, copywriter</h3><p>Schrijft in mijn stem. Ik heb elf echte mails laten analyseren; daar is een handboek van gemaakt.</p></div>
+    <div class="card r" style="--d:300"><span class="tw" data-toon="max"></span><h3>Max, social media</h3><p>LinkedIn-posts in mijn toon, beelden in huisstijl, plaatst op Instagram en YouTube na mijn akkoord.</p></div>
+    <div class="card r" style="--d:380"><span class="tw" data-toon="wes"></span><h3>Wes, websitebouwer</h3><p>Drie websites gebouwd en live. Pagina erbij? Eén zin in de chat.</p><div class="metric"><span data-count="3">3</span><small>sites live</small></div></div>
+    <div class="card r" style="--d:460"><span class="tw" data-toon="zoe"></span><h3>Zoë, SEO-specialist</h3><p>Audits, zoekwoordpagina's, structured data, bezoekersstatistieken. En vindbaar in AI-zoekmachines.</p></div>
+    <div class="card r" style="--d:540"><span class="tw" data-toon="gijs"></span><h3>Gijs, merkbewaker</h3><p>Een vastgelegde brandguide. Elke uiting wordt gecheckt op kleuren, fonts en toon.</p></div>
+    <div class="card r" style="--d:620"><span class="tw" data-toon="pim"></span><h3>Pim, presentaties</h3><p>Ook deze presentatie. Ik vertelde het verhaal, mijn collega bouwde de slides.</p></div>
   </div>
-  <aside class="notes">Marketing. Een copywriter die in mijn stem schrijft: ik heb elf echte mails van mezelf laten analyseren en daar een handboek van gemaakt. Een social media manager. Een websitebouwer: drie sites live, zonder dat ik één regel code heb geschreven. Een SEO-specialist. Een merkbewaker. En leuk detail: deze presentatie is ook gebouwd door een van mijn collega's.</aside>
+  <aside class="notes">Marketing. Coco schrijft in mijn stem: ik heb elf echte mails van mezelf laten analyseren en daar een handboek van gemaakt. Max doet social media. Wes bouwde drie websites, zonder dat ik één regel code schreef. Zoë zorgt dat we gevonden worden. Gijs bewaakt de huisstijl. En Pim heeft deze presentatie gebouwd.</aside>
 </section>
 
 <!-- ============ 10 STUDIO ============ -->
@@ -709,19 +750,19 @@ aside.notes{display:none}
       <div class="reel"><video src="assets/wat-we-maken-loop.mp4" poster="assets/poster-960.webp" muted loop playsinline autoplay></video></div>
     </div>
     <div class="crew">
-      <div class="card r" style="--d:300"><div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg></div><div><b>Video-editor &amp; motion designer</b><span>Montage, titels, bumpers en animatie. Video als code, frame voor frame te sturen.</span></div></div>
-      <div class="card r" style="--d:400"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><div><b>Audio-engineer &amp; componist</b><span>Voice-over, muziek en geluidseffecten, gemixt op de beat van de montage.</span></div></div>
-      <div class="card r" style="--d:500"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div><div><b>Graphic designer</b><span>Banners, thumbnails, mailhandtekeningen, deelbeelden voor elke pagina.</span></div></div>
+      <div class="card r" style="--d:300"><span class="tw" data-toon="vera"></span><div><b>Vera, video-editor en motion designer</b><span>Montage, titels, bumpers en animatie. Video als code, frame voor frame te sturen.</span></div></div>
+      <div class="card r" style="--d:400"><span class="tw" data-toon="abel"></span><div><b>Abel, audio-engineer en componist</b><span>Voice-over, muziek en geluidseffecten, gemixt op de beat van de montage.</span></div></div>
+      <div class="card r" style="--d:500"><span class="tw" data-toon="gijs"></span><div><b>Gijs, graphic designer</b><span>Banners, thumbnails, mailhandtekeningen, deelbeelden voor elke pagina.</span></div></div>
       <div class="pill r" style="--d:600;align-self:flex-start"><i></i>Elke video binnen een week klaar</div>
     </div>
   </div>
-  <aside class="notes">De studio. Video-editor, motion designer, audio-engineer, graphic designer. Wat je hier ziet is echt werk voor echte klanten. Vroeger had ik hier een cameraploeg, een editor en een componist voor nodig. Nu: elke video binnen een week.</aside>
+  <aside class="notes">De studio: Vera monteert, Abel doet muziek en geluid, Gijs ontwerpt. Wat je hier ziet is echt werk voor echte klanten. Vroeger had ik hier een cameraploeg, een editor en een componist voor nodig. Nu: elke video binnen een week.</aside>
 </section>
 
 <!-- ============ 11 RADIO ============ -->
 <section class="slide" data-label="Radioproducer">
-  <h2 class="r" style="--d:100">Ook voor mijn <em>radioshow.</em></h2>
-  <p class="lead r" style="--d:180">Vier middagen per week sta ik live op SLAM!. Mijn showvoorbereiding? Die doet een agent.</p>
+  <div class="hwho"><span class="tw r" style="--d:0" data-toon="rosa"></span><h2 class="r" style="--d:100">Rosa bereidt <em>mijn radioshow voor.</em></h2></div>
+  <p class="lead r" style="--d:180">Vier middagen per week sta ik live op SLAM!. Mijn showvoorbereiding? Die doet Rosa.</p>
   <div class="flow3">
     <div class="card r" style="--d:280"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div><b>Playlist erin</b><span>Ik plak de playlist van vandaag in de chat.</span></div>
     <div class="arr r" style="--d:360">→</div>
@@ -743,55 +784,25 @@ aside.notes{display:none}
   <aside class="notes">Samengevat: één mens. Twaalf functies. Nul regels code die ik zelf heb geschreven. Ik schrijf geen code. Ik schrijf werkinstructies. En dat is het hele geheim, daar gaan we nu op in.</aside>
 </section>
 
-<!-- ============ 12b GROWTH ============ -->
-<section class="slide" data-label="Zo groeide het team">
-  <h2 class="r" style="--d:100">Van chatbot naar team, <em>in vier weken.</em></h2>
-  <div class="day r" style="--d:250">
-    <div class="track"></div><div class="fill"></div>
-    <div class="pts">
-      <div class="pt" style="--i:0"><div class="t">29 sep</div><div class="dot"></div><div class="h">Website live</div><div class="d">storiomedia.nl gebouwd en online, zonder developer.</div></div>
-      <div class="pt" style="--i:1"><div class="t">16 okt</div><div class="dot"></div><div class="h">Eerste collega</div><div class="d">Een assistent op Telegram die dag en nacht draait.</div></div>
-      <div class="pt" style="--i:2"><div class="t">17 okt</div><div class="dot"></div><div class="h">Het handboek</div><div class="d">Tone of voice en huisstijl vastgelegd. Instagram gekoppeld.</div></div>
-      <div class="pt" style="--i:3"><div class="t">21 okt</div><div class="dot"></div><div class="h">Sales en mail</div><div class="d">Leads, acquisitiemails, agenda en inbox.</div></div>
-      <div class="pt" style="--i:4"><div class="t">28 okt</div><div class="dot"></div><div class="h">Voorbereiding</div><div class="d">Een briefing voor elk gesprek, automatisch.</div></div>
-      <div class="pt" style="--i:5"><div class="t">5 nov</div><div class="dot"></div><div class="h">Prijzen</div><div class="d">Offertes op maat, binnen grenzen die ik bepaal.</div></div>
-    </div>
-  </div>
-  <div class="rule f"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><div><b>Geen groot IT-project. Elke week één collega erbij, of een betere.</b><br><span>En elke week regels aangescherpt op basis van wat er misging.</span></div></div>
-  <aside class="notes">Hoe lang heeft dit geduurd? Geen jaar. Half oktober startte mijn eerste agent. Een week later deed die acquisitie, mail en agenda. Eind oktober bereidde die mijn gesprekken voor. Begin november bepaalde die prijzen. [klik] Geen groot IT-project, geen budgetronde. Elke week één collega erbij, of een betere.</aside>
-</section>
-
-<!-- ============ 12c ZO BOUW IK ============ -->
-<section class="slide" data-label="Zo bouw ik">
-  <h2 class="r" style="--d:0;font-size:64px">Zo bouw ik: <em>ik praat gewoon.</em></h2>
-  <div class="build">
-    <div class="cwin r" style="--d:150">
-      <div class="top"><i></i><i></i><i></i><span>Claude</span></div>
-      <div class="body">
-        <div class="cmsg me">Ik wil graag dat de achtergrond licht (wit) is, en vooral donkerblauw gebruiken.</div>
-        <div class="cmsg ai">Duidelijk: <b>witte achtergrond, vooral donkerblauw.</b> Ik zet de hele kleurenset om en zet de nieuwe versie online.</div>
-        <div class="cmsg me">Die titels met hoofdletters erboven wil ik weg. Dat lijkt erg AI-achtig.</div>
-        <div class="cmsg ai">Weggehaald, op alle 25 dia's. <b>Live gezet.</b></div>
-      </div>
-    </div>
-    <div>
-      <div class="ba r" style="--d:250">
-        <figure><img src="assets/bouw-voor.webp" alt="Eerste versie van deze presentatie"><figcaption>Eerste versie</figcaption></figure>
-        <figure><img src="assets/bouw-na.webp" alt="Huidige versie van deze presentatie"><figcaption><b>Eén zin later</b></figcaption></figure>
-      </div>
-      <p class="lead r" style="--d:350;font-size:23px">Deze presentatie is zo gemaakt. Ik schrijf geen code. Ik zeg wat ik wil, kijk wat eruit komt en geef feedback.</p>
-      <div class="flow4 r" style="--d:450"><span><em>1</em>Zeggen wat je wilt</span><span><em>2</em>Claude bouwt</span><span><em>3</em>Kijken en bijsturen</span><span><em>4</em>Live</span></div>
-    </div>
-  </div>
-  <aside class="notes">Dit is letterlijk hoe ik werk. Links zie je twee berichten die ik vandaag zelf aan Claude stuurde, voor déze presentatie. Rechts het verschil. Ik schrijf geen code: ik zeg wat ik wil, ik kijk, en ik stuur bij. Net als met een vormgever die naast je zit. Mijn websites, video's en deze slides zijn allemaal zo gemaakt.</aside>
-</section>
-
 <!-- ============ 13 SECTION 02 ============ -->
-<section class="slide sec" data-label="02 Hoe werkt het">
+<section class="slide sec" data-label="02 Begrippen">
   <div class="no r">02</div>
-  <h2 class="r" style="--d:120">Hoe werkt <em>een agent?</em></h2>
-  <p class="lead r" style="--d:220">Zonder jargon. Beloofd.</p>
+  <h2 class="r" style="--d:120">Eerst even <em>de begrippen.</em></h2>
+  <p class="lead r" style="--d:220">Vijf woorden, zonder jargon. Beloofd.</p>
   <aside class="notes">Hoe werkt zo'n agent nou eigenlijk? Zonder jargon.</aside>
+</section>
+
+<!-- ============ VIJF WOORDEN ============ -->
+<section class="slide" data-label="Vijf woorden">
+  <h2 class="r" style="--d:0;font-size:64px">Vijf woorden die je <em>vandaag hoort.</em></h2>
+  <div class="terms">
+    <div class="term f"><span class="n">01</span><b>Taalmodel</b><p>Het brein. Kan lezen, schrijven en redeneren.</p><div class="mine"><i>Bij mij:</i> Claude</div></div>
+    <div class="term f"><span class="n">02</span><b>Prompt</b><p>Een opdracht in gewone taal. Hoe duidelijker, hoe beter het resultaat.</p><div class="mine"><i>Bij mij:</i> "Maak een briefing over…"</div></div>
+    <div class="term f"><span class="n">03</span><b>Skill</b><p>Een werkinstructie die de AI bij elke opdracht leest. Het handboek.</p><div class="mine"><i>Bij mij:</i> het handboek van Sam</div></div>
+    <div class="term f"><span class="n">04</span><b>Koppeling</b><p>Toegang tot je systemen. Hiermee kan de AI echt iets doen.</p><div class="mine"><i>Bij mij:</i> mail, agenda, Zapier</div></div>
+    <div class="term agent f"><span class="n">05</span><b>Agent</b><p>Alles bij elkaar, plus een planning. Een collega die zelf aan de slag gaat.</p><div class="mine"><i>Bij mij:</i> Sam, Ada en de rest</div></div>
+  </div>
+  <aside class="notes">Vijf woorden. [klik per woord] Een taalmodel is het brein: Claude, ChatGPT. Een prompt is een opdracht in gewone taal. Een skill is een werkinstructie die de AI bij elke opdracht leest. Een koppeling geeft toegang tot je systemen, zoals mail en agenda. En een agent is alles bij elkaar, plus een planning: een collega die zelf aan de slag gaat. Brein plus handboek plus handen is een collega.</aside>
 </section>
 
 <!-- ============ 14 ANATOMY ============ -->
@@ -811,12 +822,69 @@ aside.notes{display:none}
   <aside class="notes">In het midden het brein: het taalmodel, bij mij Claude. Op zichzelf is dat een slimme chatbot. Een agent wordt het pas met vier dingen eromheen. [klik] Een handboek: skills, werkinstructies in gewone taal. [klik] Handen: toegang tot mail, agenda, internet. [klik] Een geheugen: bestanden waarin staat wat er al gebeurd is. [klik] En een ritme: de agent begint zelf, op vaste tijden.</aside>
 </section>
 
+<!-- ============ EEN BREIN ============ -->
+<section class="slide" data-label="Eén brein">
+  <h2 class="r" style="--d:0;font-size:64px">Twaalf collega's, <em>één brein.</em></h2>
+  <p class="lead r" style="--d:120;font-size:24px;margin-top:16px">Elke collega is eigenlijk een handboek. Het brein eronder is steeds hetzelfde.</p>
+  <div class="brainmap">
+    <div class="bm-row r" style="--d:220"><div class="bm-h">Via Telegram, dag en nacht</div><div class="bm-tiles"><div class="bm-t"><span class="tw" data-toon="sam"></span><div><b>Sam</b><code>storio-sales</code></div></div><div class="bm-t"><span class="tw" data-toon="ada"></span><div><b>Ada</b><code>mailbox · agenda</code></div></div><div class="bm-t"><span class="tw" data-toon="otto"></span><div><b>Otto</b><code>storio-prijzen</code></div></div><div class="bm-t"><span class="tw" data-toon="max"></span><div><b>Max</b><code>social-media</code></div></div><div class="bm-t"><span class="tw" data-toon="coco"></span><div><b>Coco</b><code>tone-of-voice</code></div></div><div class="bm-t"><span class="tw" data-toon="gijs"></span><div><b>Gijs</b><code>brand-identity</code></div></div></div></div>
+    <div class="bm-row r" style="--d:320"><div class="bm-h">Op mijn laptop, in Claude Code</div><div class="bm-tiles"><div class="bm-t"><span class="tw" data-toon="wes"></span><div><b>Wes</b><code>websites</code></div></div><div class="bm-t"><span class="tw" data-toon="zoe"></span><div><b>Zoë</b><code>seo-audit</code></div></div><div class="bm-t"><span class="tw" data-toon="vera"></span><div><b>Vera</b><code>hyperframes</code></div></div><div class="bm-t"><span class="tw" data-toon="abel"></span><div><b>Abel</b><code>media-use</code></div></div><div class="bm-t"><span class="tw" data-toon="rosa"></span><div><b>Rosa</b><code>slam-draaiboek</code></div></div><div class="bm-t"><span class="tw" data-toon="pim"></span><div><b>Pim</b><code>design-taste</code></div></div></div></div>
+    <div class="bm-core r" style="--d:420"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM8 12h8M12 8v8"/></svg></div><div><b>Eén brein: Claude.</b><br><span>Welke collega er aan het werk is, hangt af van welk handboek erbij wordt gepakt.</span></div></div>
+  </div>
+  <aside class="notes">Een eerlijk geheim: het zijn niet twaalf losse systemen. Het is één brein, Claude, met per collega een eigen handboek. Sam is de sales-skill, Ada zijn de mailbox- en agendaskills, Rosa is de draaiboekskill. Bovenaan wat via Telegram loopt, dag en nacht. Onderaan wat ik op mijn laptop doe, in Claude Code: websites, video, geluid. Ik geef ze namen omdat het zo voelt: als een team dat je inwerkt.</aside>
+</section>
+
+<!-- ============ 20d ECHTE SKILL ============ -->
+<section class="slide" data-label="Echte werkinstructie">
+  <div class="realskill">
+    <div>
+      <h2 class="r" style="--d:0;font-size:62px">Zo ziet een skill eruit: <em>het handboek van Sam.</em></h2>
+      <p class="lead r" style="--d:120;font-size:23px">De echte werkinstructie, iets ingekort. Gewoon tekst, in mijn woorden. Elke versie is een les.</p>
+      <div class="vers r" style="--d:220">
+        <div><b>21 okt</b>Storio Media én Storio Podcasts in één agent.</div>
+        <div><b>3 nov</b>Breder zoeken: lijsten, vacatures, regionaal nieuws.</div>
+        <div><b>9 nov</b>Focus op mkb met een eigen marketingafdeling.</div>
+        <div><b>10 nov</b>"Wij produceren jóuw podcast", niet: "kom je in mijn podcast?"</div>
+      </div>
+    </div>
+    <pre class="skill r" style="--d:200"><span class="c"># Sam, sales agent (versie 2.3), ingekort</span>
+
+<span class="k">Wie je bent</span>
+Je bent de sales agent van Hielke Boersma.
+Doel: elke werkdag nieuwe opdrachten dichterbij
+brengen. Jij doet het uitzoekwerk, houdt de
+pipeline bij en schrijft concepten.
+
+<span class="k">Grenzen</span>
+<span class="h">Versturen gebeurt alleen na Hielke's "ja".</span>
+Acquisitie loopt alleen via mail.
+
+<span class="k">Wie zoek je</span>
+Storio Media: vooral mkb, 20 tot 250 medewerkers.
+Pluspunt: een eigen marketingafdeling.
+
+<span class="k">Toon</span>
+Laat merken dat Storio Podcasts een productie-
+bedrijf is. Nooit iets wat leest als een gast-
+verzoek of interviewverzoek.</pre>
+  </div>
+  <aside class="notes">Dit is de echte werkinstructie van mijn sales agent, iets ingekort. Gewoon tekst. Links zie je hoe die is gegroeid: elke regel komt van iets wat misging of beter kon. Op 10 november bijvoorbeeld: bedrijven dachten dat ik ze als gast wilde interviewen. Nu staat erin dat elke mail duidelijk maakt dat wíj hún podcast maken.</aside>
+</section>
+
+<!-- ============ S03 BOUWEN ============ -->
+<section class="slide sec" data-label="03 Bouwen">
+  <div class="no r">03</div>
+  <h2 class="r" style="--d:120">Zo bouw je <em>een collega.</em></h2>
+  <p class="lead r" style="--d:220">Van een idee naar een collega die zelf aan de slag gaat.</p>
+  <aside class="notes">Nu we de woorden kennen: hoe bouw je zo'n collega? Ik laat het live zien, en ondertussen vertel ik hoe het bij mij in elkaar zit.</aside>
+</section>
+
 <!-- ============ 18b LIVE ============ -->
 <section class="slide" data-label="Live demo">
   <div class="split">
     <div>
-      <h2 class="r" style="--d:100">Test <em>mijn assistent.</em></h2>
-      <p class="lead r" style="--d:180;font-size:25px">Noem een bedrijf uit de zaal. Ik stuur één bericht, en terwijl mijn assistent aan het werk gaat, vertel ik verder.</p>
+      <h2 class="r" style="--d:100">Test <em>Ada.</em></h2>
+      <p class="lead r" style="--d:180;font-size:25px">Noem een bedrijf uit de zaal. Ik stuur één bericht, en terwijl Ada aan het werk gaat, vertel ik verder.</p>
       <div class="feat">
         <div class="row r" style="--d:280"><div class="ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div><div><b>Jullie kiezen</b><span>Een bedrijf, een klant, een prospect.</span></div></div>
         <div class="row r" style="--d:380"><div class="ic"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></div><div><b>Eén bericht</b><span>Via Telegram, live op het scherm.</span></div></div>
@@ -824,7 +892,7 @@ aside.notes{display:none}
       </div>
     </div>
     <div class="phone r" style="--d:200">
-      <div class="bar"><div class="av">S</div><div><b>Storio assistent</b><small>● online</small></div></div>
+      <div class="bar"><div class="av" data-toon="ada"></div><div><b>Ada, assistent</b><small>● online</small></div></div>
       <div class="msgs" style="min-height:420px">
         <div class="msg me on">Maak een briefing over [bedrijf uit de zaal] voor een eerste gesprek over video. Wie beslist, wat speelt er, drie vragen.</div>
         <div class="typing on"><i></i><i></i><i></i></div>
@@ -872,41 +940,47 @@ aside.notes{display:none}
   <aside class="notes">Zo koppel ik een nieuw kanaal, bijvoorbeeld Instagram. In Zapier zet ik aan wat de agent mag doen. Mail heb ik daar bewust uitgezet: dat loopt via mijn eigen mailbox. Ik kopieer de koppellink en zeg tegen Claude: koppel dit aan mijn agent. Dat is het. Vanaf dan kan ik in Telegram zeggen: plaats deze post. En ook hier: alleen na mijn ja. Let op: de koppellink zelf is geheim, die deel je nooit.</aside>
 </section>
 
-<!-- ============ 20d ECHTE SKILL ============ -->
-<section class="slide" data-label="Echte werkinstructie">
-  <div class="realskill">
-    <div>
-      <h2 class="r" style="--d:0;font-size:62px">De echte werkinstructie van <em>mijn sales agent.</em></h2>
-      <p class="lead r" style="--d:120;font-size:23px">Gewoon tekst, in mijn woorden. Elke versie is een les.</p>
-      <div class="vers r" style="--d:220">
-        <div><b>21 okt</b>Storio Media én Storio Podcasts in één agent.</div>
-        <div><b>3 nov</b>Breder zoeken: lijsten, vacatures, regionaal nieuws.</div>
-        <div><b>9 nov</b>Focus op mkb met een eigen marketingafdeling.</div>
-        <div><b>10 nov</b>"Wij produceren jóuw podcast", niet: "kom je in mijn podcast?"</div>
+<!-- ============ 12c ZO BOUW IK ============ -->
+<section class="slide" data-label="Zo bouw ik">
+  <h2 class="r" style="--d:0;font-size:64px">Zo bouw ik: <em>ik praat gewoon.</em></h2>
+  <div class="build">
+    <div class="cwin r" style="--d:150">
+      <div class="top"><i></i><i></i><i></i><span>Claude</span></div>
+      <div class="body">
+        <div class="cmsg me">Ik wil graag dat de achtergrond licht (wit) is, en vooral donkerblauw gebruiken.</div>
+        <div class="cmsg ai">Duidelijk: <b>witte achtergrond, vooral donkerblauw.</b> Ik zet de hele kleurenset om en zet de nieuwe versie online.</div>
+        <div class="cmsg me">Die titels met hoofdletters erboven wil ik weg. Dat lijkt erg AI-achtig.</div>
+        <div class="cmsg ai">Weggehaald, op alle 25 dia's. <b>Live gezet.</b></div>
       </div>
     </div>
-    <pre class="skill r" style="--d:200"><span class="c"># Storio, sales agent (versie 2.3), ingekort</span>
-
-<span class="k">Wie je bent</span>
-Je bent de sales agent van Hielke Boersma.
-Doel: elke werkdag nieuwe opdrachten dichterbij
-brengen. Jij doet het uitzoekwerk, houdt de
-pipeline bij en schrijft concepten.
-
-<span class="k">Grenzen</span>
-<span class="h">Versturen gebeurt alleen na Hielke's "ja".</span>
-Acquisitie loopt alleen via mail.
-
-<span class="k">Wie zoek je</span>
-Storio Media: vooral mkb, 20 tot 250 medewerkers.
-Pluspunt: een eigen marketingafdeling.
-
-<span class="k">Toon</span>
-Laat merken dat Storio Podcasts een productie-
-bedrijf is. Nooit iets wat leest als een gast-
-verzoek of interviewverzoek.</pre>
+    <div>
+      <div class="ba r" style="--d:250">
+        <figure><img src="assets/bouw-voor.webp" alt="Eerste versie van deze presentatie"><figcaption>Eerste versie</figcaption></figure>
+        <figure><img src="assets/bouw-na.webp" alt="Huidige versie van deze presentatie"><figcaption><b>Eén zin later</b></figcaption></figure>
+      </div>
+      <p class="lead r" style="--d:350;font-size:23px">Deze presentatie is zo gemaakt. Ik schrijf geen code. Ik zeg wat ik wil, kijk wat eruit komt en geef feedback.</p>
+      <div class="flow4 r" style="--d:450"><span><em>1</em>Zeggen wat je wilt</span><span><em>2</em>Claude bouwt</span><span><em>3</em>Kijken en bijsturen</span><span><em>4</em>Live</span></div>
+    </div>
   </div>
-  <aside class="notes">Dit is de echte werkinstructie van mijn sales agent, iets ingekort. Gewoon tekst. Links zie je hoe die is gegroeid: elke regel komt van iets wat misging of beter kon. Op 10 november bijvoorbeeld: bedrijven dachten dat ik ze als gast wilde interviewen. Nu staat erin dat elke mail duidelijk maakt dat wíj hún podcast maken.</aside>
+  <aside class="notes">Dit is letterlijk hoe ik werk. Links zie je twee berichten die ik vandaag zelf aan Claude stuurde, voor déze presentatie. Rechts het verschil. Ik schrijf geen code: ik zeg wat ik wil, ik kijk, en ik stuur bij. Net als met een vormgever die naast je zit. Mijn websites, video's en deze slides zijn allemaal zo gemaakt.</aside>
+</section>
+
+<!-- ============ 12b GROWTH ============ -->
+<section class="slide" data-label="Zo groeide het team">
+  <h2 class="r" style="--d:100">Van chatbot naar team, <em>in vier weken.</em></h2>
+  <div class="day r" style="--d:250">
+    <div class="track"></div><div class="fill"></div>
+    <div class="pts">
+      <div class="pt" style="--i:0"><div class="t">29 sep</div><div class="dot"></div><div class="h">Website live</div><div class="d">storiomedia.nl gebouwd en online, zonder developer.</div></div>
+      <div class="pt" style="--i:1"><div class="t">16 okt</div><div class="dot"></div><div class="h">Ada begint</div><div class="d">Mijn eerste collega, op Telegram, dag en nacht.</div></div>
+      <div class="pt" style="--i:2"><div class="t">17 okt</div><div class="dot"></div><div class="h">Het handboek</div><div class="d">Tone of voice en huisstijl vastgelegd. Instagram gekoppeld.</div></div>
+      <div class="pt" style="--i:3"><div class="t">21 okt</div><div class="dot"></div><div class="h">Sam begint</div><div class="d">Leads en acquisitiemails. Ada krijgt agenda en inbox.</div></div>
+      <div class="pt" style="--i:4"><div class="t">28 okt</div><div class="dot"></div><div class="h">Ada leert bij</div><div class="d">Een briefing voor elk gesprek, automatisch.</div></div>
+      <div class="pt" style="--i:5"><div class="t">5 nov</div><div class="dot"></div><div class="h">Otto begint</div><div class="d">Offertes op maat, binnen grenzen die ik bepaal.</div></div>
+    </div>
+  </div>
+  <div class="rule f"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><div><b>Geen groot IT-project. Elke week één collega erbij, of een betere.</b><br><span>En elke week regels aangescherpt op basis van wat er misging.</span></div></div>
+  <aside class="notes">Hoe lang heeft dit geduurd? Geen jaar. Half oktober startte mijn eerste agent. Een week later deed die acquisitie, mail en agenda. Eind oktober bereidde die mijn gesprekken voor. Begin november bepaalde die prijzen. [klik] Geen groot IT-project, geen budgetronde. Elke week één collega erbij, of een betere.</aside>
 </section>
 
 <!-- ============ 15 COMPARE ============ -->
@@ -952,7 +1026,7 @@ verzoek of interviewverzoek.</pre>
 <section class="slide" data-label="Live resultaat">
   <div class="split">
     <div>
-      <h2 class="r" style="--d:0">Wat heeft mijn assistent <em>gevonden?</em></h2>
+      <h2 class="r" style="--d:0">Wat heeft Ada <em>gevonden?</em></h2>
       <p class="lead r" style="--d:120;font-size:25px">Een paar minuten geleden stuurde ik één bericht. Dit is wat er ondertussen is uitgezocht.</p>
       <div class="feat">
         <div class="row r" style="--d:240"><div class="ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><b>Wie zit er aan tafel</b><span>Wie beslist er, en wat is hun rol?</span></div></div>
@@ -961,7 +1035,7 @@ verzoek of interviewverzoek.</pre>
       </div>
     </div>
     <div class="phone r" style="--d:200">
-      <div class="bar"><div class="av">S</div><div><b>Storio assistent</b><small>● online</small></div></div>
+      <div class="bar"><div class="av" data-toon="ada"></div><div><b>Ada, assistent</b><small>● online</small></div></div>
       <div class="msgs" style="min-height:420px">
         <div class="msg me on">Maak een briefing over [bedrijf uit de zaal] voor een eerste gesprek over video. Wie beslist, wat speelt er, drie vragen.</div>
         <div class="msg bot on"><span class="lbl">Briefing klaar</span>Wie zit er aan tafel · Wat speelt er · Drie vragen voor het gesprek. Hieronder alles op een rij.</div>
@@ -972,8 +1046,8 @@ verzoek of interviewverzoek.</pre>
 </section>
 
 <!-- ============ 19 SECTION 03 ============ -->
-<section class="slide sec" data-label="03 En jij">
-  <div class="no r">03</div>
+<section class="slide sec" data-label="04 En jij">
+  <div class="no r">04</div>
   <h2 class="r" style="--d:120">En nu <em>jij.</em></h2>
   <p class="lead r" style="--d:220">Wat betekent dit voor jouw sales- en marketingteam?</p>
   <aside class="notes">Genoeg over mij. Wat betekent dit voor jullie?</aside>
@@ -994,7 +1068,7 @@ verzoek of interviewverzoek.</pre>
 </section>
 
 <!-- ============ 21 MARKETING TEAM ============ -->
-<section class="slide" data-label="Marketing">
+<section class="slide" data-label="Marketing team">
   <h2 class="r" style="--d:100">En zes voor <em>marketing.</em></h2>
   <div class="hire">
     <div class="card r" style="--d:200"><span class="win">PLANNING</span><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><b>Contentplanner</b><span>Maakt de contentkalender op basis van nieuws, cases en seizoen.</span></div>
@@ -1043,7 +1117,7 @@ verzoek of interviewverzoek.</pre>
     </div>
     <div class="vac r" style="--d:200">
       <div class="hd">Vacature voor je AI-collega</div>
-      <div class="fld"><b>Functietitel</b><span>Bijvoorbeeld: Follow-upbewaker</span></div>
+      <div class="fld"><b>Naam en functie</b><span>Bijvoorbeeld: Fien, follow-upbewaker</span></div>
       <div class="fld"><b>Doel</b><span>Wat is er beter als deze collega goed werk levert?</span></div>
       <div class="fld"><b>Input</b><span>Wat krijgt de agent van jou? Lijst, mail, notities?</span></div>
       <div class="fld"><b>Werkwijze</b><span>De stappen, zoals je ze aan een stagiair uitlegt.</span></div>
@@ -1063,7 +1137,7 @@ verzoek of interviewverzoek.</pre>
       <h2 class="r" style="--d:100">Een handboek is <em>gewoon tekst.</em></h2>
       <p class="lead r" style="--d:200;font-size:24px">Geen code. Dit is een ingekorte versie van een echte werkinstructie. Wat jij net schreef, is precies dit.</p>
     </div>
-    <pre class="skill r" style="--d:250"><span class="c"># Skill: follow-upbewaker</span>
+    <pre class="skill r" style="--d:250"><span class="c"># Fien, follow-upbewaker</span>
 
 <span class="k">Wie je bent</span>
 Je bewaakt onze opvolging. Niemand die we
@@ -1110,6 +1184,7 @@ Elke werkdag om 14:00.</pre>
 <div id="hint">← → navigeren · F volledig scherm · N notities en tijd · T klok opnieuw</div>
 <div id="notes"><div class="nh"><b>SPREKERSNOTITIES</b><span id="sched"></span></div><div id="notesTxt"></div></div>
 
+<script src="assets/team.js"></script>
 <script>
 (()=>{
 const stage=document.getElementById('stage');
@@ -1135,12 +1210,13 @@ const roles=[
  ['Radioproducer','Draaiboek voor mijn SLAM!-show','M4 9h16v11H4zM8 9l8-5M8 14h.01M12 14h4'],
  ['Presentatie-designer','Bouwde deze slides','M4 4h16v12H5.2L4 17.2zM8 9h8M8 12h5'],
 ];
+const KEYS=['sam','ada','otto','max','coco','wes','zoe','gijs','vera','abel','rosa','pim'];
 const cells=[[1,1],[1,2],[1,3],[1,4],[2,4],[3,4],[4,4],[4,3],[4,2],[4,1],[3,1],[2,1]];
 const org=document.getElementById('org');
 roles.forEach((r,i)=>{
   const el=document.createElement('div');el.className='role r';el.style.setProperty('--d',300+i*110);
   el.style.gridRow=cells[i][0];el.style.gridColumn=cells[i][1];
-  el.innerHTML=`<div class="ic"><svg viewBox="0 0 24 24"><path d="${r[2]}"/></svg></div><div><b>${r[0]}</b><small>${r[1]}</small><span class="stt"></span></div><span class="live" style="animation-delay:${i*.17}s"></span>`;
+  const K=KEYS[i];el.innerHTML=`<span class="tw">${avatar(K)}</span><div><b>${TEAM[K].name} <span class="rl">· ${r[0]}</span></b><small>${r[1]}</small><span class="stt"></span></div><span class="live" style="animation-delay:${i*.17}s"></span>`;
   org.appendChild(el);
 });
 function drawOrg(){
@@ -1264,7 +1340,7 @@ function go(i){
 }
 
 /* tijdschema */
-const MIN=[1,1,1.5,1.5,1.5,1.5,1.5,1.5,1,0.5,2,2,2,1.5,1,1,0.5,1.5,2,0.5,2,1.5,2,1.5,1.5,1.5,1.5,1.5,2.5,0.5,1,1,1.5,1,10,1,1.5];let t0=null;
+const MIN=[1,1,1.5,1.5,1.5,1.5,1.5,1.5,1,0.5,2.5,2,2,1.5,1,1,0.5,0.5,2,2,2,1.5,0.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,2.5,0.5,1,1,1.5,1,10,1,1.5];let t0=null;
 const mmss=x=>{const a=Math.abs(Math.round(x));return (x<0?'-':'')+String(Math.floor(a/60)).padStart(2,'0')+':'+String(a%60).padStart(2,'0')};
 function sched(){const plan=MIN.slice(0,cur).reduce((a,b)=>a+b,0)*60,el=document.getElementById('sched');
   let h=`dia ${cur+1} · ± ${MIN[cur]} min · schema ${mmss(plan)}`;
