@@ -221,14 +221,15 @@ footer .orb.o1{width:700px;height:700px;right:-160px;bottom:-360px;background:ra
 .team-s .glow{background:radial-gradient(circle,rgba(126,170,240,.18),transparent 65%)}
 /* ---- beeldmerk: jij in het midden, je agents eromheen ---- */
 .wm{display:inline-flex;align-items:center;gap:12px}
-.mark{position:relative;width:36px;height:36px;flex:0 0 auto;--dot:5px;--core:15px;--mc:var(--navy)}
-.mark::before{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--mc) 35%,transparent)}
-.mark::after{content:"";position:absolute;left:50%;top:50%;width:var(--core);height:var(--core);margin:calc(var(--core)/-2) 0 0 calc(var(--core)/-2);border-radius:50%;background:var(--mc)}
+.mark{position:relative;width:36px;height:36px;flex:0 0 auto;--dot:5px;--core:15px;--mc:var(--navy);--arc:#2563ff;--pc:rgba(37,99,255,.55);--pr:9px}
+.mark::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 55%,var(--arc) 100%);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 2px));mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 2px));box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--mc) 22%,transparent);animation:orbit 2.6s linear infinite}
+.mark::after{content:"";position:absolute;left:50%;top:50%;width:var(--core);height:var(--core);margin:calc(var(--core)/-2) 0 0 calc(var(--core)/-2);border-radius:50%;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--mc) 55%,#5c8cff),var(--mc) 62%);animation:pulse 2.4s cubic-bezier(.2,.7,.3,1) infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--pc);transform:scale(1)}35%{transform:scale(1.12)}75%{box-shadow:0 0 0 var(--pr) transparent;transform:scale(1)}100%{box-shadow:0 0 0 0 transparent}}
 .mark i{position:absolute;inset:0;animation:orbit 14s linear infinite}
-.mark i::before{content:"";position:absolute;left:50%;top:calc(var(--dot)/-2);width:var(--dot);height:var(--dot);margin-left:calc(var(--dot)/-2);border-radius:50%;background:var(--c,var(--blue));transform:scale(var(--k,1))}
+.mark i::before{content:"";position:absolute;left:50%;top:calc(var(--dot)/-2);width:var(--dot);height:var(--dot);margin-left:calc(var(--dot)/-2);border-radius:50%;background:var(--c,var(--blue));transform:scale(var(--k,1));box-shadow:0 0 calc(var(--dot)*1.4) var(--c)}
 @keyframes orbit{to{transform:rotate(360deg)}}
 .wm:hover .mark i{animation-duration:5s}
-footer .mark{--mc:#fff;--core:34%;--dot:12%}
+footer .mark{--mc:#fff;--core:34%;--dot:12%;--arc:#5cc8ff;--pc:rgba(92,200,255,.5);--pr:22px}
 .nav .wm{font-size:23px;font-weight:900;letter-spacing:-.045em;text-transform:none}
 footer .big{display:flex;align-items:center;gap:clamp(16px,2vw,32px)}
 footer .big .mark{width:clamp(48px,7vw,110px);height:clamp(48px,7vw,110px)}
@@ -240,7 +241,7 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 .orbit .rg.r2{inset:16%;border-style:dashed}
 .orbit .st{position:absolute;inset:0;animation:orbit var(--t,110s) linear infinite;animation-delay:var(--dl,0s)}
 .orbit .st.in{inset:16%;animation-direction:reverse}
-.orbit .st::before{content:"";position:absolute;left:50%;top:calc(var(--s,12px)/-2);width:var(--s,12px);height:var(--s,12px);margin-left:calc(var(--s,12px)/-2);border-radius:50%;background:var(--c,var(--d))}
+.orbit .st::before{content:"";position:absolute;left:50%;top:calc(var(--s,12px)/-2);width:var(--s,12px);height:var(--s,12px);margin-left:calc(var(--s,12px)/-2);border-radius:50%;background:var(--c,var(--d));box-shadow:0 0 calc(var(--s,12px)*1.2) var(--c)}
 
 .hero-pic-wrap{position:relative}
 .hero-pic-wrap .orbit{width:150%;aspect-ratio:1;left:50%;top:50%;transform:translate(-50%,-50%)}
@@ -364,7 +365,7 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
   <div class="wrap bg-grid">
     <div class="bg-text">
       <h2 class="rise">Begonnen <em>in de radio.</em></h2>
-      <p class="lead rise" style="--i:1">Ik ben vooral creatief en een echte maker. Ik vertel verhalen, met woorden en met muziek. Code schrijven heb ik nooit geleerd. Wat ik wel kan: helder uitleggen wat goed werk is.</p>
+      <p class="lead rise" style="--i:1">Ik ben een maker en ondernemer. Ideeën bedenken, verhalen vertellen, iets neerzetten dat staat: daar ben ik goed in. Al het gedoe eromheen niet. Code schrijven, opvolgen, administratie, eindeloos mailen. Dat werk doet nu mijn AI-team.</p>
       <div class="chap">
         <div class="rise" style="--i:2"><span class="lb"><img class="logo" src="/presentatie/assets/slam-logo.png" alt="SLAM!"></span><span><h3>Radio-dj en presentator</h3><p>Van maandag tot en met donderdag van 12:00 tot 16:00 live op SLAM!. Daarnaast ben ik dagvoorzitter en presentator bij congressen en bedrijfsevents.</p></span></div>
         <div class="rise" style="--i:3"><span class="lb"><svg class="logo" viewBox="0 0 160 44" role="img" aria-label="Storio Podcasts" style="height:44px;width:auto"><text x="0" y="29" font-family="Fraunces, Georgia, serif" font-weight="800" font-size="27" fill="#101926">Storio</text><text x="8.5" y="41" font-family="'DM Sans', sans-serif" font-weight="600" font-size="7.5" letter-spacing="3.5" fill="#2e9e60">PODCASTS</text></svg></span><span><h3>Podcasts voor organisaties</h3><p>Van concept en opname op locatie tot montage en publicatie. Onder meer voor FC Utrecht, PharmaPartners en Gemeente Groningen.</p></span></div>
@@ -512,7 +513,7 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 
 
 /* beeldmerk en banen vullen: kern + agents */
-(()=>{const PAL=['#3563a8','#e08a55','#3fa877','#7ea9e6','#cf6a92','#d9b25f','#6a78d6','#3a9fae','#8fb8e8','#a07ccf','#e3a37a','#5bb39a'],K=[1,.7,1.3,.85,1.15,.6,1.25,.9,.75,1.1,.65,1.2];document.querySelectorAll('.mark').forEach(m=>{const n=8;for(let k=0;k<n;k++){const i=document.createElement('i');i.style.rotate=(360*k/n)+'deg';i.style.setProperty('--c',PAL[k]);i.style.setProperty('--k',K[k]);m.appendChild(i)}});
+(()=>{const PAL=['#2563ff','#ff6b2c','#12b886','#00b8d9','#e0368a','#f5a524','#7c4dff','#0ea5a4','#5cc8ff','#9b5cff','#ff4d6d','#22c55e'],K=[1,.7,1.3,.85,1.15,.6,1.25,.9,.75,1.1,.65,1.2];document.querySelectorAll('.mark').forEach(m=>{const n=8;for(let k=0;k<n;k++){const i=document.createElement('i');i.style.rotate=(360*k/n)+'deg';i.style.setProperty('--c',PAL[k]);i.style.setProperty('--k',K[k]);m.appendChild(i)}});
 document.querySelectorAll('.orbit[data-agents]').forEach(o=>{o.innerHTML='<div class="rg"></div><div class="rg r2"></div>';const n=+o.dataset.agents,out=Math.ceil(n/2);
  for(let k=0;k<n;k++){const d=document.createElement('div');const inner=k>=out;d.className='st'+(inner?' in':'');const cnt=inner?n-out:out,idx=inner?k-out:k,T=inner?90:120;
   d.style.setProperty('--t',T+'s');d.style.rotate=(360*idx/cnt+(inner?30:0))+'deg';d.style.setProperty('--s',Math.round((inner?10:13)*K[k])+'px');d.style.setProperty('--c',PAL[k]);o.appendChild(d)}});})();
