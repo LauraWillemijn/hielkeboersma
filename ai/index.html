@@ -58,7 +58,7 @@ p{max-width:62ch}
 header{position:sticky;top:0;z-index:50;background:#fff}
 .nav{display:flex;align-items:center;gap:32px;height:76px}
 .nav .wm{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--navy);margin-right:auto}
-.nav .wm span{color:var(--blue)}
+.nav .wm>span>span{color:var(--blue)}
 .nav a.l{text-decoration:none;font-weight:600;font-size:16px;color:var(--navy)}
 .nav a.l:hover{color:var(--blue)}
 .nav .btn{padding:11px 20px;font-size:15px}
@@ -201,6 +201,43 @@ footer .row a{text-decoration:none;color:#fff;font-weight:600}
 footer .row a:hover{color:var(--blue-l)}
 
 
+
+/* ---- future layer: netwerk, kleurvlakken, raster ---- */
+.fx{position:relative;overflow:hidden;isolation:isolate}
+.fx>.wrap{position:relative;z-index:2}
+.fx canvas.net{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0}
+.hero .orb.o1{width:820px;height:820px;right:-220px;top:-280px;background:radial-gradient(circle,#b7cdf2,transparent 66%);animation:od1 22s ease-in-out infinite alternate}
+.hero .orb.o2{width:700px;height:700px;left:-240px;bottom:-300px;background:radial-gradient(circle,#c9dbf6,transparent 66%);animation:od2 26s ease-in-out infinite alternate}
+.team-s .orb.o1{width:720px;height:720px;right:-220px;top:-200px;background:radial-gradient(circle,rgba(53,99,168,.55),transparent 66%);animation:od1 24s ease-in-out infinite alternate}
+.team-s .orb.o2{width:560px;height:560px;left:-200px;bottom:-200px;background:radial-gradient(circle,rgba(53,99,168,.35),transparent 66%);animation:od2 28s ease-in-out infinite alternate}
+footer .orb.o1{width:700px;height:700px;right:-160px;bottom:-360px;background:radial-gradient(circle,rgba(53,99,168,.6),transparent 66%);animation:od2 24s ease-in-out infinite alternate}
+@keyframes od1{to{transform:translate(-140px,110px) scale(1.12)}}
+@keyframes od2{to{transform:translate(160px,-90px) scale(1.15)}}
+.grid{position:absolute;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(23,34,50,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(23,34,50,.05) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 75% 70% at 50% 40%,#000 25%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 75% 70% at 50% 40%,#000 25%,transparent 100%)}
+.team-s .grid{background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px)}
+.glow{position:absolute;width:640px;height:640px;border-radius:50%;left:0;top:0;transform:translate(-50%,-50%);pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(53,99,168,.18),transparent 65%);opacity:0;transition:opacity .4s}
+.fx:hover>.glow{opacity:1}
+.team-s .glow{background:radial-gradient(circle,rgba(126,170,240,.18),transparent 65%)}
+/* ---- beeldmerk ---- */
+.wm{display:inline-flex;align-items:center;gap:12px}
+.mark{position:relative;width:34px;height:34px;flex:0 0 auto}
+.mark::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--navy)}
+.mark::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--navy)}
+.mark i{position:absolute;inset:0;animation:orbit 6s linear infinite}
+.mark i::before{content:"";position:absolute;left:50%;top:-4px;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:var(--blue)}
+.mark i:nth-child(2){animation-delay:-2s}.mark i:nth-child(3){animation-delay:-4s}
+.mark i:nth-child(2)::before{background:#7ea9e6}.mark i:nth-child(3)::before{background:#2e9e60}
+@keyframes orbit{to{transform:rotate(360deg)}}
+.wm:hover .mark i{animation-duration:2s}
+.nav .wm{font-size:23px;font-weight:900;letter-spacing:-.045em;text-transform:none}
+footer .mark{width:64px;height:64px}
+footer .mark::before{border-color:#fff;border-width:3px}
+footer .mark::after{background:#fff;width:22px;height:22px;margin:-11px 0 0 -11px}
+footer .mark i::before{width:14px;height:14px;margin-left:-7px;top:-7px}
+footer .big{display:flex;align-items:center;gap:clamp(16px,2vw,32px)}
+footer .big .mark{width:clamp(48px,7vw,110px);height:clamp(48px,7vw,110px)}
+header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px)}
 /* kinetic words */
 .kw{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .04em .12em;margin:0 -.04em -.12em}
 .kw>span{display:inline-block;transform:translateY(110%) rotate(6deg);transform-origin:0 100%;transition:transform 1.05s var(--ease);transition-delay:calc(var(--wi)*70ms + 80ms)}
@@ -250,7 +287,12 @@ footer .row a:hover{color:var(--blue-l)}
   .c-card img{width:120px;height:120px}
   .now h2{flex-wrap:wrap}
   .now h2 time{margin-left:0}
-  .nav .btn{padding:9px 16px;font-size:14px}
+  .nav .btn{padding:9px 14px;font-size:13.5px;white-space:nowrap}
+  .nav{gap:12px}
+  .nav .wm{font-size:18px;white-space:nowrap;gap:9px}
+  .nav .mark{width:26px;height:26px}
+  .nav .mark::after{width:9px;height:9px;margin:-4.5px 0 0 -4.5px}
+  .nav .mark i::before{width:6px;height:6px;margin-left:-3px;top:-3px}
   .hero-pic .team{left:12px;right:12px;bottom:12px;padding:10px 12px;gap:10px}
   .stack span{width:32px;height:32px;margin-left:-10px;border-width:2px}
   .stack span:nth-child(n+5){display:none}
@@ -267,7 +309,7 @@ footer .row a:hover{color:var(--blue-l)}
 
 <header>
   <div class="wrap nav">
-    <a class="wm" href="/">Hielke <span>Boersma</span></a>
+    <a class="wm" href="/" aria-label="Hielke Boersma, naar de homepage"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Hielke <span>Boersma</span></span></a>
     <a class="l" href="#achtergrond">Achtergrond</a>
     <a class="l" href="#team">Mijn AI-team</a>
     <a class="l" href="#seminars">Seminars</a>
@@ -278,7 +320,8 @@ footer .row a:hover{color:var(--blue-l)}
 
 <main>
 <!-- HERO -->
-<section class="hero">
+<section class="hero fx" data-net="light">
+  <canvas class="net" aria-hidden="true"></canvas><div class="grid" aria-hidden="true"></div><div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <h1 class="rise"><span class="ln">Eén mens.</span> <em class="ln">Twaalf AI-collega's.</em></h1>
     <div>
@@ -329,7 +372,8 @@ footer .row a:hover{color:var(--blue-l)}
 </section>
 
 <!-- TEAM -->
-<section class="team-s" id="team">
+<section class="team-s fx" id="team" data-net="dark">
+  <canvas class="net" aria-hidden="true"></canvas><div class="grid" aria-hidden="true"></div><div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
   <div class="wrap">
     <div class="team-head">
       <h2 class="rise">Maak kennis met <em>mijn team.</em></h2>
@@ -424,7 +468,8 @@ footer .row a:hover{color:var(--blue-l)}
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
+<section class="contact fx" id="contact" data-net="light">
+  <canvas class="net" aria-hidden="true"></canvas><div class="grid" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
   <div class="wrap c-grid">
     <div>
       <h2 class="rise c-h"><span class="ln">Plan een seminar</span> <em class="ln">voor je team.</em></h2>
@@ -443,9 +488,10 @@ footer .row a:hover{color:var(--blue-l)}
 </section>
 </main>
 
-<footer>
+<footer class="fx" data-net="dark">
+  <canvas class="net" aria-hidden="true"></canvas><div class="orb o1" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="big">Hielke Boersma</div>
+    <div class="big"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Hielke Boersma</div>
     <div class="row"><span>AI-seminars, radio en verhalen.</span><a href="/">hielkeboersma.com</a><a href="https://storiomedia.nl" target="_blank" rel="noopener">Storio Media</a><a href="https://storiopodcasts.nl" target="_blank" rel="noopener">Storio Podcasts</a><a href="/presentatie/">De presentatie</a></div>
   </div>
 </footer>
@@ -453,6 +499,29 @@ footer .row a:hover{color:var(--blue-l)}
 <script src="/presentatie/assets/team.js"></script>
 <script>
 
+
+/* future layer: netwerk per sectie, zoals in de presentatie */
+(()=>{const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.fx[data-net]').forEach(sec=>{
+ const cv=sec.querySelector('canvas.net'),cx=cv.getContext('2d'),dark=sec.dataset.net==='dark',glow=sec.querySelector('.glow');
+ const C=dark?{dot:'rgba(255,255,255,.5)',line:'169,198,240',la:.2,pulse:'126,190,255',mouse:'126,190,255'}:{dot:'rgba(53,99,168,.45)',line:'53,99,168',la:.18,pulse:'53,99,168',mouse:'53,99,168'};
+ let W=0,H=0,P=[],pulses=[],mouse={x:-999,y:-999},run=false,raf=0;const DPR=Math.min(2,devicePixelRatio||1);
+ function size(){W=sec.clientWidth;H=sec.clientHeight;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0);
+  const n=Math.round(Math.min(110,W*H/15000));P=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.4+.7}))}
+ function frame(){cx.clearRect(0,0,W,H);const D=170;
+  for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+  for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const a=P[i],b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<D){cx.strokeStyle=`rgba(${C.line},${(1-d/D)*C.la})`;cx.lineWidth=1;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke();if(Math.random()<.0012&&pulses.length<14)pulses.push({a:i,b:j,t:0})}}
+  for(const p of P){cx.fillStyle=C.dot;cx.beginPath();cx.arc(p.x,p.y,p.r*1.2,0,7);cx.fill();const dm=Math.hypot(p.x-mouse.x,p.y-mouse.y);
+   if(dm<200){cx.strokeStyle=`rgba(${C.mouse},${(1-dm/200)*.5})`;cx.lineWidth=1.2;cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(mouse.x,mouse.y);cx.stroke()}}
+  for(let k=pulses.length-1;k>=0;k--){const q=pulses[k];q.t+=.012;const a=P[q.a],b=P[q.b];if(!a||!b||q.t>=1||Math.hypot(a.x-b.x,a.y-b.y)>D){pulses.splice(k,1);continue}
+   const x=a.x+(b.x-a.x)*q.t,y=a.y+(b.y-a.y)*q.t,g=cx.createRadialGradient(x,y,0,x,y,12);g.addColorStop(0,`rgba(${C.pulse},1)`);g.addColorStop(1,`rgba(${C.pulse},0)`);cx.fillStyle=g;cx.beginPath();cx.arc(x,y,12,0,7);cx.fill()}
+  if(run)raf=requestAnimationFrame(frame)}
+ size();new ResizeObserver(()=>{if(sec.clientWidth!==W||sec.clientHeight!==H){size();if(!run)frame()}}).observe(sec);
+ sec.addEventListener('mousemove',e=>{const b=sec.getBoundingClientRect();mouse.x=e.clientX-b.left;mouse.y=e.clientY-b.top;if(glow){glow.style.left=mouse.x+'px';glow.style.top=mouse.y+'px'}});
+ sec.addEventListener('mouseleave',()=>{mouse.x=mouse.y=-999});
+ if(reduce){frame();return}
+ new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!run){run=true;frame()}else if(!e.isIntersecting){run=false;cancelAnimationFrame(raf)}})).observe(sec);
+});})();
 /* kinetische koppen */
 (()=>{document.querySelectorAll('h1.rise,h2.rise').forEach(h=>{h.classList.add('kin');let n=0;
  (function walk(node){[...node.childNodes].forEach(c=>{
