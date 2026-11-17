@@ -232,6 +232,9 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
 .sb-pod::before{content:"";position:absolute;right:-20%;top:-30%;width:70%;aspect-ratio:1;border-radius:50%;
   background:radial-gradient(circle,rgba(46,158,96,.22) 0%,rgba(46,158,96,0) 65%);pointer-events:none}
 .sb-med{background:linear-gradient(135deg,#d6f4e0 0%,#dcebf4 40%,#d6e1f6 70%,#d0d8f8 100%);color:var(--s-dark)}
+/* Logo gelijk in elke browser: vaste optische grootte (Safari kiest die anders) en vaste letterposities */
+.sb-logo text{font-optical-sizing:none;font-variation-settings:'opsz' 27}
+.sb-logo text+text{font-variation-settings:'opsz' 9}
 .sb-logo{width:150px;height:auto;display:block;margin-bottom:clamp(36px,5vw,64px);position:relative}
 .sb-label{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--s-green);margin-bottom:14px}
 .sb h3{font-size:clamp(30px,3.3vw,46px);font-weight:900;line-height:1.04;letter-spacing:-.03em;margin-bottom:18px;position:relative}
@@ -568,7 +571,7 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
 
     <div class="storio-grid">
       <a class="sb sb-pod" href="https://storiopodcasts.nl/" target="_blank" rel="noopener" aria-label="Storio Podcasts, naar storiopodcasts.nl">
-        <svg class="sb-logo" viewBox="0 0 160 44" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Storio Podcasts"><text x="0" y="29" font-family="'Fraunces',Georgia,serif" font-weight="800" font-size="27" fill="#ffffff">Storio</text><text x="8.5" y="41" font-family="'DM Sans',sans-serif" font-weight="600" font-size="7.5" letter-spacing="3.5" fill="#2e9e60">PODCASTS</text></svg>
+        <svg class="sb-logo" viewBox="0 0 160 44" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Storio Podcasts"><text x="0" y="29" font-family="'Fraunces',Georgia,serif" font-weight="800" font-size="27" fill="#ffffff">Storio</text><text x="8.5 16.58 25.74 34.34 43.21 51.95 59.92 67.78" y="41" font-family="'DM Sans',sans-serif" font-weight="600" font-size="7.5" fill="#2e9e60">PODCASTS</text></svg>
         <div class="sb-label">Podcastproductie</div>
         <h3>Podcasts met <em>impact.</em></h3>
         <p>Van concept en strategie tot opname, montage en distributie. Voor bedrijven, merken en makers, op locatie of in een studio via ons netwerk.</p>
@@ -578,7 +581,7 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
       </a>
 
       <a class="sb sb-med" href="https://storiomedia.nl/" target="_blank" rel="noopener" aria-label="Storio Media, naar storiomedia.nl">
-        <svg class="sb-logo" viewBox="0 0 160 44" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Storio Media"><text x="0" y="29" font-family="'Fraunces',Georgia,serif" font-size="27" font-weight="800" fill="#101926">Storio</text><text x="45.80" text-anchor="middle" y="41" font-family="'DM Sans',sans-serif" font-size="7.5" font-weight="600" fill="#2e9e60" letter-spacing="7.4">MEDIA</text></svg>
+        <svg class="sb-logo" viewBox="0 0 160 44" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Storio Media"><text x="0" y="29" font-family="'Fraunces',Georgia,serif" font-size="27" font-weight="800" fill="#101926">Storio</text><text x="15.7 29.55 41.33 53.83 63.25" y="41" font-family="'DM Sans',sans-serif" font-size="7.5" font-weight="600" fill="#2e9e60">MEDIA</text></svg>
         <div class="sb-label">Videoproductie</div>
         <h3>Video's die <em>opvallen.</em></h3>
         <p>Een video laten maken voor je bedrijf? Van commercial en bedrijfsfilm tot explainer en social content: Storio Media maakt kostenefficiënt video's die je doelgroep raken.</p>
