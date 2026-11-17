@@ -225,11 +225,13 @@ footer .orb.o1{width:700px;height:700px;right:-160px;bottom:-360px;background:ra
 .mark::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 55%,var(--arc) 100%);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 2px));mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 2px));box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--mc) 22%,transparent);animation:orbit 2.6s linear infinite}
 .mark::after{content:"";position:absolute;left:50%;top:50%;width:var(--core);height:var(--core);margin:calc(var(--core)/-2) 0 0 calc(var(--core)/-2);border-radius:50%;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--mc) 55%,#5c8cff),var(--mc) 62%);animation:pulse 2.4s cubic-bezier(.2,.7,.3,1) infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 var(--pc);transform:scale(1)}35%{transform:scale(1.12)}75%{box-shadow:0 0 0 var(--pr) transparent;transform:scale(1)}100%{box-shadow:0 0 0 0 transparent}}
+.mark i.o::before{background:transparent!important;box-shadow:inset 0 0 0 max(1.5px,calc(var(--dot)*.26)) var(--c)!important}
+.orbit .st.o::before{background:transparent!important;box-shadow:inset 0 0 0 2px var(--c)!important}
 .mark i{position:absolute;inset:0;animation:orbit 14s linear infinite}
-.mark i::before{content:"";position:absolute;left:50%;top:calc(var(--dot)/-2);width:var(--dot);height:var(--dot);margin-left:calc(var(--dot)/-2);border-radius:50%;background:var(--c,var(--blue));transform:scale(var(--k,1));box-shadow:0 0 calc(var(--dot)*1.4) var(--c)}
+.mark i::before{content:"";position:absolute;left:50%;top:calc(var(--dot)/-2);width:var(--dot);height:var(--dot);margin-left:calc(var(--dot)/-2);border-radius:50%;background:var(--c,var(--blue));transform:scale(var(--k,1));box-shadow:0 0 calc(var(--dot)*1.6) var(--g,transparent)}
 @keyframes orbit{to{transform:rotate(360deg)}}
 .wm:hover .mark i{animation-duration:5s}
-footer .mark{--mc:#fff;--core:34%;--dot:12%;--arc:#5cc8ff;--pc:rgba(92,200,255,.5);--pr:22px}
+footer .mark{--mk-ink:#fff;--mc:#fff;--core:34%;--dot:12%;--arc:#5cc8ff;--pc:rgba(92,200,255,.5);--pr:22px}
 .nav .wm{font-size:23px;font-weight:900;letter-spacing:-.045em;text-transform:none}
 footer .big{display:flex;align-items:center;gap:clamp(16px,2vw,32px)}
 footer .big .mark{width:clamp(48px,7vw,110px);height:clamp(48px,7vw,110px)}
@@ -241,14 +243,14 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 .orbit .rg.r2{inset:16%;border-style:dashed}
 .orbit .st{position:absolute;inset:0;animation:orbit var(--t,110s) linear infinite;animation-delay:var(--dl,0s)}
 .orbit .st.in{inset:16%;animation-direction:reverse}
-.orbit .st::before{content:"";position:absolute;left:50%;top:calc(var(--s,12px)/-2);width:var(--s,12px);height:var(--s,12px);margin-left:calc(var(--s,12px)/-2);border-radius:50%;background:var(--c,var(--d));box-shadow:0 0 calc(var(--s,12px)*1.2) var(--c)}
+.orbit .st::before{content:"";position:absolute;left:50%;top:calc(var(--s,12px)/-2);width:var(--s,12px);height:var(--s,12px);margin-left:calc(var(--s,12px)/-2);border-radius:50%;background:var(--c,var(--d));box-shadow:0 0 calc(var(--s,12px)*1.4) var(--g,transparent)}
 
 .hero-pic-wrap{position:relative}
 .hero-pic-wrap .orbit{width:150%;aspect-ratio:1;left:50%;top:50%;transform:translate(-50%,-50%)}
 .hero-pic{z-index:1}
 .hero h1,.hero-grid>div:not(.hero-pic-wrap){position:relative;z-index:1}
 .hero-pic-wrap{z-index:0}
-.team-s .orbit{width:min(900px,90vw);aspect-ratio:1;right:-260px;top:-220px;--c1:rgba(255,255,255,.1);--d:rgba(169,198,240,.8)}
+.team-s .orbit{--mk-ink:#fff;width:min(900px,90vw);aspect-ratio:1;right:-260px;top:-220px;--c1:rgba(255,255,255,.1);--d:rgba(169,198,240,.8)}
 @media(max-width:980px){.hero-pic-wrap .orbit{width:125%}}
 /* kinetic words */
 .kw{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .04em .12em;margin:0 -.04em -.12em}
@@ -513,10 +515,10 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 
 
 /* beeldmerk en banen vullen: kern + agents */
-(()=>{const PAL=['#2563ff','#ff6b2c','#12b886','#00b8d9','#e0368a','#f5a524','#7c4dff','#0ea5a4','#5cc8ff','#9b5cff','#ff4d6d','#22c55e'],K=[1,.7,1.3,.85,1.15,.6,1.25,.9,.75,1.1,.65,1.2];document.querySelectorAll('.mark').forEach(m=>{const n=8;for(let k=0;k<n;k++){const i=document.createElement('i');i.style.rotate=(360*k/n)+'deg';i.style.setProperty('--c',PAL[k]);i.style.setProperty('--k',K[k]);m.appendChild(i)}});
+(()=>{const PAL=['#2563ff','var(--mk-ink,#172232)','#5cc8ff','var(--mk-ink,#172232)','#2563ff','#5cc8ff','var(--mk-ink,#172232)','#2563ff','var(--mk-ink,#172232)','#5cc8ff','#2563ff','var(--mk-ink,#172232)'],HOL=[3,6,10],G=c=>c[0]=='#'?c:'transparent',K=[1,.7,1.3,.85,1.15,.6,1.25,.9,.75,1.1,.65,1.2];document.querySelectorAll('.mark').forEach(m=>{const n=8;for(let k=0;k<n;k++){const i=document.createElement('i');i.style.rotate=(360*k/n)+'deg';i.style.setProperty('--c',PAL[k]);i.style.setProperty('--g',G(PAL[k]));if(HOL.includes(k))i.className='o';i.style.setProperty('--k',K[k]);m.appendChild(i)}});
 document.querySelectorAll('.orbit[data-agents]').forEach(o=>{o.innerHTML='<div class="rg"></div><div class="rg r2"></div>';const n=+o.dataset.agents,out=Math.ceil(n/2);
  for(let k=0;k<n;k++){const d=document.createElement('div');const inner=k>=out;d.className='st'+(inner?' in':'');const cnt=inner?n-out:out,idx=inner?k-out:k,T=inner?90:120;
-  d.style.setProperty('--t',T+'s');d.style.rotate=(360*idx/cnt+(inner?30:0))+'deg';d.style.setProperty('--s',Math.round((inner?10:13)*K[k])+'px');d.style.setProperty('--c',PAL[k]);o.appendChild(d)}});})();
+  d.style.setProperty('--t',T+'s');d.style.rotate=(360*idx/cnt+(inner?30:0))+'deg';d.style.setProperty('--s',Math.round((inner?10:13)*K[k])+'px');d.style.setProperty('--c',PAL[k]);d.style.setProperty('--g',G(PAL[k]));if(HOL.includes(k))d.classList.add('o');o.appendChild(d)}});})();
 /* future layer: netwerk per sectie, zoals in de presentatie */
 (()=>{const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.querySelectorAll('.fx[data-net]').forEach(sec=>{
