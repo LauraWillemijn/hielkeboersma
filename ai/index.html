@@ -225,12 +225,10 @@ footer .orb.o1{width:700px;height:700px;right:-160px;bottom:-360px;background:ra
 .mark::before{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--mc) 35%,transparent)}
 .mark::after{content:"";position:absolute;left:50%;top:50%;width:var(--core);height:var(--core);margin:calc(var(--core)/-2) 0 0 calc(var(--core)/-2);border-radius:50%;background:var(--mc)}
 .mark i{position:absolute;inset:0;animation:orbit 14s linear infinite}
-.mark i::before{content:"";position:absolute;left:50%;top:calc(var(--dot)/-2);width:var(--dot);height:var(--dot);margin-left:calc(var(--dot)/-2);border-radius:50%;background:var(--blue)}
-.mark i:nth-child(3n+2)::before{background:#7ea9e6}.mark i:nth-child(3n)::before{background:var(--navy)}
+.mark i::before{content:"";position:absolute;left:50%;top:calc(var(--dot)/-2);width:var(--dot);height:var(--dot);margin-left:calc(var(--dot)/-2);border-radius:50%;background:var(--c,var(--blue));transform:scale(var(--k,1))}
 @keyframes orbit{to{transform:rotate(360deg)}}
 .wm:hover .mark i{animation-duration:5s}
 footer .mark{--mc:#fff;--core:34%;--dot:12%}
-footer .mark i:nth-child(3n)::before{background:#fff}
 .nav .wm{font-size:23px;font-weight:900;letter-spacing:-.045em;text-transform:none}
 footer .big{display:flex;align-items:center;gap:clamp(16px,2vw,32px)}
 footer .big .mark{width:clamp(48px,7vw,110px);height:clamp(48px,7vw,110px)}
@@ -242,15 +240,14 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 .orbit .rg.r2{inset:16%;border-style:dashed}
 .orbit .st{position:absolute;inset:0;animation:orbit var(--t,110s) linear infinite;animation-delay:var(--dl,0s)}
 .orbit .st.in{inset:16%;animation-direction:reverse}
-.orbit .st::before{content:"";position:absolute;left:50%;top:calc(var(--s,12px)/-2);width:var(--s,12px);height:var(--s,12px);margin-left:calc(var(--s,12px)/-2);border-radius:50%;background:var(--d)}
-.orbit .st:nth-child(3n)::before{background:#7ea9e6}.orbit .st:nth-child(4n)::before{background:var(--navy)}
+.orbit .st::before{content:"";position:absolute;left:50%;top:calc(var(--s,12px)/-2);width:var(--s,12px);height:var(--s,12px);margin-left:calc(var(--s,12px)/-2);border-radius:50%;background:var(--c,var(--d))}
+
 .hero-pic-wrap{position:relative}
 .hero-pic-wrap .orbit{width:150%;aspect-ratio:1;left:50%;top:50%;transform:translate(-50%,-50%)}
 .hero-pic{z-index:1}
 .hero h1,.hero-grid>div:not(.hero-pic-wrap){position:relative;z-index:1}
 .hero-pic-wrap{z-index:0}
 .team-s .orbit{width:min(900px,90vw);aspect-ratio:1;right:-260px;top:-220px;--c1:rgba(255,255,255,.1);--d:rgba(169,198,240,.8)}
-.team-s .orbit .st:nth-child(4n)::before{background:#fff}
 @media(max-width:980px){.hero-pic-wrap .orbit{width:125%}}
 /* kinetic words */
 .kw{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .04em .12em;margin:0 -.04em -.12em}
@@ -367,9 +364,9 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
   <div class="wrap bg-grid">
     <div class="bg-text">
       <h2 class="rise">Begonnen <em>in de radio.</em></h2>
-      <p class="lead rise" style="--i:1">Ik ben vooral een creatief. Ik vertel verhalen, met woorden en met muziek. Code schrijven heb ik nooit geleerd. Wat ik wel kan: helder uitleggen wat goed werk is.</p>
+      <p class="lead rise" style="--i:1">Ik ben vooral creatief en een echte maker. Ik vertel verhalen, met woorden en met muziek. Code schrijven heb ik nooit geleerd. Wat ik wel kan: helder uitleggen wat goed werk is.</p>
       <div class="chap">
-        <div class="rise" style="--i:2"><span class="lb"><img class="logo" src="/presentatie/assets/slam-logo.png" alt="SLAM!"></span><span><h3>Radio-dj en presentator</h3><p>Van maandag tot en met donderdag sta ik van 12:00 tot 16:00 live op SLAM!. Daarnaast ben ik dagvoorzitter en presentator bij congressen en bedrijfsevents.</p></span></div>
+        <div class="rise" style="--i:2"><span class="lb"><img class="logo" src="/presentatie/assets/slam-logo.png" alt="SLAM!"></span><span><h3>Radio-dj en presentator</h3><p>Van maandag tot en met donderdag van 12:00 tot 16:00 live op SLAM!. Daarnaast ben ik dagvoorzitter en presentator bij congressen en bedrijfsevents.</p></span></div>
         <div class="rise" style="--i:3"><span class="lb"><svg class="logo" viewBox="0 0 160 44" role="img" aria-label="Storio Podcasts" style="height:44px;width:auto"><text x="0" y="29" font-family="Fraunces, Georgia, serif" font-weight="800" font-size="27" fill="#101926">Storio</text><text x="8.5" y="41" font-family="'DM Sans', sans-serif" font-weight="600" font-size="7.5" letter-spacing="3.5" fill="#2e9e60">PODCASTS</text></svg></span><span><h3>Podcasts voor organisaties</h3><p>Van concept en opname op locatie tot montage en publicatie. Onder meer voor FC Utrecht, PharmaPartners en Gemeente Groningen.</p></span></div>
         <div class="rise" style="--i:4"><span class="lb"><svg class="logo" viewBox="0 0 160 44" role="img" aria-label="Storio Media" style="height:44px;width:auto"><text x="0" y="29" font-family="'Fraunces',Georgia,serif" font-size="27" font-weight="800" fill="#101926">Storio</text><text x="45.80" text-anchor="middle" y="41" font-family="'DM Sans',sans-serif" font-size="7.5" font-weight="600" fill="#2e9e60" letter-spacing="7.4">MEDIA</text></svg></span><span><h3>Video's, slim gemaakt met AI</h3><p>Sinds 2026 maak ik met Storio Media video's voor bedrijven: concept, AI-beeld, stem en muziek. Binnen een week klaar.</p></span></div>
       </div>
@@ -487,7 +484,7 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
     <div>
       <h2 class="rise c-h"><span class="ln">Plan een seminar</span> <em class="ln">voor je team.</em></h2>
       <p class="lead rise" style="--i:1">Vertel me over je team, de gelegenheid en wat je wilt bereiken. Ik denk graag mee over de vorm: een seminar, een seminar met workshop of een teamtraject.</p>
-      <div class="acts rise" style="--i:2"><a class="btn" href="mailto:info@hielkeboersma.com?subject=AI-seminar%20voor%20ons%20team&amp;body=Hoi%20Hielke%2C%0A%0AWe%20zijn%20ge%C3%AFnteresseerd%20in%20een%20AI-seminar.%0A%0AOrganisatie%3A%0AAantal%20deelnemers%3A%0AGelegenheid%20en%20datum%3A%0AVorm%20(seminar%2C%20seminar%20met%20workshop%20of%20teamtraject)%3A%0A">Mail me <span class="arr">→</span></a></div>
+      <div class="acts rise" style="--i:2"><a class="btn" href="mailto:info@hielkeboersma.com?subject=AI-seminar%20voor%20ons%20team&amp;body=Hoi%20Hielke%2C%0A%0AWe%20zijn%20ge%C3%AFnteresseerd%20in%20een%20AI-seminar.%0A%0AOrganisatie%3A%0AAantal%20deelnemers%3A%0AGelegenheid%20en%20datum%3A%0AVorm%20(seminar%2C%20seminar%20met%20workshop%20of%20teamtraject)%3A%0A">Mail <span class="arr">→</span></a></div>
     </div>
     <div class="c-card rise" style="--i:1">
       <img src="img/hielke-contact.webp" alt="Hielke Boersma achter zijn laptop" loading="lazy">
@@ -515,10 +512,10 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 
 
 /* beeldmerk en banen vullen: kern + agents */
-(()=>{document.querySelectorAll('.mark').forEach(m=>{const n=8;for(let k=0;k<n;k++){const i=document.createElement('i');i.style.animationDelay=(-14*k/n)+'s';m.appendChild(i)}});
+(()=>{const PAL=['#3563a8','#e08a55','#3fa877','#7ea9e6','#cf6a92','#d9b25f','#6a78d6','#3a9fae','#8fb8e8','#a07ccf','#e3a37a','#5bb39a'],K=[1,.7,1.3,.85,1.15,.6,1.25,.9,.75,1.1,.65,1.2];document.querySelectorAll('.mark').forEach(m=>{const n=8;for(let k=0;k<n;k++){const i=document.createElement('i');i.style.rotate=(360*k/n)+'deg';i.style.setProperty('--c',PAL[k]);i.style.setProperty('--k',K[k]);m.appendChild(i)}});
 document.querySelectorAll('.orbit[data-agents]').forEach(o=>{o.innerHTML='<div class="rg"></div><div class="rg r2"></div>';const n=+o.dataset.agents,out=Math.ceil(n/2);
  for(let k=0;k<n;k++){const d=document.createElement('div');const inner=k>=out;d.className='st'+(inner?' in':'');const cnt=inner?n-out:out,idx=inner?k-out:k,T=inner?90:120;
-  d.style.setProperty('--t',T+'s');d.style.setProperty('--dl',(-T*idx/cnt)+'s');d.style.setProperty('--s',(inner?10:13)+'px');o.appendChild(d)}});})();
+  d.style.setProperty('--t',T+'s');d.style.rotate=(360*idx/cnt+(inner?30:0))+'deg';d.style.setProperty('--s',Math.round((inner?10:13)*K[k])+'px');d.style.setProperty('--c',PAL[k]);o.appendChild(d)}});})();
 /* future layer: netwerk per sectie, zoals in de presentatie */
 (()=>{const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.querySelectorAll('.fx[data-net]').forEach(sec=>{
@@ -578,7 +575,7 @@ document.querySelectorAll('.fx[data-net]').forEach(sec=>{
   if(now>=420&&now<1260){const n=30-(now%30);out.push(row('ada',`<b>Ada</b> checkt mijn inbox ${n===30?'nu':mins(n)}.`))}
   else out.push(row('ada',`<b>Ada</b> checkt weer elk half uur mijn inbox vanaf 07:00.`));
   // Rosa / SLAM
-  if(d>=1&&d<=4&&now>=720&&now<960)out.push(row('rosa',`<b>Ik</b> sta nu live op SLAM!. Het draaiboek van <b>Rosa</b> ligt klaar.`));
+  if(d>=1&&d<=4&&now>=720&&now<960)out.push(row('rosa',`<b>Ik</b> ben nu live op SLAM! Het draaiboek van <b>Rosa</b> ligt klaar.`));
   else if(d>=1&&d<=4&&now<720)out.push(row('rosa',`<b>Rosa</b> maakt het draaiboek voor mijn SLAM!-show van 12:00.`));
   list.innerHTML=out.join('');
  }
