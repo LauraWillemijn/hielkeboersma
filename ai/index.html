@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI-sessies voor sales en marketing | Hielke Boersma</title>
-<meta name="description" content="Hielke Boersma bouwde zonder IT-achtergrond een compleet bedrijf met twaalf AI-agents. In een keynote of sessie met workshop laat hij sales- en marketingteams zien hoe zij dat zelf doen.">
+<title>AI-seminars voor sales en marketing | Hielke Boersma</title>
+<meta name="description" content="Hielke Boersma bouwde zonder IT-achtergrond een compleet bedrijf met twaalf AI-agents. In een seminar laat hij sales- en marketingteams zien hoe zij dat zelf doen, zodat ze na afloop weten waar ze moeten beginnen.">
 <link rel="canonical" href="https://hielkeboersma.com/ai/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hielkeboersma.com/ai/">
 <meta property="og:title" content="Eén mens. Twaalf AI-collega's. | Hielke Boersma">
-<meta property="og:description" content="Keynotes en sessies met workshop over werken met AI-agents, voor sales- en marketingteams.">
+<meta property="og:description" content="Seminars over werken met AI-agents, voor sales- en marketingteams. Na afloop weet je waar je moet beginnen.">
 <meta property="og:image" content="https://hielkeboersma.com/ai/img/og-ai.jpg">
 <meta property="og:locale" content="nl_NL">
 <meta name="twitter:card" content="summary_large_image">
@@ -18,7 +18,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"Person","@id":"https://hielkeboersma.com/#hielke","name":"Hielke Boersma","url":"https://hielkeboersma.com/","email":"info@hielkeboersma.com","telephone":"+31651969025","jobTitle":"Spreker over AI, radio-dj en oprichter van Storio Media en Storio Podcasts","sameAs":["https://www.linkedin.com/in/hielke-boersma-517aa134/","https://storiomedia.nl","https://storiopodcasts.nl"]},
- {"@type":"Service","name":"AI-sessies voor sales en marketing","provider":{"@id":"https://hielkeboersma.com/#hielke"},"areaServed":"NL","url":"https://hielkeboersma.com/ai/","description":"Keynote, sessie met workshop of teamtraject over werken met AI-agents voor sales- en marketingteams."}
+ {"@type":"Service","name":"AI-seminars voor sales en marketing","provider":{"@id":"https://hielkeboersma.com/#hielke"},"areaServed":"NL","url":"https://hielkeboersma.com/ai/","description":"Seminar, seminar met workshop of teamtraject over werken met AI-agents voor sales- en marketingteams."}
 ]}
 </script>
 <style>
@@ -40,7 +40,7 @@ a{color:inherit}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--m)}
 h1,h2,h3{color:var(--navy);letter-spacing:-.035em;line-height:1}
 h1{font-size:clamp(46px,7.2vw,112px);font-weight:900}
-h2{font-size:clamp(36px,5vw,76px);font-weight:900}
+h2{font-size:clamp(38px,6vw,96px);font-weight:900;letter-spacing:-.045em;line-height:.98}
 h3{font-size:clamp(22px,2vw,28px);font-weight:800;letter-spacing:-.02em;line-height:1.15}
 h1 em,h2 em{font-style:normal;color:var(--blue)}
 p{max-width:62ch}
@@ -74,7 +74,7 @@ header{position:sticky;top:0;z-index:50;background:#fff}
 .hero .lead{margin-top:0}
 .hero .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
 .hero-pic{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/4.6;background:#0c1828}
-.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:46% 50%;transform-origin:50% 40%}
+.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:40% 30%;transform-origin:40% 30%}
 .hero-pic .team{position:absolute;left:20px;right:20px;bottom:20px;display:flex;align-items:center;gap:16px;padding:14px 18px;border-radius:18px;background:rgba(255,255,255,.94)}
 .stack{display:flex}
 .stack span{width:42px;height:42px;border-radius:50%;overflow:hidden;margin-left:-12px;border:3px solid #fff}
@@ -99,8 +99,10 @@ section{scroll-margin-top:90px}
 .bg-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,5vw,90px);align-items:start}
 .bg-text .lead{margin-top:32px}
 .chap{margin-top:36px;display:flex;flex-direction:column;gap:28px}
-.chap div{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:start}
-.chap img.logo{height:40px;width:auto}
+.chap>div{display:grid;grid-template-columns:150px 1fr;gap:26px;align-items:center}
+.chap .lb{height:64px;display:flex;align-items:center}
+.chap img.logo{height:26px;width:auto}
+.chap svg.logo{height:46px!important;width:auto}
 .chap h3{font-size:22px;margin-bottom:4px}
 .chap p{font-size:17px;color:var(--ink)}
 .mosaic{display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:1fr 1fr;gap:14px;height:clamp(460px,52vw,720px);position:sticky;top:100px}
@@ -167,18 +169,28 @@ dl.terms div.agent dd i{color:var(--blue-l)}
 .take li{display:flex;gap:14px;font-size:18px}
 .take li::before{content:"";flex:0 0 auto;width:22px;height:22px;margin-top:3px;border-radius:50%;background:var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/13px no-repeat}
 .take .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
-.deck{display:block;border-radius:var(--r);overflow:hidden;text-decoration:none;background:#fff;transition:transform .35s var(--ease)}
+.deck{display:block;border-radius:28px;overflow:hidden;text-decoration:none;background:var(--navy);color:#fff;transition:transform .45s var(--ease)}
 .deck:hover{transform:translateY(-6px)}
-.deck img{width:100%;aspect-ratio:16/8.4;object-fit:cover;object-position:top}
-.deck span{display:flex;justify-content:space-between;padding:18px 22px;font-weight:700;color:var(--navy)}
+.deck-shots{display:block;position:relative;height:clamp(240px,24vw,340px);background:#24344c;overflow:hidden}
+.deck-shots img{position:absolute;width:76%;aspect-ratio:1540/860;object-fit:cover;border-radius:12px;transition:transform .6s var(--ease)}
+.deck-shots .s2{left:6%;top:18%;transform:rotate(-4deg)}
+.deck-shots .s1{right:5%;top:30%;transform:rotate(3deg)}
+.deck:hover .s1{transform:rotate(1deg) translate(-8px,-10px)}
+.deck:hover .s2{transform:rotate(-6deg) translate(-6px,-4px)}
+.deck-txt{display:flex;flex-direction:column;gap:6px;padding:26px 30px 30px}
+.deck-txt b{font-size:clamp(22px,2vw,28px);letter-spacing:-.02em;line-height:1.15}
+.deck-txt>span{color:rgba(255,255,255,.75);font-size:17px}
+.deck-txt .go{color:#fff!important;font-weight:700;margin-top:10px;display:inline-flex;gap:8px}
+.deck:hover .go .arr{transform:translateX(4px)}
 
 /* contact */
 .contact{padding:clamp(110px,12vw,200px) 0 clamp(80px,9vw,140px)}
 .c-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,5vw,90px);align-items:center}
+.c-h{font-size:clamp(34px,4.6vw,72px)}
 .c-grid .lead{margin-top:28px}
 .c-grid .acts{margin-top:36px}
 .c-card{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;background:var(--soft);border-radius:var(--r);padding:28px}
-.c-card img{width:150px;height:190px;object-fit:cover;border-radius:16px}
+.c-card img{width:150px;height:150px;object-fit:cover;border-radius:50%}
 .c-card a{display:block;text-decoration:none;font-weight:800;color:var(--navy);font-size:clamp(19px,1.7vw,24px);letter-spacing:-.01em;padding:6px 0}
 .c-card a:hover{color:var(--blue)}
 .c-card small{display:block;font-size:15px;color:var(--mut)}
@@ -188,6 +200,30 @@ footer .row{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:40px;font-size:
 footer .row a{text-decoration:none;color:#fff;font-weight:600}
 footer .row a:hover{color:var(--blue-l)}
 
+
+/* kinetic words */
+.kw{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .04em .12em;margin:0 -.04em -.12em}
+.kw>span{display:inline-block;transform:translateY(110%) rotate(6deg);transform-origin:0 100%;transition:transform 1.05s var(--ease);transition-delay:calc(var(--wi)*70ms + 80ms)}
+.kin.in .kw>span,html:not(.js) .kw>span{transform:none}
+.js .kin.rise{opacity:1;transform:none}
+/* team marquee */
+.marq{background:var(--blue);color:#fff;overflow:hidden;padding:22px 0}
+.marq-track{display:flex;gap:46px;width:max-content;animation:marq 48s linear infinite}
+.marq:hover .marq-track{animation-play-state:paused}
+.marq-item{display:flex;align-items:center;gap:16px;font-size:clamp(24px,2.6vw,38px);font-weight:900;letter-spacing:-.03em;white-space:nowrap}
+.marq-item .tw{width:58px;height:58px;border-radius:50%;overflow:hidden;flex:0 0 auto}
+.marq-item i{font-style:normal;font-weight:500;opacity:.75}
+@keyframes marq{to{transform:translateX(-50%)}}
+/* grote getallen */
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:clamp(56px,6vw,90px)}
+.nums div{border-radius:var(--r);background:rgba(255,255,255,.06);padding:28px 30px}
+.nums b{display:block;font-size:clamp(64px,8vw,132px);font-weight:900;letter-spacing:-.06em;line-height:.9;color:#fff;font-variant-numeric:tabular-nums}
+.nums div:nth-child(2) b{color:var(--blue-l)}
+.nums span{display:block;margin-top:10px;font-size:18px;color:rgba(255,255,255,.75)}
+/* belofte */
+.promise{font-size:clamp(28px,2.9vw,36px);line-height:1.2;font-weight:800;letter-spacing:-.025em;color:var(--navy);max-width:22ch;margin-bottom:40px}
+.promise em{font-style:normal;color:var(--blue)}
+@media(max-width:600px){.nums{grid-template-columns:1fr}.marq-item .tw{width:44px;height:44px}}
 /* entrances */
 .js .rise{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i,0)*75ms)}
 .js .rise.in{opacity:1;transform:none}
@@ -207,10 +243,11 @@ footer .row a:hover{color:var(--blue-l)}
 @media(max-width:600px){
   body{font-size:17px}
   .crew{grid-template-columns:1fr}
-  .chap div{grid-template-columns:1fr;gap:8px}
+  .chap>div{grid-template-columns:1fr;gap:6px}
+  .chap .lb{height:auto}
   dl.terms div{grid-template-columns:1fr;gap:6px}
   .c-card{grid-template-columns:1fr}
-  .c-card img{width:100%;height:220px}
+  .c-card img{width:120px;height:120px}
   .now h2{flex-wrap:wrap}
   .now h2 time{margin-left:0}
   .nav .btn{padding:9px 16px;font-size:14px}
@@ -233,9 +270,9 @@ footer .row a:hover{color:var(--blue-l)}
     <a class="wm" href="/">Hielke <span>Boersma</span></a>
     <a class="l" href="#achtergrond">Achtergrond</a>
     <a class="l" href="#team">Mijn AI-team</a>
-    <a class="l" href="#sessies">Sessies</a>
+    <a class="l" href="#seminars">Seminars</a>
     <a class="l" href="#contact">Contact</a>
-    <a class="btn" href="#contact">Plan een sessie</a>
+    <a class="btn" href="#contact">Plan een seminar</a>
   </div>
 </header>
 
@@ -245,9 +282,9 @@ footer .row a:hover{color:var(--blue-l)}
   <div class="wrap hero-grid">
     <h1 class="rise"><span class="ln">Eén mens.</span> <em class="ln">Twaalf AI-collega's.</em></h1>
     <div>
-      <p class="lead rise" style="--i:1">Ik ben Hielke Boersma: radio-dj, maker en ondernemer. Zonder IT-achtergrond bouwde ik een compleet bedrijf met AI-agents. Nu laat ik sales- en marketingteams zien hoe zij dat zelf doen.</p>
+      <p class="lead rise" style="--i:1">Ik ben Hielke Boersma: radio-dj, dagvoorzitter en ondernemer. Zonder IT-achtergrond bouwde ik een compleet bedrijf met AI-agents. Nu laat ik sales- en marketingteams zien hoe zij dat zelf doen. Als je naar buiten loopt, weet je waar je moet beginnen.</p>
       <div class="acts rise" style="--i:2">
-        <a class="btn" href="#contact">Plan een sessie <span class="arr">→</span></a>
+        <a class="btn" href="#contact">Plan een seminar <span class="arr">→</span></a>
         <a class="btn alt" href="/presentatie/">Bekijk de presentatie</a>
       </div>
       <div class="now rise" style="--i:3" aria-live="polite">
@@ -259,7 +296,7 @@ footer .row a:hover{color:var(--blue-l)}
       </div>
     </div>
     <figure class="hero-pic rise" style="--i:1">
-      <img src="img/hielke-laptop.webp" srcset="img/hielke-laptop-1000.webp 1000w, img/hielke-laptop.webp 2000w" sizes="(max-width:980px) 100vw, 52vw" alt="Hielke Boersma aan het werk achter zijn laptop" fetchpriority="high">
+      <img src="img/hielke-lacht.webp" srcset="img/hielke-lacht-1000.webp 1000w, img/hielke-lacht.webp 2000w" sizes="(max-width:980px) 100vw, 52vw" alt="Hielke Boersma lacht achter zijn laptop" fetchpriority="high">
       <figcaption class="team">
         <span class="stack"><span data-toon="sam"></span><span data-toon="ada"></span><span data-toon="otto"></span><span data-toon="coco"></span><span data-toon="vera"></span><span data-toon="rosa"></span></span>
         <p><b>Sam, Ada, Otto en nog negen</b>Mijn team, allemaal AI.</p>
@@ -268,6 +305,8 @@ footer .row a:hover{color:var(--blue-l)}
   </div>
 </section>
 
+<div class="marq" aria-hidden="true"><div class="marq-track"><span class="marq-item"><span class="tw" data-toon="sam"></span>Sam <i>sales</i></span><span class="marq-item"><span class="tw" data-toon="ada"></span>Ada <i>assistent</i></span><span class="marq-item"><span class="tw" data-toon="otto"></span>Otto <i>offertes</i></span><span class="marq-item"><span class="tw" data-toon="max"></span>Max <i>marketing</i></span><span class="marq-item"><span class="tw" data-toon="coco"></span>Coco <i>copy</i></span><span class="marq-item"><span class="tw" data-toon="wes"></span>Wes <i>websites</i></span><span class="marq-item"><span class="tw" data-toon="zoe"></span>Zoë <i>SEO</i></span><span class="marq-item"><span class="tw" data-toon="gijs"></span>Gijs <i>design</i></span><span class="marq-item"><span class="tw" data-toon="vera"></span>Vera <i>video</i></span><span class="marq-item"><span class="tw" data-toon="abel"></span>Abel <i>audio</i></span><span class="marq-item"><span class="tw" data-toon="rosa"></span>Rosa <i>radio</i></span><span class="marq-item"><span class="tw" data-toon="pim"></span>Pim <i>presentaties</i></span><span class="marq-item"><span class="tw" data-toon="sam"></span>Sam <i>sales</i></span><span class="marq-item"><span class="tw" data-toon="ada"></span>Ada <i>assistent</i></span><span class="marq-item"><span class="tw" data-toon="otto"></span>Otto <i>offertes</i></span><span class="marq-item"><span class="tw" data-toon="max"></span>Max <i>marketing</i></span><span class="marq-item"><span class="tw" data-toon="coco"></span>Coco <i>copy</i></span><span class="marq-item"><span class="tw" data-toon="wes"></span>Wes <i>websites</i></span><span class="marq-item"><span class="tw" data-toon="zoe"></span>Zoë <i>SEO</i></span><span class="marq-item"><span class="tw" data-toon="gijs"></span>Gijs <i>design</i></span><span class="marq-item"><span class="tw" data-toon="vera"></span>Vera <i>video</i></span><span class="marq-item"><span class="tw" data-toon="abel"></span>Abel <i>audio</i></span><span class="marq-item"><span class="tw" data-toon="rosa"></span>Rosa <i>radio</i></span><span class="marq-item"><span class="tw" data-toon="pim"></span>Pim <i>presentaties</i></span></div></div>
+
 <!-- ACHTERGROND -->
 <section class="bg" id="achtergrond">
   <div class="wrap bg-grid">
@@ -275,16 +314,16 @@ footer .row a:hover{color:var(--blue-l)}
       <h2 class="rise">Begonnen <em>in de radio.</em></h2>
       <p class="lead rise" style="--i:1">Ik ben vooral een creatief. Ik vertel verhalen, met woorden en met muziek. Code schrijven heb ik nooit geleerd. Wat ik wel kan: helder uitleggen wat goed werk is.</p>
       <div class="chap">
-        <div class="rise" style="--i:2"><img class="logo" src="/presentatie/assets/slam-logo.png" alt="SLAM!"><span><h3>Radio-dj en presentator</h3><p>Van maandag tot en met donderdag sta ik van 12:00 tot 16:00 live op SLAM!. Daarnaast draai ik op feesten en presenteer ik events.</p></span></div>
-        <div class="rise" style="--i:3"><svg class="logo" viewBox="0 0 160 44" role="img" aria-label="Storio Podcasts" style="height:44px;width:auto"><text x="0" y="29" font-family="Fraunces, Georgia, serif" font-weight="800" font-size="27" fill="#101926">Storio</text><text x="8.5" y="41" font-family="'DM Sans', sans-serif" font-weight="600" font-size="7.5" letter-spacing="3.5" fill="#2e9e60">PODCASTS</text></svg><span><h3>Podcasts voor organisaties</h3><p>Van concept en opname op locatie tot montage en publicatie. Onder meer voor FC Utrecht, PharmaPartners en Gemeente Groningen.</p></span></div>
-        <div class="rise" style="--i:4"><svg class="logo" viewBox="0 0 160 44" role="img" aria-label="Storio Media" style="height:44px;width:auto"><text x="0" y="29" font-family="'Fraunces',Georgia,serif" font-size="27" font-weight="800" fill="#101926">Storio</text><text x="45.80" text-anchor="middle" y="41" font-family="'DM Sans',sans-serif" font-size="7.5" font-weight="600" fill="#2e9e60" letter-spacing="7.4">MEDIA</text></svg><span><h3>Video's, slim gemaakt met AI</h3><p>Sinds 2026 maak ik met Storio Media video's voor bedrijven: concept, AI-beeld, stem en muziek. Binnen een week klaar.</p></span></div>
+        <div class="rise" style="--i:2"><span class="lb"><img class="logo" src="/presentatie/assets/slam-logo.png" alt="SLAM!"></span><span><h3>Radio-dj en presentator</h3><p>Van maandag tot en met donderdag sta ik van 12:00 tot 16:00 live op SLAM!. Daarnaast ben ik dagvoorzitter en presentator bij congressen en bedrijfsevents.</p></span></div>
+        <div class="rise" style="--i:3"><span class="lb"><svg class="logo" viewBox="0 0 160 44" role="img" aria-label="Storio Podcasts" style="height:44px;width:auto"><text x="0" y="29" font-family="Fraunces, Georgia, serif" font-weight="800" font-size="27" fill="#101926">Storio</text><text x="8.5" y="41" font-family="'DM Sans', sans-serif" font-weight="600" font-size="7.5" letter-spacing="3.5" fill="#2e9e60">PODCASTS</text></svg></span><span><h3>Podcasts voor organisaties</h3><p>Van concept en opname op locatie tot montage en publicatie. Onder meer voor FC Utrecht, PharmaPartners en Gemeente Groningen.</p></span></div>
+        <div class="rise" style="--i:4"><span class="lb"><svg class="logo" viewBox="0 0 160 44" role="img" aria-label="Storio Media" style="height:44px;width:auto"><text x="0" y="29" font-family="'Fraunces',Georgia,serif" font-size="27" font-weight="800" fill="#101926">Storio</text><text x="45.80" text-anchor="middle" y="41" font-family="'DM Sans',sans-serif" font-size="7.5" font-weight="600" fill="#2e9e60" letter-spacing="7.4">MEDIA</text></svg></span><span><h3>Video's, slim gemaakt met AI</h3><p>Sinds 2026 maak ik met Storio Media video's voor bedrijven: concept, AI-beeld, stem en muziek. Binnen een week klaar.</p></span></div>
       </div>
       <p class="rise" style="margin-top:36px;--i:5">Twee bedrijven, veel ideeën, en maar één mens. Acquisitie, offertes, mail, websites, video, geluid: er was altijd meer werk dan handen. Dus ben ik collega's gaan inwerken. Van een ander soort.</p>
     </div>
     <div class="mosaic rise" style="--i:1">
-      <figure><img src="/presentatie/assets/radio-ade.webp" alt="Hielke Boersma met koptelefoon in de studio van SLAM!" loading="lazy"><figcaption>Live op SLAM!</figcaption></figure>
-      <figure><img src="/presentatie/assets/pod-fcu.webp" alt="Opname van de FC Utrecht Podcast door Storio Podcasts" loading="lazy" style="object-position:72% 50%"><figcaption>FC Utrecht Podcast</figcaption></figure>
-      <figure><video src="/presentatie/assets/loop-rondje.mp4" poster="/presentatie/assets/loop-rondje.jpg" muted loop playsinline autoplay preload="metadata" aria-label="AI-video van Storio Media voor Rondje"></video><figcaption>Storio Media voor Rondje</figcaption></figure>
+      <figure><img src="/presentatie/assets/radio-ade.webp" alt="Hielke Boersma met koptelefoon in de studio van SLAM!" loading="lazy"></figure>
+      <figure><img src="/presentatie/assets/pod-fcu.webp" alt="Opname van de FC Utrecht Podcast door Storio Podcasts" loading="lazy" style="object-position:72% 50%"></figure>
+      <figure><video src="/presentatie/assets/loop-rondje.mp4" poster="/presentatie/assets/loop-rondje.jpg" muted loop playsinline autoplay preload="metadata" aria-label="AI-video van Storio Media voor Rondje"></video></figure>
     </div>
   </div>
 </section>
@@ -295,6 +334,11 @@ footer .row a:hover{color:var(--blue-l)}
     <div class="team-head">
       <h2 class="rise">Maak kennis met <em>mijn team.</em></h2>
       <p class="lead rise" style="--i:1">Groeien betekende vroeger mensen aannemen. Ik heb twaalf collega's ingewerkt. Ze werken elke dag, ook als ik op de radio zit. En geen van hen is een mens.</p>
+    </div>
+    <div class="nums">
+      <div class="rise"><b data-count="1">1</b><span>mens</span></div>
+      <div class="rise" style="--i:1"><b data-count="12">12</b><span>AI-collega's</span></div>
+      <div class="rise" style="--i:2"><b data-count="0" data-from="25000">0</b><span>regels code zelf geschreven</span></div>
     </div>
     <ul class="crew">
       <li class="rise"><span class="tw" data-toon="sam"></span><span><b>Sam <span>· sales</span></b><small>Zoekt drie keer per dag nieuwe leads en schrijft de eerste mail.</small></span></li>
@@ -348,29 +392,33 @@ footer .row a:hover{color:var(--blue-l)}
 </section>
 
 <!-- SESSIES -->
-<section class="ses" id="sessies">
+<section class="ses" id="seminars">
   <div class="wrap">
     <div class="ses-head">
-      <h2 class="rise">AI-sessies voor <em>jouw team.</em></h2>
+      <h2 class="rise">AI-seminars voor <em>jouw team.</em></h2>
       <p class="lead rise" style="--i:1">Voor sales- en marketingteams die willen zien wat AI echt voor hun werk doet. Geen theorie of hype, maar mijn eigen bedrijf als voorbeeld, een live demo en zelf aan de slag.</p>
     </div>
     <div class="formats">
-      <article class="fmt rise"><h3>Keynote</h3><span class="dur">45 minuten</span><p>Het verhaal van één mens en twaalf AI-collega's, met een live demo waarin de zaal een bedrijf kiest. Voor congressen, kick-offs en teamdagen.</p></article>
-      <article class="fmt main rise" style="--i:1"><h3>Sessie met workshop</h3><span class="dur">60 tot 90 minuten</span><p>De keynote plus een workshop: iedereen werkt zijn eerste AI-collega in, met een werkblad en een startprompt. Je team gaat naar huis met iets wat werkt.</p></article>
-      <article class="fmt rise" style="--i:2"><h3>Teamtraject</h3><span class="dur">Op maat</span><p>Samen met je team de eerste agents bouwen voor jullie eigen werk, zoals leads, follow-ups of content. Verspreid over een paar sessies.</p></article>
+      <article class="fmt rise"><h3>Seminar</h3><span class="dur">45 minuten</span><p>Het verhaal van één mens en twaalf AI-collega's, met een live demo waarin de zaal een bedrijf kiest. Voor congressen, kick-offs en teamdagen.</p></article>
+      <article class="fmt main rise" style="--i:1"><h3>Seminar met workshop</h3><span class="dur">60 tot 90 minuten</span><p>Het seminar plus een workshop: iedereen werkt zijn eerste AI-collega in, met een werkblad en een startprompt. Je team gaat naar huis met iets wat werkt.</p></article>
+      <article class="fmt rise" style="--i:2"><h3>Teamtraject</h3><span class="dur">Op maat</span><p>Samen met je team de eerste agents bouwen voor jullie eigen werk, zoals leads, follow-ups of content. Verspreid over een paar bijeenkomsten.</p></article>
     </div>
     <div class="take">
       <div>
+        <p class="promise rise">Als je naar buiten loopt, weet je <em>waar je moet beginnen.</em></p>
         <h3 class="rise">Wat je team meeneemt.</h3>
         <ul>
           <li class="rise" style="--i:1">De vijf begrippen die je nodig hebt, zonder jargon.</li>
           <li class="rise" style="--i:2">Een eerste AI-collega met een eigen werkinstructie.</li>
           <li class="rise" style="--i:3">Een stappenplan om morgen te beginnen, en de valkuilen om te vermijden.</li>
-          <li class="rise" style="--i:4">Het werkblad, om ook na de sessie mee door te gaan.</li>
+          <li class="rise" style="--i:4">Het werkblad, om ook na het seminar mee door te gaan.</li>
         </ul>
-        <div class="acts rise" style="--i:5"><a class="btn" href="#contact">Plan een sessie <span class="arr">→</span></a><a class="btn alt" href="/werkblad/">Download het werkblad</a></div>
+        <div class="acts rise" style="--i:5"><a class="btn" href="#contact">Plan een seminar <span class="arr">→</span></a><a class="btn alt" href="/werkblad/">Download het werkblad</a></div>
       </div>
-      <a class="deck rise" style="--i:2" href="/presentatie/"><img src="/presentatie/assets/bouw-na.webp" alt="Titeldia van de presentatie Eén mens, twaalf collega's" loading="lazy"><span>Blader zelf door de presentatie <span class="arr">→</span></span></a>
+      <a class="deck rise" style="--i:2" href="/presentatie/">
+        <span class="deck-shots"><img class="s1" src="img/deck-title.webp" alt="Titeldia van de presentatie" loading="lazy"><img class="s2" src="img/deck-team.webp" alt="Dia met het AI-team uit de presentatie" loading="lazy"></span>
+        <span class="deck-txt"><b>Blader zelf door de presentatie</b><span>40 dia's, met mijn team, de begrippen en de workshop.</span><span class="go">Bekijk de presentatie <span class="arr">→</span></span></span>
+      </a>
     </div>
   </div>
 </section>
@@ -379,12 +427,12 @@ footer .row a:hover{color:var(--blue-l)}
 <section class="contact" id="contact">
   <div class="wrap c-grid">
     <div>
-      <h2 class="rise">Plan een sessie <em>voor je team.</em></h2>
-      <p class="lead rise" style="--i:1">Vertel me over je team, de gelegenheid en wat je wilt bereiken. Ik denk graag mee over de vorm: een keynote, een sessie met workshop of een traject.</p>
-      <div class="acts rise" style="--i:2"><a class="btn" href="mailto:info@hielkeboersma.com?subject=AI-sessie%20voor%20ons%20team&amp;body=Hoi%20Hielke%2C%0A%0AWe%20zijn%20ge%C3%AFnteresseerd%20in%20een%20AI-sessie.%0A%0AOrganisatie%3A%0AAantal%20deelnemers%3A%0AGelegenheid%20en%20datum%3A%0AVorm%20(keynote%2C%20sessie%20met%20workshop%20of%20traject)%3A%0A">Mail me <span class="arr">→</span></a></div>
+      <h2 class="rise c-h"><span class="ln">Plan een seminar</span> <em class="ln">voor je team.</em></h2>
+      <p class="lead rise" style="--i:1">Vertel me over je team, de gelegenheid en wat je wilt bereiken. Ik denk graag mee over de vorm: een seminar, een seminar met workshop of een teamtraject.</p>
+      <div class="acts rise" style="--i:2"><a class="btn" href="mailto:info@hielkeboersma.com?subject=AI-seminar%20voor%20ons%20team&amp;body=Hoi%20Hielke%2C%0A%0AWe%20zijn%20ge%C3%AFnteresseerd%20in%20een%20AI-seminar.%0A%0AOrganisatie%3A%0AAantal%20deelnemers%3A%0AGelegenheid%20en%20datum%3A%0AVorm%20(seminar%2C%20seminar%20met%20workshop%20of%20teamtraject)%3A%0A">Mail me <span class="arr">→</span></a></div>
     </div>
     <div class="c-card rise" style="--i:1">
-      <img src="img/hielke-portret.webp" alt="Portret van Hielke Boersma" loading="lazy">
+      <img src="img/hielke-contact.webp" alt="Hielke Boersma achter zijn laptop" loading="lazy">
       <div>
         <small>Mail</small><a href="mailto:info@hielkeboersma.com">info@hielkeboersma.com</a>
         <small style="margin-top:12px">Bel of app</small><a href="tel:+31651969025">06 51 96 90 25</a>
@@ -398,12 +446,24 @@ footer .row a:hover{color:var(--blue-l)}
 <footer>
   <div class="wrap">
     <div class="big">Hielke Boersma</div>
-    <div class="row"><span>AI-sessies, radio en verhalen.</span><a href="/">hielkeboersma.com</a><a href="https://storiomedia.nl" target="_blank" rel="noopener">Storio Media</a><a href="https://storiopodcasts.nl" target="_blank" rel="noopener">Storio Podcasts</a><a href="/presentatie/">De presentatie</a></div>
+    <div class="row"><span>AI-seminars, radio en verhalen.</span><a href="/">hielkeboersma.com</a><a href="https://storiomedia.nl" target="_blank" rel="noopener">Storio Media</a><a href="https://storiopodcasts.nl" target="_blank" rel="noopener">Storio Podcasts</a><a href="/presentatie/">De presentatie</a></div>
   </div>
 </footer>
 
 <script src="/presentatie/assets/team.js"></script>
 <script>
+
+/* kinetische koppen */
+(()=>{document.querySelectorAll('h1.rise,h2.rise').forEach(h=>{h.classList.add('kin');let n=0;
+ (function walk(node){[...node.childNodes].forEach(c=>{
+  if(c.nodeType===3){const fr=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(t=>{if(!t)return;if(/^\s+$/.test(t)){fr.appendChild(document.createTextNode(t));return}
+   const w=document.createElement('span');w.className='kw';const i=document.createElement('span');i.textContent=t;i.style.setProperty('--wi',n++);w.appendChild(i);fr.appendChild(w)});c.replaceWith(fr)}
+  else if(c.nodeType===1&&c.tagName!=='BR')walk(c)})})(h)})})();
+/* tellers */
+(()=>{const ease=t=>1-Math.pow(1-t,4);const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);
+ const el=e.target,to=+el.dataset.count,from=+(el.dataset.from||0);if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=to;return}
+ const t0=performance.now();(function st(now){const k=Math.min(1,(now-t0)/1700);el.textContent=Math.round(from+(to-from)*ease(k)).toLocaleString('nl-NL');if(k<1)requestAnimationFrame(st)})(t0)}),{threshold:.5});
+ document.querySelectorAll('[data-count]').forEach(el=>{el.textContent=(+(el.dataset.from||0)).toLocaleString('nl-NL');io.observe(el)})})();
 /* entrances */
 (()=>{const els=document.querySelectorAll('.rise');
  if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
