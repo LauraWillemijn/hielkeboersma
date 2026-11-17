@@ -131,6 +131,8 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:100;height:68px;padding:0 60p
 /* ===== MEDIA GRIDS ===== */
 .photo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:46px 0}
 .photo-row.two{grid-template-columns:repeat(2,1fr)}
+.photo-row.one{grid-template-columns:1fr}
+.photo-row.one img{height:460px}
 .photo-row img{width:100%;height:280px;object-fit:cover;border-radius:12px;filter:contrast(1.05) saturate(1.05)}
 .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
 .video-grid.two{grid-template-columns:repeat(2,1fr)}
@@ -276,7 +278,7 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
   .hero-inner{padding-left:20px;padding-right:20px;padding-bottom:60px}
   .section{padding-top:70px;padding-bottom:70px}
   .photo-row,.photo-row.two,.video-grid,.video-grid.two{grid-template-columns:1fr}
-  .photo-row img{height:auto;aspect-ratio:4/3}
+  .photo-row img,.photo-row.one img{height:auto;aspect-ratio:4/3}
   .review-row{padding-left:20px;padding-right:20px}
   .footer-inner{flex-direction:column;text-align:center}
 }
@@ -416,7 +418,7 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <h1>Hielke Boersma</h1>
-    <p>DJ bij SLAM!, DJ op je feestje, presentator, dagvoorzitter en voice-over met jarenlange ervaring. Van corporate events tot festivals, altijd met passie en professionaliteit.</p>
+    <p>DJ bij SLAM!, (AI) creative, presentator, dagvoorzitter en voice-over met jarenlange ervaring. Van corporate events tot festivals, altijd met passie en professionaliteit.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn-primary">Neem contact op →</a>
       <a href="#dj" class="btn-ghost">Werk</a>
@@ -430,7 +432,7 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
     <div class="over-grid">
       <div>
         <h2>Over Hielke</h2>
-        <p class="lead">Hielke Boersma is (radio) dj, presentator en voice-over. Sinds 2020 is hij een van de vaste stemmen van radiozender SLAM!. Zijn carrière begon bij OOG TV en Radio, waarna hij via opleidingsprojecten bij Qmusic en Radio 538 zijn weg vond naar de landelijke radio.</p>
+        <p class="lead">Hielke Boersma is (radio) dj, (AI) creative, presentator en voice-over. Sinds 2020 is hij een van de vaste stemmen van radiozender SLAM!. Zijn carrière begon bij OOG TV en Radio, waarna hij via opleidingsprojecten bij Qmusic en Radio 538 zijn weg vond naar de landelijke radio.</p>
         <p class="lead">Naast zijn werk op de radio is Hielke een ervaren presentator, zowel op het podium als voor de camera. Of het nu gaat om een strak geregisseerde video, een bedrijfscongres of een energiek festivalpanel, hij schakelt moeiteloos tussen stijlen en formats.</p>
         <p class="lead">Hielke is opgegroeid in Groningen, maar woont tegenwoordig in Utrecht. Daar werkt hij aan uiteenlopende mediaprojecten, van radioshows tot events. Als hij niet achter de microfoon staat, vind je hem achter de draaitafels. Sinds 2026 is hij daarnaast oprichter van <a class="inline-link" href="https://storiopodcasts.nl/" target="_blank" rel="noopener">Storio Podcasts</a>, een podcastproductiebureau voor bedrijven, merken, makers en andere organisaties. Met <a class="inline-link" href="https://storiomedia.nl/" target="_blank" rel="noopener">Storio Media</a> maakt hij ook video's voor bedrijven: commercials, bedrijfsfilms, explainers en social content.</p>
         <p class="clients-line"><strong>Een selectie van tevreden opdrachtgevers:</strong> 100%NL, Bedrijvingsfestival, EY, FIRM24, Gemeente Den Haag, Gemeente Groningen, Ministerie van Justitie en Veiligheid, Nationale-Nederlanden, OOG TV, PWC, Radio 538, RTV Noord, SBS 6, SLAM!. <span class="stars">★★★★★</span></p>
@@ -511,10 +513,8 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
   <div class="wrap">
     <h2>Presentator &amp; dagvoorzitter</h2>
 
-    <div class="photo-row">
+    <div class="photo-row one">
       <img src="images/hielkenieuwade.jpg" alt="Hielke Boersma als presentator">
-      <img src="images/hielke13.jpg" alt="Hielke Boersma als presentator">
-      <img src="images/hielke1.avif" alt="Hielke Boersma als presentator">
     </div>
 
     <div class="subhead">

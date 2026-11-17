@@ -128,6 +128,8 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:100;height:68px;padding:0 60p
 
 /* ===== MEDIA GRIDS ===== */
 .photo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:46px 0}
+.photo-row.one{grid-template-columns:1fr}
+.photo-row.one img{height:460px}
 .photo-row img{width:100%;height:280px;object-fit:cover;border-radius:12px;filter:contrast(1.05) saturate(1.05)}
 .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
 .video-grid.two{grid-template-columns:repeat(2,1fr)}
@@ -229,7 +231,7 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
   .hero-inner{padding-left:20px;padding-right:20px;padding-bottom:60px}
   .section{padding-top:70px;padding-bottom:70px}
   .photo-row,.video-grid,.video-grid.two{grid-template-columns:1fr}
-  .photo-row img{height:auto;aspect-ratio:4/3}
+  .photo-row img,.photo-row.one img{height:auto;aspect-ratio:4/3}
   .review-row{padding-left:20px;padding-right:20px}
   .footer-inner{flex-direction:column;text-align:center}
 }
@@ -269,10 +271,8 @@ footer{background:var(--footer);color:rgba(255,255,255,0.65);padding:60px}
   <div class="wrap">
     <h2>Presentator &amp; dagvoorzitter</h2>
 
-    <div class="photo-row">
+    <div class="photo-row one">
       <img src="images/hielkenieuwade.jpg" alt="Hielke Boersma als presentator">
-      <img src="images/hielke13.jpg" alt="Hielke Boersma als presentator">
-      <img src="images/hielke1.avif" alt="Hielke Boersma als presentator">
     </div>
 
     <div class="subhead">
