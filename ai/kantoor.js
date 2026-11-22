@@ -31,12 +31,13 @@ const disc=(x,y,z,r,top,side,th=7)=>{const[cx,cy]=P(x,y,z),rx=r*A*1.414,ry=r*B*1
 const HALL=5.0,COLS=[5.2,7.9,10.6],ROWS=[6.0,7.9,9.8,11.7];
 const DESK={};KEYS.forEach((k,i)=>{const x0=COLS[i%3],y0=ROWS[Math.floor(i/3)];
  DESK[k]={x0,y0,seat:[x0+1,y0-.55],gap:i%3===0?x0-.4:x0-.35}});
-DESK.hielke={x0:1.2,y0:10.5,seat:[2.2,9.95]};
+DESK.hielke={x0:1.2,y0:8.55,seat:[2.2,8.0]};
+const RADIO={x0:1.2,y0:11.6,seat:[2.2,11.05]};
 const MEET=[[1.25,2.4],[3.15,2.4],[2.2,3.3],[2.2,1.5]];
 const IDLE={ /* [x,y,houding] */
  rosa:[10.55,2.3,'sit'],vera:[12.65,2.3,'sit'],max:[11.0,1.15,'stand'],abel:[12.9,1.15,'stand'],
  otto:[10.25,4.0,'pp'],wes:[13.55,4.0,'pp'],sam:[5.6,2.0,'stand'],ada:[6.9,2.3,'stand'],
- coco:[1.55,5.3,'sit'],zoe:[1.55,6.5,'sit'],gijs:[7.85,3.5,'stand'],pim:[9.2,3.5,'stand']};
+ coco:[1.55,4.95,'sit'],zoe:[1.55,6.05,'sit'],gijs:[7.85,3.5,'stand'],pim:[9.2,3.5,'stand']};
 
 /* ---------- ruimte ---------- */
 let room='',objs=[];
@@ -50,7 +51,7 @@ room+=`<path d="M${pt([0,13,WALL])}L${pt([0,0,WALL])}L${pt([14,0,WALL])}" fill="
 room+=`<path class="k-neon" d="M${pt([0,13,3])}L${pt([0,0,3])}L${pt([14,0,3])}" fill="none" stroke="#2563ff" stroke-width="3"/>`;
 /* vloerzones */
 room+=poly([[9.7,.8],[13.9,.8],[13.9,4.75],[9.7,4.75]],'rgba(92,200,255,.05)');
-room+=poly([[.35,8.2],[4,8.2],[4,12.6],[.35,12.6]],'rgba(92,200,255,.07)');
+room+=poly([[.35,7],[4,7],[4,9.7],[.35,9.7]],'rgba(92,200,255,.07)')+poly([[.35,10],[4,10],[4,12.8],[.35,12.8]],'rgba(92,200,255,.07)','class="k-studiofloor"');
 {const[cx,cy]=P(2.2,2.4);room+=`<ellipse cx="${cx}" cy="${cy}" rx="150" ry="75" fill="rgba(37,99,255,.10)"/>`}
 /* rechtermuur: scherm en kantine */
 room+=`<g transform="matrix(1 .5 0 1 ${OX} ${OY})">
@@ -65,13 +66,13 @@ room+=`<g transform="matrix(1 .5 0 1 ${OX} ${OY})">
 </g>`;
 /* linkermuur: ramen en on air */
 room+=`<g transform="matrix(1 -.5 0 1 ${OX} ${OY})">
- ${[[-300,-64],[-560,-64]].map(([x])=>`<rect class="k-win" x="${x-150}" y="-168" width="190" height="112" rx="6"/><path d="M${x-55} -168v112M${x-150} -112h190" stroke="#1a2740" stroke-width="3"/>`).join('')}
- <g id="k-onair"><rect x="-690" y="-172" width="150" height="40" rx="8" fill="#12090c" stroke="#5a2630" stroke-width="2"/><text x="-615" y="-145" text-anchor="middle" class="k-onairt">ON AIR</text></g>
+ ${[[-240,170],[-530,130]].map(([x,w])=>`<rect class="k-win" x="${x}" y="-168" width="${w}" height="112" rx="6"/><path d="M${x+w/2} -168v112M${x} -112h${w}" stroke="#1a2740" stroke-width="3"/>`).join('')}
+ <g id="k-onair"><rect x="-700" y="-172" width="130" height="38" rx="8" fill="#12090c" stroke="#5a2630" stroke-width="2"/><text x="-635" y="-146" text-anchor="middle" class="k-onairt">ON AIR</text></g>
 </g>`;
 /* planten */
 const plant=(x,y,s=1)=>{const[cx,cy]=P(x,y,26);return box(x-.16,y-.16,.32,.32,26,{t:'#e9e2d6',l:'#cfc6b6',r:'#b3a996'})+
  `<g class="k-plant"><ellipse cx="${cx-12*s}" cy="${cy-30*s}" rx="${13*s}" ry="${24*s}" fill="#2f7d5b" transform="rotate(-24 ${cx} ${cy})"/><ellipse cx="${cx+13*s}" cy="${cy-28*s}" rx="${12*s}" ry="${22*s}" fill="#3a9770" transform="rotate(22 ${cx} ${cy})"/><ellipse cx="${cx}" cy="${cy-40*s}" rx="${11*s}" ry="${28*s}" fill="#3fa877"/></g>`};
-[[.5,.5,1.3],[13.5,5.4,1],[4.45,5.6,1.1],[.55,7.75,1.1],[13.4,12.4,1.2],[4.5,12.9,1]].forEach(([x,y,s])=>add(x+y,plant(x,y,s)));
+[[.5,.5,1.3],[13.5,5.4,1],[4.45,5.6,1.1],[13.4,12.4,1.2]].forEach(([x,y,s])=>add(x+y,plant(x,y,s)));
 /* overlegtafel */
 add(4.6,disc(2.2,2.4,34,.72,'#f1e9dc','#b5a994')+`<rect x="${P(2.2,2.4)[0]-6}" y="${P(2.2,2.4,30)[1]}" width="12" height="30" fill="#1a2740"/>`);
 /* kantine */
@@ -85,11 +86,21 @@ add(13.92,disc(11.6,2.3,30,.58,'#f1e9dc','#b5a994')+`<circle cx="${P(11.45,2.25,
  +poly([[11.9,3.45,35],[11.9,4.55,35],[11.9,4.55,47],[11.9,3.45,47]],'rgba(255,255,255,.35)','stroke="rgba(255,255,255,.7)"')
  +`<g class="k-ball" style="--bx:${(b[0]-a[0]).toFixed(1)}px;--by:${(b[1]-a[1]).toFixed(1)}px"><circle cx="${a[0]}" cy="${a[1]}" r="5" fill="#ffb86b"/></g>`,'k-pp');}
 /* bank */
-add(7.0,box(.35,4.7,.3,2.5,46,{t:'#a5644b',l:'#7d4937',r:'#6c3f30'})+box(.65,4.7,.75,2.5,22,{t:'#b7735a',l:'#8a513d',r:'#774535'}));
+add(6.6,box(.35,4.4,.3,2.2,46,{t:'#a5644b',l:'#7d4937',r:'#6c3f30'})+box(.65,4.4,.75,2.2,22,{t:'#b7735a',l:'#8a513d',r:'#774535'}));
 /* glazen kantoor van de founder */
-add(8.7,poly([[.35,8.2,0],[4,8.2,0],[4,8.2,150],[.35,8.2,150]],'rgba(126,196,255,.06)','stroke="rgba(126,196,255,.35)" stroke-width="1.5"'));
-add(14.9,poly([[4,8.2,0],[4,9.3,0],[4,9.3,150],[4,8.2,150]],'rgba(126,196,255,.07)','stroke="rgba(126,196,255,.4)" stroke-width="1.5"')
- +poly([[4,10.4,0],[4,12.6,0],[4,12.6,150],[4,10.4,150]],'rgba(126,196,255,.07)','stroke="rgba(126,196,255,.4)" stroke-width="1.5"'));
+const GL='stroke="rgba(126,196,255,.42)" stroke-width="1.5"',glass=(pts,d,f='rgba(126,196,255,.07)')=>add(d,poly(pts,f,GL));
+glass([[.35,7,0],[4,7,0],[4,7,150],[.35,7,150]],8.0);
+glass([[.35,10,0],[4,10,0],[4,10,150],[.35,10,150]],12.9);
+add(13.0,poly([[4,7,0],[4,7.55,0],[4,7.55,150],[4,7,150]],'rgba(126,196,255,.07)',GL)+poly([[4,8.6,0],[4,10,0],[4,10,150],[4,8.6,150]],'rgba(126,196,255,.07)',GL));
+add(15.6,poly([[4,10,0],[4,10.6,0],[4,10.6,150],[4,10,150]],'rgba(126,196,255,.07)',GL)+poly([[4,11.6,0],[4,12.8,0],[4,12.8,150],[4,11.6,150]],'rgba(126,196,255,.07)',GL));
+/* radiostudio: tafel met mengpaneel en microfoon */
+{const{x0,y0}=RADIO,z=38,sk='#f2cdae',m1=P(x0+.35,y0+.2,z),m2=P(x0+.5,y0-.05,z+50),m3=P(x0+.74,y0-.22,z+34),h1=P(x0+.86,y0+.14,z+9),h2=P(x0+1.2,y0+.14,z+9);
+ add(x0+.5+y0+.47,box(x0+.06,y0+.1,.1,.75,32,DARK)+box(x0,y0,1,.95,6,WOOD,32),'kd kd-radio');
+ add(x0+1.5+y0+.47,box(x0+1.42,y0+.06,.5,.83,32,DARK)+box(x0+1,y0,1,.95,6,WOOD,32)
+  +box(x0+.55,y0+.3,1.0,.5,6,{t:'#1b2638',l:'#111a29',r:'#0c1422'},z)
+  +[0,1,2,3,4].map(i=>{const q=P(x0+.68+i*.18,y0+.42+(i%2)*.16,z+7);return`<circle class="k-fader" style="--i:${i}" cx="${q[0]}" cy="${q[1]}" r="3.2"/>`}).join('')
+  +`<circle class="k-hand" cx="${h1[0]}" cy="${h1[1]}" r="6" fill="${sk}"/><circle class="k-hand h2" cx="${h2[0]}" cy="${h2[1]}" r="6" fill="${sk}"/>`
+  +`<path d="M${m1[0]} ${m1[1]}L${m2[0]} ${m2[1]}L${m3[0]} ${m3[1]}" fill="none" stroke="#0f1826" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="${m3[0]-6}" y="${m3[1]-8}" width="12" height="20" rx="6" fill="#0f1826" stroke="#5a6b88" stroke-width="1.5"/>`,'kd kd-radio');}
 /* bureaus */
 function desk(k){const{x0,y0}=DESK[k],t=T[k],z=38,big=k==='hielke';
  const lid=[[x0+.68,y0+.58,z],[x0+1.32,y0+.58,z],[x0+1.32,y0+.67,z+31],[x0+.68,y0+.67,z+31]],lc=P(x0+1,y0+.625,z+16),hp=P(x0+1.66,y0+.42,z+40);
@@ -190,7 +201,7 @@ function goIdle(c){const[x,y,p]=IDLE[c.k];c.mode='idle';c.task='';c.el.classList
 function links(){const groups={};Object.values(C).forEach(c=>{if(c.mode==='work'&&c.grp&&c.pose==='desk')(groups[c.grp]=groups[c.grp]||[]).push(c)});
  let h='';Object.values(groups).forEach(g=>{for(let i=1;i<g.length;i++){const a=DESK[g[i-1].k],b=DESK[g[i].k],p=P(a.x0+1,a.y0+1.15),q=P(b.x0+1,b.y0+1.15);
   h+=`<path class="k-link" d="M${p[0]} ${p[1]}Q${(p[0]+q[0])/2} ${(p[1]+q[1])/2+46} ${q[0]} ${q[1]}"/>`}});gLinks.innerHTML=h}
-let base={},baseSrc='rooster',demo=null,founder='away';
+let base={},baseSrc='rooster',demo=null,founder=null;
 function apply(target,opts={}){ /* target: {key:{k,grp,src}} */
  const starters=KEYS.filter(k=>target[k]&&C[k].mode!=='work');
  const meet=opts.meet&&starters.length>1;
@@ -201,14 +212,21 @@ function apply(target,opts={}){ /* target: {key:{k,grp,src}} */
    else if(c.task!==task){c.task=task;setLabel(c,task,'work')}}
   else if(c.mode!=='idle')goIdle(c)});
  links();summary()}
-function fly(c,done,delay){const from=P(...DESK.hielke.seat),g=document.createElementNS(NS,'g');g.setAttribute('class','k-msg');
+function fly(c,done,delay){const from=P(...C.hielke.pos),g=document.createElementNS(NS,'g');g.setAttribute('class','k-msg');
  g.innerHTML='<circle r="15"/><path d="M-7 1l15-7-5 14-3-5z"/>';gFx.appendChild(g);const t0=performance.now()+delay;
  (function f(now){const p=Math.min(1,Math.max(0,(now-t0)/1100)),to=P(c.pos[0],c.pos[1]),e=p*p*(3-2*p);
   g.setAttribute('transform',`translate(${from[0]+(to[0]-from[0])*e} ${from[1]-80+(to[1]-from[1])*e-Math.sin(p*Math.PI)*150})`);g.style.opacity=p<=0?0:1;
   if(p<1)requestAnimationFrame(f);else{g.remove();done()}})(performance.now())}
-function setFounder(s){founder=s;const c=C.hielke;svg.classList.remove('f-online','f-onair','f-away');svg.classList.add('f-'+s);
- c.el.classList.toggle('work',s==='online');c.el.classList.toggle('gone',s==='away');deskEls('hielke').forEach(e=>e.classList.toggle('on',s==='online'));
- setLabel(c,s==='online'?'Geeft opdrachten':s==='onair'?'Live op SLAM!':'Even niet online',s==='online'?'work':s==='onair'?'air':'off')}
+function setFounder(s){const c=C.hielke,was=founder;founder=s;svg.classList.remove('f-online','f-onair','f-away');svg.classList.add('f-'+s);
+ const seat=s==='onair'?RADIO.seat:DESK.hielke.seat,off=()=>{c.el.classList.remove('work');deskEls('hielke').forEach(e=>e.classList.remove('on'));deskEls('radio').forEach(e=>e.classList.remove('on'))};
+ const sit=()=>{pose(c,'desk');c.el.classList.toggle('work',founder!=='away');deskEls('hielke').forEach(e=>e.classList.toggle('on',founder==='online'));deskEls('radio').forEach(e=>e.classList.toggle('on',founder==='onair'))};
+ c.el.classList.toggle('gone',s==='away');
+ setLabel(c,s==='online'?'Geeft opdrachten':s==='onair'?'Live op SLAM!':'Even niet online',s==='online'?'work':s==='onair'?'air':'off');
+ if(Math.hypot(c.pos[0]-seat[0],c.pos[1]-seat[1])<.05){off();sit();return}
+ off();
+ if(reduce||!visible||was===null){c.pos=seat.slice();c.q=[];sit();place(c);sort();return}
+ /* via de deur van het ene glazen hok naar het andere */
+ c.q=[{fn:()=>pose(c,'stand')},{go:[4.5,c.pos[1]]},{go:[4.5,seat[1]]},{go:seat.slice()},{fn:sit}];kick()}
 
 /* ---------- tijd en rooster ---------- */
 function nl(){const p=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
@@ -217,7 +235,8 @@ const hhmm=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart
 function rooster(){const{d,m}=nl(),t={};if(d>=1&&d<=5){
  [[465,478,'leads'],[720,733,'leads'],[900,913,'leads'],[840,846,'followup']].forEach(([a,b,k])=>{if(m>=a&&m<b)t.sam={k}});
  if(d<=4&&m>=990&&m<996)t.sam={k:'dag'};if(d===5&&m>=960&&m<966)t.sam={k:'week'}}return t}
-function founderNow(f){const{d,m}=nl();if(f===1)return'online';if(d>=1&&d<=4&&m>=720&&m<960)return'onair';if(f===0)return'away';return d>=1&&d<=5&&m>=510&&m<1050?'online':'away'}
+const FQ=new URLSearchParams(location.search).get('founder');
+function founderNow(f){if(['online','onair','away'].includes(FQ))return FQ;const{d,m}=nl();if(f===1)return'online';if(d>=1&&d<=4&&m>=720&&m<960)return'onair';if(f===0)return'away';return d>=1&&d<=5&&m>=510&&m<1050?'online':'away'}
 
 /* ---------- samenvatting, lijst en muurscherm ---------- */
 const badge=root.querySelector('.k-badge'),list=root.querySelector('.k-list'),feedEl=root.querySelector('.k-feed');
@@ -241,7 +260,7 @@ let first=true;
 /* /ai/?toon=vera:video,abel:audio laat een vaste situatie zien (handig om iets voor te doen) */
 const TOON=(new URLSearchParams(location.search).get('toon')||'').split(',').map(x=>x.split(':')).filter(x=>LABEL[x[0]]&&LABEL[x[0]][x[1]]);
 async function refresh(){
- if(TOON.length){const t={};TOON.forEach(([k,v])=>t[k]={k:v,grp:'toon'});base={target:t,f:1};demo=demo||'toon';setFounder('online');apply(t);setBadge();return}
+ if(TOON.length){const t={};TOON.forEach(([k,v])=>t[k]={k:v,grp:'toon'});base={target:t,f:1};demo=demo||'toon';setFounder(founderNow(1));apply(t);setBadge();return}
  const j=await load(),now=Date.now()/1000;let target,f;
  if(j&&now-j.t<17*60){baseSrc='live';target={};Object.keys(j.a||{}).forEach(k=>{if(LABEL[k]&&LABEL[k][j.a[k].k])target[k]={k:j.a[k].k,src:j.a[k].src,grp:j.a[k].src}});f=j.f;
   events=(j.ev||[]).filter(e=>LABEL[e[1]]&&LABEL[e[1]][e[2]]).map(e=>{const d=new Date(e[0]*1000),t=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit'}).format(d);
@@ -259,7 +278,7 @@ const DEMOS={mail:{say:'Stel een mail op',t:{coco:{k:'mail'},ada:{k:'mailklaar'}
 const say=root.querySelector('.k-say'),btns=[...root.querySelectorAll('.k-try button')];let timers=[];
 function runDemo(id){const d=DEMOS[id];if(!d||demo)return;demo=id;btns.forEach(b=>{b.disabled=true;b.classList.toggle('act',b.dataset.demo===id)});setBadge();
  const names=Object.keys(d.t).map(k=>T[k].name),who=names.slice(0,-1).join(', ')+' en '+names.slice(-1);
- say.textContent=`Ik stuur via Telegram: "${d.say}."`;setFounder('online');
+ say.textContent=`Ik stuur via Telegram: "${d.say}."`;if(founder==='away')setFounder('online');
  const t={};Object.keys(d.t).forEach(k=>t[k]={...d.t[k],grp:'demo'});
  KEYS.forEach(k=>{if(!t[k]&&C[k].mode==='work')t[k]={k:Object.keys(LABEL[k]).find(x=>LABEL[k][x]===C[k].task),grp:C[k].grp}});
  apply(t,{fly:true,meet:true});

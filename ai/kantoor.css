@@ -129,3 +129,10 @@
 
 .now-more{display:inline-flex;gap:8px;margin-top:18px;color:#bfe3ff;font-weight:600;font-size:16px;text-decoration:none}
 .now-more:hover{color:#fff}
+
+/* radiostudio */
+.k-studiofloor{transition:fill .6s}
+.f-onair .k-studiofloor{fill:rgba(255,90,90,.13)}
+.k-fader{fill:#3d5380}
+.kd.on .k-fader{fill:#5cc8ff;animation:kled .5s infinite alternate;animation-delay:calc(var(--i)*-.17s)}
+.kd.on .k-fader:nth-of-type(2n){fill:#ff5a5a}
