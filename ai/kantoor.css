@@ -136,3 +136,29 @@
 .k-fader{fill:#3d5380}
 .kd.on .k-fader{fill:#5cc8ff;animation:kled .5s infinite alternate;animation-delay:calc(var(--i)*-.17s)}
 .kd.on .k-fader:nth-of-type(2n){fill:#ff5a5a}
+
+/* kaartje bij een klik op een poppetje */
+.kc{cursor:pointer}
+.kc.sel .kc-sh{fill:rgba(92,200,255,.55)}
+.kl{pointer-events:auto;cursor:pointer}
+.k-list li{cursor:pointer}
+.k-list li:hover{opacity:1}
+.k-list li:focus-visible{outline:2px solid #5cc8ff;outline-offset:2px;opacity:1}
+.k-card{position:absolute;z-index:5;width:min(300px,84vw);background:#fff;color:var(--ink);border-radius:20px;padding:18px 20px 20px;box-shadow:0 24px 60px -18px rgba(0,0,0,.75);font-size:15px;line-height:1.45}
+.k-card[hidden]{display:none}
+.k-x{position:absolute;right:10px;top:8px;width:34px;height:34px;border:0;border-radius:50%;background:transparent;font-size:24px;line-height:1;color:var(--ink);cursor:pointer}
+.k-x:hover{background:rgba(16,25,38,.08)}
+.k-x:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
+.k-ch{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.k-ch .tw{width:52px;height:52px;border-radius:50%;overflow:hidden;flex:0 0 auto;background:#dce8fa}
+.k-ch .tw svg{display:block;width:100%;height:100%}
+.k-ch b{display:block;font-size:20px;letter-spacing:-.01em}
+.k-ch em{font-style:normal;color:rgba(16,25,38,.62)}
+.k-now{display:flex;gap:8px;align-items:center;margin-top:10px;font-weight:600}
+.k-now u{width:9px;height:9px;border-radius:50%;background:#9aa6b8;flex:0 0 auto}
+.k-now[data-on="1"] u{background:#1fae68}
+.k-card h3{margin-top:14px;padding-top:12px;border-top:1px solid rgba(16,25,38,.12);font-size:13px;font-weight:700;color:rgba(16,25,38,.62)}
+.k-card ol{list-style:none;margin-top:6px;display:flex;flex-direction:column;gap:6px}
+.k-card ol li{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.k-card time{color:rgba(16,25,38,.6);font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.k-none{margin-top:6px;color:rgba(16,25,38,.62)}

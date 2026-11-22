@@ -262,6 +262,7 @@ const TOON=(new URLSearchParams(location.search).get('toon')||'').split(',').map
 async function refresh(){
  if(TOON.length){const t={};TOON.forEach(([k,v])=>t[k]={k:v,grp:'toon'});base={target:t,f:1};demo=demo||'toon';setFounder(founderNow(1));apply(t);setBadge();return}
  const j=await load(),now=Date.now()/1000;let target,f;
+ hist=(j&&j.h)||{};if(cardKey)showCard(cardKey);
  if(j&&now-j.t<17*60){baseSrc='live';target={};Object.keys(j.a||{}).forEach(k=>{if(LABEL[k]&&LABEL[k][j.a[k].k])target[k]={k:j.a[k].k,src:j.a[k].src,grp:j.a[k].src}});f=j.f;
   events=(j.ev||[]).filter(e=>LABEL[e[1]]&&LABEL[e[1]][e[2]]).map(e=>{const d=new Date(e[0]*1000),t=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit'}).format(d);
    return`${t} ${T[e[1]].name} ${e[3]?'begint':'is klaar'}: ${LABEL[e[1]][e[2]].toLowerCase()}`})}
@@ -287,6 +288,38 @@ function runDemo(id){const d=DEMOS[id];if(!d||demo)return;demo=id;btns.forEach(b
   setTimeout(()=>{demo=null;btns.forEach(b=>{b.disabled=false;b.classList.remove('act')});say.textContent='Dit was een voorbeeld. Hierboven zie je weer wat er nu echt gebeurt.';
    setFounder(founderNow(base.f));apply(base.target||{});setBadge()},reduce?6000:21000)]}
 btns.forEach(b=>b.addEventListener('click',()=>runDemo(b.dataset.demo)));
+
+/* ---------- kaartje bij een klik ---------- */
+const DESC={sam:'Zoekt drie keer per dag nieuwe leads en schrijft de eerste mail.',ada:'Houdt inbox en agenda bij en maakt een briefing voor elk gesprek.',otto:'Rekent prijzen uit binnen de grenzen die ik heb vastgelegd.',
+ max:'Maakt social posts. Plaatsen gebeurt pas na mijn akkoord.',coco:'Schrijft in mijn stem, getraind op mijn eigen mails.',wes:'Bouwt en onderhoudt de websites, ook deze pagina.',zoe:'Zorgt dat we gevonden worden, ook in AI-zoekmachines.',
+ gijs:'Maakt banners en beelden en bewaakt de huisstijl.',vera:'Monteert video, titels en animatie.',abel:'Maakt voice-over, muziek en geluidseffecten.',rosa:'Maakt het draaiboek voor mijn radioshow.',pim:'Bouwt mijn presentaties.',
+ hielke:'Dat ben ik. Ik geef de opdrachten en keur alles goed voordat het de deur uit gaat.'};
+let hist={},cardKey=null;const card=document.createElement('div');card.className='k-card';card.hidden=true;card.setAttribute('role','dialog');stage.appendChild(card);
+const dayFmt=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',year:'numeric',month:'2-digit',day:'2-digit'}),
+ timeFmt=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit'}),
+ dateFmt=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',weekday:'short',day:'numeric',month:'short'});
+function when(t){const d=new Date(t*1000),today=dayFmt.format(new Date()),yest=dayFmt.format(new Date(Date.now()-864e5)),x=dayFmt.format(d);
+ return(x===today?'vandaag':x===yest?'gisteren':dateFmt.format(d))+' '+timeFmt.format(d)}
+function showCard(k,scroll){const c=C[k];if(!c)return;cardKey=k;const me=k==='hielke';
+ const h=(hist[k]||[]).filter(e=>LABEL[k]&&LABEL[k][e[1]]).slice(0,3);
+ card.innerHTML=`<button type="button" class="k-x" aria-label="Sluiten">×</button>
+ <div class="k-ch"><span class="tw">${me?'<svg viewBox="0 6 100 100">'+HIELKE.replace('class="lid"','class="lid" opacity="0"')+'</svg>':avatar(k)}</span><span><b>${T[k].name}</b><em>${ROLE[k]}</em></span></div>
+ <p>${DESC[k]}</p>
+ <p class="k-now" data-on="${c.mode==='work'||(me&&founder!=='away')?1:0}"><u></u>${me?c.lab.querySelector('i').textContent:c.mode==='work'?'Nu bezig: '+c.task.toLowerCase():'Nu stand-by'}</p>
+ ${me?'':`<h3>Laatste taken</h3>${h.length?'<ol>'+h.map(e=>`<li><span>${LABEL[k][e[1]]}</span><time>${when(e[0])}</time></li>`).join('')+'</ol>':'<p class="k-none">Nog niets afgerond sinds dit kantoor live staat.</p>'}`}`;
+ const[sx,sy]=P(c.pos[0],c.pos[1]);card.hidden=false;
+ card.style.left=Math.min(78,Math.max(1,sx/W*100+2.5))+'%';card.style.top=Math.min(58,Math.max(2,(sy-190)/H*100))+'%';
+ Object.values(C).forEach(o=>o.el.classList.toggle('sel',o===c));
+ if(scroll)stage.scrollIntoView({block:'center',behavior:reduce?'auto':'smooth'});
+ card.querySelector('.k-x').focus({preventScroll:true})}
+function hideCard(){card.hidden=true;cardKey=null;Object.values(C).forEach(o=>o.el.classList.remove('sel'))}
+Object.values(C).forEach(c=>{c.el.addEventListener('click',e=>{e.stopPropagation();cardKey===c.k?hideCard():showCard(c.k)});
+ c.lab.addEventListener('click',e=>{e.stopPropagation();cardKey===c.k?hideCard():showCard(c.k)})});
+list.addEventListener('click',e=>{const li=e.target.closest('li');if(li){e.stopPropagation();showCard(li.dataset.k,true)}});
+list.addEventListener('keydown',e=>{const li=e.target.closest('li');if(li&&(e.key==='Enter'||e.key===' ')){e.preventDefault();showCard(li.dataset.k,true)}});
+list.querySelectorAll('li').forEach(li=>{li.tabIndex=0;li.setAttribute('role','button')});
+card.addEventListener('click',e=>{e.stopPropagation();if(e.target.closest('.k-x'))hideCard()});
+document.addEventListener('click',()=>{if(cardKey)hideCard()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&cardKey)hideCard()});
 
 /* ---------- start ---------- */
 Object.values(C).forEach(c=>{if(c.k==='hielke'){c.pos=DESK.hielke.seat.slice();c.placed=true;pose(c,'desk')}else{const[x,y,p]=IDLE[c.k];c.pos=[x,y];c.placed=true;c.mode='idle';setLabel(c,'Stand-by','idle');pose(c,p)}});
