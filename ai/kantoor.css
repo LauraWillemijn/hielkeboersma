@@ -6,7 +6,7 @@
 .k-top .lead{color:rgba(255,255,255,.82)}
 .k-badge{display:inline-flex;gap:10px;align-items:center;margin-top:22px;padding:9px 18px;border-radius:100px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-weight:600;font-size:15px;font-variant-numeric:tabular-nums}
 .k-badge u{width:9px;height:9px;border-radius:50%;background:#35d07f;animation:kping 2s infinite}
-.k-badge[data-s=rooster] u{background:#ffb86b;animation:none}
+.k-badge[data-s=sim] u,.k-badge[data-s=rooster] u{background:#ffb86b;animation:none}
 .k-badge[data-s=demo] u{background:#5cc8ff}
 @keyframes kping{0%{box-shadow:0 0 0 0 rgba(53,208,127,.6)}100%{box-shadow:0 0 0 12px rgba(53,208,127,0)}}
 

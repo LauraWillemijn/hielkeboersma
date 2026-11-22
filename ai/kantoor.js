@@ -216,7 +216,7 @@ function backThenIdle(c){const d=DESK[c.k];c.mode='idle';c.task='';
 function links(){const groups={};Object.values(C).forEach(c=>{if(c.mode==='work'&&c.grp&&c.pose==='desk')(groups[c.grp]=groups[c.grp]||[]).push(c)});
  let h='';Object.values(groups).forEach(g=>{for(let i=1;i<g.length;i++){const a=DESK[g[i-1].k],b=DESK[g[i].k],p=P(a.x0+1,a.y0+1.15),q=P(b.x0+1,b.y0+1.15);
   h+=`<path class="k-link" d="M${p[0]} ${p[1]}Q${(p[0]+q[0])/2} ${(p[1]+q[1])/2+46} ${q[0]} ${q[1]}"/>`}});gLinks.innerHTML=h}
-let base={},baseSrc='rooster',demo=null,founder=null;
+let base={},baseSrc='sim',demo=null,founder=null;
 function apply(target,opts={}){ /* target: {key:{k,grp,src}} */
  const starters=KEYS.filter(k=>target[k]&&target[k].k!=='vraag'&&C[k].mode==='idle');
  const meet=opts.meet&&starters.length>1;
@@ -272,9 +272,33 @@ function summary(){const n=KEYS.filter(k=>C[k].mode==='work').length,{m}=nl();
  KEYS.forEach(k=>{const li=list.querySelector(`[data-k="${k}"]`),c=C[k];li.classList.toggle('on',c.mode==='work');li.classList.toggle('ask',c.mode==='ask');li.querySelector('small').textContent=c.mode==='work'?c.task:c.mode==='ask'?'Vraag voor Hielke':brk==='lunch'?'Lunchpauze':brk?'Vrijdagmiddagborrel':'Stand-by'});
  feedEl.innerHTML=events.slice(-4).reverse().map(e=>`<li>${e}</li>`).join('');
  const rows=KEYS.filter(k=>C[k].mode==='work').slice(0,3).map(k=>`<li><span class="tw">${avatar(k)}</span><span><b>${T[k].name}</b> is nu bezig: ${C[k].task.toLowerCase()}.</span></li>`).join('');
- window.KLIVE_ROWS=demo?'':rows;window.dispatchEvent(new Event('klive'))}
+ window.KLIVE_ROWS=demo||baseSrc!=='live'?'':rows;window.dispatchEvent(new Event('klive'))}
 function setBadge(){badge.dataset.s=demo?'demo':baseSrc;const{m}=nl();
- badge.querySelector('span').textContent=demo?'Voorbeeld':baseSrc==='live'?'Live · '+hhmm(m):'Volgens rooster · '+hhmm(m)}
+ badge.querySelector('span').textContent=demo?'Voorbeeld':baseSrc==='live'?'Live · '+hhmm(m):'Simulatie · '+hhmm(m)}
+
+/* ---------- simulatie: als het kantoor niet live staat, gebeurt er elke minuut iets ---------- */
+const SOLO={sam:['leads','followup','onderzoek'],ada:['inbox','agenda','meeting'],otto:['offerte'],max:['social'],coco:['copy'],wes:['web'],zoe:['seo'],gijs:['design'],vera:['video'],abel:['audio'],rosa:['radio'],pim:['deck']};
+const TEAMS=[{coco:'mail',ada:'mailklaar'},{vera:'video',abel:'audio',gijs:'design'},{wes:'web',zoe:'seo'},{max:'social',coco:'copy'},{sam:'leads',otto:'offerte'},{pim:'deck',gijs:'design'}];
+const WANDER=[[11.9,1.2],[12.2,3.2],[6.2,2.3],[3.4,3.7],[9.3,2.2],[8.5,4.4]];
+let sim=null;const rnd=a=>a[Math.floor(Math.random()*a.length)];
+function simTarget(){const t={};if(sim)Object.keys(sim.t).forEach(k=>t[k]={k:sim.t[k].k,grp:sim.t[k].grp});return t}
+function simPush(o){base={target:simTarget()};if(!demo)apply(base.target,o||{})}
+function simWander(idle){const pool=idle.filter(k=>k!=='otto'&&k!=='wes');if(!pool.length)return;const c=C[rnd(pool)];
+ walk(c,rnd(WANDER),()=>pose(c,'stand'));c.q.push({wait:8000},{fn:()=>{if(c.mode==='idle')goIdle(c)}});kick()}
+function simEvent(){const t=Date.now(),idle=KEYS.filter(k=>!sim.t[k]&&C[k].mode==='idle'&&!C[k].q.length),busy=Object.keys(sim.t).filter(k=>sim.t[k].k!=='vraag'&&C[k].pose==='desk');
+ const r=Math.random(),fly=founder!=='away';
+ if(r<.36&&idle.length&&busy.length<6){const k=rnd(idle);sim.t[k]={k:rnd(SOLO[k]),end:t+7e4+Math.random()*9e4};return simPush({fly})}
+ if(r<.6&&busy.length<5){const ok=TEAMS.filter(m=>Object.keys(m).every(k=>idle.includes(k)));if(ok.length){const m=rnd(ok),g='s'+t;
+  Object.keys(m).forEach(k=>sim.t[k]={k:m[k],grp:g,end:t+9e4+Math.random()*8e4});return simPush({fly,meet:true})}}
+ if(r<.8&&busy.length&&founder!=='away'){const k=rnd(busy);sim.t[k]={k:'vraag',back:sim.t[k],end:t+24000};return simPush()}
+ simWander(idle)}
+function simTick(){if(!sim||demo||document.hidden||!visible)return;const t=Date.now();let ch=false;
+ Object.keys(sim.t).forEach(k=>{const o=sim.t[k];if(t<o.end)return;ch=true;if(o.k==='vraag')sim.t[k]={...o.back,end:t+4e4+Math.random()*5e4};else delete sim.t[k]});
+ if(ch)simPush();
+ if(t>sim.next){sim.next=t+38000+Math.random()*20000;simEvent()}}
+function simStart(){if(sim)return;const t=Date.now();sim={t:{},next:t+12000};
+ KEYS.slice().sort(()=>Math.random()-.5).slice(0,3).forEach(k=>sim.t[k]={k:rnd(SOLO[k]),end:t+4e4+Math.random()*1e5});sim.timer=setInterval(simTick,4000)}
+function simStop(){if(!sim)return;clearInterval(sim.timer);sim=null}
 
 /* ---------- live feed ---------- */
 const FEEDS=['https://api.github.com/repos/LauraWillemijn/hielkeboersma/contents/status.json?ref=status','https://raw.githubusercontent.com/LauraWillemijn/hielkeboersma/status/status.json'];
@@ -292,10 +316,12 @@ async function refresh(given){
  let j=given||await load();const now=Date.now()/1000;let target,f;
  if(pushed&&(!j||pushed.t>j.t))j=pushed;
  hist=(j&&j.h)||{};if(cardKey)showCard(cardKey);
- if(j&&now-j.t<17*60){baseSrc='live';target={};Object.keys(j.a||{}).forEach(k=>{if(LABEL[k]&&LABEL[k][j.a[k].k])target[k]={k:j.a[k].k,src:j.a[k].src,grp:j.a[k].src}});f=j.f;
+ if(j&&j.until&&now<j.until+20&&now-j.t<200){simStop();baseSrc='live';target={};Object.keys(j.a||{}).forEach(k=>{if(LABEL[k]&&LABEL[k][j.a[k].k])target[k]={k:j.a[k].k,src:j.a[k].src,grp:j.a[k].src}});f=j.f;
   events=(j.ev||[]).filter(e=>LABEL[e[1]]&&LABEL[e[1]][e[2]]).map(e=>{const d=new Date(e[0]*1000),t=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit'}).format(d);
    return e[2]==='vraag'?(e[3]?`${t} ${T[e[1]].name} loopt met een vraag naar Hielke`:`${t} ${T[e[1]].name} heeft antwoord en gaat verder`):`${t} ${T[e[1]].name} ${e[3]?'begint':'is klaar'}: ${LABEL[e[1]][e[2]].toLowerCase()}`})}
- else{baseSrc='rooster';target=rooster();events=[]}
+ else{ /* niet live: simulatie van een werkdag */
+  baseSrc='sim';events=[];simStart();base={target:simTarget()};if(demo)return;
+  setFounder(founderNow());apply(base.target,{meet:!first});first=false;setBadge();return}
  base={target,f};if(demo)return;
  const tele=Object.values(target).some(t=>t.src==='telegram');
  setFounder(founderNow(tele?1:f));apply(target,{fly:!first&&tele,meet:!first});first=false;setBadge()}
