@@ -11,6 +11,7 @@ const LABEL={
  otto:{offerte:'Offerte uitrekenen'},max:{social:'Social post maken',idee:'Idee uitwerken'},coco:{mail:'Mail schrijven',copy:'Tekst schrijven'},
  wes:{web:'Website aanpassen'},zoe:{seo:'Vindbaarheid verbeteren'},gijs:{design:'Beeld ontwerpen'},vera:{video:'Video maken'},
  abel:{audio:'Stem en geluid maken'},rosa:{radio:'Draaiboek maken'},pim:{deck:'Presentatie bouwen'}};
+Object.values(LABEL).forEach(o=>o.vraag='Vraag voor Hielke');
 const ICON={sales:'M4 17l5-5 4 3 7-8M15 7h5v5',assistent:'M4 6h16v13H4zM4 10h16M8 4v4M16 4v4',offertes:'M15 6a6 6 0 100 12M5 10h8M5 14h8',marketing:'M4 10v4l3 1 9 4V5L7 9zM19 9a4 4 0 010 6',copy:'M5 6h14M5 10h14M5 14h9M5 18h6',websites:'M9 8l-4 4 4 4M15 8l4 4-4 4',SEO:'M11 5a6 6 0 100 12 6 6 0 000-12M16 16l4 4',design:'M12 4l8 14H4zM12 13a2 2 0 100 .1',video:'M5 5h14v14H5zM10 9l5 3-5 3z',audio:'M5 10v4M9 7v10M13 4v16M17 8v8M21 11v2',radio:'M12 4a3 3 0 00-3 3v4a3 3 0 006 0V7a3 3 0 00-3-3M6 11a6 6 0 0012 0M12 17v3',presentaties:'M4 5h16v10H4zM12 15v4M8 20h8'};
 
 /* ---------- projectie ---------- */
@@ -72,7 +73,7 @@ room+=`<g transform="matrix(1 -.5 0 1 ${OX} ${OY})">
 /* planten */
 const plant=(x,y,s=1)=>{const[cx,cy]=P(x,y,26);return box(x-.16,y-.16,.32,.32,26,{t:'#e9e2d6',l:'#cfc6b6',r:'#b3a996'})+
  `<g class="k-plant"><ellipse cx="${cx-12*s}" cy="${cy-30*s}" rx="${13*s}" ry="${24*s}" fill="#2f7d5b" transform="rotate(-24 ${cx} ${cy})"/><ellipse cx="${cx+13*s}" cy="${cy-28*s}" rx="${12*s}" ry="${22*s}" fill="#3a9770" transform="rotate(22 ${cx} ${cy})"/><ellipse cx="${cx}" cy="${cy-40*s}" rx="${11*s}" ry="${28*s}" fill="#3fa877"/></g>`};
-[[.5,.5,1.3],[13.5,5.4,1],[4.45,5.6,1.1],[13.4,12.4,1.2]].forEach(([x,y,s])=>add(x+y,plant(x,y,s)));
+[[.5,.5,1.3],[13.5,5.4,1],[3.5,6.2,1.1],[13.4,12.4,1.2]].forEach(([x,y,s])=>add(x+y,plant(x,y,s)));
 /* overlegtafel */
 add(4.6,disc(2.2,2.4,34,.72,'#f1e9dc','#b5a994')+`<rect x="${P(2.2,2.4)[0]-6}" y="${P(2.2,2.4,30)[1]}" width="12" height="30" fill="#1a2740"/>`);
 /* kantine */
@@ -138,6 +139,7 @@ function figure(k){const t=T[k];
  <g class="kc-up"><rect x="-31" y="-64" width="62" height="38" rx="13" fill="${t.shirt}"/>
  <g class="kc-head"><svg x="-55" y="-166" width="110" height="110" viewBox="0 0 100 100" overflow="visible">${k==='hielke'?HIELKE:avatar(k,1)}</svg></g>
  ${k==='otto'||k==='wes'?`<g class="kc-bat"><rect x="${k==='otto'?30:-36}" y="-66" width="6" height="16" rx="3" fill="#cfc4b1"/><circle cx="${k==='otto'?33:-33}" cy="-76" r="12" fill="#e0453a"/></g>`:''}
+ ${k==='hielke'?'':`<g class="kc-food"><rect x="17" y="-60" width="24" height="14" rx="6" fill="#e2b56f"/><rect x="17" y="-55" width="24" height="3.5" fill="#5aa35a"/><circle cx="30" cy="-45" r="6" fill="${t.skin}"/></g><g class="kc-beer"><rect x="21" y="-68" width="15" height="24" rx="3" fill="#f2a93b"/><rect x="20" y="-72" width="17" height="8" rx="4" fill="#fff"/><circle cx="29" cy="-43" r="6" fill="${t.skin}"/></g>`}
  ${k==='hielke'?`<g class="kc-hp"><path d="M-25 -112a25 25 0 0150 0" fill="none" stroke="#101926" stroke-width="5"/><rect x="-31" y="-118" width="10" height="17" rx="5" fill="#2563ff"/><rect x="21" y="-118" width="10" height="17" rx="5" fill="#2563ff"/></g>`:''}
  </g></g>`}
 const C={};
@@ -156,18 +158,20 @@ Object.values(C).forEach((c,i)=>{const g=document.createElementNS(NS,'g');g.setA
 const deskEls=k=>gObjs.querySelectorAll('.kd-'+k);
 function sort(){const ch=[...gObjs.children];const s=ch.slice().sort((a,b)=>a.dataset.d-b.dataset.d);for(let i=0;i<s.length;i++)if(s[i]!==ch[i]){s.forEach(n=>gObjs.appendChild(n));break}}
 function place(c){const[sx,sy]=P(c.pos[0],c.pos[1]);c.el.setAttribute('transform',`translate(${sx.toFixed(1)} ${(sy-(c.hop||0)).toFixed(1)})`);c.el.dataset.d=c.pos[0]+c.pos[1]+.01;
- const side=c.lab.dataset.kind&&c.lab.dataset.kind!=='idle',flip=side&&sx>1250;
+ const side=c.lab.dataset.kind&&c.lab.dataset.kind!=='idle'&&c.lab.dataset.kind!=='break',flip=side&&sx>1250;
  const top=side?(c.pose==='stand'?88:c.pose==='desk'?60:68):(c.pose==='stand'?120:c.pose==='desk'?97:104);
  c.lab.style.left=(sx+(side?(flip?-24:24):0))/W*100+'%';c.lab.style.top=(sy-top)/H*100+'%';
  c.lab.classList.toggle('side',side);c.lab.classList.toggle('flip',flip)}
 function pose(c,p){c.pose=p;c.el.classList.remove('p-stand','p-desk','p-sit','p-pp');c.el.classList.add('p-'+(p==='pp'?'stand':p));c.el.classList.toggle('p-pp',p==='pp');place(c);ppCheck()}
-function ppCheck(){const on=C.otto.pose==='pp'&&C.wes.pose==='pp'&&!C.otto.q.length&&!C.wes.q.length;svg.classList.toggle('pp-on',on)}
+function ppCheck(){const on=!brk&&C.otto.pose==='pp'&&C.wes.pose==='pp'&&!C.otto.q.length&&!C.wes.q.length;svg.classList.toggle('pp-on',on)}
+let brk='';
 function setLabel(c,text,kind){c.lab.querySelector('i').textContent=text;c.lab.dataset.kind=kind;if(c.placed)place(c)}
 
 /* ---------- lopen ---------- */
 const spotVia=(c,spot)=>{ /* tussenpunten van een plek naar de gang */
  const[x,y]=spot;const d=DESK[c.k];
  if(c.k!=='hielke'&&d.seat[0]===x&&d.seat[1]===y)return[[d.gap,y],[d.gap,HALL]];
+ if(x<4.1&&y>=7)return[[4.5,y],[4.5,HALL]];
  if(x>9.5){if(y>3.4)return[[x,HALL]];return[[9.75,y],[9.75,HALL]]}
  if(y>4.4)return[[2.4,y],[2.4,HALL]];
  if(y<2)return[[3.4,y],[3.4,HALL]];
@@ -192,24 +196,37 @@ function walk(c,to,then,keep){
  c.q.push({fn:()=>{pose(c,'stand');c.q.splice(1,0,...route(c,to),{fn:()=>{then&&then()}})}});kick()}
 
 /* ---------- toestanden ---------- */
-function goWork(c,task,meetAt){const d=DESK[c.k];c.mode='work';c.task=task;
+function goWork(c,task,meetAt){const d=DESK[c.k];c.mode='work';c.task=task;c.el.classList.remove('idle');
  setLabel(c,meetAt?'Even overleggen':'Onderweg naar bureau','go');
  const sit=()=>{if(c.mode!=='work')return;pose(c,'desk');c.el.classList.add('work');deskEls(c.k).forEach(e=>e.classList.add('on'));setLabel(c,task,'work');links()};
  if(meetAt){walk(c,meetAt);if(c.q.length)c.q.push({wait:3200});walk(c,d.seat,sit,true)}else walk(c,d.seat,sit)}
-function goIdle(c){const[x,y,p]=IDLE[c.k];c.mode='idle';c.task='';c.el.classList.remove('work');deskEls(c.k).forEach(e=>e.classList.remove('on'));
- setLabel(c,'Stand-by','idle');links();walk(c,[x,y],()=>{if(c.mode==='idle')pose(c,p)})}
+function idleLabel(c){const b=c.k!=='hielke'?brk:'';c.lab.querySelector('.n').dataset.t=b==='lunch'?'lunch':b?'borrel':'';setLabel(c,'Stand-by',b?'break':'idle')}
+function leave(c){c.el.classList.remove('work','idle');deskEls(c.k).forEach(e=>e.classList.remove('on'))}
+function goIdle(c){const[x,y,p]=IDLE[c.k];c.mode='idle';c.task='';leave(c);
+ idleLabel(c);links();walk(c,[x,y],()=>{if(c.mode==='idle'){pose(c,p);c.el.classList.add('idle')}})}
+/* met een vraag naar Hielke lopen: naar zijn kantoor, of naar de studio als hij uitzendt */
+const ASKSPOT={office:[[3.35,8.1],[3.25,7.4],[1.1,7.9]],studio:[[3.35,11.1],[3.25,10.45],[1.1,10.9]]};
+function goAsk(c){c.mode='ask';c.task='Vraag voor Hielke';leave(c);links();
+ const n=KEYS.filter(k=>C[k].mode==='ask').indexOf(c.k),spot=ASKSPOT[founder==='onair'?'studio':'office'][n%3];
+ setLabel(c,'Loopt naar Hielke','go');walk(c,spot,()=>{if(c.mode==='ask'){pose(c,'stand');setLabel(c,'Vraagt iets aan Hielke','ask')}})}
+/* antwoord gekregen en verder niets te doen: eerst terug naar de werkplek, dan pas pauze */
+function backThenIdle(c){const d=DESK[c.k];c.mode='idle';c.task='';
+ walk(c,d.seat,()=>{pose(c,'desk');c.el.classList.add('work');deskEls(c.k).forEach(e=>e.classList.add('on'));setLabel(c,'Verwerkt het antwoord','work')});
+ c.q.push({wait:7000},{fn:()=>{if(c.mode==='idle')goIdle(c)}});kick()}
 function links(){const groups={};Object.values(C).forEach(c=>{if(c.mode==='work'&&c.grp&&c.pose==='desk')(groups[c.grp]=groups[c.grp]||[]).push(c)});
  let h='';Object.values(groups).forEach(g=>{for(let i=1;i<g.length;i++){const a=DESK[g[i-1].k],b=DESK[g[i].k],p=P(a.x0+1,a.y0+1.15),q=P(b.x0+1,b.y0+1.15);
   h+=`<path class="k-link" d="M${p[0]} ${p[1]}Q${(p[0]+q[0])/2} ${(p[1]+q[1])/2+46} ${q[0]} ${q[1]}"/>`}});gLinks.innerHTML=h}
 let base={},baseSrc='rooster',demo=null,founder=null;
 function apply(target,opts={}){ /* target: {key:{k,grp,src}} */
- const starters=KEYS.filter(k=>target[k]&&C[k].mode!=='work');
+ const starters=KEYS.filter(k=>target[k]&&target[k].k!=='vraag'&&C[k].mode==='idle');
  const meet=opts.meet&&starters.length>1;
  KEYS.forEach(k=>{const c=C[k],t=target[k];
+  if(t&&t.k==='vraag'){if(c.mode!=='ask')goAsk(c);return}
   if(t){const task=(LABEL[k]||{})[t.k];if(!task)return;c.grp=t.grp||null;
-   if(c.mode!=='work'){const go=()=>goWork(c,task,meet?MEET[starters.indexOf(k)%4]:null);
+   if(c.mode!=='work'){const go=()=>goWork(c,task,meet&&starters.includes(k)?MEET[starters.indexOf(k)%4]:null);
     if(opts.fly&&c.placed&&!reduce&&visible)fly(c,go,starters.indexOf(k)*350);else go()}
    else if(c.task!==task){c.task=task;setLabel(c,task,'work')}}
+  else if(c.mode==='ask')backThenIdle(c);
   else if(c.mode!=='idle')goIdle(c)});
  links();summary()}
 function fly(c,done,delay){const from=P(...C.hielke.pos),g=document.createElementNS(NS,'g');g.setAttribute('class','k-msg');
@@ -238,6 +255,12 @@ function rooster(){const{d,m}=nl(),t={};if(d>=1&&d<=5){
 const FQ=new URLSearchParams(location.search).get('founder');
 function founderNow(f){if(['online','onair','away'].includes(FQ))return FQ;const{d,m}=nl();if(f===1)return'online';if(d>=1&&d<=4&&m>=720&&m<960)return'onair';if(f===0)return'away';return d>=1&&d<=5&&m>=510&&m<1050?'online':'away'}
 
+/* lunch op werkdagen van 12 tot 16 uur, vrijdagmiddagborrel vanaf 16:30 */
+const BQ=new URLSearchParams(location.search).get('pauze');
+function breakNow(){if(BQ==='lunch'||BQ==='borrel')return BQ;const{d,m}=nl();if(d===5&&m>=990&&m<1140)return'borrel';if(d>=1&&d<=5&&m>=720&&m<960)return'lunch';return''}
+function setBreak(){const b=breakNow();if(b===brk)return;brk=b;svg.classList.toggle('t-lunch',b==='lunch');svg.classList.toggle('t-borrel',b==='borrel');
+ KEYS.forEach(k=>{if(C[k].mode==='idle')idleLabel(C[k])});ppCheck()}
+
 /* ---------- samenvatting, lijst en muurscherm ---------- */
 const badge=root.querySelector('.k-badge'),list=root.querySelector('.k-list'),feedEl=root.querySelector('.k-feed');
 let events=[];
@@ -246,7 +269,7 @@ function summary(){const n=KEYS.filter(k=>C[k].mode==='work').length,{m}=nl();
  svg.querySelector('#k-clock').textContent=hhmm(m);
  svg.querySelector('#k-count').textContent=n?`${n} van 12 aan het werk`:'Iedereen stand-by';
  const ev=events.slice(-2).reverse();['#k-f0','#k-f1'].forEach((id,i)=>{svg.querySelector(id).textContent=ev[i]||''});
- KEYS.forEach(k=>{const li=list.querySelector(`[data-k="${k}"]`),c=C[k];li.classList.toggle('on',c.mode==='work');li.querySelector('small').textContent=c.mode==='work'?c.task:'Stand-by'});
+ KEYS.forEach(k=>{const li=list.querySelector(`[data-k="${k}"]`),c=C[k];li.classList.toggle('on',c.mode==='work');li.classList.toggle('ask',c.mode==='ask');li.querySelector('small').textContent=c.mode==='work'?c.task:c.mode==='ask'?'Vraag voor Hielke':brk==='lunch'?'Lunchpauze':brk?'Vrijdagmiddagborrel':'Stand-by'});
  feedEl.innerHTML=events.slice(-4).reverse().map(e=>`<li>${e}</li>`).join('');
  const rows=KEYS.filter(k=>C[k].mode==='work').slice(0,3).map(k=>`<li><span class="tw">${avatar(k)}</span><span><b>${T[k].name}</b> is nu bezig: ${C[k].task.toLowerCase()}.</span></li>`).join('');
  window.KLIVE_ROWS=demo?'':rows;window.dispatchEvent(new Event('klive'))}
@@ -265,17 +288,17 @@ async function refresh(){
  hist=(j&&j.h)||{};if(cardKey)showCard(cardKey);
  if(j&&now-j.t<17*60){baseSrc='live';target={};Object.keys(j.a||{}).forEach(k=>{if(LABEL[k]&&LABEL[k][j.a[k].k])target[k]={k:j.a[k].k,src:j.a[k].src,grp:j.a[k].src}});f=j.f;
   events=(j.ev||[]).filter(e=>LABEL[e[1]]&&LABEL[e[1]][e[2]]).map(e=>{const d=new Date(e[0]*1000),t=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit'}).format(d);
-   return`${t} ${T[e[1]].name} ${e[3]?'begint':'is klaar'}: ${LABEL[e[1]][e[2]].toLowerCase()}`})}
+   return e[2]==='vraag'?(e[3]?`${t} ${T[e[1]].name} loopt met een vraag naar Hielke`:`${t} ${T[e[1]].name} heeft antwoord en gaat verder`):`${t} ${T[e[1]].name} ${e[3]?'begint':'is klaar'}: ${LABEL[e[1]][e[2]].toLowerCase()}`})}
  else{baseSrc='rooster';target=rooster();events=[]}
  base={target,f};if(demo)return;
  const tele=Object.values(target).some(t=>t.src==='telegram');
  setFounder(founderNow(tele?1:f));apply(target,{fly:!first&&tele,meet:!first});first=false;setBadge()}
 
 /* ---------- voorbeeldopdrachten ---------- */
-const DEMOS={mail:{say:'Stel een mail op',t:{coco:{k:'mail'},ada:{k:'mailklaar'}},end:'Coco schrijft de mail in mijn toon. Ada zet de mail klaar als concept. Versturen gebeurt pas na mijn ja.'},
- video:{say:'Maak een video',t:{vera:{k:'video'},abel:{k:'audio'},gijs:{k:'design'}},end:'Gijs maakt het beeld, Abel de stem en muziek, Vera monteert. Drie specialisten, één opdracht.'},
- web:{say:'Pas de website aan',t:{wes:{k:'web'},zoe:{k:'seo'}},end:'Wes past de pagina aan. Zoë controleert of Google en AI-zoekmachines de pagina goed kunnen lezen.'},
- idee:{say:'Werk een idee uit',t:{max:{k:'idee'},coco:{k:'copy'},pim:{k:'deck'}},end:'Max werkt het idee uit, Coco schrijft de tekst en Pim zet het in een presentatie.'}};
+const DEMOS={mail:{ask:'ada',say:'Stel een mail op',t:{coco:{k:'mail'},ada:{k:'mailklaar'}},end:'Coco schrijft de mail in mijn toon. Ada zet de mail klaar als concept. Versturen gebeurt pas na mijn ja.'},
+ video:{ask:'vera',say:'Maak een video',t:{vera:{k:'video'},abel:{k:'audio'},gijs:{k:'design'}},end:'Gijs maakt het beeld, Abel de stem en muziek, Vera monteert. Drie specialisten, één opdracht.'},
+ web:{ask:'wes',say:'Pas de website aan',t:{wes:{k:'web'},zoe:{k:'seo'}},end:'Wes past de pagina aan. Zoë controleert of Google en AI-zoekmachines de pagina goed kunnen lezen.'},
+ idee:{ask:'max',say:'Werk een idee uit',t:{max:{k:'idee'},coco:{k:'copy'},pim:{k:'deck'}},end:'Max werkt het idee uit, Coco schrijft de tekst en Pim zet het in een presentatie.'}};
 const say=root.querySelector('.k-say'),btns=[...root.querySelectorAll('.k-try button')];let timers=[];
 function runDemo(id){const d=DEMOS[id];if(!d||demo)return;demo=id;btns.forEach(b=>{b.disabled=true;b.classList.toggle('act',b.dataset.demo===id)});setBadge();
  const names=Object.keys(d.t).map(k=>T[k].name),who=names.slice(0,-1).join(', ')+' en '+names.slice(-1);
@@ -285,8 +308,10 @@ function runDemo(id){const d=DEMOS[id];if(!d||demo)return;demo=id;btns.forEach(b
  apply(t,{fly:true,meet:true});
  timers=[setTimeout(()=>say.textContent=`${who} pakken de opdracht op en stemmen kort af.`,1700),
   setTimeout(()=>say.textContent=d.end,reduce?400:9000),
+  setTimeout(()=>{say.textContent=`${T[d.ask].name} loopt naar mijn kantoor en vraagt of het zo goed is.`;goAsk(C[d.ask])},reduce?3000:14000),
+  setTimeout(()=>{say.textContent=`Ik zeg ja. ${T[d.ask].name} gaat terug naar het bureau en rondt het werk af.`;const c=C[d.ask];goWork(c,LABEL[d.ask][d.t[d.ask].k])},reduce?6000:21000),
   setTimeout(()=>{demo=null;btns.forEach(b=>{b.disabled=false;b.classList.remove('act')});say.textContent='Dit was een voorbeeld. Hierboven zie je weer wat er nu echt gebeurt.';
-   setFounder(founderNow(base.f));apply(base.target||{});setBadge()},reduce?6000:21000)]}
+   setFounder(founderNow(base.f));apply(base.target||{});setBadge()},reduce?9000:30000)]}
 btns.forEach(b=>b.addEventListener('click',()=>runDemo(b.dataset.demo)));
 
 /* ---------- kaartje bij een klik ---------- */
@@ -305,7 +330,7 @@ function showCard(k,scroll){const c=C[k];if(!c)return;cardKey=k;const me=k==='hi
  card.innerHTML=`<button type="button" class="k-x" aria-label="Sluiten">×</button>
  <div class="k-ch"><span class="tw">${me?'<svg viewBox="0 6 100 100">'+HIELKE.replace('class="lid"','class="lid" opacity="0"')+'</svg>':avatar(k)}</span><span><b>${T[k].name}</b><em>${ROLE[k]}</em></span></div>
  <p>${DESC[k]}</p>
- <p class="k-now" data-on="${c.mode==='work'||(me&&founder!=='away')?1:0}"><u></u>${me?c.lab.querySelector('i').textContent:c.mode==='work'?'Nu bezig: '+c.task.toLowerCase():'Nu stand-by'}</p>
+ <p class="k-now" data-on="${c.mode==='work'||(me&&founder!=='away')?1:0}"><u></u>${me?c.lab.querySelector('i').textContent:c.mode==='work'?'Nu bezig: '+c.task.toLowerCase():c.mode==='ask'?'Wacht op mijn antwoord':brk==='lunch'?'Nu aan de lunch':brk?'Nu op de vrijdagmiddagborrel':'Nu stand-by'}</p>
  ${me?'':`<h3>Laatste taken</h3>${h.length?'<ol>'+h.map(e=>`<li><span>${LABEL[k][e[1]]}</span><time>${when(e[0])}</time></li>`).join('')+'</ol>':'<p class="k-none">Nog niets afgerond sinds dit kantoor live staat.</p>'}`}`;
  const[sx,sy]=P(c.pos[0],c.pos[1]);card.hidden=false;
  card.style.left=Math.min(78,Math.max(1,sx/W*100+2.5))+'%';card.style.top=Math.min(58,Math.max(2,(sy-190)/H*100))+'%';
@@ -322,9 +347,9 @@ card.addEventListener('click',e=>{e.stopPropagation();if(e.target.closest('.k-x'
 document.addEventListener('click',()=>{if(cardKey)hideCard()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&cardKey)hideCard()});
 
 /* ---------- start ---------- */
-Object.values(C).forEach(c=>{if(c.k==='hielke'){c.pos=DESK.hielke.seat.slice();c.placed=true;pose(c,'desk')}else{const[x,y,p]=IDLE[c.k];c.pos=[x,y];c.placed=true;c.mode='idle';setLabel(c,'Stand-by','idle');pose(c,p)}});
-sort();setFounder(founderNow());summary();setBadge();
+Object.values(C).forEach(c=>{if(c.k==='hielke'){c.pos=DESK.hielke.seat.slice();c.placed=true;pose(c,'desk')}else{const[x,y,p]=IDLE[c.k];c.pos=[x,y];c.placed=true;c.mode='idle';c.el.classList.add('idle');setLabel(c,'Stand-by','idle');pose(c,p)}});
+sort();setFounder(founderNow());setBreak();summary();setBadge();
 const{d:dd,m:mm}=nl();svg.classList.toggle('night',mm<450||mm>=1080);
 new IntersectionObserver(es=>{visible=es[0].isIntersecting;svg.classList.toggle('paused',!visible);if(visible)kick()},{rootMargin:'100px'}).observe(stage);
-refresh();setInterval(()=>{if(!document.hidden)refresh()},75000);setInterval(()=>{if(!demo){summary();setBadge()}},30000);
+refresh();setInterval(()=>{if(!document.hidden)refresh()},75000);setInterval(()=>{setBreak();if(!demo){summary();setBadge()}},30000);
 })();
