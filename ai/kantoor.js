@@ -279,12 +279,18 @@ function setBadge(){badge.dataset.s=demo?'demo':baseSrc;const{m}=nl();
 /* ---------- live feed ---------- */
 const FEEDS=['https://api.github.com/repos/LauraWillemijn/hielkeboersma/contents/status.json?ref=status','https://raw.githubusercontent.com/LauraWillemijn/hielkeboersma/status/status.json'];
 async function load(){for(const u of FEEDS){try{const r=await fetch(u,{headers:u.includes('api.')?{Accept:'application/vnd.github.raw+json'}:{},cache:'no-store'});if(!r.ok)continue;const j=await r.json();if(j&&j.t)return j}catch(e){}}return null}
-let first=true;
+let first=true,pushed=null;
+/* seintje van de laptop: er is een nieuwe status. Het seintje bevat alleen het versienummer. */
+try{const es=new EventSource('https://ntfy.sh/hb-kantoor-3a5815bd6ed10ab7/sse');
+ es.onmessage=async e=>{try{const sha=(JSON.parse(e.data).message||'').trim();if(!/^[0-9a-f]{40}$/.test(sha))return;
+  const r=await fetch(`https://raw.githubusercontent.com/LauraWillemijn/hielkeboersma/${sha}/status.json`);if(!r.ok)return;const j=await r.json();
+  if(j&&j.t&&(!pushed||j.t>=pushed.t)){pushed=j;refresh(j)}}catch(x){}}}catch(x){}
 /* /ai/?toon=vera:video,abel:audio laat een vaste situatie zien (handig om iets voor te doen) */
 const TOON=(new URLSearchParams(location.search).get('toon')||'').split(',').map(x=>x.split(':')).filter(x=>LABEL[x[0]]&&LABEL[x[0]][x[1]]);
-async function refresh(){
+async function refresh(given){
  if(TOON.length){const t={};TOON.forEach(([k,v])=>t[k]={k:v,grp:'toon'});base={target:t,f:1};demo=demo||'toon';setFounder(founderNow(1));apply(t);setBadge();return}
- const j=await load(),now=Date.now()/1000;let target,f;
+ let j=given||await load();const now=Date.now()/1000;let target,f;
+ if(pushed&&(!j||pushed.t>j.t))j=pushed;
  hist=(j&&j.h)||{};if(cardKey)showCard(cardKey);
  if(j&&now-j.t<17*60){baseSrc='live';target={};Object.keys(j.a||{}).forEach(k=>{if(LABEL[k]&&LABEL[k][j.a[k].k])target[k]={k:j.a[k].k,src:j.a[k].src,grp:j.a[k].src}});f=j.f;
   events=(j.ev||[]).filter(e=>LABEL[e[1]]&&LABEL[e[1]][e[2]]).map(e=>{const d=new Date(e[0]*1000),t=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit'}).format(d);
@@ -351,5 +357,5 @@ Object.values(C).forEach(c=>{if(c.k==='hielke'){c.pos=DESK.hielke.seat.slice();c
 sort();setFounder(founderNow());setBreak();summary();setBadge();
 const{d:dd,m:mm}=nl();svg.classList.toggle('night',mm<450||mm>=1080);
 new IntersectionObserver(es=>{visible=es[0].isIntersecting;svg.classList.toggle('paused',!visible);if(visible)kick()},{rootMargin:'100px'}).observe(stage);
-refresh();setInterval(()=>{if(!document.hidden)refresh()},75000);setInterval(()=>{setBreak();if(!demo){summary();setBadge()}},30000);
+refresh();setInterval(()=>{if(!document.hidden)refresh()},120000);setInterval(()=>{setBreak();if(!demo){summary();setBadge()}},30000);
 })();
