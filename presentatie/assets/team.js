@@ -49,22 +49,26 @@ function acc(t){
   return s;
 }
 let UID=0;
-function avatar(key){
+function avatar(key,bare){
   const t=T[key];if(!t)return '';const id='c-'+key+'-'+(++UID);
   const eyes=t.acc.includes('glasses')?`<circle cx="43" cy="46" r="1.9" fill="${INK}"/><circle cx="57" cy="46" r="1.9" fill="${INK}"/>`:`<circle cx="43" cy="46" r="2.3" fill="${INK}"/><circle cx="57" cy="46" r="2.3" fill="${INK}"/><circle cx="43.8" cy="45.2" r=".7" fill="#fff"/><circle cx="57.8" cy="45.2" r=".7" fill="#fff"/>`;
   const smile=t.acc.includes('beard')?'':`<path d="M44.5 53.5 Q50 58.5 55.5 53.5" fill="none" stroke="${INK}" stroke-width="2" stroke-linecap="round"/>`;
-  return `<svg class="toon" viewBox="0 0 100 100" role="img" aria-label="${t.name}, ${t.role}">
-<defs><clipPath id="${id}"><circle cx="50" cy="50" r="50"/></clipPath></defs>
-<g clip-path="url(#${id})">
-<rect width="100" height="100" fill="${t.bg}"/>
-${hairBack(t)}
+  const lid=bare?`<g class="lid" fill="${t.skin}"><circle cx="43" cy="46" r="3.3"/><circle cx="57" cy="46" r="3.3"/></g>`:'';
+  const body=`${hairBack(t)}
 <path d="M16 104 C16 76 32 66 50 66 C68 66 84 76 84 104 Z" fill="${t.shirt}"/>
 <path d="M43 60 H57 V68 C57 72 43 72 43 68 Z" fill="${t.skin}"/>
 <path d="M42 66 L50 72 L58 66" fill="none" stroke="#fff" stroke-width="2" opacity=".35"/>
 <ellipse cx="29.5" cy="47" rx="3.5" ry="5" fill="${t.skin}"/><ellipse cx="70.5" cy="47" rx="3.5" ry="5" fill="${t.skin}"/>
 <circle cx="50" cy="45" r="21" fill="${t.skin}"/>
 <circle cx="38" cy="52" r="3.4" fill="#e8768a" opacity=".28"/><circle cx="62" cy="52" r="3.4" fill="#e8768a" opacity=".28"/>
-${eyes}${smile}${hairFront(t)}${acc(t)}
+${eyes}${lid}${smile}${hairFront(t)}${acc(t)}`;
+  /* bare: los poppetje zonder cirkel, om in een andere SVG te zetten */
+  if(bare)return body;
+  return `<svg class="toon" viewBox="0 0 100 100" role="img" aria-label="${t.name}, ${t.role}">
+<defs><clipPath id="${id}"><circle cx="50" cy="50" r="50"/></clipPath></defs>
+<g clip-path="url(#${id})">
+<rect width="100" height="100" fill="${t.bg}"/>
+${body}
 </g></svg>`;
 }
 window.TEAM=T;window.avatar=avatar;

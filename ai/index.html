@@ -315,6 +315,7 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rise{opacity:1;transform:none}}
 </style>
+<link rel="stylesheet" href="kantoor.css?v=1">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -348,6 +349,7 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
           <li><span class="tw" data-toon="sam"></span><span><b>Sam</b> zoekt op werkdagen om 08:00, 12:00 en 15:00 nieuwe leads.</span></li>
           <li><span class="tw" data-toon="ada"></span><span><b>Ada</b> checkt elk half uur mijn inbox, van 07:00 tot 21:00.</span></li>
         </ul>
+        <a class="now-more" href="#live">Kijk live mee op kantoor <span class="arr">→</span></a>
       </div>
     </div>
     <div class="hero-pic-wrap"><div class="orbit" data-agents="12" aria-hidden="true"></div><figure class="hero-pic rise" style="--i:1">
@@ -361,6 +363,35 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 </section>
 
 <div class="marq" aria-hidden="true"><div class="marq-track"><span class="marq-item"><span class="tw" data-toon="sam"></span>Sam <i>sales</i></span><span class="marq-item"><span class="tw" data-toon="ada"></span>Ada <i>assistent</i></span><span class="marq-item"><span class="tw" data-toon="otto"></span>Otto <i>offertes</i></span><span class="marq-item"><span class="tw" data-toon="max"></span>Max <i>marketing</i></span><span class="marq-item"><span class="tw" data-toon="coco"></span>Coco <i>copy</i></span><span class="marq-item"><span class="tw" data-toon="wes"></span>Wes <i>websites</i></span><span class="marq-item"><span class="tw" data-toon="zoe"></span>Zoë <i>SEO</i></span><span class="marq-item"><span class="tw" data-toon="gijs"></span>Gijs <i>design</i></span><span class="marq-item"><span class="tw" data-toon="vera"></span>Vera <i>video</i></span><span class="marq-item"><span class="tw" data-toon="abel"></span>Abel <i>audio</i></span><span class="marq-item"><span class="tw" data-toon="rosa"></span>Rosa <i>radio</i></span><span class="marq-item"><span class="tw" data-toon="pim"></span>Pim <i>presentaties</i></span><span class="marq-item"><span class="tw" data-toon="sam"></span>Sam <i>sales</i></span><span class="marq-item"><span class="tw" data-toon="ada"></span>Ada <i>assistent</i></span><span class="marq-item"><span class="tw" data-toon="otto"></span>Otto <i>offertes</i></span><span class="marq-item"><span class="tw" data-toon="max"></span>Max <i>marketing</i></span><span class="marq-item"><span class="tw" data-toon="coco"></span>Coco <i>copy</i></span><span class="marq-item"><span class="tw" data-toon="wes"></span>Wes <i>websites</i></span><span class="marq-item"><span class="tw" data-toon="zoe"></span>Zoë <i>SEO</i></span><span class="marq-item"><span class="tw" data-toon="gijs"></span>Gijs <i>design</i></span><span class="marq-item"><span class="tw" data-toon="vera"></span>Vera <i>video</i></span><span class="marq-item"><span class="tw" data-toon="abel"></span>Abel <i>audio</i></span><span class="marq-item"><span class="tw" data-toon="rosa"></span>Rosa <i>radio</i></span><span class="marq-item"><span class="tw" data-toon="pim"></span>Pim <i>presentaties</i></span></div></div>
+
+<!-- LIVE KANTOOR -->
+<section class="kantoor" id="live">
+  <div class="wrap">
+    <div class="k-top">
+      <h2 class="rise">Kijk live mee <em>op kantoor.</em></h2>
+      <div>
+        <p class="lead rise" style="--i:1">Een agent is een AI-collega met één duidelijke taak, eigen gereedschap en een handboek in mijn woorden. Hier zie je wie er op dit moment aan het werk is. Wie niets te doen heeft, zit in de kantine.</p>
+        <p class="k-badge rise" style="--i:2" data-s="rooster"><u></u><span>Volgens rooster</span></p>
+      </div>
+    </div>
+    <div class="k-scroll"><div class="k-stage"></div></div>
+    <div class="k-try">
+      <p><b>Geef zelf een opdracht.</b>Zo gaat het ook als ik iets via Telegram vraag.</p>
+      <div class="k-btns">
+        <button type="button" data-demo="mail">Stel een mail op</button>
+        <button type="button" data-demo="video">Maak een video</button>
+        <button type="button" data-demo="web">Pas de website aan</button>
+        <button type="button" data-demo="idee">Werk een idee uit</button>
+      </div>
+      <p class="k-say" aria-live="polite">Kies een opdracht en kijk wie er opstaat.</p>
+    </div>
+    <ul class="k-list" aria-label="Wie doet wat op dit moment"></ul>
+    <div class="k-foot">
+      <ul class="k-feed" aria-label="Laatste activiteit"></ul>
+      <p class="k-note">Je ziet welk soort werk er gebeurt. Voor wie het werk is en wat erin staat, blijft binnen.</p>
+    </div>
+  </div>
+</section>
 
 <!-- ACHTERGROND -->
 <section class="bg" id="achtergrond">
@@ -510,6 +541,7 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 </footer>
 
 <script src="/presentatie/assets/team.js"></script>
+<script src="kantoor.js?v=1" defer></script>
 <script>
 
 
@@ -580,9 +612,9 @@ document.querySelectorAll('.fx[data-net]').forEach(sec=>{
   // Rosa / SLAM
   if(d>=1&&d<=4&&now>=720&&now<960)out.push(row('rosa',`<b>Ik</b> ben nu live op SLAM! Het draaiboek van <b>Rosa</b> ligt klaar.`));
   else if(d>=1&&d<=4&&now<720)out.push(row('rosa',`<b>Rosa</b> maakt het draaiboek voor mijn SLAM!-show van 12:00.`));
-  list.innerHTML=out.join('');
+  list.innerHTML=(window.KLIVE_ROWS||'')+out.join('');
  }
- render();setInterval(render,30000);
+ render();setInterval(render,30000);addEventListener('klive',render);
 })();
 </script>
 <script data-goatcounter="https://hielkeboersma.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
