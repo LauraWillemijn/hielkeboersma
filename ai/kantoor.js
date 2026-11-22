@@ -106,12 +106,26 @@ function desk(k){const{x0,y0}=DESK[k],t=T[k],z=38,big=k==='hielke';
 [...KEYS,'hielke'].forEach(desk);
 
 /* ---------- poppetjes ---------- */
+/* Hielke zelf: donkere kuif, stoppelbaard, blauwe ogen, brede lach, donker overhemd */
+const HIELKE=`<path d="M16 104 C16 76 32 66 50 66 C68 66 84 76 84 104 Z" fill="#1b2536"/>
+<path d="M43 60 H57 V69 C57 74 43 74 43 69 Z" fill="#eec3a2"/><path d="M40 67 L50 77 L60 67" fill="none" stroke="#2b3954" stroke-width="3" stroke-linejoin="round"/>
+<ellipse cx="29.5" cy="47" rx="3.5" ry="5" fill="#eec3a2"/><ellipse cx="70.5" cy="47" rx="3.5" ry="5" fill="#eec3a2"/>
+<circle cx="50" cy="45" r="21" fill="#f2cdae"/>
+<path d="M29.5 46 C30 70 70 70 70.5 46 C67 56 60 60 50 60 C40 60 33 56 29.5 46 Z" fill="#3a2a1f" opacity=".34"/>
+<path d="M40 52.5 Q50 47.5 60 52.5 Q50 51 40 52.5 Z" fill="#3a2a1f" opacity=".3"/>
+<circle cx="38" cy="51" r="3.2" fill="#e8768a" opacity=".2"/><circle cx="62" cy="51" r="3.2" fill="#e8768a" opacity=".2"/>
+<path d="M38 40.6 Q42.5 38 47 40.4" fill="none" stroke="#33241a" stroke-width="2.4" stroke-linecap="round"/><path d="M53 40.4 Q57.5 38 62 40.6" fill="none" stroke="#33241a" stroke-width="2.4" stroke-linecap="round"/>
+<circle cx="43" cy="46" r="2.7" fill="#3f74b8"/><circle cx="57" cy="46" r="2.7" fill="#3f74b8"/><circle cx="43" cy="46" r="1.3" fill="#172232"/><circle cx="57" cy="46" r="1.3" fill="#172232"/><circle cx="43.9" cy="45.1" r=".7" fill="#fff"/><circle cx="57.9" cy="45.1" r=".7" fill="#fff"/>
+<g class="lid" fill="#f2cdae"><circle cx="43" cy="46" r="3.5"/><circle cx="57" cy="46" r="3.5"/></g>
+<path d="M42.5 53.2 Q50 61.5 57.5 53.2 Z" fill="#fff" stroke="#172232" stroke-width="1.7" stroke-linejoin="round"/>
+<path d="M28 45 C24 25 36 12 52 12.5 C68 13 77 26 72 45 C70.5 37 66 31.5 59 29.5 C50 27 41 28.5 35 33 C31.5 36 29.5 40 28 45 Z" fill="#3a2a1f"/>
+<path d="M33 25 C37 9 59 5 68 17 C60 12.5 46 14 33 25 Z" fill="#4a3628"/>`;
 function figure(k){const t=T[k];
  return `<g transform="scale(.76)"><ellipse class="kc-sh" cx="0" cy="0" rx="30" ry="11"/>
  <rect class="kc-chair" x="-35" y="-100" width="70" height="88" rx="18"/>
  <g class="kc-legs"><rect x="-19" y="-30" width="15" height="28" rx="6"/><rect x="4" y="-30" width="15" height="28" rx="6"/></g>
  <g class="kc-up"><rect x="-31" y="-64" width="62" height="38" rx="13" fill="${t.shirt}"/>
- <g class="kc-head"><svg x="-55" y="-166" width="110" height="110" viewBox="0 0 100 100" overflow="visible">${avatar(k,1)}</svg></g>
+ <g class="kc-head"><svg x="-55" y="-166" width="110" height="110" viewBox="0 0 100 100" overflow="visible">${k==='hielke'?HIELKE:avatar(k,1)}</svg></g>
  ${k==='otto'||k==='wes'?`<g class="kc-bat"><rect x="${k==='otto'?30:-36}" y="-66" width="6" height="16" rx="3" fill="#cfc4b1"/><circle cx="${k==='otto'?33:-33}" cy="-76" r="12" fill="#e0453a"/></g>`:''}
  ${k==='hielke'?`<g class="kc-hp"><path d="M-25 -112a25 25 0 0150 0" fill="none" stroke="#101926" stroke-width="5"/><rect x="-31" y="-118" width="10" height="17" rx="5" fill="#2563ff"/><rect x="21" y="-118" width="10" height="17" rx="5" fill="#2563ff"/></g>`:''}
  </g></g>`}
@@ -193,8 +207,8 @@ function fly(c,done,delay){const from=P(...DESK.hielke.seat),g=document.createEl
   g.setAttribute('transform',`translate(${from[0]+(to[0]-from[0])*e} ${from[1]-80+(to[1]-from[1])*e-Math.sin(p*Math.PI)*150})`);g.style.opacity=p<=0?0:1;
   if(p<1)requestAnimationFrame(f);else{g.remove();done()}})(performance.now())}
 function setFounder(s){founder=s;const c=C.hielke;svg.classList.remove('f-online','f-onair','f-away');svg.classList.add('f-'+s);
- c.el.classList.toggle('work',s==='online');c.el.classList.toggle('gone',s==='away'||s==='onair');deskEls('hielke').forEach(e=>e.classList.toggle('on',s==='online'));
- setLabel(c,s==='online'?'Geeft opdrachten':s==='onair'?'Live op SLAM!':'Niet op kantoor',s==='online'?'work':s==='onair'?'air':'off')}
+ c.el.classList.toggle('work',s==='online');c.el.classList.toggle('gone',s==='away');deskEls('hielke').forEach(e=>e.classList.toggle('on',s==='online'));
+ setLabel(c,s==='online'?'Geeft opdrachten':s==='onair'?'Live op SLAM!':'Even niet online',s==='online'?'work':s==='onair'?'air':'off')}
 
 /* ---------- tijd en rooster ---------- */
 function nl(){const p=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());

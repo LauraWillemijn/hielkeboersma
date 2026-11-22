@@ -59,7 +59,7 @@
 @keyframes kswing{from{transform:rotate(-14deg)}to{transform:rotate(16deg)}}
 .f-onair .kc-hp{display:block}
 .kc{transition:opacity .5s}
-.kc.gone{opacity:0}
+.kc.gone{opacity:.45}
 .kc .lid{opacity:0;animation:kblink 4.6s infinite;animation-delay:calc(var(--r)*-4.6s)}
 @keyframes kblink{0%,95%{opacity:0}96%,100%{opacity:1}}
 .kc.work .kc-head{animation:knod 1.9s ease-in-out infinite alternate;animation-delay:calc(var(--r)*-2s);transform-box:fill-box;transform-origin:50% 90%}
