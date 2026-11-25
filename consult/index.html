@@ -363,6 +363,11 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 .biz .logo{height:52px;width:189px;margin-bottom:22px}
 .biz .app>p{color:var(--ink);max-width:none}
 .biz .self{margin-top:auto;padding-top:26px;font-weight:700;color:var(--navy);font-size:17px}
+.biz .lbl{margin-top:26px;font-size:14px;font-weight:700;color:var(--blue)}
+.biz .lbl+ul{margin-top:14px}
+.biz li b em{font-style:normal;font-weight:600;color:var(--blue)}
+.agentdef{margin-top:28px;padding:22px 26px;border-radius:20px;background:var(--navy);color:#fff;max-width:none;font-size:18px}
+.agentdef b{color:var(--blue-l)}
 .biz-sum{margin-top:36px;font-size:clamp(19px,1.6vw,23px);max-width:60ch}
 .who{display:block;border-radius:28px;overflow:hidden;text-decoration:none;background:var(--navy);color:#fff}
 .who img{width:100%;height:clamp(240px,24vw,340px);object-fit:cover;object-position:40% 25%}
@@ -508,17 +513,19 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 <section class="how" id="praktijk">
   <div class="wrap">
     <h2 class="rise" style="margin-bottom:clamp(28px,3vw,48px)"><span class="ln2">Eerst zelf gedaan.</span> <em class="ln2">In twee bedrijven.</em></h2>
-    <p class="lead rise" style="--i:1;margin-top:0">Wat ik teams aanraad, draait elke dag in mijn eigen bedrijven. Zo ziet dat er in de praktijk uit.</p>
+    <p class="lead rise" style="--i:1;margin-top:0">Wat ik teams aanraad, draait elke dag in mijn eigen bedrijven. Beide bedrijven werken met een team van agents. Hieronder zie je per bedrijf welke agent welk werk doet.</p>
+    <p class="agentdef rise" style="--i:2"><b>Wat is een agent?</b> Een AI-collega met één duidelijke taak, een eigen werkinstructie en toegang tot de systemen die daarvoor nodig zijn. Een agent gaat zelf aan de slag, op een vast moment of na een opdracht. Ik heb elke agent een naam gegeven.</p>
     <div class="biz">
       <article class="app rise">
         <svg class="logo" viewBox="0 0 160 44" role="img" aria-label="Storio Podcasts"><text x="0" y="29" font-family="Fraunces, Georgia, serif" font-weight="800" font-size="27" fill="#101926">Storio</text><text x="8.5" y="41" font-family="'DM Sans', sans-serif" font-weight="600" font-size="7.5" letter-spacing="3.5" fill="#2e9e60">PODCASTS</text></svg>
         <h3>Podcasts voor organisaties</h3>
         <p>Storio Podcasts maakt podcasts voor organisaties: van concept en opname op locatie tot montage en publicatie. Onder meer voor FC Utrecht, PharmaPartners en Gemeente Groningen.</p>
+        <p class="lbl">De agents in dit bedrijf</p>
         <ul>
-          <li><span class="tw" data-toon="sam"></span><div><b>Sales</b><span>Zoekt elke werkdag organisaties waar een podcast past en schrijft de eerste mail als concept.</span></div></li>
-          <li><span class="tw" data-toon="ada"></span><div><b>Inbox en agenda</b><span>Houdt de mailbox bij en maakt een uur voor elk gesprek een briefing.</span></div></li>
-          <li><span class="tw" data-toon="otto"></span><div><b>Voorstellen</b><span>Rekent de prijs uit en zet het voorstel klaar, binnen de kaders die ik heb vastgelegd.</span></div></li>
-          <li><span class="tw" data-toon="wes"></span><div><b>Website</b><span>Bouwde de website en houdt de vindbaarheid bij.</span></div></li>
+          <li><span class="tw" data-toon="sam"></span><div><b>Sam <em>· sales agent</em></b><span>Zoekt elke werkdag organisaties waar een podcast past en schrijft de eerste mail als concept.</span></div></li>
+          <li><span class="tw" data-toon="ada"></span><div><b>Ada <em>· agent voor inbox en agenda</em></b><span>Houdt de mailbox bij en maakt een uur voor elk gesprek een briefing.</span></div></li>
+          <li><span class="tw" data-toon="otto"></span><div><b>Otto <em>· agent voor voorstellen</em></b><span>Rekent de prijs uit en zet het voorstel klaar, binnen de kaders die ik heb vastgelegd.</span></div></li>
+          <li><span class="tw" data-toon="wes"></span><div><b>Wes <em>· website agent</em></b><span>Bouwde de website en houdt de vindbaarheid bij.</span></div></li>
         </ul>
         <p class="self">Opnemen, interviewen en het eindoordeel doe ik zelf.</p>
       </article>
@@ -526,16 +533,17 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
         <svg class="logo" viewBox="0 0 160 44" role="img" aria-label="Storio Media"><text x="0" y="29" font-family="'Fraunces',Georgia,serif" font-size="27" font-weight="800" fill="#101926">Storio</text><text x="45.80" text-anchor="middle" y="41" font-family="'DM Sans',sans-serif" font-size="7.5" font-weight="600" fill="#2e9e60" letter-spacing="7.4">MEDIA</text></svg>
         <h3>Video's, gemaakt met AI</h3>
         <p>Storio Media maakt video's voor bedrijven: uitleganimaties, productvideo's en bedrijfsfilms. Concept, beeld, stem en muziek komen tot stand met AI, waardoor een video binnen een week klaar is.</p>
+        <p class="lbl">De agents in dit bedrijf</p>
         <ul>
-          <li><span class="tw" data-toon="gijs"></span><div><b>Beeld</b><span>Maakt de beelden in de huisstijl van de klant.</span></div></li>
-          <li><span class="tw" data-toon="vera"></span><div><b>Montage</b><span>Zet beeld, titels en animatie in elkaar tot één video.</span></div></li>
-          <li><span class="tw" data-toon="abel"></span><div><b>Stem en muziek</b><span>Maakt de voice-over en kiest muziek en geluidseffecten.</span></div></li>
-          <li><span class="tw" data-toon="max"></span><div><b>Social</b><span>Schrijft de posts en zet ze klaar voor Instagram en LinkedIn.</span></div></li>
+          <li><span class="tw" data-toon="gijs"></span><div><b>Gijs <em>· agent voor beeld</em></b><span>Maakt de beelden in de huisstijl van de klant.</span></div></li>
+          <li><span class="tw" data-toon="vera"></span><div><b>Vera <em>· agent voor montage</em></b><span>Zet beeld, titels en animatie in elkaar tot één video.</span></div></li>
+          <li><span class="tw" data-toon="abel"></span><div><b>Abel <em>· agent voor stem en muziek</em></b><span>Maakt de voice-over en kiest muziek en geluidseffecten.</span></div></li>
+          <li><span class="tw" data-toon="max"></span><div><b>Max <em>· social agent</em></b><span>Schrijft de posts en zet ze klaar voor Instagram en LinkedIn.</span></div></li>
         </ul>
         <p class="self">Het idee, de regie en de laatste check blijven mensenwerk.</p>
       </article>
     </div>
-    <p class="biz-sum rise">Twee bedrijven, één mens en twaalf AI-collega's. Zonder IT-achtergrond en zonder zelf een regel code te schrijven.</p>
+    <p class="biz-sum rise">Twee bedrijven, één mens en twaalf agents. Zonder IT-achtergrond en zonder zelf een regel code te schrijven.</p>
   </div>
 </section>
 
@@ -543,15 +551,15 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 <section class="kantoor" id="live">
   <div class="wrap">
     <div class="k-top">
-      <h2 class="rise">Een team met <em>AI-collega's.</em></h2>
+      <h2 class="rise">Een team <em>van agents.</em></h2>
       <div>
-        <p class="lead rise" style="--i:1">Dit is het team achter Storio Podcasts en Storio Media: twaalf AI-collega's, elk met een eigen taak. Wie werkt, zit aan een bureau en wie niets te doen heeft, zit in de kantine. Klik op een collega om te zien wat die doet.</p>
+        <p class="lead rise" style="--i:1">Dit zijn de twaalf agents achter Storio Podcasts en Storio Media, getekend als collega's op kantoor. Een agent die werkt, zit aan een bureau. Een agent die niets te doen heeft, zit in de kantine. Klik op een agent om te zien wat die doet.</p>
         <p class="k-badge rise" style="--i:2" data-s="sim"><u></u><span>Simulatie</span></p>
       </div>
     </div>
     <div class="k-scroll"><div class="k-stage"></div></div>
     <div class="k-try">
-      <p><b>Geef zelf een opdracht.</b>En kijk welke collega's de opdracht oppakken.</p>
+      <p><b>Geef zelf een opdracht.</b>En kijk welke agents de opdracht oppakken.</p>
       <div class="k-btns">
         <button type="button" data-demo="mail">Stel een mail op</button>
         <button type="button" data-demo="video">Maak een video</button>
@@ -614,7 +622,7 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
       </div>
       <a class="who rise" style="--i:2" href="/ai/">
         <img src="/ai/img/hielke-lacht-1000.webp" alt="Hielke Boersma achter zijn laptop" loading="lazy">
-        <span class="deck-txt"><b>Wie je begeleidt</b><span>Hielke Boersma is contentmaker: radio, podcasts, video en verhalen voor organisaties. Bouwde Storio Podcasts en Storio Media met twaalf AI-collega's, zonder IT-achtergrond.</span><span class="go">Lees het hele verhaal <span class="arr">→</span></span></span>
+        <span class="deck-txt"><b>Wie je begeleidt</b><span>Hielke Boersma is contentmaker: radio, podcasts, video en verhalen voor organisaties. Bouwde Storio Podcasts en Storio Media met twaalf agents, zonder IT-achtergrond.</span><span class="go">Lees het hele verhaal <span class="arr">→</span></span></span>
       </a>
     </div>
   </div>
