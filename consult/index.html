@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI voor marketing, communicatie en sales | Hielke Boersma</title>
+<meta name="description" content="Begeleiding voor marketing-, communicatie- en salesteams die AI en agents willen inzetten in hun dagelijkse werk. Van een eerste scan tot AI-collega's die meedraaien met je team.">
+<link rel="canonical" href="https://hielkeboersma.com/consult/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hielkeboersma.com/consult/">
+<meta property="og:title" content="Meer werk gedaan. Met hetzelfde team.">
+<meta property="og:description" content="AI en agents inzetten in marketing, communicatie en sales. Begeleiding van scan tot AI-collega's die meedraaien.">
+<meta property="og:image" content="https://hielkeboersma.com/ai/img/og-ai.jpg">
+<meta property="og:locale" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/ai/img/mark.svg">
+<link href="/presentatie/assets/fonts.css" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Person","@id":"https://hielkeboersma.com/#hielke","name":"Hielke Boersma","url":"https://hielkeboersma.com/","email":"info@hielkeboersma.com","telephone":"+31651969025"},
+ {"@type":"Service","name":"AI-begeleiding voor marketing, communicatie en sales","provider":{"@id":"https://hielkeboersma.com/#hielke"},"areaServed":"NL","url":"https://hielkeboersma.com/consult/","description":"Begeleiding bij het inzetten van AI en agents in marketing-, communicatie- en salesteams: scan, eerste AI-collega's bouwen en het team begeleiden."}
+]}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ground:#ffffff; --soft:#f1f5fc; --soft2:#e6edf8;
+  --ink:#101926; --navy:#172232; --blue:#3563a8; --blue-l:#a9c6f0;
+  --mut:rgba(16,25,38,.66);
+  --f:'DM Sans',system-ui,-apple-system,sans-serif;
+  --m:clamp(20px,4.4vw,64px);
+  --max:1360px;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --r:24px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);color:var(--ink);background:var(--ground);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,video,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--m)}
+h1,h2,h3{color:var(--navy);letter-spacing:-.035em;line-height:1}
+h1{font-size:clamp(46px,7.2vw,112px);font-weight:900}
+h2{font-size:clamp(38px,6vw,96px);font-weight:900;letter-spacing:-.045em;line-height:.98}
+h3{font-size:clamp(22px,2vw,28px);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+h1 em,h2 em{font-style:normal;color:var(--blue)}
+p{max-width:62ch}
+.lead{font-size:clamp(19px,1.6vw,23px);line-height:1.5;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:700 17px var(--f);text-decoration:none;padding:16px 28px;border-radius:100px;background:var(--navy);color:#fff;transition:transform .25s var(--ease),background .25s}
+.btn:hover{background:var(--blue);transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn.alt{background:var(--soft);color:var(--navy)}
+.btn.alt:hover{background:var(--soft2)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.btn .arr{transition:transform .25s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:#fff}
+.nav{display:flex;align-items:center;gap:32px;height:76px}
+.nav .wm{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--navy);margin-right:auto}
+.nav .wm>span>span{color:var(--blue)}
+.nav a.l{text-decoration:none;font-weight:600;font-size:16px;color:var(--navy)}
+.nav a.l:hover{color:var(--blue)}
+.nav .btn{padding:11px 20px;font-size:15px}
+@media(max-width:860px){.nav a.l{display:none}}
+
+/* hero */
+.hero{padding:clamp(28px,4vw,56px) 0 clamp(80px,9vw,140px)}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(28px,4vw,72px) clamp(32px,4vw,72px);align-items:start}
+.hero h1{grid-column:1/-1;font-size:clamp(29px,7.2vw,112px);margin-bottom:clamp(8px,1.5vw,24px)}
+.ln{display:block;white-space:nowrap}
+.ln2{white-space:nowrap}
+@media(max-width:1100px){.ln2{display:block}}
+.hero .lead{margin-top:0}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.hero-pic{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/4.6;background:#0c1828}
+.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:40% 30%;transform-origin:40% 30%}
+.hero-pic .team{position:absolute;left:20px;right:20px;bottom:20px;display:flex;align-items:center;gap:16px;padding:14px 18px;border-radius:18px;background:rgba(255,255,255,.94)}
+.stack{display:flex}
+.stack span{width:42px;height:42px;border-radius:50%;overflow:hidden;margin-left:-12px;border:3px solid #fff}
+.stack span:first-child{margin-left:0}
+.hero-pic .team p{font-size:16px;line-height:1.35;color:var(--navy)}
+.hero-pic .team b{display:block}
+
+/* nu bij storio (live) */
+.now{margin-top:44px;border-radius:var(--r);background:var(--navy);color:#fff;padding:24px 26px}
+.now h2{font-size:20px;color:#fff;letter-spacing:-.01em;display:flex;align-items:center;gap:12px}
+.now h2 .dot{width:10px;height:10px;border-radius:50%;background:#7ec4ff;animation:ping 2s infinite}
+@keyframes ping{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.8)}}
+.now h2 time{font-weight:600;color:var(--blue-l);margin-left:auto;font-variant-numeric:tabular-nums}
+.now ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:12px}
+.now li{display:flex;gap:14px;align-items:center;font-size:16.5px;line-height:1.4;color:rgba(255,255,255,.88)}
+.now li .tw{width:40px;height:40px;border-radius:50%;overflow:hidden;flex:0 0 auto}
+.now li b{color:#fff}
+
+/* achtergrond */
+section{scroll-margin-top:90px}
+.bg{padding:clamp(40px,6vw,80px) 0 clamp(110px,12vw,200px)}
+.bg-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,5vw,90px);align-items:start}
+.bg-text .lead{margin-top:32px}
+.chap{margin-top:36px;display:flex;flex-direction:column;gap:28px}
+.chap>div{display:grid;grid-template-columns:150px 1fr;gap:26px;align-items:center}
+.chap .lb{height:64px;display:flex;align-items:center}
+.chap img.logo{height:26px;width:auto}
+.chap svg.logo{height:46px!important;width:auto}
+.chap h3{font-size:22px;margin-bottom:4px}
+.chap p{font-size:17px;color:var(--ink)}
+.mosaic{display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:1fr 1fr;gap:14px;height:clamp(460px,52vw,720px);position:sticky;top:100px}
+.mosaic figure{border-radius:20px;overflow:hidden;position:relative;background:var(--soft)}
+.mosaic figure:first-child{grid-row:1/3}
+.mosaic img,.mosaic video{width:100%;height:100%;object-fit:cover}
+.mosaic figcaption{position:absolute;left:12px;bottom:12px;font-size:14px;font-weight:700;background:#fff;color:var(--navy);padding:6px 12px;border-radius:100px}
+
+/* team (navy field) */
+.team-s{background:var(--navy);color:#fff;padding:clamp(100px,11vw,180px) 0}
+.team-s h2{color:#fff}
+.team-s h2 em{color:var(--blue-l)}
+.team-head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,90px);align-items:end}
+.team-head p{color:rgba(255,255,255,.86)}
+.crew{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px 40px;margin-top:clamp(56px,6vw,90px)}
+.crew li{display:flex;gap:18px;align-items:center}
+.crew .tw{width:74px;height:74px;border-radius:50%;overflow:hidden;flex:0 0 auto;transition:transform .35s var(--ease)}
+.crew li:hover .tw{transform:scale(1.08) rotate(-4deg)}
+.crew b{display:block;font-size:20px}
+.crew b span{font-weight:500;color:var(--blue-l)}
+.crew small{display:block;font-size:15.5px;line-height:1.4;color:rgba(255,255,255,.72);margin-top:2px}
+.brain{margin-top:clamp(56px,6vw,90px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,90px);padding-top:0}
+.brain p{font-size:clamp(19px,1.6vw,22px);color:#fff;max-width:none}
+.brain p.sm{font-size:17px;color:rgba(255,255,255,.75)}
+
+/* zo werkt het */
+.how{padding:clamp(110px,12vw,200px) 0}
+.how-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,90px);align-items:start}
+.how .lead{margin-top:28px}
+dl.terms{display:flex;flex-direction:column;gap:6px}
+dl.terms div{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:22px 26px;border-radius:20px;background:var(--soft);transition:background .25s}
+dl.terms div:hover{background:var(--soft2)}
+dl.terms div.agent{background:var(--navy);color:#fff}
+dl.terms dt{font-size:24px;font-weight:900;color:var(--navy);letter-spacing:-.02em}
+dl.terms div.agent dt{color:#fff}
+dl.terms dd{font-size:17px;line-height:1.5}
+dl.terms dd i{font-style:normal;display:block;color:var(--blue);font-weight:700;margin-top:4px}
+dl.terms div.agent dd i{color:var(--blue-l)}
+.day{margin-top:clamp(80px,9vw,140px)}
+.day h3{font-size:clamp(26px,2.6vw,36px)}
+.day ol{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:30px;position:relative}
+.day ol::before{content:"";position:absolute;left:0;right:0;top:44px;height:4px;border-radius:4px;background:var(--soft2)}
+.day li{position:relative}
+.day time{font-size:26px;font-weight:800;color:var(--navy);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.day li i{display:block;width:18px;height:18px;border-radius:50%;background:var(--blue);margin:10px 0 18px;position:relative;box-shadow:0 0 0 6px #fff} /* taste-skill-ignore: white ring masks the timeline track */
+.day li b{display:block;font-size:18px;color:var(--navy)}
+.day li span{display:block;font-size:15.5px;line-height:1.45;color:var(--mut);margin-top:4px}
+
+/* sessies */
+.ses{background:var(--soft);padding:clamp(100px,11vw,180px) 0}
+.ses-head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,90px);align-items:end}
+.formats{margin-top:clamp(56px,6vw,90px);display:flex;flex-direction:column;gap:12px}
+.fmt{display:grid;grid-template-columns:1fr 190px 1.6fr;gap:32px;align-items:center;background:#fff;border-radius:var(--r);padding:30px 36px;transition:transform .3s var(--ease)}
+.fmt:hover{transform:translateX(6px)}
+.fmt.main{background:var(--navy);color:#fff}
+.fmt.main h3{color:#fff}
+.fmt .dur{font-size:18px;font-weight:700;color:var(--blue)}
+.fmt.main .dur{color:var(--blue-l)}
+.fmt p{font-size:17px}
+.fmt.main p{color:rgba(255,255,255,.86)}
+.take{margin-top:clamp(64px,7vw,110px);display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,5vw,90px);align-items:center}
+.take h3{font-size:clamp(26px,2.6vw,36px)}
+.take ul{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:14px}
+.take li{display:flex;gap:14px;font-size:18px}
+.take li::before{content:"";flex:0 0 auto;width:22px;height:22px;margin-top:3px;border-radius:50%;background:var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/13px no-repeat}
+.take .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.deck{display:block;border-radius:28px;overflow:hidden;text-decoration:none;background:var(--navy);color:#fff;transition:transform .45s var(--ease)}
+.deck:hover{transform:translateY(-6px)}
+.deck-shots{display:block;position:relative;height:clamp(240px,24vw,340px);background:#24344c;overflow:hidden}
+.deck-shots img{position:absolute;width:76%;aspect-ratio:1540/860;object-fit:cover;border-radius:12px;transition:transform .6s var(--ease)}
+.deck-shots .s2{left:6%;top:18%;transform:rotate(-4deg)}
+.deck-shots .s1{right:5%;top:30%;transform:rotate(3deg)}
+.deck:hover .s1{transform:rotate(1deg) translate(-8px,-10px)}
+.deck:hover .s2{transform:rotate(-6deg) translate(-6px,-4px)}
+.deck-txt{display:flex;flex-direction:column;gap:6px;padding:26px 30px 30px}
+.deck-txt b{font-size:clamp(22px,2vw,28px);letter-spacing:-.02em;line-height:1.15}
+.deck-txt>span{color:rgba(255,255,255,.75);font-size:17px}
+.deck-txt .go{color:#fff!important;font-weight:700;margin-top:10px;display:inline-flex;gap:8px}
+.deck:hover .go .arr{transform:translateX(4px)}
+
+/* contact */
+.contact{padding:clamp(110px,12vw,200px) 0 clamp(80px,9vw,140px)}
+.c-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,5vw,90px);align-items:center}
+.c-h{font-size:clamp(34px,4.6vw,72px)}
+.c-grid .lead{margin-top:28px}
+.c-grid .acts{margin-top:36px}
+.c-card{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;background:var(--soft);border-radius:var(--r);padding:28px}
+.c-card img{width:150px;height:150px;object-fit:cover;border-radius:50%}
+.c-card a{display:block;text-decoration:none;font-weight:800;color:var(--navy);font-size:clamp(19px,1.7vw,24px);letter-spacing:-.01em;padding:6px 0}
+.c-card a:hover{color:var(--blue)}
+.c-card small{display:block;font-size:15px;color:var(--mut)}
+footer{background:var(--navy);color:#fff;padding:clamp(70px,8vw,120px) 0 40px;overflow:hidden}
+footer .big{font-size:clamp(56px,11.5vw,184px);font-weight:900;letter-spacing:-.05em;line-height:.9}
+footer .row{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:40px;font-size:16px;color:rgba(255,255,255,.75)}
+footer .row a{text-decoration:none;color:#fff;font-weight:600}
+footer .row a:hover{color:var(--blue-l)}
+
+
+
+/* ---- future layer: netwerk, kleurvlakken, raster ---- */
+.fx{position:relative;overflow:hidden;isolation:isolate}
+.fx>.wrap{position:relative;z-index:2}
+.fx canvas.net{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0}
+.hero .orb.o1{width:820px;height:820px;right:-220px;top:-280px;background:radial-gradient(circle,#b7cdf2,transparent 66%);animation:od1 22s ease-in-out infinite alternate}
+.hero .orb.o2{width:700px;height:700px;left:-240px;bottom:-300px;background:radial-gradient(circle,#c9dbf6,transparent 66%);animation:od2 26s ease-in-out infinite alternate}
+.team-s .orb.o1{width:720px;height:720px;right:-220px;top:-200px;background:radial-gradient(circle,rgba(53,99,168,.55),transparent 66%);animation:od1 24s ease-in-out infinite alternate}
+.team-s .orb.o2{width:560px;height:560px;left:-200px;bottom:-200px;background:radial-gradient(circle,rgba(53,99,168,.35),transparent 66%);animation:od2 28s ease-in-out infinite alternate}
+footer .orb.o1{width:700px;height:700px;right:-160px;bottom:-360px;background:radial-gradient(circle,rgba(53,99,168,.6),transparent 66%);animation:od2 24s ease-in-out infinite alternate}
+@keyframes od1{to{transform:translate(-140px,110px) scale(1.12)}}
+@keyframes od2{to{transform:translate(160px,-90px) scale(1.15)}}
+.grid{position:absolute;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(23,34,50,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(23,34,50,.05) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 75% 70% at 50% 40%,#000 25%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 75% 70% at 50% 40%,#000 25%,transparent 100%)}
+.team-s .grid{background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px)}
+.glow{position:absolute;width:640px;height:640px;border-radius:50%;left:0;top:0;transform:translate(-50%,-50%);pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(53,99,168,.18),transparent 65%);opacity:0;transition:opacity .4s}
+.fx:hover>.glow{opacity:1}
+.team-s .glow{background:radial-gradient(circle,rgba(126,170,240,.18),transparent 65%)}
+/* ---- beeldmerk: jij in het midden, je agents eromheen ---- */
+.wm{display:inline-flex;align-items:center;gap:12px}
+.mark{position:relative;width:36px;height:36px;flex:0 0 auto;--dot:5px;--core:15px;--mc:var(--navy);--arc:#2563ff;--pc:rgba(37,99,255,.55);--pr:9px}
+.mark::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 55%,var(--arc) 100%);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 2px));mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 2px));box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--mc) 22%,transparent);animation:orbit 2.6s linear infinite}
+.mark::after{content:"";position:absolute;left:50%;top:50%;width:var(--core);height:var(--core);margin:calc(var(--core)/-2) 0 0 calc(var(--core)/-2);border-radius:50%;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--mc) 55%,#5c8cff),var(--mc) 62%);animation:pulse 2.4s cubic-bezier(.2,.7,.3,1) infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--pc);transform:scale(1)}35%{transform:scale(1.12)}75%{box-shadow:0 0 0 var(--pr) transparent;transform:scale(1)}100%{box-shadow:0 0 0 0 transparent}}
+.mark i.o::before{background:transparent!important;box-shadow:inset 0 0 0 max(1.5px,calc(var(--dot)*.26)) var(--c)!important}
+.orbit .st.o::before{background:transparent!important;box-shadow:inset 0 0 0 2px var(--c)!important}
+.mark i{position:absolute;inset:0;animation:orbit 14s linear infinite}
+.mark i::before{content:"";position:absolute;left:50%;top:calc(var(--dot)/-2);width:var(--dot);height:var(--dot);margin-left:calc(var(--dot)/-2);border-radius:50%;background:var(--c,var(--blue));transform:scale(var(--k,1));box-shadow:0 0 calc(var(--dot)*1.6) var(--g,transparent)}
+@keyframes orbit{to{transform:rotate(360deg)}}
+.wm:hover .mark i{animation-duration:5s}
+footer .mark{--mk-ink:#fff;--mc:#fff;--core:34%;--dot:12%;--arc:#5cc8ff;--pc:rgba(92,200,255,.5);--pr:22px}
+.nav .wm{font-size:23px;font-weight:900;letter-spacing:-.045em;text-transform:none}
+footer .big{display:flex;align-items:center;gap:clamp(16px,2vw,32px)}
+footer .big .mark{width:clamp(48px,7vw,110px);height:clamp(48px,7vw,110px)}
+header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px)}
+
+/* ---- baan-motief ---- */
+.orbit{position:absolute;border-radius:50%;pointer-events:none;z-index:0;--c1:rgba(23,34,50,.12);--d:var(--blue)}
+.orbit .rg{position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--c1)}
+.orbit .rg.r2{inset:16%;border-style:dashed}
+.orbit .st{position:absolute;inset:0;animation:orbit var(--t,110s) linear infinite;animation-delay:var(--dl,0s)}
+.orbit .st.in{inset:16%;animation-direction:reverse}
+.orbit .st::before{content:"";position:absolute;left:50%;top:calc(var(--s,12px)/-2);width:var(--s,12px);height:var(--s,12px);margin-left:calc(var(--s,12px)/-2);border-radius:50%;background:var(--c,var(--d));box-shadow:0 0 calc(var(--s,12px)*1.4) var(--g,transparent)}
+
+.hero-pic-wrap{position:relative}
+.hero-pic-wrap .orbit{width:150%;aspect-ratio:1;left:50%;top:50%;transform:translate(-50%,-50%)}
+.hero-pic{z-index:1}
+.hero h1,.hero-grid>div:not(.hero-pic-wrap){position:relative;z-index:1}
+.hero-pic-wrap{z-index:0}
+.team-s .orbit{--mk-ink:#fff;width:min(900px,90vw);aspect-ratio:1;right:-260px;top:-220px;--c1:rgba(255,255,255,.1);--d:rgba(169,198,240,.8)}
+@media(max-width:980px){.hero-pic-wrap .orbit{width:125%}}
+/* kinetic words */
+.kw{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .04em .12em;margin:0 -.04em -.12em}
+.kw>span{display:inline-block;transform:translateY(110%) rotate(6deg);transform-origin:0 100%;transition:transform 1.05s var(--ease);transition-delay:calc(var(--wi)*70ms + 80ms)}
+.kin.in .kw>span,html:not(.js) .kw>span{transform:none}
+.js .kin.rise{opacity:1;transform:none}
+/* team marquee */
+.marq{background:var(--blue);color:#fff;overflow:hidden;padding:22px 0}
+.marq-track{display:flex;gap:46px;width:max-content;animation:marq 48s linear infinite}
+.marq:hover .marq-track{animation-play-state:paused}
+.marq-item{display:flex;align-items:center;gap:16px;font-size:clamp(24px,2.6vw,38px);font-weight:900;letter-spacing:-.03em;white-space:nowrap}
+.marq-item .tw{width:58px;height:58px;border-radius:50%;overflow:hidden;flex:0 0 auto}
+.marq-item i{font-style:normal;font-weight:500;opacity:.75}
+@keyframes marq{to{transform:translateX(-50%)}}
+/* grote getallen */
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:clamp(56px,6vw,90px)}
+.nums div{border-radius:var(--r);background:rgba(255,255,255,.06);padding:28px 30px}
+.nums b{display:block;font-size:clamp(64px,8vw,132px);font-weight:900;letter-spacing:-.06em;line-height:.9;color:#fff;font-variant-numeric:tabular-nums}
+.nums div:nth-child(2) b{color:var(--blue-l)}
+.nums span{display:block;margin-top:10px;font-size:18px;color:rgba(255,255,255,.75)}
+/* belofte */
+.promise{font-size:clamp(28px,2.9vw,36px);line-height:1.2;font-weight:800;letter-spacing:-.025em;color:var(--navy);max-width:22ch;margin-bottom:40px}
+.promise em{font-style:normal;color:var(--blue)}
+@media(max-width:600px){.nums{grid-template-columns:1fr}.marq-item .tw{width:44px;height:44px}}
+/* entrances */
+.js .rise{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i,0)*75ms)}
+.js .rise.in{opacity:1;transform:none}
+.hero-pic img{animation:drift 22s ease-in-out infinite alternate}
+@keyframes drift{from{transform:scale(1.04)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
+
+/* phone */
+@media(max-width:980px){
+  .hero-grid,.bg-grid,.team-head,.brain,.how-grid,.ses-head,.take,.c-grid{grid-template-columns:1fr}
+  .hero-pic{aspect-ratio:4/3.6}
+  .mosaic{position:static;height:auto;grid-template-rows:260px 260px}
+  .crew{grid-template-columns:1fr 1fr}
+  .fmt{grid-template-columns:1fr;gap:8px}
+  .day ol{grid-template-columns:repeat(2,1fr);row-gap:30px}
+  .day ol::before{display:none}
+}
+@media(max-width:600px){
+  body{font-size:17px}
+  .crew{grid-template-columns:1fr}
+  .chap>div{grid-template-columns:1fr;gap:6px}
+  .chap .lb{height:auto}
+  dl.terms div{grid-template-columns:1fr;gap:6px}
+  .c-card{grid-template-columns:1fr}
+  .c-card img{width:120px;height:120px}
+  .now h2{flex-wrap:wrap}
+  .now h2 time{margin-left:0}
+  .nav .btn{padding:9px 14px;font-size:13.5px;white-space:nowrap}
+  .nav{gap:12px}
+  .nav .wm{font-size:18px;white-space:nowrap;gap:9px}
+  .nav .mark{width:28px;height:28px;--core:12px;--dot:4px}
+  .hero-pic .team{left:12px;right:12px;bottom:12px;padding:10px 12px;gap:10px}
+  .stack span{width:32px;height:32px;margin-left:-10px;border-width:2px}
+  .stack span:nth-child(n+5){display:none}
+  .hero-pic .team p{font-size:14px}
+}
+@media(max-width:980px){
+  .hero h1{order:0}.hero-pic-wrap{order:1}.hero-grid>div:not(.hero-pic-wrap){order:2}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rise{opacity:1;transform:none}}
+
+/* consult */
+.board{position:relative;z-index:1;background:var(--navy);color:#fff;border-radius:var(--r);padding:clamp(22px,2.4vw,34px)}
+.board-h{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;letter-spacing:-.01em;max-width:none}
+.board-h .dot{width:10px;height:10px;border-radius:50%;background:#7ec4ff;animation:ping 2s infinite}
+.lane{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14)}
+.lane>b{display:block;font-size:14px;font-weight:700;color:var(--blue-l);margin-bottom:12px}
+.lane ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.lane li{display:flex;gap:14px;align-items:center;font-size:17px;line-height:1.35;color:rgba(255,255,255,.9)}
+.lane .tw{width:42px;height:42px;border-radius:50%;overflow:hidden;flex:0 0 auto}
+.board-f{margin-top:22px;padding:14px 18px;border-radius:16px;background:rgba(255,255,255,.1);font-weight:600;font-size:16.5px;max-width:none}
+.apps{margin-top:clamp(56px,6vw,90px);display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.app{background:#fff;border-radius:var(--r);padding:clamp(26px,2.6vw,38px);display:flex;flex-direction:column}
+.app.main{background:var(--navy);color:#fff}
+.app h3{font-size:clamp(26px,2.4vw,34px)}
+.app.main h3{color:#fff}
+.app>p{margin-top:10px;font-size:17px;color:var(--mut)}
+.app.main>p{color:rgba(255,255,255,.78)}
+.app ul{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:18px}
+.app li{display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:start}
+.app li .tw{width:46px;height:46px;border-radius:50%;overflow:hidden}
+.app li b{display:block;font-size:18px;line-height:1.25}
+.app li span{display:block;font-size:15.5px;line-height:1.45;color:var(--mut);margin-top:3px}
+.app.main li span{color:rgba(255,255,255,.72)}
+.make{margin-top:clamp(56px,6vw,90px);display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:14px;height:clamp(300px,34vw,520px)}
+.make figure{border-radius:20px;overflow:hidden;background:#0c1828}
+.make video{width:100%;height:100%;object-fit:cover}
+.steps ol{grid-template-columns:repeat(5,1fr)}
+.who{display:block;border-radius:28px;overflow:hidden;text-decoration:none;background:var(--navy);color:#fff}
+.who img{width:100%;height:clamp(240px,24vw,340px);object-fit:cover;object-position:40% 25%}
+.who:hover .go .arr{transform:translateX(4px)}
+@media(max-width:980px){.hero-grid>.hero-pic-wrap{order:3}.apps{grid-template-columns:1fr}.make{grid-template-columns:1fr 1fr;height:auto}.make figure{aspect-ratio:1}.make figure:first-child{grid-column:1/-1;aspect-ratio:16/10}.steps ol{grid-template-columns:1fr}}
+</style>
+<link rel="stylesheet" href="/ai/kantoor.css?v=6">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="wm" href="/" aria-label="Hielke Boersma, naar de homepage"><span class="mark" aria-hidden="true"></span><span>Hielke <span>Boersma</span></span></a>
+    <a class="l" href="#toepassingen">Toepassingen</a>
+    <a class="l" href="#aanpak">Aanpak</a>
+    <a class="l" href="#trajecten">Trajecten</a>
+    <a class="l" href="#contact">Contact</a>
+    <a class="btn" href="#contact">Plan een kennismaking</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero fx" data-net="light">
+  <canvas class="net" aria-hidden="true"></canvas><div class="grid" aria-hidden="true"></div><div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <h1 class="rise"><span class="ln">Meer werk gedaan.</span> <em class="ln">Met hetzelfde team.</em></h1>
+    <div>
+      <p class="lead rise" style="--i:1">Voor marketing-, communicatie- en salesteams die AI en agents willen inzetten in hun dagelijkse werk. Geen rapport dat in een la belandt, maar AI-collega's die meedraaien: van campagne en content tot het opvolgen van leads.</p>
+      <div class="acts rise" style="--i:2">
+        <a class="btn" href="#contact">Plan een kennismaking <span class="arr">→</span></a>
+        <a class="btn alt" href="#toepassingen">Bekijk de toepassingen</a>
+      </div>
+    </div>
+    <div class="hero-pic-wrap"><div class="orbit" data-agents="12" aria-hidden="true"></div>
+      <div class="board rise" style="--i:1">
+        <p class="board-h"><span class="dot"></span>Jouw afdeling, met AI-collega's</p>
+        <div class="lane"><b>Marketing</b><ul><li><span class="tw" data-toon="coco"></span><span>Schrijft de campagne in jullie toon</span></li><li><span class="tw" data-toon="gijs"></span><span>Maakt het beeld in huisstijl</span></li><li><span class="tw" data-toon="vera"></span><span>Monteert de video</span></li></ul></div>
+        <div class="lane"><b>Communicatie</b><ul><li><span class="tw" data-toon="max"></span><span>Schrijft nieuwsbrief en persbericht</span></li><li><span class="tw" data-toon="pim"></span><span>Maakt de presentatie voor de directie</span></li></ul></div>
+        <div class="lane"><b>Sales</b><ul><li><span class="tw" data-toon="sam"></span><span>Zoekt leads en schrijft de eerste mail</span></li><li><span class="tw" data-toon="otto"></span><span>Rekent de offerte uit</span></li></ul></div>
+        <p class="board-f">Jouw team geeft richting en akkoord. Daar verandert niets aan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="marq-track"><span class="marq-item"><span class="tw" data-toon="coco"></span>Campagneteksten <i>in jullie toon</i></span><span class="marq-item"><span class="tw" data-toon="gijs"></span>Beeld <i>in huisstijl</i></span><span class="marq-item"><span class="tw" data-toon="vera"></span>Video <i>in een middag</i></span><span class="marq-item"><span class="tw" data-toon="max"></span>Social posts <i>ingepland</i></span><span class="marq-item"><span class="tw" data-toon="zoe"></span>Vindbaarheid <i>ook in AI</i></span><span class="marq-item"><span class="tw" data-toon="sam"></span>Leads <i>opgevolgd</i></span><span class="marq-item"><span class="tw" data-toon="otto"></span>Offertes <i>binnen kaders</i></span><span class="marq-item"><span class="tw" data-toon="ada"></span>Inbox en agenda <i>bijgehouden</i></span><span class="marq-item"><span class="tw" data-toon="abel"></span>Voice-over <i>en muziek</i></span><span class="marq-item"><span class="tw" data-toon="pim"></span>Presentaties <i>voor de directie</i></span><span class="marq-item"><span class="tw" data-toon="rosa"></span>Nieuwsbrief <i>elke week</i></span><span class="marq-item"><span class="tw" data-toon="wes"></span>Website <i>actueel</i></span></div></div>
+
+<!-- WAAROM -->
+<section class="how" id="waarom">
+  <div class="wrap">
+    <h2 class="rise" style="margin-bottom:clamp(36px,4vw,64px)"><span class="ln2">Het werk groeit.</span> <em class="ln2">Het team niet.</em></h2>
+    <div class="how-grid">
+      <div>
+        <p class="lead rise" style="--i:1;margin-top:0">Meer kanalen, meer content, snellere reacties. De meeste afdelingen hebben AI-tools genoeg, maar het werk gaat er nog niet anders door. Het verschil zit in hoe je AI inricht: als een collega met een taak, in plaats van een los hulpmiddel.</p>
+      </div>
+      <dl class="terms">
+        <div class="rise"><dt>Meer kanalen</dt><dd>Elke campagne moet naar de site, de mail, LinkedIn, Instagram en video. De uren daarvoor zijn er niet.</dd></div>
+        <div class="rise" style="--i:1"><dt>Losse tools</dt><dd>Iedereen gebruikt weleens een chatbot, maar elke collega doet het anders en niets wordt vastgelegd.</dd></div>
+        <div class="rise" style="--i:2"><dt>Eigen toon</dt><dd>AI-teksten klinken algemeen. Jullie stem, huisstijl en afspraken zitten er niet in.</dd></div>
+        <div class="rise" style="--i:3"><dt>Opvolging</dt><dd>Leads, vragen en aanvragen blijven liggen omdat het team druk is met het maakwerk.</dd></div>
+        <div class="agent rise" style="--i:4"><dt>De oplossing</dt><dd>AI-collega's met één duidelijke taak, een handboek in jullie eigen woorden en toegang tot de systemen die ze nodig hebben.<i>Dat heet een agent</i></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- TOEPASSINGEN -->
+<section class="ses" id="toepassingen">
+  <div class="wrap">
+    <div class="ses-head">
+      <h2 class="rise">Werk voor <em>AI-collega's.</em></h2>
+      <p class="lead rise" style="--i:1">Per afdeling een paar voorbeelden van werk dat een AI-collega kan overnemen of voorbereiden. Welke voor jullie het meeste opleveren, zoeken we samen uit.</p>
+    </div>
+    <div class="apps">
+      <article class="app rise"><h3>Marketing</h3><p>Meer content en campagnes, in jullie eigen stijl.</p><ul>
+        <li><span class="tw" data-toon="coco"></span><div><b>Campagneteksten</b><span>Van één briefing naar teksten voor site, mail en social, in jullie toon.</span></div></li>
+        <li><span class="tw" data-toon="max"></span><div><b>Social planning</b><span>Posts schrijven en klaarzetten. Plaatsen gebeurt na akkoord.</span></div></li>
+        <li><span class="tw" data-toon="gijs"></span><div><b>Beeld in huisstijl</b><span>Banners en visuals die kloppen met kleuren, lettertype en logo.</span></div></li>
+        <li><span class="tw" data-toon="zoe"></span><div><b>Vindbaarheid</b><span>Gevonden worden in Google en in AI-zoekmachines.</span></div></li>
+        <li><span class="tw" data-toon="pim"></span><div><b>Rapportage</b><span>Cijfers verzamelen en samenvatten voor het overleg.</span></div></li>
+      </ul></article>
+      <article class="app main rise" style="--i:1"><h3>Communicatie</h3><p>Sneller en consistenter communiceren, binnen en buiten.</p><ul>
+        <li><span class="tw" data-toon="rosa"></span><div><b>Nieuwsbrief en persbericht</b><span>Een eerste versie in de stijl van de organisatie, klaar om te redigeren.</span></div></li>
+        <li><span class="tw" data-toon="ada"></span><div><b>Interne communicatie</b><span>Updates voor intranet en medewerkers op basis van besluiten en notulen.</span></div></li>
+        <li><span class="tw" data-toon="coco"></span><div><b>Heldere taal</b><span>Lastige teksten herschrijven naar begrijpelijk Nederlands.</span></div></li>
+        <li><span class="tw" data-toon="abel"></span><div><b>Audio en podcast</b><span>Voice-over, montage en muziek voor interne of externe verhalen.</span></div></li>
+        <li><span class="tw" data-toon="otto"></span><div><b>Vragen en antwoorden</b><span>Een Q&A bij een nieuw besluit, zodat iedereen hetzelfde verhaal vertelt.</span></div></li>
+      </ul></article>
+      <article class="app rise" style="--i:2"><h3>Sales</h3><p>Geen lead meer die blijft liggen.</p><ul>
+        <li><span class="tw" data-toon="sam"></span><div><b>Leads zoeken</b><span>Elke dag bedrijven met een aanleiding om contact op te nemen.</span></div></li>
+        <li><span class="tw" data-toon="coco"></span><div><b>De eerste mail</b><span>Persoonlijk geschreven per lead, als concept voor de accountmanager.</span></div></li>
+        <li><span class="tw" data-toon="sam"></span><div><b>Opvolging</b><span>Wie reageerde niet? Een korte tweede mail op het juiste moment.</span></div></li>
+        <li><span class="tw" data-toon="otto"></span><div><b>Offertes</b><span>Prijzen uitrekenen binnen de grenzen die jullie vastleggen.</span></div></li>
+        <li><span class="tw" data-toon="ada"></span><div><b>Gespreksvoorbereiding</b><span>Een briefing over het bedrijf en de persoon, een uur voor het gesprek.</span></div></li>
+      </ul></article>
+    </div>
+  </div>
+</section>
+
+<!-- CREATIE -->
+<section class="team-s fx" id="creatie" data-net="dark">
+  <div class="orbit" data-agents="12" aria-hidden="true"></div>
+  <canvas class="net" aria-hidden="true"></canvas><div class="grid" aria-hidden="true"></div><div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="team-head">
+      <h2 class="rise">Ook beeld, <em>video en geluid.</em></h2>
+      <p class="lead rise" style="--i:1">AI is meer dan tekst. Met Storio Media maak ik complete video's met AI: concept, beeld, stem en muziek. Die manier van werken breng ik naar jouw team, zodat een social video of een uitleganimatie geen weken meer hoeft te duren.</p>
+    </div>
+    <div class="make rise" style="--i:1">
+      <figure><video src="/ai/img/loop-volta.mp4" poster="/ai/img/loop-volta.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Uitleganimatie, gemaakt met AI door Storio Media"></video></figure>
+      <figure><video src="/presentatie/assets/loop-rondje.mp4" poster="/presentatie/assets/loop-rondje.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Productvideo, gemaakt met AI door Storio Media"></video></figure>
+      <figure><video src="/presentatie/assets/loop-silverflow.mp4" poster="/presentatie/assets/loop-silverflow.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Bedrijfsvideo, gemaakt met AI door Storio Media"></video></figure>
+    </div>
+    <div class="brain">
+      <p class="rise">Elke AI-collega kent de huisstijl: kleuren, lettertypes, logo en toon staan in een handboek dat bij elke opdracht wordt gelezen.</p>
+      <p class="sm rise" style="--i:1">De video's hierboven zijn werk van Storio Media, gemaakt met AI. Het oordeel over wat goed is, blijft bij een mens.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE KANTOOR -->
+<section class="kantoor" id="live">
+  <div class="wrap">
+    <div class="k-top">
+      <h2 class="rise">Een team met <em>AI-collega's.</em></h2>
+      <div>
+        <p class="lead rise" style="--i:1">Dit is mijn eigen bedrijf: twaalf AI-collega's, elk met een eigen taak. Wie werkt, zit aan een bureau en wie niets te doen heeft, zit in de kantine. Klik op een collega om te zien wat die doet.</p>
+        <p class="k-badge rise" style="--i:2" data-s="sim"><u></u><span>Simulatie</span></p>
+      </div>
+    </div>
+    <div class="k-scroll"><div class="k-stage"></div></div>
+    <div class="k-try">
+      <p><b>Geef zelf een opdracht.</b>En kijk welke collega's de opdracht oppakken.</p>
+      <div class="k-btns">
+        <button type="button" data-demo="mail">Stel een mail op</button>
+        <button type="button" data-demo="video">Maak een video</button>
+        <button type="button" data-demo="web">Pas de website aan</button>
+        <button type="button" data-demo="idee">Werk een idee uit</button>
+      </div>
+      <p class="k-say" aria-live="polite">Kies een opdracht en kijk wie er opstaat.</p>
+    </div>
+    <ul class="k-list" aria-label="Wie doet wat op dit moment"></ul>
+    <div class="k-foot">
+      <ul class="k-feed" aria-label="Laatste activiteit"></ul>
+      <p class="k-note">Je ziet welk soort werk er gebeurt. Voor wie het werk is en wat erin staat, blijft binnen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AANPAK -->
+<section class="how" id="aanpak">
+  <div class="wrap">
+    <h2 class="rise"><span class="ln2">Klein beginnen.</span> <em class="ln2">Snel iets zien werken.</em></h2>
+    <div class="day steps" style="margin-top:clamp(48px,5vw,80px)">
+      <h3 class="rise">In vijf stappen van idee naar een AI-collega die meedraait.</h3>
+      <ol>
+        <li class="rise"><time>01</time><i></i><b>Kennismaken</b><span>Waar gaat bij jullie de tijd in zitten, en wat mag AI wel en niet zien?</span></li>
+        <li class="rise" style="--i:1"><time>02</time><i></i><b>Scan</b><span>Het werk van het team in kaart: welke taken leveren het meeste op als AI ze oppakt?</span></li>
+        <li class="rise" style="--i:2"><time>03</time><i></i><b>Eerste AI-collega</b><span>Samen bouwen met een echte opdracht uit jullie week, niet met een voorbeeld.</span></li>
+        <li class="rise" style="--i:3"><time>04</time><i></i><b>Inwerken</b><span>Toon, huisstijl en regels vastleggen. Feedback geven tot het resultaat klopt.</span></li>
+        <li class="rise" style="--i:4"><time>05</time><i></i><b>Overdragen</b><span>Het team leert zelf AI-collega's aan te passen en nieuwe te bouwen.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- TRAJECTEN -->
+<section class="ses" id="trajecten">
+  <div class="wrap">
+    <div class="ses-head">
+      <h2 class="rise">Vier manieren <em>om te starten.</em></h2>
+      <p class="lead rise" style="--i:1">Van een eerste verkenning tot begeleiding van het hele team. Elk traject stemmen we af op jullie afdeling, jullie systemen en jullie tempo.</p>
+    </div>
+    <div class="formats">
+      <article class="fmt rise"><h3>AI-scan</h3><span class="dur">Een dagdeel</span><p>We lopen het werk van het team door en kiezen de taken waar AI het meeste oplevert. Je krijgt een overzicht met wat eerst kan en wat later.</p></article>
+      <article class="fmt main rise" style="--i:1"><h3>Eerste AI-collega's</h3><span class="dur">Een paar weken</span><p>We bouwen de eerste agents voor jullie eigen werk, zoals content, opvolging van leads of interne communicatie. Inclusief handboek, huisregels en inwerken.</p></article>
+      <article class="fmt rise" style="--i:2"><h3>Begeleiding van het team</h3><span class="dur">Doorlopend</span><p>Vaste momenten waarop het team leert, vragen stelt en nieuwe AI-collega's bouwt. Zo blijft de kennis in huis.</p></article>
+      <article class="fmt rise" style="--i:3"><h3>Seminar of workshop</h3><span class="dur">45 tot 90 minuten</span><p>Een inspirerende start voor de hele afdeling, met een live demo en zelf aan de slag. <a href="/ai/">Bekijk de AI-seminars</a>.</p></article>
+    </div>
+    <div class="take">
+      <div>
+        <p class="promise rise">Na het eerste traject werkt er iets <em>wat je team elke dag gebruikt.</em></p>
+        <h3 class="rise">Waar ik op let.</h3>
+        <ul>
+          <li class="rise" style="--i:1">Een mens geeft akkoord. Niets gaat de deur uit zonder dat iemand uit het team heeft meegekeken.</li>
+          <li class="rise" style="--i:2">Duidelijke afspraken over wat wel en niet in AI mag, zoals klantgegevens.</li>
+          <li class="rise" style="--i:3">Toon en huisstijl liggen vast, zodat alles klinkt en oogt als jullie organisatie.</li>
+          <li class="rise" style="--i:4">Werkinstructies in gewone taal, zodat het team ze zelf kan aanpassen.</li>
+        </ul>
+        <div class="acts rise" style="--i:5"><a class="btn" href="#contact">Plan een kennismaking <span class="arr">→</span></a></div>
+      </div>
+      <a class="who rise" style="--i:2" href="/ai/">
+        <img src="/ai/img/hielke-lacht-1000.webp" alt="Hielke Boersma achter zijn laptop" loading="lazy">
+        <span class="deck-txt"><b>Wie je begeleidt</b><span>Hielke Boersma bouwde Storio Podcasts en Storio Media met twaalf AI-collega's, zonder IT-achtergrond. Maker en radio-dj: uitleg in gewone taal, zonder jargon.</span><span class="go">Lees het hele verhaal <span class="arr">→</span></span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact fx" id="contact" data-net="light">
+  <canvas class="net" aria-hidden="true"></canvas><div class="grid" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
+  <div class="wrap c-grid">
+    <div>
+      <h2 class="rise c-h"><span class="ln">Plan een</span> <em class="ln">kennismaking.</em></h2>
+      <p class="lead rise" style="--i:1">Vertel me over je afdeling en waar het team tegenaan loopt. In een eerste gesprek kijken we of AI daar iets in kan betekenen, en waar je het beste begint.</p>
+      <div class="acts rise" style="--i:2"><a class="btn" href="mailto:info@hielkeboersma.com?subject=AI%20in%20ons%20team&amp;body=Hoi%20Hielke%2C%0A%0AWe%20willen%20AI%20inzetten%20in%20ons%20team.%0A%0AOrganisatie%3A%0AAfdeling%20(marketing%2C%20communicatie%2C%20sales)%3A%0AAantal%20collega's%3A%0AWaar%20gaat%20bij%20ons%20de%20meeste%20tijd%20in%20zitten%3A%0A">Mail <span class="arr">→</span></a></div>
+    </div>
+    <div class="c-card rise" style="--i:1">
+      <img src="/ai/img/hielke-contact.webp" alt="Hielke Boersma" loading="lazy">
+      <div>
+        <small>Mail</small><a href="mailto:info@hielkeboersma.com">info@hielkeboersma.com</a>
+        <small style="margin-top:12px">Bel of app</small><a href="tel:+31651969025">06 51 96 90 25</a>
+        <small style="margin-top:12px">LinkedIn</small><a href="https://www.linkedin.com/in/hielke-boersma-517aa134/" target="_blank" rel="noopener">Hielke Boersma</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="fx" data-net="dark">
+  <canvas class="net" aria-hidden="true"></canvas><div class="orb o1" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="big"><span class="mark" aria-hidden="true"></span>Hielke Boersma</div>
+    <div class="row"><span>AI voor marketing, communicatie en sales.</span><a href="/ai/">AI-seminars</a><a href="/">hielkeboersma.com</a><a href="https://storiomedia.nl" target="_blank" rel="noopener">Storio Media</a><a href="https://storiopodcasts.nl" target="_blank" rel="noopener">Storio Podcasts</a></div>
+  </div>
+</footer>
+
+<script src="/presentatie/assets/team.js"></script>
+<script src="/ai/kantoor.js?v=7" defer></script>
+<script>
+
+
+
+/* beeldmerk en banen vullen: kern + agents */
+(()=>{const PAL=['#2563ff','var(--mk-ink,#172232)','#5cc8ff','var(--mk-ink,#172232)','#2563ff','#5cc8ff','var(--mk-ink,#172232)','#2563ff','var(--mk-ink,#172232)','#5cc8ff','#2563ff','var(--mk-ink,#172232)'],HOL=[],G=c=>c[0]=='#'?c:'transparent',K=[1,.7,1.3,.85,1.15,.6,1.25,.9,.75,1.1,.65,1.2];document.querySelectorAll('.mark').forEach(m=>{const n=8;for(let k=0;k<n;k++){const i=document.createElement('i');i.style.rotate=(360*k/n)+'deg';i.style.setProperty('--c',PAL[k]);i.style.setProperty('--g',G(PAL[k]));if(HOL.includes(k))i.className='o';i.style.setProperty('--k',K[k]);m.appendChild(i)}});
+document.querySelectorAll('.orbit[data-agents]').forEach(o=>{o.innerHTML='<div class="rg"></div><div class="rg r2"></div>';const n=+o.dataset.agents,out=Math.ceil(n/2);
+ for(let k=0;k<n;k++){const d=document.createElement('div');const inner=k>=out;d.className='st'+(inner?' in':'');const cnt=inner?n-out:out,idx=inner?k-out:k,T=inner?90:120;
+  d.style.setProperty('--t',T+'s');d.style.rotate=(360*idx/cnt+(inner?30:0))+'deg';d.style.setProperty('--s',Math.round((inner?10:13)*K[k])+'px');d.style.setProperty('--c',PAL[k]);d.style.setProperty('--g',G(PAL[k]));if(HOL.includes(k))d.classList.add('o');o.appendChild(d)}});})();
+/* future layer: netwerk per sectie, zoals in de presentatie */
+(()=>{const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.fx[data-net]').forEach(sec=>{
+ const cv=sec.querySelector('canvas.net'),cx=cv.getContext('2d'),dark=sec.dataset.net==='dark',glow=sec.querySelector('.glow');
+ const C=dark?{dot:'rgba(255,255,255,.4)',line:'169,198,240',la:.16,mouse:'126,190,255'}:{dot:'rgba(53,99,168,.32)',line:'53,99,168',la:.14,mouse:'53,99,168'};
+ let W=0,H=0,P=[],pulses=[],mouse={x:-999,y:-999},run=false,raf=0;const DPR=Math.min(2,devicePixelRatio||1);
+ function size(){W=sec.clientWidth;H=sec.clientHeight;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0);
+  const n=Math.round(Math.min(80,W*H/20000));P=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.4+.7}))}
+ function frame(){cx.clearRect(0,0,W,H);const D=170;
+  for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+  for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const a=P[i],b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<D){cx.strokeStyle=`rgba(${C.line},${(1-d/D)*C.la})`;cx.lineWidth=1;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke();}}
+  for(const p of P){cx.fillStyle=C.dot;cx.beginPath();cx.arc(p.x,p.y,p.r*1.2,0,7);cx.fill();const dm=Math.hypot(p.x-mouse.x,p.y-mouse.y);
+   if(dm<200){cx.strokeStyle=`rgba(${C.mouse},${(1-dm/200)*.5})`;cx.lineWidth=1.2;cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(mouse.x,mouse.y);cx.stroke()}}
+  if(run)raf=requestAnimationFrame(frame)}
+ size();new ResizeObserver(()=>{if(sec.clientWidth!==W||sec.clientHeight!==H){size();if(!run)frame()}}).observe(sec);
+ sec.addEventListener('mousemove',e=>{const b=sec.getBoundingClientRect();mouse.x=e.clientX-b.left;mouse.y=e.clientY-b.top;if(glow){glow.style.left=mouse.x+'px';glow.style.top=mouse.y+'px'}});
+ sec.addEventListener('mouseleave',()=>{mouse.x=mouse.y=-999});
+ if(reduce){frame();return}
+ new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!run){run=true;frame()}else if(!e.isIntersecting){run=false;cancelAnimationFrame(raf)}})).observe(sec);
+});})();
+/* kinetische koppen */
+(()=>{document.querySelectorAll('h1.rise,h2.rise').forEach(h=>{h.classList.add('kin');let n=0;
+ (function walk(node){[...node.childNodes].forEach(c=>{
+  if(c.nodeType===3){const fr=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(t=>{if(!t)return;if(/^\s+$/.test(t)){fr.appendChild(document.createTextNode(t));return}
+   const w=document.createElement('span');w.className='kw';const i=document.createElement('span');i.textContent=t;i.style.setProperty('--wi',n++);w.appendChild(i);fr.appendChild(w)});c.replaceWith(fr)}
+  else if(c.nodeType===1&&c.tagName!=='BR')walk(c)})})(h)})})();
+/* tellers */
+(()=>{const ease=t=>1-Math.pow(1-t,4);const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);
+ const el=e.target,to=+el.dataset.count,from=+(el.dataset.from||0);if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=to;return}
+ const t0=performance.now();(function st(now){const k=Math.min(1,(now-t0)/1700);el.textContent=Math.round(from+(to-from)*ease(k)).toLocaleString('nl-NL');if(k<1)requestAnimationFrame(st)})(t0)}),{threshold:.5});
+ document.querySelectorAll('[data-count]').forEach(el=>{el.textContent=(+(el.dataset.from||0)).toLocaleString('nl-NL');io.observe(el)})})();
+/* entrances */
+(()=>{const els=document.querySelectorAll('.rise');
+ if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+ els.forEach(e=>io.observe(e));})();
+
+/* Nu bij mijn team: echte planning, in Nederlandse tijd */
+</script>
+<script data-goatcounter="https://hielkeboersma.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
