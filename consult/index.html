@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AI voor communicatie, marketing en sales | Hielke Boersma</title>
-<meta name="description" content="Voor communicatie-, marketing- en salesteams die AI en agents willen inzetten in hun dagelijkse werk. Van content en middelen tot opvolging: ik bouw de AI-collega's en werk mee in je team.">
+<meta name="description" content="Voor communicatie-, marketing- en salesteams die AI en agents willen inzetten in hun dagelijkse werk. Werkwijze, tools, afspraken en agents: stap voor stap ingevoerd, veilig en met het team aan het stuur.">
 <link rel="canonical" href="https://hielkeboersma.com/consult/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hielkeboersma.com/consult/">
 <meta property="og:title" content="Meer werk gedaan. Met hetzelfde team.">
-<meta property="og:description" content="AI en agents inzetten in marketing, communicatie en sales. Begeleiding van scan tot AI-collega's die meedraaien.">
+<meta property="og:description" content="AI goed inzetten in communicatie, marketing en sales: werkwijze, tools, afspraken en agents.">
 <meta property="og:image" content="https://hielkeboersma.com/ai/img/og-ai.jpg">
 <meta property="og:locale" content="nl_NL">
 <meta name="twitter:card" content="summary_large_image">
@@ -342,6 +342,22 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 .make figure{border-radius:20px;overflow:hidden;background:#0c1828}
 .make video{width:100%;height:100%;object-fit:cover}
 .steps ol{grid-template-columns:repeat(5,1fr)}
+.brow{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:center;padding:16px 0;border-top:1px solid rgba(255,255,255,.14)}
+.board-h+.brow{margin-top:20px}
+.bi{width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.1);display:grid;place-items:center}
+.bi svg{width:24px;height:24px;fill:none;stroke:var(--blue-l);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.brow b{display:block;font-size:19px}
+.brow span{display:block;font-size:16px;line-height:1.4;color:rgba(255,255,255,.78)}
+.board-f{margin-top:6px}
+.app ul{counter-reset:n}
+.apps .app li{grid-template-columns:38px 1fr}
+.apps .app li::before{counter-increment:n;content:counter(n,decimal-leading-zero);width:38px;height:38px;border-radius:11px;background:var(--soft);color:var(--blue);font-weight:800;font-size:14px;display:grid;place-items:center;font-variant-numeric:tabular-nums}
+.apps .app.main li::before{background:rgba(255,255,255,.12);color:var(--blue-l)}
+.pils{margin-top:clamp(48px,5vw,80px);display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:p}
+.pil{background:rgba(255,255,255,.06);border-radius:var(--r);padding:clamp(24px,2.4vw,34px)}
+.pil::before{counter-increment:p;content:counter(p,decimal-leading-zero);display:block;font-weight:800;font-size:15px;color:var(--blue-l);margin-bottom:18px;font-variant-numeric:tabular-nums}
+.pil h3{color:#fff;font-size:clamp(22px,1.9vw,26px)}
+.pil p{margin-top:10px;font-size:17px;line-height:1.5;color:rgba(255,255,255,.8)}
 .biz{margin-top:clamp(40px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .biz .app{background:var(--soft)}
 .biz .logo{height:52px;width:189px;margin-bottom:22px}
@@ -351,7 +367,7 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 .who{display:block;border-radius:28px;overflow:hidden;text-decoration:none;background:var(--navy);color:#fff}
 .who img{width:100%;height:clamp(240px,24vw,340px);object-fit:cover;object-position:40% 25%}
 .who:hover .go .arr{transform:translateX(4px)}
-@media(max-width:980px){.biz{grid-template-columns:1fr}.hero-grid>.hero-pic-wrap{order:3}.apps{grid-template-columns:1fr}.make{grid-template-columns:1fr 1fr;height:auto}.make figure{aspect-ratio:1}.make figure:first-child{grid-column:1/-1;aspect-ratio:16/10}.steps ol{grid-template-columns:1fr}}
+@media(max-width:980px){.pils{grid-template-columns:1fr}.biz{grid-template-columns:1fr}.hero-grid>.hero-pic-wrap{order:3}.apps{grid-template-columns:1fr}.make{grid-template-columns:1fr 1fr;height:auto}.make figure{aspect-ratio:1}.make figure:first-child{grid-column:1/-1;aspect-ratio:16/10}.steps ol{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="/ai/kantoor.css?v=6">
 <script>document.documentElement.classList.add('js')</script>
@@ -361,9 +377,9 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 <header>
   <div class="wrap nav">
     <a class="wm" href="/" aria-label="Hielke Boersma, naar de homepage"><span class="mark" aria-hidden="true"></span><span>Hielke <span>Boersma</span></span></a>
+    <a class="l" href="#werkwijze">Werkwijze</a>
     <a class="l" href="#toepassingen">Toepassingen</a>
     <a class="l" href="#praktijk">Praktijk</a>
-    <a class="l" href="#aanpak">Aanpak</a>
     <a class="l" href="#trajecten">Trajecten</a>
     <a class="l" href="#contact">Contact</a>
     <a class="btn" href="#contact">Plan een kennismaking</a>
@@ -372,30 +388,30 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 
 <main>
 <!-- HERO -->
-<section class="hero fx" data-net="light">
-  <canvas class="net" aria-hidden="true"></canvas><div class="grid" aria-hidden="true"></div><div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
+<section class="hero fx">
+  <div class="grid" aria-hidden="true"></div><div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <h1 class="rise"><span class="ln">Meer werk gedaan.</span> <em class="ln">Met hetzelfde team.</em></h1>
     <div>
-      <p class="lead rise" style="--i:1">Voor communicatie- en marketingteams die AI en agents willen inzetten in hun dagelijkse werk. Geen rapport dat in een la belandt, maar AI-collega's die meedraaien: van één verhaal naar artikel, post, video en nieuwsbrief.</p>
+      <p class="lead rise" style="--i:1">Voor communicatie- en marketingteams die AI goed willen inzetten. Ik help met de hele werkwijze: welke taken je aan AI geeft, welke tools daarbij passen, welke afspraken nodig zijn en waar agents het terugkerende werk overnemen.</p>
       <div class="acts rise" style="--i:2">
         <a class="btn" href="#contact">Plan een kennismaking <span class="arr">→</span></a>
-        <a class="btn alt" href="#toepassingen">Bekijk de toepassingen</a>
+        <a class="btn alt" href="#werkwijze">Bekijk de werkwijze</a>
       </div>
     </div>
     <div class="hero-pic-wrap"><div class="orbit" data-agents="12" aria-hidden="true"></div>
       <div class="board rise" style="--i:1">
-        <p class="board-h"><span class="dot"></span>Jouw afdeling, met AI-collega's</p>
-        <div class="lane"><b>Communicatie</b><ul><li><span class="tw" data-toon="coco"></span><span>Maakt van één verhaal een artikel, post en nieuwsbrief</span></li><li><span class="tw" data-toon="vera"></span><span>Monteert de video erbij</span></li><li><span class="tw" data-toon="gijs"></span><span>Maakt het beeld in huisstijl</span></li></ul></div>
-        <div class="lane"><b>Marketing</b><ul><li><span class="tw" data-toon="max"></span><span>Plant de campagne en de social posts in</span></li><li><span class="tw" data-toon="zoe"></span><span>Houdt de website vindbaar</span></li></ul></div>
-        <div class="lane"><b>Sales</b><ul><li><span class="tw" data-toon="sam"></span><span>Zoekt leads en schrijft de eerste mail</span></li></ul></div>
-        <p class="board-f">Jouw team geeft richting en akkoord. Daar verandert niets aan.</p>
+        <p class="board-h"><span class="dot"></span>Wat we samen inrichten</p>
+        <div class="brow"><span class="bi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v5H4zM14 14h6v5h-6zM10 7.5h4v9"/></svg></span><div><b>Werkwijze</b><span>Welke taken AI oppakt en wie waarover beslist</span></div></div>
+        <div class="brow"><span class="bi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></span><div><b>Tools</b><span>De juiste tool per taak, passend bij jullie beleid</span></div></div>
+        <div class="brow"><span class="bi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v5l3 2M12 3a9 9 0 100 18 9 9 0 000-18"/></svg></span><div><b>Agents</b><span>Terugkerend werk dat vanzelf wordt voorbereid</span></div></div>
+        <div class="brow"><span class="bi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM9 12l2 2 4-4"/></svg></span><div><b>Afspraken</b><span>Veilig werken, met een mens die akkoord geeft</span></div></div>
+        <p class="board-f">Het team houdt de regie. AI doet het voorbereidende werk.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="marq" aria-hidden="true"><div class="marq-track"><span class="marq-item"><span class="tw" data-toon="coco"></span>Eén verhaal <i>alle middelen</i></span><span class="marq-item"><span class="tw" data-toon="gijs"></span>Beeld <i>in huisstijl</i></span><span class="marq-item"><span class="tw" data-toon="vera"></span>Video <i>in een middag</i></span><span class="marq-item"><span class="tw" data-toon="max"></span>Social posts <i>ingepland</i></span><span class="marq-item"><span class="tw" data-toon="zoe"></span>Vindbaarheid <i>ook in AI</i></span><span class="marq-item"><span class="tw" data-toon="sam"></span>Leads <i>opgevolgd</i></span><span class="marq-item"><span class="tw" data-toon="otto"></span>Offertes <i>binnen kaders</i></span><span class="marq-item"><span class="tw" data-toon="ada"></span>Inbox en agenda <i>bijgehouden</i></span><span class="marq-item"><span class="tw" data-toon="abel"></span>Voice-over <i>en muziek</i></span><span class="marq-item"><span class="tw" data-toon="pim"></span>Presentaties <i>voor de directie</i></span><span class="marq-item"><span class="tw" data-toon="rosa"></span>Nieuwsbrief <i>elke week</i></span><span class="marq-item"><span class="tw" data-toon="wes"></span>Website <i>actueel</i></span></div></div>
 
 <!-- WAAROM -->
 <section class="how" id="waarom">
@@ -403,15 +419,33 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
     <h2 class="rise" style="margin-bottom:clamp(36px,4vw,64px)"><span class="ln2">Het werk groeit.</span> <em class="ln2">Het team niet.</em></h2>
     <div class="how-grid">
       <div>
-        <p class="lead rise" style="--i:1;margin-top:0">Meer kanalen, meer content, snellere reacties. De meeste afdelingen hebben AI-tools genoeg, maar het werk gaat er nog niet anders door. Het verschil zit in hoe je AI inricht: als een collega met een taak, in plaats van een los hulpmiddel.</p>
+        <p class="lead rise" style="--i:1;margin-top:0">Meer kanalen, meer content, snellere reacties. De meeste afdelingen hebben AI-tools genoeg, maar het werk gaat er nog niet anders door. Het verschil zit niet in de tool, maar in de werkwijze eromheen: wat doe je ermee, hoe leg je het vast en wie houdt de regie.</p>
       </div>
       <dl class="terms">
         <div class="rise"><dt>Meer middelen</dt><dd>Elk verhaal moet naar de site, het intranet, de nieuwsbrief, LinkedIn en video. De uren daarvoor zijn er niet.</dd></div>
         <div class="rise" style="--i:1"><dt>Losse tools</dt><dd>Iedereen gebruikt weleens een chatbot, maar elke collega doet het anders en niets wordt vastgelegd.</dd></div>
         <div class="rise" style="--i:2"><dt>Eigen toon</dt><dd>AI-teksten klinken algemeen. Jullie stem, huisstijl en afspraken zitten er niet in.</dd></div>
         <div class="rise" style="--i:3"><dt>Zorgvuldigheid</dt><dd>Niet alles mag zomaar in een AI-tool. Zonder duidelijke afspraken durft niemand echt te beginnen.</dd></div>
-        <div class="agent rise" style="--i:4"><dt>De oplossing</dt><dd>AI-collega's met één duidelijke taak, een handboek in jullie eigen woorden en toegang tot de systemen die ze nodig hebben.<i>Dat heet een agent</i></dd></div>
+        <div class="agent rise" style="--i:4"><dt>De oplossing</dt><dd>Een werkwijze die het team deelt: duidelijke afspraken, de juiste tools en agents voor het werk dat steeds terugkomt.<i>Stap voor stap ingevoerd</i></dd></div>
       </dl>
+    </div>
+  </div>
+</section>
+
+<!-- WERKWIJZE -->
+<section class="team-s" id="werkwijze">
+  <div class="wrap">
+    <div class="team-head">
+      <h2 class="rise">Meer dan <em>een tool.</em></h2>
+      <p class="lead rise" style="--i:1">AI levert pas iets op als het een manier van werken wordt. Daarom begin ik niet bij de techniek, maar bij het werk zelf. Zes onderdelen die samen een werkwijze vormen.</p>
+    </div>
+    <div class="pils">
+      <article class="pil rise"><h3>Het werk in kaart</h3><p>Welke taken komen steeds terug, waar gaat de meeste tijd in zitten en wie beslist waarover? Daar begint elke keuze.</p></article>
+      <article class="pil rise"><h3>De juiste tools</h3><p>Per taak de tool die past: een AI-assistent zoals Microsoft Copilot, ChatGPT of Claude, aangevuld met tools voor beeld, video en geluid. We werken met wat binnen jullie organisatie is toegestaan.</p></article>
+      <article class="pil rise"><h3>Vastleggen wat werkt</h3><p>Werkinstructies, voorbeeldopdrachten, toon en huisstijl op één gedeelde plek. Zo werkt iedereen op dezelfde manier en hangt de kwaliteit niet af van één collega.</p></article>
+      <article class="pil rise"><h3>Agents voor terugkerend werk</h3><p>Waar een taak vaak terugkomt, bereidt een agent het werk voor: met een eigen instructie, een planning en toegang tot de systemen die daarvoor nodig zijn.</p></article>
+      <article class="pil rise"><h3>Afspraken en veiligheid</h3><p>Wat mag wel en niet in AI, wie controleert de feiten en wie geeft akkoord? Dat ligt vast voordat het team begint.</p></article>
+      <article class="pil rise"><h3>Leren en bijstellen</h3><p>Het team leert de werkwijze in de praktijk, met echte opdrachten. Na een paar weken kijken we wat werkt en stellen we bij.</p></article>
     </div>
   </div>
 </section>
@@ -420,39 +454,39 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 <section class="ses" id="toepassingen">
   <div class="wrap">
     <div class="ses-head">
-      <h2 class="rise">Werk voor <em>AI-collega's.</em></h2>
-      <p class="lead rise" style="--i:1">Per afdeling een paar voorbeelden van werk dat een AI-collega kan overnemen of voorbereiden. Welke voor jullie het meeste opleveren, zoeken we samen uit.</p>
+      <h2 class="rise">Toepassingen <em>per afdeling.</em></h2>
+      <p class="lead rise" style="--i:1">Voorbeelden van werk dat AI kan voorbereiden of overnemen. Welke toepassingen voor jullie het meeste opleveren, zoeken we samen uit.</p>
     </div>
     <div class="apps">
       <article class="app main rise"><h3>Communicatie</h3><p>Meer content en middelen, in één herkenbare stem.</p><ul>
-        <li><span class="tw" data-toon="coco"></span><div><b>Eén verhaal, alle middelen</b><span>Van een interview of besluit naar artikel, intranetbericht, post en nieuwsbrief.</span></div></li>
-        <li><span class="tw" data-toon="vera"></span><div><b>Video en animatie</b><span>Een uitlegvideo of korte social video, zonder weken productietijd.</span></div></li>
-        <li><span class="tw" data-toon="ada"></span><div><b>Interne communicatie</b><span>Updates voor medewerkers op basis van besluiten, notulen en planning.</span></div></li>
-        <li><span class="tw" data-toon="rosa"></span><div><b>Heldere taal</b><span>Vakjargon en beleidstekst herschrijven naar begrijpelijk Nederlands.</span></div></li>
-        <li><span class="tw" data-toon="otto"></span><div><b>Vragen en antwoorden</b><span>Een Q&A bij een nieuw besluit, zodat iedereen hetzelfde verhaal vertelt.</span></div></li>
+        <li><div><b>Eén verhaal, alle middelen</b><span>Van een interview of besluit naar artikel, intranetbericht, post en nieuwsbrief.</span></div></li>
+        <li><div><b>Video en animatie</b><span>Een uitlegvideo of korte social video, zonder weken productietijd.</span></div></li>
+        <li><div><b>Interne communicatie</b><span>Updates voor medewerkers op basis van besluiten, notulen en planning.</span></div></li>
+        <li><div><b>Heldere taal</b><span>Vakjargon en beleidstekst herschrijven naar begrijpelijk Nederlands.</span></div></li>
+        <li><div><b>Vragen en antwoorden</b><span>Een Q&A bij een nieuw besluit, zodat iedereen hetzelfde verhaal vertelt.</span></div></li>
       </ul></article>
       <article class="app rise" style="--i:1"><h3>Marketing</h3><p>Meer campagnes, in jullie eigen stijl.</p><ul>
-        <li><span class="tw" data-toon="coco"></span><div><b>Campagneteksten</b><span>Van één briefing naar teksten voor site, mail en social, in jullie toon.</span></div></li>
-        <li><span class="tw" data-toon="max"></span><div><b>Social planning</b><span>Posts schrijven en klaarzetten. Plaatsen gebeurt na akkoord.</span></div></li>
-        <li><span class="tw" data-toon="gijs"></span><div><b>Beeld in huisstijl</b><span>Banners en visuals die kloppen met kleuren, lettertype en logo.</span></div></li>
-        <li><span class="tw" data-toon="zoe"></span><div><b>Vindbaarheid</b><span>Gevonden worden in Google en in AI-zoekmachines.</span></div></li>
-        <li><span class="tw" data-toon="pim"></span><div><b>Rapportage</b><span>Cijfers verzamelen en samenvatten voor het overleg.</span></div></li>
+        <li><div><b>Campagneteksten</b><span>Van één briefing naar teksten voor site, mail en social, in jullie toon.</span></div></li>
+        <li><div><b>Social planning</b><span>Posts schrijven en klaarzetten. Plaatsen gebeurt na akkoord.</span></div></li>
+        <li><div><b>Beeld in huisstijl</b><span>Banners en visuals die kloppen met kleuren, lettertype en logo.</span></div></li>
+        <li><div><b>Vindbaarheid</b><span>Gevonden worden in Google en in AI-zoekmachines.</span></div></li>
+        <li><div><b>Rapportage</b><span>Cijfers verzamelen en samenvatten voor het overleg.</span></div></li>
       </ul></article>
       <article class="app rise" style="--i:2"><h3>Sales</h3><p>Geen lead meer die blijft liggen.</p><ul>
-        <li><span class="tw" data-toon="sam"></span><div><b>Leads zoeken</b><span>Elke dag bedrijven met een aanleiding om contact op te nemen.</span></div></li>
-        <li><span class="tw" data-toon="coco"></span><div><b>De eerste mail</b><span>Persoonlijk geschreven per lead, als concept voor de accountmanager.</span></div></li>
-        <li><span class="tw" data-toon="sam"></span><div><b>Opvolging</b><span>Wie reageerde niet? Een korte tweede mail op het juiste moment.</span></div></li>
-        <li><span class="tw" data-toon="otto"></span><div><b>Offertes</b><span>Prijzen uitrekenen binnen de grenzen die jullie vastleggen.</span></div></li>
-        <li><span class="tw" data-toon="ada"></span><div><b>Gespreksvoorbereiding</b><span>Een briefing over het bedrijf en de persoon, een uur voor het gesprek.</span></div></li>
+        <li><div><b>Leads zoeken</b><span>Elke dag bedrijven met een aanleiding om contact op te nemen.</span></div></li>
+        <li><div><b>De eerste mail</b><span>Persoonlijk geschreven per lead, als concept voor de accountmanager.</span></div></li>
+        <li><div><b>Opvolging</b><span>Wie reageerde niet? Een korte tweede mail op het juiste moment.</span></div></li>
+        <li><div><b>Offertes</b><span>Prijzen uitrekenen binnen de grenzen die jullie vastleggen.</span></div></li>
+        <li><div><b>Gespreksvoorbereiding</b><span>Een briefing over het bedrijf en de persoon, een uur voor het gesprek.</span></div></li>
       </ul></article>
     </div>
   </div>
 </section>
 
 <!-- CREATIE -->
-<section class="team-s fx" id="creatie" data-net="dark">
+<section class="team-s fx" id="creatie">
   <div class="orbit" data-agents="12" aria-hidden="true"></div>
-  <canvas class="net" aria-hidden="true"></canvas><div class="grid" aria-hidden="true"></div><div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
+  <div class="grid" aria-hidden="true"></div><div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
   <div class="wrap">
     <div class="team-head">
       <h2 class="rise">Ook beeld, <em>video en geluid.</em></h2>
@@ -464,7 +498,7 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
       <figure><video src="/presentatie/assets/loop-silverflow.mp4" poster="/presentatie/assets/loop-silverflow.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Bedrijfsvideo, gemaakt met AI door Storio Media"></video></figure>
     </div>
     <div class="brain">
-      <p class="rise">Elke AI-collega kent de huisstijl: kleuren, lettertypes, logo en toon staan in een handboek dat bij elke opdracht wordt gelezen.</p>
+      <p class="rise">De huisstijl ligt vast: kleuren, lettertypes, logo en toon staan in een werkinstructie die bij elke opdracht wordt gebruikt.</p>
       <p class="sm rise" style="--i:1">De video's hierboven zijn werk van Storio Media, gemaakt met AI. Het oordeel over wat goed is, blijft bij een mens.</p>
     </div>
   </div>
@@ -539,13 +573,13 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
   <div class="wrap">
     <h2 class="rise"><span class="ln2">Klein beginnen.</span> <em class="ln2">Snel iets zien werken.</em></h2>
     <div class="day steps" style="margin-top:clamp(48px,5vw,80px)">
-      <h3 class="rise">In vijf stappen van idee naar een AI-collega die meedraait.</h3>
+      <h3 class="rise">In vijf stappen naar een werkwijze die blijft.</h3>
       <ol>
         <li class="rise"><time>01</time><i></i><b>Kennismaken</b><span>Waar gaat bij jullie de tijd in zitten, en wat mag AI wel en niet zien?</span></li>
         <li class="rise" style="--i:1"><time>02</time><i></i><b>Scan</b><span>Het werk van het team in kaart: welke taken leveren het meeste op als AI ze oppakt?</span></li>
-        <li class="rise" style="--i:2"><time>03</time><i></i><b>Eerste AI-collega</b><span>Samen bouwen met een echte opdracht uit jullie week, niet met een voorbeeld.</span></li>
-        <li class="rise" style="--i:3"><time>04</time><i></i><b>Inwerken</b><span>Toon, huisstijl en regels vastleggen. Feedback geven tot het resultaat klopt.</span></li>
-        <li class="rise" style="--i:4"><time>05</time><i></i><b>Overdragen</b><span>Het team leert zelf AI-collega's aan te passen en nieuwe te bouwen.</span></li>
+        <li class="rise" style="--i:2"><time>03</time><i></i><b>Inrichten</b><span>Tools kiezen, werkinstructies schrijven en de eerste agent bouwen, met een echte opdracht uit jullie week.</span></li>
+        <li class="rise" style="--i:3"><time>04</time><i></i><b>Testen</b><span>Het team werkt ermee. We leggen toon, huisstijl en regels vast en stellen bij tot het resultaat klopt.</span></li>
+        <li class="rise" style="--i:4"><time>05</time><i></i><b>Overdragen</b><span>Het team kan de werkwijze zelf aanpassen en uitbreiden. De kennis blijft in huis.</span></li>
       </ol>
     </div>
   </div>
@@ -560,9 +594,9 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
     </div>
     <div class="formats">
       <article class="fmt rise"><h3>AI-scan</h3><span class="dur">Een dagdeel</span><p>We lopen het werk van het team door en kiezen de taken waar AI het meeste oplevert. Je krijgt een overzicht met wat eerst kan en wat later.</p></article>
-      <article class="fmt main rise" style="--i:1"><h3>Meewerken in het team</h3><span class="dur">Vaste dagen per week</span><p>Ik draai als freelancer mee als contentmaker: schrijven, video, audio en beeld. Ondertussen bouw ik de AI-collega's waarmee het team daarna zelf verder kan.</p></article>
-      <article class="fmt rise" style="--i:1"><h3>Eerste AI-collega's</h3><span class="dur">Een paar weken</span><p>We bouwen de eerste agents voor jullie eigen werk, zoals content en middelen, interne communicatie of opvolging van leads. Inclusief handboek, huisregels en inwerken.</p></article>
-      <article class="fmt rise" style="--i:2"><h3>Begeleiding van het team</h3><span class="dur">Doorlopend</span><p>Vaste momenten waarop het team leert, vragen stelt en nieuwe AI-collega's bouwt. Zo blijft de kennis in huis.</p></article>
+      <article class="fmt main rise" style="--i:1"><h3>Meewerken in het team</h3><span class="dur">Vaste dagen per week</span><p>Ik draai als freelancer mee als contentmaker: schrijven, video, audio en beeld. Ondertussen richt ik de werkwijze en de agents in waarmee het team daarna zelf verder kan.</p></article>
+      <article class="fmt rise" style="--i:1"><h3>Implementatie</h3><span class="dur">Een paar weken</span><p>We richten de werkwijze in voor jullie eigen werk: tools kiezen, werkinstructies vastleggen, afspraken maken en de eerste agents bouwen.</p></article>
+      <article class="fmt rise" style="--i:2"><h3>Begeleiding van het team</h3><span class="dur">Doorlopend</span><p>Vaste momenten waarop het team leert, vragen stelt en de werkwijze verder uitbouwt. Zo blijft de kennis in huis.</p></article>
       <article class="fmt rise" style="--i:3"><h3>Seminar of workshop</h3><span class="dur">45 tot 90 minuten</span><p>Een inspirerende start voor de hele afdeling, met een live demo en zelf aan de slag. <a href="/ai/">Bekijk de AI-seminars</a>.</p></article>
     </div>
     <div class="take">
@@ -587,8 +621,8 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 </section>
 
 <!-- CONTACT -->
-<section class="contact fx" id="contact" data-net="light">
-  <canvas class="net" aria-hidden="true"></canvas><div class="grid" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
+<section class="contact fx" id="contact">
+  <div class="grid" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
   <div class="wrap c-grid">
     <div>
       <h2 class="rise c-h"><span class="ln">Plan een</span> <em class="ln">kennismaking.</em></h2>
@@ -607,8 +641,8 @@ header{background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) bl
 </section>
 </main>
 
-<footer class="fx" data-net="dark">
-  <canvas class="net" aria-hidden="true"></canvas><div class="orb o1" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
+<footer class="fx">
+  <div class="orb o1" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
   <div class="wrap">
     <div class="big"><span class="mark" aria-hidden="true"></span>Hielke Boersma</div>
     <div class="row"><span>AI voor communicatie, marketing en sales.</span><a href="/ai/">AI-seminars</a><a href="/">hielkeboersma.com</a><a href="https://storiomedia.nl" target="_blank" rel="noopener">Storio Media</a><a href="https://storiopodcasts.nl" target="_blank" rel="noopener">Storio Podcasts</a></div>
